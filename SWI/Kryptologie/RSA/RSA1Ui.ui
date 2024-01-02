@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>838</width>
+    <height>643</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(78, 65, 135);
+font:87 12pt &quot;Arial Black&quot;;
+color: rgb(255, 255, 255);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <widget class="QLabel" name="labelText">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>28</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Text to Encrypt</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTextEdit" name="textEditTextToEncrypt">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>125</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(48, 131, 220);
+</string>
+            </property>
+            <property name="html">
+             <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Arial Black'; font-size:12pt; font-weight:80; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Ahoj&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="labelText_6">
+            <property name="text">
+             <string>Numeral Representation</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTextEdit" name="textEditNumeralRepresentation">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>125</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(48, 131, 220);
+</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_5">
+              <item>
+               <widget class="QLabel" name="labelN_3">
+                <property name="text">
+                 <string>N:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="labelE_3">
+                <property name="text">
+                 <string>E:</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_4">
+              <item>
+               <widget class="QLineEdit" name="lineEditNEncrypt"/>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="lineEditEEncrypt"/>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QLabel" name="labelText_3">
+            <property name="text">
+             <string>Encrypted Text</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTextEdit" name="textEditEncrypted">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>125</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(48, 131, 220);
+</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButtonEncrypt">
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+background-color: rgb(78, 65, 135);
+font:87 12pt &quot;Arial Black&quot;;
+color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(48, 131, 220);
+}
+
+QPushButton:pressed{
+background-color: rgb(48, 181, 220);
+}
+</string>
+            </property>
+            <property name="text">
+             <string>Encrypt</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <widget class="QLabel" name="labelLenghtOfPrimeNumber">
+              <property name="text">
+               <string>Lenght of prime number</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEditLenghtOfPrimeNumber">
+              <property name="text">
+               <string>10</string>
+              </property>
+              <property name="maxLength">
+               <number>10</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <layout class="QVBoxLayout" name="Jednotky">
+              <item>
+               <widget class="QLabel" name="labelP">
+                <property name="text">
+                 <string>p:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="labelQ">
+                <property name="text">
+                 <string>q:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="labelPhi">
+                <property name="text">
+                 <string>Phi:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="labelN">
+                <property name="text">
+                 <string>N:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="labelE">
+                <property name="text">
+                 <string>E:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="labelD">
+                <property name="text">
+                 <string>D:</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QWidget" name="JednotkyLine" native="true">
+              <property name="styleSheet">
+               <string notr="true">font:87 8pt &quot;Arial Black&quot;;
+</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout">
+               <item row="1" column="0">
+                <spacer name="verticalSpacer_4">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="6" column="0">
+                <widget class="QLineEdit" name="lineEditN"/>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLineEdit" name="lineEditP">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLineEdit" name="lineEditQ"/>
+               </item>
+               <item row="4" column="0">
+                <widget class="QLineEdit" name="lineEditPhi"/>
+               </item>
+               <item row="8" column="0">
+                <widget class="QLineEdit" name="lineEditE"/>
+               </item>
+               <item row="10" column="0">
+                <widget class="QLineEdit" name="lineEditD"/>
+               </item>
+               <item row="3" column="0">
+                <spacer name="verticalSpacer_3">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="9" column="0">
+                <spacer name="verticalSpacer">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="7" column="0">
+                <spacer name="verticalSpacer_2">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="5" column="0">
+                <spacer name="verticalSpacer_5">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButtonGenerateKeys">
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+background-color: rgb(78, 65, 135);
+font:87 12pt &quot;Arial Black&quot;;
+color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(48, 131, 220);
+}
+
+QPushButton:pressed{
+background-color: rgb(48, 181, 220);
+}
+</string>
+            </property>
+            <property name="text">
+             <string>Generate keys</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_9">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <widget class="QLabel" name="labelText_4">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>28</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Encrypted Text</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QTextEdit" name="textEditEncrypted_2">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>125</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(48, 131, 220);
+</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="labelText_7">
+            <property name="text">
+             <string>Numeral Representation</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTextEdit" name="textEditNumeralRepresentation_2">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>125</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(48, 131, 220);
+</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_8">
+              <item>
+               <widget class="QLabel" name="labelN_4">
+                <property name="text">
+                 <string>N:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="labelD_3">
+                <property name="text">
+                 <string>D:</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_7">
+              <item>
+               <widget class="QLineEdit" name="lineEditNDecrypt"/>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="lineEditDDecrypt"/>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QLabel" name="labelText_5">
+            <property name="text">
+             <string>Decrypted Text</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTextEdit" name="textEditDecrypted">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>125</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(48, 131, 220);
+</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButtonDecrypt">
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+background-color: rgb(78, 65, 135);
+font:87 12pt &quot;Arial Black&quot;;
+color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(48, 131, 220);
+}
+
+QPushButton:pressed{
+background-color: rgb(48, 181, 220);
+}
+</string>
+            </property>
+            <property name="text">
+             <string>Decrypt</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QTableWidget" name="tableWidget">
+        <property name="styleSheet">
+         <string notr="true">QHeaderView::section {
+background-color: rgb(48, 131, 220);
+    color: white; 
+    font-weight: bold;
+}
+QHeaderView::section:horizontal {
+	height: 18px
+
+}
+QHeaderView::section {
+padding: 4px;
+}
+QTableWidget{
+font:87 12pt &quot;Arial Black&quot;;
+}</string>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::NoEditTriggers</set>
+        </property>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>Char</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>ASCII</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Binary</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Block of 4 characters</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

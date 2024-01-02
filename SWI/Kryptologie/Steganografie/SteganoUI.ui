@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>932</width>
+    <height>654</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(23, 202, 118);
+font:87 12pt &quot;Arial Black&quot;;
+color: rgb(255, 255, 255);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLabel" name="labelSelectImage">
+          <property name="text">
+           <string>Select Image to put text into</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QListWidget" name="listWidgetSelectImageInput">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>105</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelImageInput">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>256</width>
+            <height>256</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(0, 170, 0);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonShowInfoInput">
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+background-color: rgb(23, 202, 118);
+font:87 12pt &quot;Arial Black&quot;;
+color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(23, 232, 118);
+}
+
+QPushButton:pressed{
+background-color: rgb(0, 170, 0);}</string>
+          </property>
+          <property name="text">
+           <string>Show Info</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="textEditInput"/>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QLabel" name="labelInputName">
+            <property name="text">
+             <string>Name</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditInputName"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonInput">
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+background-color: rgb(23, 202, 118);
+font:87 12pt &quot;Arial Black&quot;;
+color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(23, 232, 118);
+}
+
+QPushButton:pressed{
+background-color: rgb(0, 170, 0);}</string>
+          </property>
+          <property name="text">
+           <string>Hide text</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QWidget" name="widget" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>256</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(23, 232, 118);
+font:87 12pt &quot;Arial Black&quot;;
+color: rgb(255, 255, 255);</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="0" column="0">
+          <widget class="QLabel" name="labelNewImage">
+           <property name="text">
+            <string>Create new image</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <layout class="QVBoxLayout" name="verticalLayout_8">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout">
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_3">
+               <item>
+                <widget class="QLabel" name="labelNewImageHeight">
+                 <property name="text">
+                  <string>Height</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="labelNewImageHeight_2">
+                 <property name="text">
+                  <string>Width</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_4">
+               <item>
+                <widget class="QLineEdit" name="lineEditHeight">
+                 <property name="inputMethodHints">
+                  <set>Qt::ImhDigitsOnly</set>
+                 </property>
+                 <property name="inputMask">
+                  <string/>
+                 </property>
+                 <property name="text">
+                  <string>255</string>
+                 </property>
+                 <property name="maxLength">
+                  <number>3</number>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="lineEditWidth">
+                 <property name="inputMethodHints">
+                  <set>Qt::ImhNone</set>
+                 </property>
+                 <property name="inputMask">
+                  <string/>
+                 </property>
+                 <property name="text">
+                  <string>255</string>
+                 </property>
+                 <property name="maxLength">
+                  <number>3</number>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_7">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_2">
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_5">
+                 <item>
+                  <widget class="QLabel" name="labelRed">
+                   <property name="text">
+                    <string>Red</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelGreen">
+                   <property name="text">
+                    <string>Green</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelBlue">
+                   <property name="text">
+                    <string>Blue</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_6">
+                 <item>
+                  <widget class="QSlider" name="horizontalSliderRed">
+                   <property name="maximum">
+                    <number>255</number>
+                   </property>
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSlider" name="horizontalSliderGreen">
+                   <property name="maximum">
+                    <number>255</number>
+                   </property>
+                   <property name="pageStep">
+                    <number>10</number>
+                   </property>
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="invertedAppearance">
+                    <bool>false</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSlider" name="horizontalSliderBlue">
+                   <property name="maximum">
+                    <number>255</number>
+                   </property>
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="QLabel" name="labelPreview">
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="checkBoxRandomize">
+               <property name="text">
+                <string>Randomize</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_3">
+               <item>
+                <widget class="QLabel" name="labelName">
+                 <property name="text">
+                  <string>Name</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="lineEditName"/>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButtonNewImage">
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+font:87 12pt &quot;Arial Black&quot;;
+color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(23, 202, 118);
+}
+
+QPushButton:pressed{
+background-color: rgb(0, 170, 0);}</string>
+             </property>
+             <property name="text">
+              <string>New Image</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="3" column="0">
+          <widget class="QPushButton" name="pushButtonAddImage">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+font:87 12pt &quot;Arial Black&quot;;
+color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(23, 202, 118);
+}
+
+QPushButton:pressed{
+background-color: rgb(0, 170, 0);}</string>
+           </property>
+           <property name="text">
+            <string>Add Image</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="labelSelectImage_2">
+          <property name="text">
+           <string>Select Image to get text from</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QListWidget" name="listWidgetSelectImageOutput"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelImageOutput">
+          <property name="minimumSize">
+           <size>
+            <width>256</width>
+            <height>256</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(0, 170, 0);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonShowInfoOutput">
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+background-color: rgb(23, 202, 118);
+font:87 12pt &quot;Arial Black&quot;;
+color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(23, 232, 118);
+}
+
+QPushButton:pressed{
+background-color: rgb(0, 170, 0);}</string>
+          </property>
+          <property name="text">
+           <string>Show Info</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="textEditOutput"/>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_6"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonOutput">
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+background-color: rgb(23, 202, 118);
+font:87 12pt &quot;Arial Black&quot;;
+color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(23, 232, 118);
+}
+
+QPushButton:pressed{
+background-color: rgb(0, 170, 0);}</string>
+          </property>
+          <property name="text">
+           <string>Get text</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

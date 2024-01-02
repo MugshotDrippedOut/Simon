@@ -1,0 +1,1026 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1048</width>
+    <height>511</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(80, 80, 80);
+font:87 10pt &quot;Arial Black&quot;;
+color: rgb(255, 255, 255);
+
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_14">
+        <item>
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>116</width>
+            <height>17</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="styleSheet">
+           <string notr="true">font:87 16pt &quot;Arial Black&quot;;
+</string>
+          </property>
+          <property name="text">
+           <string>Create keys</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>116</width>
+            <height>17</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_7">
+        <property name="text">
+         <string>Select path to save the keys</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <widget class="QLineEdit" name="lineEditSaveKeys">
+          <property name="text">
+           <string>C:/Users/bucka/Documents/GitHub/School/Simon/Kryptologie/Elektronicky_Podpis/folder/Keys</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonFolder_4">
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+background-color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(205, 205, 205);
+}
+
+QPushButton:pressed{
+background-color: rgb(155, 155, 155);
+}
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>folder.png</normaloff>folder.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonGenerateKeys">
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+background-color: rgb(80, 80, 80);
+font:87 10pt &quot;Arial Black&quot;;
+color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(100, 100, 100);
+}
+
+QPushButton:pressed{
+background-color: rgb(50, 50, 50);
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Generate keys</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_8">
+        <property name="text">
+         <string>Select path to save the zip file</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <widget class="QLineEdit" name="lineEditSaveZip">
+          <property name="text">
+           <string>C:/Users/bucka/Documents/GitHub/School/Simon/Kryptologie/Elektronicky_Podpis/folder/Zip</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonFolder_5">
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+background-color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(205, 205, 205);
+}
+
+QPushButton:pressed{
+background-color: rgb(155, 155, 155);
+}
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>folder.png</normaloff>folder.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonZip">
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+background-color: rgb(80, 80, 80);
+font:87 10pt &quot;Arial Black&quot;;
+color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(100, 100, 100);
+}
+
+QPushButton:pressed{
+background-color: rgb(50, 50, 50);
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Zip</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_9">
+        <property name="text">
+         <string>Select path to load the zip file</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <item>
+         <widget class="QLineEdit" name="lineEditLoadZip">
+          <property name="text">
+           <string>C:/Users/bucka/Documents/GitHub/School/Simon/Kryptologie/Elektronicky_Podpis/folder/Zip</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonFolder_6">
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+background-color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(205, 205, 205);
+}
+
+QPushButton:pressed{
+background-color: rgb(155, 155, 155);
+}
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>folder.png</normaloff>folder.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_10">
+        <property name="text">
+         <string>Select path to save the unzipped file</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_7">
+        <item>
+         <widget class="QLineEdit" name="lineEditSaveUnzip">
+          <property name="text">
+           <string>C:/Users/bucka/Documents/GitHub/School/Simon/Kryptologie/Elektronicky_Podpis/folder/Unzip</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonFolder_7">
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+background-color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(205, 205, 205);
+}
+
+QPushButton:pressed{
+background-color: rgb(155, 155, 155);
+}
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>folder.png</normaloff>folder.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonUnzip">
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+background-color: rgb(80, 80, 80);
+font:87 10pt &quot;Arial Black&quot;;
+color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(100, 100, 100);
+}
+
+QPushButton:pressed{
+background-color: rgb(50, 50, 50);
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Unzip</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="2">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_9">
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>117</width>
+            <height>17</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="styleSheet">
+           <string notr="true">font:87 16pt &quot;Arial Black&quot;;
+</string>
+          </property>
+          <property name="text">
+           <string>Sign</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Select path for digital signature</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QLineEdit" name="lineEditDigitalSignatureSign">
+          <property name="text">
+           <string>C:/Users/bucka/Documents/GitHub/School/Simon/Kryptologie/Elektronicky_Podpis/folder/Signature</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonFolder">
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+background-color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(205, 205, 205);
+}
+
+QPushButton:pressed{
+background-color: rgb(155, 155, 155);
+}
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>folder.png</normaloff>folder.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonInfo">
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+background-color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(205, 205, 205);
+}
+
+QPushButton:pressed{
+background-color: rgb(155, 155, 155);
+}
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>info.png</normaloff>info.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>Select path for message</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLineEdit" name="lineEditMessageSign">
+          <property name="text">
+           <string>C:/Users/bucka/Documents/GitHub/School/Simon/Kryptologie/Elektronicky_Podpis/folder/Message</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonFolder_2">
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+background-color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(205, 205, 205);
+}
+
+QPushButton:pressed{
+background-color: rgb(155, 155, 155);
+}
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>folder.png</normaloff>folder.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonInfo_2">
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+background-color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(205, 205, 205);
+}
+
+QPushButton:pressed{
+background-color: rgb(155, 155, 155);
+}
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>info.png</normaloff>info.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonEditMessage">
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+background-color: rgb(80, 80, 80);
+font:87 10pt &quot;Arial Black&quot;;
+color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(100, 100, 100);
+}
+
+QPushButton:pressed{
+background-color: rgb(50, 50, 50);
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Edit Message</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_8">
+        <item>
+         <widget class="QPushButton" name="pushButtonHash">
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+background-color: rgb(80, 80, 80);
+font:87 10pt &quot;Arial Black&quot;;
+color: rgb(255, 255, 255);
+
+}
+
+QPushButton:hover{
+background-color: rgb(100, 100, 100);
+}
+
+QPushButton:pressed{
+background-color: rgb(50, 50, 50);
+}
+</string>
+          </property>
+          <property name="text">
+           <string>Hash</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonShowHash">
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+background-color: rgb(80, 80, 80);
+font:87 10pt &quot;Arial Black&quot;;
+color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(100, 100, 100);
+}
+
+QPushButton:pressed{
+background-color: rgb(50, 50, 50);
+}
+</string>
+          </property>
+          <property name="text">
+           <string>Show Hash</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_6">
+        <property name="text">
+         <string>Select path to load the private key</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLineEdit" name="lineEditPrivateKey">
+          <property name="text">
+           <string>C:/Users/bucka/Documents/GitHub/School/Simon/Kryptologie/Elektronicky_Podpis/folder/Unzip</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonFolder_3">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#353535;&quot;&gt;Folder&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="whatsThis">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Folder&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+background-color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(205, 205, 205);
+}
+
+QPushButton:pressed{
+background-color: rgb(155, 155, 155);
+}
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>folder.png</normaloff>folder.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonLoadKey">
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+background-color: rgb(80, 80, 80);
+font:87 10pt &quot;Arial Black&quot;;
+color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(100, 100, 100);
+}
+
+QPushButton:pressed{
+background-color: rgb(50, 50, 50);
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Load key</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonSign">
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+background-color: rgb(80, 80, 80);
+font:87 10pt &quot;Arial Black&quot;;
+color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(100, 100, 100);
+}
+
+QPushButton:pressed{
+background-color: rgb(50, 50, 50);
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Sign</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="3">
+     <spacer name="horizontalSpacer_7">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Maximum</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>80</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="0" column="6">
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_15">
+        <item>
+         <spacer name="horizontalSpacer_6">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>78</width>
+            <height>14</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="styleSheet">
+           <string notr="true">font:87 16pt &quot;Arial Black&quot;;
+</string>
+          </property>
+          <property name="text">
+           <string>Verify</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_5">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>78</width>
+            <height>14</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_11">
+        <property name="text">
+         <string>Select path to load digital signature</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_10">
+        <item>
+         <widget class="QLineEdit" name="lineEditDigitalSignatureVerify">
+          <property name="text">
+           <string>C:/Users/bucka/Documents/GitHub/School/Simon/Kryptologie/Elektronicky_Podpis/folder/Signature</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonFolder_8">
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+background-color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(205, 205, 205);
+}
+
+QPushButton:pressed{
+background-color: rgb(155, 155, 155);
+}
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>folder.png</normaloff>folder.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonInfo_3">
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+background-color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(205, 205, 205);
+}
+
+QPushButton:pressed{
+background-color: rgb(155, 155, 155);
+}
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>info.png</normaloff>info.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_12">
+        <item>
+         <widget class="QPushButton" name="pushButtonHash_2">
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+background-color: rgb(80, 80, 80);
+font:87 10pt &quot;Arial Black&quot;;
+color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(100, 100, 100);
+}
+
+QPushButton:pressed{
+background-color: rgb(50, 50, 50);
+}
+</string>
+          </property>
+          <property name="text">
+           <string>Hash</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonShowHash_2">
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+background-color: rgb(80, 80, 80);
+font:87 10pt &quot;Arial Black&quot;;
+color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(100, 100, 100);
+}
+
+QPushButton:pressed{
+background-color: rgb(50, 50, 50);
+}
+</string>
+          </property>
+          <property name="text">
+           <string>Show Hash</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_13">
+        <property name="text">
+         <string>Select path to load the public key</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_13">
+        <item>
+         <widget class="QLineEdit" name="lineEditPublicKey">
+          <property name="text">
+           <string>C:/Users/bucka/Documents/GitHub/School/Simon/Kryptologie/Elektronicky_Podpis/folder/Unzip</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonFolder_10">
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+background-color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(205, 205, 205);
+}
+
+QPushButton:pressed{
+background-color: rgb(155, 155, 155);
+}
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>folder.png</normaloff>folder.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonLoadKey_2">
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+background-color: rgb(80, 80, 80);
+font:87 10pt &quot;Arial Black&quot;;
+color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(100, 100, 100);
+}
+
+QPushButton:pressed{
+background-color: rgb(50, 50, 50);
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Load key</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonVerify">
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+background-color: rgb(80, 80, 80);
+font:87 10pt &quot;Arial Black&quot;;
+color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(100, 100, 100);
+}
+
+QPushButton:pressed{
+background-color: rgb(50, 50, 50);
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Verify</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="1">
+     <spacer name="horizontalSpacer_8">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Maximum</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>80</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
