@@ -1,0 +1,63 @@
+# 1. otázky z dc
+
+- Frekvenční analýza, co jsme pomocí ní schopni zjistit.
+  - Jestli se jedná o substituci, písmená budú zachovávať frekvenčné rozloženie, čiže najčastejšie vyskytujúce písmeno bude pravdepodobne to písmeno ktoré sa najčastejšie vyskytuje v pôvodnej abecede.
+- Co kdyby byl vytvořený kvantový Pc, jak by to ovlivnilo symetrickou a asymetrickou šifru.
+  - Zanikne asymetrická a symetrická kryptografie(faktorizace a eliptické křivky budou řešeny v řádech milisekund), její nástupce bude kvantová kryptografie
+- Máš 24 bitový obrázek BPM asi 20x50 pixelů použiješ poslední dva bity+něco se složkou R, kolik se tam vleze bitů dat do obrázku.
+  - 20x50 = 1000 pixelov
+  - posledné 2 pixely R (red) složky 2x1000=2000 pixelov
+  - do obrázku se vleze 2000bit dat
+- Popiš jak funguje AES šifra.
+  - v blocích s pevnou délkou
+  - 10 nebo 14 rund a každá z techto rund se skládá
+    - ByteSub Transformation
+    - ShiftRow Transformation
+    - MixColumn Tranfromation
+    - AddRoundKey
+- kolik bitů používá klíč šifer AES, ECC, SHA-384.
+  - AES - 128, 192, 256
+  - ECC - 256, 384
+  - SHA-384 -384
+- rozdíl mezi RSA a ECC rozepiš.
+  - ECC použivá operace nad eliptickou křivkou namiesto modulárnej aritmetiky
+    - taky kratšie klíče čiže väčšia výpočetná efektivita a bezpečnosť voči délke klíče
+- něco o Moderní kryptografii, její výhody.
+  - Moderní kryptologie je postavena zejména na externí algoritmické složitosti výpočtu a analýty klíčového prostoru.
+  - výhody u vernamovej šifry : Stejný algoritmus je možné použít pro zašifrování i dešifrování
+- Zašifruj svoje jmeno pomocí vegenarovy šifry.
+  - abeceda zacina podla klucoveho slova a index je +1
+  - B..C..D....A
+  - U..V..W....T
+  - B = D
+  - U = P
+  - F = V
+  - A = B
+- kolik ruznych hodnot a, b můžeme použít v affiní šifře a proč ?
+  - počet hodnôt pre parameter "a" závisí na velkosti abecedy "m"( všetky prvočísla po hodnotu m)
+  - počet hodnôt pre parameter "b" nemá obmedzenie
+  - celkový počet kombinácii zavisí na počtu možných hodnôt pre "a" a pre "b"
+
+# 2. otázky z testu ktorý som mal ja
+
+- Výhody a nevýhody symetrické šifry
+  - Výhody: rýchlost až 100Mbit/s, jednoduchost
+  - Nevýhody: Nutnosť zdielať kľúč, viacej účastníkov = mnoho kľúčov
+- rozdíl mezi RSA a ECC rozepiš.
+  - ECC použivá operace nad eliptickou křivkou namiesto modulárnej aritmetiky
+    - taky kratšie klíče čiže väčšia výpočetná efektivita a bezpečnosť voči délke klíče
+- Jde ze sifrovaného textu zjistit jestli byla pouzita substituce nebo transpozice
+  - Áno
+  - Transpozice se muze po blocich opakovat
+  - Substituce je náhodná
+- proč je vernamova šifra neprolomitelná
+  - neuspěje ani útok hrubou silou
+  - Protože dodržuje pravidla kryptografie:
+    - Klíč je dokonale náhodný
+    - Vždy iný klíč
+    - Klíč má rovnakou délku jako zpráva
+- vysvetli pojmy P-box, S-box a rundový klíč
+  - P-box : premutační blok, nahrádza poradie bitú podla danej permutaňej tabulky
+  - S-box : substituční blok, nahrádza bity za iné podla danej substitučnej tabulky
+  - rundový klíč je klíč který ktérý se využíva opakovane pri blocích v blokových šifrách (Rundách)
+    - rundový klíč se odvádzí z pôvodného klíče
