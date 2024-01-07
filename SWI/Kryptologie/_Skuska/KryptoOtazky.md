@@ -62,7 +62,9 @@
   - S-box : substituční blok, nahrádza bity za iné podla danej substitučnej tabulky
   - rundový klíč je klíč který ktérý se využíva opakovane pri blocích v blokových šifrách (Rundách)
     - rundový klíč se odvádzí z pôvodného klíče
-
+- Co jsou nomenklátory a klamače?
+  - Nomenklátory - vybraným frekventovaným slovum s epřiřadí speciální symbol
+  - Klamače (nula) - tyto znaky nemají žádný význam, slouží pouze pro zmatení nepřítele 
 # 3. otázky 
 - K čemu všemu lze využit frekvenční analýzu? Vysvětlete.
   - Ke zistení jestli byla použita substituce na základe toho že najčastejšei opakovaný znak bude pravdepodobne najviac frekventovaný znak v pôvodnej abecede.
@@ -74,12 +76,12 @@
       Klíč je odvozen z 89 místného hesla pomocí SHA3-256
       Klíč je odvozen z 111 místného hesla pomocí SHA-256
   - AES 128 -> 128 bitov
-  - hex 128 -> 32 bitov
-  - Sha3-512 -> 128 bitov
-  - Sha3-256 -> 64 bitov
-  -Sha-256 -> 64bitov
+  - hex 128 -> 512 bitov
+  - Sha3-512 -> 512 bitov
+  - Sha3-256 -> 256 bitov
+  -Sha-256 -> 256 bitov
 - Stručne popište šifru AES
-  - Advanced data enctryption standart
+  - Advanced enctryption standart
   - 128, 192, 256
   - bloková, 10 nebo 14 rund, používaf rundový klíč
   - každá runda používa:
@@ -88,7 +90,9 @@
     - MixColumn
     - AddRoundKey
 - Popište pravidla, které vymezují "nejsilnejší" klíč použitý pro Vigenérovu šifru
+  - klíč je rovnaké delky ako OT a je náhodný
 - Co je to Vernamova šifra a proč ji považujeme za neprelomitelnou
+  - Spočívá v posunu každého znaku zprávy o náhodně zvolený počet míst v abecedě. To se prakticky rovná náhradě zcela náhodným písmenem a na tomto faktu je založen důkaz, že Vernamova šifra je v principu nerozluštitelná.
 - Rozepište rozdíl mezi proudovými a blokovými šiframi
   - Proudové šifry postupujú bit po bitu, operace XOR
     - Vernamova šifra  
@@ -103,4 +107,6 @@
   - R a G = 4 dostupné bity 
   - 1000x4 = 4000 dostupných bitov
 - Lze získat z HASHE zpátky vstupní data? Za předpokladu, že použijeme hashovací algoritmus SHA3-512? Vysvětlete.
-  - iba ak použijeme brute-force ináč nie
+  - nie
+  - iba ak použijeme brute-force, čo je velice neefektívne 
+  - SHA3-512 je jednosmerný
