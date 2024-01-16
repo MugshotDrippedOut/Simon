@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(
+    circle,
+    rgb(181, 218, 61) 0%,
+
+    rgb(151, 194, 203) 100%
+  );
+  font-family: "poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 5rem;
+}
+
+.content {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.content h2 {
+  font-size: 3rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 3rem;
+    padding: 10px 20px;
+  border-radius: 5px;
+}
+
+a:hover {
+  background: linear-gradient(to right, rgba(61, 99, 218, 1), rgba(214, 84, 207, 1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+footer {
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 20vw;
+  }
+
+}
