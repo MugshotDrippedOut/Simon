@@ -34,17 +34,37 @@ header h1 {
   font-size: 3rem;
 }
 
-a {
+#tic-tac-toe a {
   text-decoration: none;
   color: white;
   font-size: 3rem;
-    padding: 10px 20px;
+  padding: 10px 20px;
   border-radius: 5px;
 }
 
-a:hover {
-  background: linear-gradient(to right, rgba(61, 99, 218, 1), rgba(214, 84, 207, 1));
+#tic-tac-toe a:hover {
+  background: linear-gradient(
+    to right,
+    rgba(61, 99, 218, 1),
+    rgba(214, 84, 207, 1)
+  );
   -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#snake a {
+  text-decoration: none;
+  color: white;
+  font-size: 3rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+#snake a:hover {
+  background: linear-gradient(to right, #595f43, #8b966c);
+  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -58,5 +78,4 @@ footer {
   header h1 {
     font-size: 20vw;
   }
-
 }
