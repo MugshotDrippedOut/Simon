@@ -2,23 +2,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: white;
+  text-align: center;
 }
 
 body {
   background: radial-gradient(
     circle,
-    rgb(181, 218, 61) 0%,
+    rgb(181, 219, 57) 0%,
 
-    rgb(151, 194, 203) 100%
+    rgb(90, 189, 209) 100%
   );
   font-family: "poppins", sans-serif;
   overflow-x: hidden;
-}
-
-header {
-  color: white;
-  padding: 10px 0;
-  text-align: center;
 }
 
 header h1 {
@@ -26,15 +22,14 @@ header h1 {
 }
 
 .content {
-  text-align: center;
-  margin-top: 50px;
+  margin-top: 5rem;
 }
 
 .content h2 {
   font-size: 3rem;
 }
 
-#tic-tac-toe a {
+.sections a {
   text-decoration: none;
   color: white;
   font-size: 3rem;
@@ -51,14 +46,6 @@ header h1 {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-#snake a {
-  text-decoration: none;
-  color: white;
-  font-size: 3rem;
-  padding: 10px 20px;
-  border-radius: 5px;
 }
 
 #snake a:hover {
