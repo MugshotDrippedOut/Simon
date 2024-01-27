@@ -1,0 +1,41 @@
+Index: text.txt
+===================================================================
+--- text.txt    (revision 139)
++++ text.txt    (nonexistent)
+@@ -1 +0,0 @@
+-text
+\ No newline at end of file
+Index: text2.txt
+===================================================================
+--- text2.txt   (nonexistent)
++++ text2.txt   (revision 195)
+@@ -0,0 +1 @@
++novytext
+\ No newline at end of file
+Index: zdrazil_vit-log.log.txt
+===================================================================
+--- zdrazil_vit-log.log.txt     (nonexistent)
++++ zdrazil_vit-log.log.txt     (working copy)
+@@ -0,0 +1,21 @@
++Index: text.txt
++===================================================================
++--- text.txt    (revision 139)
+++++ text.txt    (nonexistent)
++@@ -1 +0,0 @@
++-text
++\ No newline at end of file
++Index: text2.txt
++===================================================================
++--- text2.txt   (nonexistent)
+++++ text2.txt   (revision 167)
++@@ -0,0 +1 @@
+++novytext
++\ No newline at end of file
++Index: zdrazil_vit-log.log.txt
++===================================================================
++--- zdrazil_vit-log.log.txt     (nonexistent)
+++++ zdrazil_vit-log.log.txt     (revision 191)
++@@ -0,0 +1 @@
+++log gile
++\ No newline at end of file
+\ No newline at end of file

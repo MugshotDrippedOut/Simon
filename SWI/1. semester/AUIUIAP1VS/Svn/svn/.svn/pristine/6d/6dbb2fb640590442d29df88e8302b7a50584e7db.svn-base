@@ -1,0 +1,9 @@
+Index: text2.txt
+===================================================================
+--- text2.txt	(revision 236)
++++ text2.txt	(working copy)
+@@ -1 +1 @@
+-Hej
+\ No newline at end of file
++Hej Hej
+\ No newline at end of file

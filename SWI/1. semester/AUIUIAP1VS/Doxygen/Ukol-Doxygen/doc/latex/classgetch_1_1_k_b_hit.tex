@@ -1,0 +1,84 @@
+\hypertarget{classgetch_1_1_k_b_hit}{}\doxysection{getch.\+KBHit Class Reference}
+\label{classgetch_1_1_k_b_hit}\index{getch.KBHit@{getch.KBHit}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classgetch_1_1_k_b_hit_a33edde464d1cd6cc7feb457f5748aeae}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classgetch_1_1_k_b_hit_a4fe051102f7088638da562d8b3a41e82}{set\+\_\+normal\+\_\+term}} (self)
+\item 
+def \mbox{\hyperlink{classgetch_1_1_k_b_hit_ac79ada9c8c5b31e5963ae9e2d7638d21}{getch}} (self)
+\item 
+def \mbox{\hyperlink{classgetch_1_1_k_b_hit_a15d7d462d199a30b49e48efeb45ad2b7}{getarrow}} (self)
+\item 
+def \mbox{\hyperlink{classgetch_1_1_k_b_hit_a1d039d07ac28f8bed935e6d7c8b16d2f}{kbhit}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classgetch_1_1_k_b_hit_a4783166b28e0f33f74a9debcf7417060}\label{classgetch_1_1_k_b_hit_a4783166b28e0f33f74a9debcf7417060}} 
+{\bfseries fd}
+\item 
+\mbox{\Hypertarget{classgetch_1_1_k_b_hit_ae018d8bc1d79a0cb49102acb3c8cfff5}\label{classgetch_1_1_k_b_hit_ae018d8bc1d79a0cb49102acb3c8cfff5}} 
+{\bfseries new\+\_\+term}
+\item 
+\mbox{\Hypertarget{classgetch_1_1_k_b_hit_ac2ae93e5a1a98548f89f5f818252947b}\label{classgetch_1_1_k_b_hit_ac2ae93e5a1a98548f89f5f818252947b}} 
+{\bfseries old\+\_\+term}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgetch_1_1_k_b_hit_a33edde464d1cd6cc7feb457f5748aeae}\label{classgetch_1_1_k_b_hit_a33edde464d1cd6cc7feb457f5748aeae}} 
+\index{getch.KBHit@{getch.KBHit}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!getch.KBHit@{getch.KBHit}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def getch.\+KBHit.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Creates a KBHit object that you can call to do various keyboard things.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgetch_1_1_k_b_hit_a15d7d462d199a30b49e48efeb45ad2b7}\label{classgetch_1_1_k_b_hit_a15d7d462d199a30b49e48efeb45ad2b7}} 
+\index{getch.KBHit@{getch.KBHit}!getarrow@{getarrow}}
+\index{getarrow@{getarrow}!getch.KBHit@{getch.KBHit}}
+\doxysubsubsection{\texorpdfstring{getarrow()}{getarrow()}}
+{\footnotesize\ttfamily def getch.\+KBHit.\+getarrow (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Returns an arrow-key code after kbhit() has been called. Codes are
+0 : up
+1 : right
+2 : down
+3 : left
+Should not be called in the same program as getch().
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classgetch_1_1_k_b_hit_ac79ada9c8c5b31e5963ae9e2d7638d21}\label{classgetch_1_1_k_b_hit_ac79ada9c8c5b31e5963ae9e2d7638d21}} 
+\index{getch.KBHit@{getch.KBHit}!getch@{getch}}
+\index{getch@{getch}!getch.KBHit@{getch.KBHit}}
+\doxysubsubsection{\texorpdfstring{getch()}{getch()}}
+{\footnotesize\ttfamily def getch.\+KBHit.\+getch (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Returns a keyboard character after kbhit() has been called.
+    Should not be called in the same program as getarrow().
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classgetch_1_1_k_b_hit_a1d039d07ac28f8bed935e6d7c8b16d2f}\label{classgetch_1_1_k_b_hit_a1d039d07ac28f8bed935e6d7c8b16d2f}} 
+\index{getch.KBHit@{getch.KBHit}!kbhit@{kbhit}}
+\index{kbhit@{kbhit}!getch.KBHit@{getch.KBHit}}
+\doxysubsubsection{\texorpdfstring{kbhit()}{kbhit()}}
+{\footnotesize\ttfamily def getch.\+KBHit.\+kbhit (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Returns True if keyboard character was hit, False otherwise.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classgetch_1_1_k_b_hit_a4fe051102f7088638da562d8b3a41e82}\label{classgetch_1_1_k_b_hit_a4fe051102f7088638da562d8b3a41e82}} 
+\index{getch.KBHit@{getch.KBHit}!set\_normal\_term@{set\_normal\_term}}
+\index{set\_normal\_term@{set\_normal\_term}!getch.KBHit@{getch.KBHit}}
+\doxysubsubsection{\texorpdfstring{set\_normal\_term()}{set\_normal\_term()}}
+{\footnotesize\ttfamily def getch.\+KBHit.\+set\+\_\+normal\+\_\+term (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Resets to normal terminal.  On Windows this is a no-op.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+getch.\+py\end{DoxyCompactItemize}

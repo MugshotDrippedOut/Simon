@@ -1,0 +1,9 @@
+Index: vyleta_libor/pozdrav.txt
+===================================================================
+--- vyleta_libor/pozdrav.txt	(revision 5)
++++ vyleta_libor/pozdrav.txt	(working copy)
+@@ -1 +1,2 @@
+-ahoj 
++ahoj
++1545
+\ No newline at end of file

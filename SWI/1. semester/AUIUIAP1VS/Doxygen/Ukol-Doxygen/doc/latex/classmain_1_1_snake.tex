@@ -1,0 +1,126 @@
+\hypertarget{classmain_1_1_snake}{}\doxysection{main.\+Snake Class Reference}
+\label{classmain_1_1_snake}\index{main.Snake@{main.Snake}}
+
+
+Hlavní část hry.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmain_1_1_snake_a188ede1ae7edb32380ccd091295abef9}\label{classmain_1_1_snake_a188ede1ae7edb32380ccd091295abef9}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, x, y)
+\item 
+\mbox{\Hypertarget{classmain_1_1_snake_aec170872efa1834546b2b61ecd1612b8}\label{classmain_1_1_snake_aec170872efa1834546b2b61ecd1612b8}} 
+def {\bfseries get\+\_\+opposites} (self)
+\item 
+def \mbox{\hyperlink{classmain_1_1_snake_a05f34c7a2c685c2768c5af35f5c9f711}{set\+\_\+skins}} (self)
+\begin{DoxyCompactList}\small\item\em This iterates each snake part, and based where the adjacent ones are, it gives it a skin between the following\+: │ ─ └ ┐ ┌ ┘ \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classmain_1_1_snake_a2ebe939761e6ecf8ccf75d4797c93569}{print\+\_\+in\+\_\+coords}} (self)
+\begin{DoxyCompactList}\small\item\em Prints the field of game with \textquotesingle{}·\textquotesingle{}, prints the snake body parts, prints the fruit (\textquotesingle{}X\textquotesingle{}) \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classmain_1_1_snake_a50de7b69fa94bbb447b92e56fb4961bb}{update\+\_\+coors}} (self)
+\begin{DoxyCompactList}\small\item\em Makes every part of the snake move to where the following was, except the head, that moves to the direction the user input. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classmain_1_1_snake_a4b78fce1e86838dbef042974faf78457}{check\+\_\+fruit}} (self)
+\begin{DoxyCompactList}\small\item\em Checks if the snake\textquotesingle{}s head is in the same place as the fruit, if so, the snake grows and another fruit is spawned. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classmain_1_1_snake_aa81eff4aacf994a053f157b5cecab937}{alive}} (self)
+\begin{DoxyCompactList}\small\item\em Check if the head hit a body part or has crossed the limits. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmain_1_1_snake_a9ee773b1fd6e79393ba330317e649ea5}\label{classmain_1_1_snake_a9ee773b1fd6e79393ba330317e649ea5}} 
+def {\bfseries get\+\_\+action} (self, character)
+\item 
+\mbox{\Hypertarget{classmain_1_1_snake_a5f18d225af7c4fbcf957539561ff3f56}\label{classmain_1_1_snake_a5f18d225af7c4fbcf957539561ff3f56}} 
+def {\bfseries generate\+\_\+fruit} (self)
+\item 
+\mbox{\Hypertarget{classmain_1_1_snake_a094f5af75b4d8ef329a60bb6758026ea}\label{classmain_1_1_snake_a094f5af75b4d8ef329a60bb6758026ea}} 
+def {\bfseries grow} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmain_1_1_snake_aa839275ca1066708bbab54bb5e2bbfef}\label{classmain_1_1_snake_aa839275ca1066708bbab54bb5e2bbfef}} 
+{\bfseries parts}
+\item 
+\mbox{\Hypertarget{classmain_1_1_snake_a8e23880675184787a08a55ef8a7f57bb}\label{classmain_1_1_snake_a8e23880675184787a08a55ef8a7f57bb}} 
+{\bfseries length}
+\item 
+\mbox{\Hypertarget{classmain_1_1_snake_ab417bd58758694044ddc8d43575d761e}\label{classmain_1_1_snake_ab417bd58758694044ddc8d43575d761e}} 
+{\bfseries dir}
+\item 
+\mbox{\Hypertarget{classmain_1_1_snake_ade39b80aaf51e261a2cd9b15131bfb68}\label{classmain_1_1_snake_ade39b80aaf51e261a2cd9b15131bfb68}} 
+{\bfseries skins}
+\item 
+\mbox{\Hypertarget{classmain_1_1_snake_a538af1e24f78ebbbe2daf86a5f5b9719}\label{classmain_1_1_snake_a538af1e24f78ebbbe2daf86a5f5b9719}} 
+{\bfseries fruit}
+\item 
+\mbox{\Hypertarget{classmain_1_1_snake_ac2b47cd3639eb204a1bf54f0ea606dd2}\label{classmain_1_1_snake_ac2b47cd3639eb204a1bf54f0ea606dd2}} 
+{\bfseries size}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Hlavní část hry. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & width of playground \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & hight of playground \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmain_1_1_snake_aa81eff4aacf994a053f157b5cecab937}\label{classmain_1_1_snake_aa81eff4aacf994a053f157b5cecab937}} 
+\index{main.Snake@{main.Snake}!alive@{alive}}
+\index{alive@{alive}!main.Snake@{main.Snake}}
+\doxysubsubsection{\texorpdfstring{alive()}{alive()}}
+{\footnotesize\ttfamily def main.\+Snake.\+alive (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Check if the head hit a body part or has crossed the limits. 
+
+\mbox{\Hypertarget{classmain_1_1_snake_a4b78fce1e86838dbef042974faf78457}\label{classmain_1_1_snake_a4b78fce1e86838dbef042974faf78457}} 
+\index{main.Snake@{main.Snake}!check\_fruit@{check\_fruit}}
+\index{check\_fruit@{check\_fruit}!main.Snake@{main.Snake}}
+\doxysubsubsection{\texorpdfstring{check\_fruit()}{check\_fruit()}}
+{\footnotesize\ttfamily def main.\+Snake.\+check\+\_\+fruit (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Checks if the snake\textquotesingle{}s head is in the same place as the fruit, if so, the snake grows and another fruit is spawned. 
+
+\mbox{\Hypertarget{classmain_1_1_snake_a2ebe939761e6ecf8ccf75d4797c93569}\label{classmain_1_1_snake_a2ebe939761e6ecf8ccf75d4797c93569}} 
+\index{main.Snake@{main.Snake}!print\_in\_coords@{print\_in\_coords}}
+\index{print\_in\_coords@{print\_in\_coords}!main.Snake@{main.Snake}}
+\doxysubsubsection{\texorpdfstring{print\_in\_coords()}{print\_in\_coords()}}
+{\footnotesize\ttfamily def main.\+Snake.\+print\+\_\+in\+\_\+coords (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Prints the field of game with \textquotesingle{}·\textquotesingle{}, prints the snake body parts, prints the fruit (\textquotesingle{}X\textquotesingle{}) 
+
+\mbox{\Hypertarget{classmain_1_1_snake_a05f34c7a2c685c2768c5af35f5c9f711}\label{classmain_1_1_snake_a05f34c7a2c685c2768c5af35f5c9f711}} 
+\index{main.Snake@{main.Snake}!set\_skins@{set\_skins}}
+\index{set\_skins@{set\_skins}!main.Snake@{main.Snake}}
+\doxysubsubsection{\texorpdfstring{set\_skins()}{set\_skins()}}
+{\footnotesize\ttfamily def main.\+Snake.\+set\+\_\+skins (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+This iterates each snake part, and based where the adjacent ones are, it gives it a skin between the following\+: │ ─ └ ┐ ┌ ┘ 
+
+\mbox{\Hypertarget{classmain_1_1_snake_a50de7b69fa94bbb447b92e56fb4961bb}\label{classmain_1_1_snake_a50de7b69fa94bbb447b92e56fb4961bb}} 
+\index{main.Snake@{main.Snake}!update\_coors@{update\_coors}}
+\index{update\_coors@{update\_coors}!main.Snake@{main.Snake}}
+\doxysubsubsection{\texorpdfstring{update\_coors()}{update\_coors()}}
+{\footnotesize\ttfamily def main.\+Snake.\+update\+\_\+coors (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Makes every part of the snake move to where the following was, except the head, that moves to the direction the user input. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+main.\+py\end{DoxyCompactItemize}

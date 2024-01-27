@@ -1,0 +1,1 @@
+Tohle je test commitu na svn server. Doufám, že tohle bude fungovat

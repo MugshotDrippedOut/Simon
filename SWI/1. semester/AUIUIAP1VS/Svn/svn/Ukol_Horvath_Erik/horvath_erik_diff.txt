@@ -1,0 +1,18 @@
+Index: Ukol_Horvath_Erik/RENAME1.txt
+===================================================================
+--- Ukol_Horvath_Erik/RENAME1.txt       (revision 219)
++++ Ukol_Horvath_Erik/RENAME1.txt       (.../RENAME1.txt)       (nonexistent)
+@@ -1,3 +0,0 @@
+-O
+-/|\
+- /\
+\ No newline at end of file
+Index: Ukol_Horvath_Erik
+===================================================================
+--- Ukol_Horvath_Erik   (nonexistent)
++++ Ukol_Horvath_Erik   (.../RENAME1.txt)       (revision 219)
+@@ -0,0 +1,3 @@
++O
++/|\
++ /\
+\ No newline at end of file
