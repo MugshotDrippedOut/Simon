@@ -1,0 +1,3 @@
+- Na konci bude certifikat CISCO ak budeme mať nad 70%
+- Na prvom pokuse pridáva pol boda ale iba k lepšej známke
+- stiahnut Cisco Packet Tracer v 4. ročníku
