@@ -1,0 +1,3 @@
+function akce() {
+    alert("Ahoj");
+}
