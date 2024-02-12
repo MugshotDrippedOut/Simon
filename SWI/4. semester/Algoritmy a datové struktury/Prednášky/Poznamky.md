@@ -63,3 +63,83 @@
 | Lineární seznam | O(1)                                   | O(1)                | O(N)                | O(N\*log<sub>2</sub>N)          |
 | Binárni strom   | O(log<sub>2</sub>N)                    | O(log<sub>2</sub>N) | O(log<sub>2</sub>N) | Vždy seřazen                    |
 | Hash tabulka    | O(1)                                   | O(1)až O(K)         | O(1) až O(K)        | Lze jen v kombinaci s jiným ADS |
+
+# Prednáška 12.2.
+
+- Je dobré si nakreslit obrázek
+- Je taktické používat enum - kompatibilný int
+
+### Príklad enum
+
+```C
+#include <stdio.h>
+
+typedef enum {SUDA,LICHA, TRETI=3, CTVRTA, PATA} t_Stavy;
+
+int main() {
+
+  t_Stavy stav= TRETI;
+  printf("stav=%d\n",stav);
+  for (int i=0;i<10; i++)
+    printf("i=%d\n",i);
+  return 0;
+}
+
+```
+
+### Príklad konečný automat
+
+Spracovanie dvoch stavov
+
+![alt](Images/SudaLicha.png)
+
+```C
+#include <stdio.h>
+
+typedef enum {SUDA,LICHA} t_Stavy;
+
+int main() {
+
+  t_Stavy stav= SUDA;
+  int znak;
+  znak=getchar();
+  while (znak!EOF){ /*EOF = -1 | preddefinovaná premenná*/
+    znak=getchar();
+  }
+  return 0
+}
+
+```
+
+Využite swich case
+
+```C
+#include <stdio.h>
+#include <ctype.h>
+
+typedef enum {SUDA,LICHA} t_Stavy;
+
+int main() {
+
+  t_Stavy stav= SUDA;
+  int znak;
+  znak=getchar();
+  while((znak=getchar())!=EOF)
+    printf("stav=%d, znak=%c, ASCII=%d\n ",stav,znak,znak)
+    swich (stav) {
+      case SUDA:
+        if (znak==’1’) {putchar(’L’); stav=LICHA;}
+        else if (znak==’0’) putchar(’S’);
+        else if (!isspace(znak)){puts("Error, neocakavane pismeno")}
+
+        break;
+      case LICHA:
+        if (znak==’1’) {putchar(’S’); stav=SUDA;}
+        else if (znak==’0’) putchar(’L’);
+        else if (!isspace(znak)){puts("Error, neocakavane pismeno")}
+        break;
+  }
+  return 0
+}
+
+```
