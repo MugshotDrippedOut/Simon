@@ -1,0 +1,5 @@
+if(EXISTS "C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 1/FSM_comment_remover-master/cmake-build-debug/tests/tests[1]_tests.cmake")
+  include("C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 1/FSM_comment_remover-master/cmake-build-debug/tests/tests[1]_tests.cmake")
+else()
+  add_test(tests_NOT_BUILT tests_NOT_BUILT)
+endif()

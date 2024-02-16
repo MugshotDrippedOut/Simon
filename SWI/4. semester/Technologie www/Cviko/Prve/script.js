@@ -1,3 +1,0 @@
-function akce() {
-    alert("Ahoj");
-}

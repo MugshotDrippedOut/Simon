@@ -36,3 +36,8 @@
   - mocnincy při základu 10 - přenosová rýchlosť
   - mocniny při základu 2 - přenosová kapacita
   - ![alt](Images/Binarni_predpony_IEC.png)
+
+# Prednáška 13.2.
+
+- 2.7 - 5.2
+[Počítačové síte](Počítačové%20sítě%2021.12.23.pdf)

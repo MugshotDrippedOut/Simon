@@ -1,0 +1,21 @@
+# ninja log v5
+2	102	7295360140294563	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	2f3b6daff7cf6de0
+2	102	7295360140294563	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 1/FSM_comment_remover-master/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	2f3b6daff7cf6de0
+103	5703	7295360196315162	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	23f20f9e52271f26
+103	5703	7295360196315162	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 1/FSM_comment_remover-master/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	23f20f9e52271f26
+5704	5778	7295360197079048	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	6c7060b9a43d729e
+5704	5778	7295360197079048	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 1/FSM_comment_remover-master/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	6c7060b9a43d729e
+5778	5854	7295360197819993	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	fcd026042b3e1319
+5778	5854	7295360197819993	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 1/FSM_comment_remover-master/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	fcd026042b3e1319
+5854	5937	7295360198654565	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	69a782a5cd2f2d73
+5854	5937	7295360198654565	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 1/FSM_comment_remover-master/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	69a782a5cd2f2d73
+5938	6015	7295360199441768	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	8c819983ae5d40ba
+5938	6015	7295360199441768	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 1/FSM_comment_remover-master/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	8c819983ae5d40ba
+6015	6090	7295360200195958	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	a6e380c24ed74286
+6015	6090	7295360200195958	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 1/FSM_comment_remover-master/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	a6e380c24ed74286
+6091	6166	7295360200958841	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	99481f39f72e7a88
+6091	6166	7295360200958841	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 1/FSM_comment_remover-master/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	99481f39f72e7a88
+6166	6265	7295360201954363	CMakeFiles/googletest-populate-complete	ef96a48b518b3a11
+6166	6265	7295360201954363	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	ef96a48b518b3a11
+6166	6265	7295360201954363	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 1/FSM_comment_remover-master/cmake-build-debug/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete	ef96a48b518b3a11
+6166	6265	7295360201954363	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 1/FSM_comment_remover-master/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	ef96a48b518b3a11

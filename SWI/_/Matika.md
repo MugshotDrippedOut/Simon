@@ -161,3 +161,6 @@ $Tn (x) =f (x_{0}) +\frac{f^{\prime} (x_{0}) }{1!} (x-x_{0}) ^{1}+\ldots\frac{f^
 </td>
 </tr>
 </table>
+
+
+![test.excalidraw.png](test.excalidraw.png)

@@ -35,7 +35,6 @@
   - Příčina: bug v Unixu, který vypnul vizuální i zvukové alarmy, následné nezpracované události byly převedeny na záložní systém, který po čase zkolaboval
 
 - Corrupted Blood (2005)
-
   - Wow, pouze 1 lokace
   - Nákaza šířící se z postavy na postavu, ale tato postava se mohla teleppo
 
@@ -55,6 +54,7 @@
   - produkují defekty (chyby, bugy) v programu
   - Pokud je defekt v kódu proveden, systém muže selhat
     - Omyl (lidský faktor)=> defekt (chyba, bug)=> |incident| =>selhání
+    - ![alt](omyl.excalidraw.png)
   - Príčiny softwarových defektu
     - Lidé sú omylní
     - Software a infrastruktura jsou složité
@@ -62,3 +62,79 @@
     - Menící se technologie
     - Mnoho systémových interakcí
     - Selhání zaviněné okolími podmínkami
+# 15.2
+- Root Cause (Kořenová příčina)
+  - Příčina vzniku chyby (prvotní omyl)
+  - řešením lze zabránit podobným selháním/defektum
+    - prevence
+  - Typické kořenové příčiny
+    -Nesrozumitelnost, neúplná specifikace, komunikace
+    - Myslel jsem...
+    - Nezkušenost
+    - Časový tlak
+
+- Statické vs Dynamické testování
+  - Statické
+    - Statická analýza - automatizované
+    - Revize - manuální
+  - Dynamické - vyžaduje spuštení
+    - Hledáme selhání
+
+- Kdy přestat s testováním?
+  - Nikdy, testování není nikdy dost
+  - musíte brát v úvahu rizika 
+    - Technický
+    - Bezpečnostní
+    - Obchodní
+  - Měli byste (vy nebo vedoucí projektu) brát v úvahu omezení
+    - Rozpočet
+    - Čas
+    - Termíny odevzdání
+
+- Přínos testování ?
+  - Včas -> odhalení defektů a prevence selhání
+  - Hodnotit -> kvalitu
+  - Pomoc s rozhodnutím
+    - Co/jak/proč ?
+  - Pochopení -> potřeby/uživatelé
+  - Regulatorní podmínky
+  - Ponaučení
+
+- Typické cíle testování
+  - Poskytnout iformace pro rozhodování
+  - Zvýšení duvěry v kvalitu
+  - Kontrola funkcionalit a očekávání všech zúčastněných stran
+  - Podpora a zpětná vazba pro QA
+  - Prevence
+
+- Cíle závisí na kontextu
+  - Kontext dle 
+    - SDLC -> Zvolený životní cyklus vývoje SW
+    - Konkurence
+  - SW pro jadrovou elektrárnu
+    - rizika, hledání selhání a defektu
+    - smluvní, právní, regulatorní požadavky
+    - dokumentace
+  - SW pro e-shop
+    - hledání selhání a defektu
+    - minimální dokumentace
+    - nefunkcionální testy - uživatelská přívětivost, zátěž, kompatibilita a další
+
+
+- Quality Assurance vs. Testování (Quality Control)
+  - QA
+    - Preventivní prístup
+    - Zavádení a zlepsování procesu
+    - Procesy pro kompletní vyvoj (včetne testováni)
+    - Cely tym
+  - Testováni
+    - Analyzuje aktuální stav/kvalitu
+    - "nápravny přístup"
+    - Lesson Learned -> informace pro opravu + QA
+
+- Testování vs. Ladëní (Debugging):
+  - Vazba na-> omyl/defekt/selháni
+  - Testování-> selhání a tím hledáni defektû
+    - tester
+  - Ladeni-> hledá priciny selháni a odstranit je
+    - vyvojár

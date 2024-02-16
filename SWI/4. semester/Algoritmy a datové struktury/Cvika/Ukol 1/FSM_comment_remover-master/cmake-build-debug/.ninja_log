@@ -1,0 +1,56 @@
+# ninja log v5
+7	128	7295360394744880	app/CMakeFiles/app.dir/main.c.obj	1859bee53f5d9cbd
+18	2315	7295364243257040	_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj	db61a59516a87f4c
+11	3604	7295364256090575	tests/CMakeFiles/tests.dir/tests.cpp.obj	ee6777f923d0daa6
+28	10262	7295364322514175	_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj	24c7515040f2107e
+26	2358	7295364348770493	_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj	db61a59516a87f4c
+17	3582	7295364360981145	tests/CMakeFiles/tests.dir/tests.cpp.obj	ee6777f923d0daa6
+34	10159	7295364426577268	_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj	24c7515040f2107e
+9	168	7295365115500715	src/CMakeFiles/io_functions.dir/FSM.c.obj	d5cb322a7f321724
+170	646	7295365120247801	lib/libio_functions.a	7209dba307582df9
+33	2274	7295365136566074	_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj	db61a59516a87f4c
+16	3314	7295365146912417	tests/CMakeFiles/tests.dir/tests.cpp.obj	ee6777f923d0daa6
+25	9357	7295365207159835	_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj	24c7515040f2107e
+9357	13151	7295365245320983	lib/libgtestd.a	420d92a1a3c626ac
+13151	13251	7295365246326356	lib/libgtest_maind.a	e447254ac8bb2c1f
+13251	18088	7295365294657245	bin/tests.exe	74d200b69960d467
+13251	18088	7295365294657245	tests/tests[1]_tests.cmake	74d200b69960d467
+13251	18088	7295365294657245	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 1/FSM_comment_remover-master/cmake-build-debug/tests/tests[1]_tests.cmake	74d200b69960d467
+7	1083	7297030708960087	src/CMakeFiles/io_functions.dir/FSM.c.obj	d5cb322a7f321724
+1084	1485	7297030713049145	lib/libio_functions.a	7209dba307582df9
+187	4463	7297030742840306	_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj	db61a59516a87f4c
+53	5619	7297030754332801	tests/CMakeFiles/tests.dir/tests.cpp.obj	ee6777f923d0daa6
+176	13526	7297030833208024	_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj	24c7515040f2107e
+13526	20476	7297030902850456	lib/libgtestd.a	420d92a1a3c626ac
+20476	20967	7297030907787244	lib/libgtest_maind.a	e447254ac8bb2c1f
+20967	32249	7297031020564033	bin/tests.exe	74d200b69960d467
+20967	32249	7297031020564033	tests/tests[1]_tests.cmake	74d200b69960d467
+20967	32249	7297031020564033	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 1/FSM_comment_remover-master/cmake-build-debug/tests/tests[1]_tests.cmake	74d200b69960d467
+6	169	7297031105454624	src/CMakeFiles/io_functions.dir/FSM.c.obj	d5cb322a7f321724
+19	193	7297031105695360	app/CMakeFiles/app.dir/main.c.obj	1859bee53f5d9cbd
+170	294	7297031106677906	lib/libio_functions.a	7209dba307582df9
+294	444	7297031108161659	bin/app.exe	f83a2afbfedc8c1a
+4	128	7297031185838658	src/CMakeFiles/io_functions.dir/FSM.c.obj	d5cb322a7f321724
+14	149	7297031185988302	app/CMakeFiles/app.dir/main.c.obj	1859bee53f5d9cbd
+129	241	7297031186950878	lib/libio_functions.a	7209dba307582df9
+241	387	7297031188362678	bin/app.exe	f83a2afbfedc8c1a
+9	777	7297314987226935	src/CMakeFiles/io_functions.dir/FSM.c.obj	d5cb322a7f321724
+777	1150	7297314990977705	lib/libio_functions.a	7209dba307582df9
+134	4302	7297315022281112	_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj	db61a59516a87f4c
+58	5701	7297315036416431	tests/CMakeFiles/tests.dir/tests.cpp.obj	ee6777f923d0daa6
+144	13062	7297315109923156	_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj	24c7515040f2107e
+13063	16084	7297315140318899	lib/libgtestd.a	420d92a1a3c626ac
+16084	16182	7297315141291843	lib/libgtest_maind.a	e447254ac8bb2c1f
+16182	20598	7297315185423342	bin/tests.exe	74d200b69960d467
+16182	20598	7297315185423342	tests/tests[1]_tests.cmake	74d200b69960d467
+16182	20598	7297315185423342	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 1/FSM_comment_remover-master/cmake-build-debug/tests/tests[1]_tests.cmake	74d200b69960d467
+12	218	7297372696232338	src/CMakeFiles/io_functions.dir/FSM.c.obj	d5cb322a7f321724
+219	448	7297372698631629	lib/libio_functions.a	7209dba307582df9
+46	2105	7297372715273498	_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj	db61a59516a87f4c
+21	3096	7297372725133136	tests/CMakeFiles/tests.dir/tests.cpp.obj	ee6777f923d0daa6
+33	8898	7297372782984995	_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj	24c7515040f2107e
+8898	11932	7297372813518018	lib/libgtestd.a	420d92a1a3c626ac
+11932	12023	7297372814448698	lib/libgtest_maind.a	e447254ac8bb2c1f
+12023	15930	7297372853493662	bin/tests.exe	74d200b69960d467
+12023	15930	7297372853493662	tests/tests[1]_tests.cmake	74d200b69960d467
+12023	15930	7297372853493662	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 1/FSM_comment_remover-master/cmake-build-debug/tests/tests[1]_tests.cmake	74d200b69960d467
