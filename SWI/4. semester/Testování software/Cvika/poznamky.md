@@ -54,7 +54,7 @@ Pro získání klasifikovaného zápočtu je potřeba splnit následující podm
   - Možné výstupní kroky (post-conditions)
     - nastavení, nejaké akce po skončení testu
     - Vyprázdnit pamět
-    - Smazat dočastné soubory
+     Smazat dočastné soubory
     - Export logu
   - Popis (stručná sumarizace, k čemu slouží)
   - Vstupní data
@@ -68,4 +68,5 @@ Pro získání klasifikovaného zápočtu je potřeba splnit následující podm
     - Verzi
 
 - Testovací případy je vhodné sdružovat do testovacích sad
+
   ![alt](testovaciSada.excalidraw.png)

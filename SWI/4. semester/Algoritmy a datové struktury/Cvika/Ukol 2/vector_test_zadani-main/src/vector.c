@@ -44,13 +44,32 @@ Vector_t *Vector_Create(size_t initial_size, size_t alloc_step)
 
 Vector_t *Vector_Copy(const Vector_t *const original)
 {
-  UNUSED(original);
-  return NULL;
+  Vector_t *copy = myMalloc(sizeof(&original));
+  if (copy == NULL){
+    return  NULL;
+  }
+
+  copy->size = original->size;
+  copy->alloc_step = original->alloc_step;
+  if(original->items==NULL){
+    return NULL;
+  }
+  copy->items = myMalloc(original->size*sizeof(Vector_DataType_t ));
+  copy->next = copy->items;
+  return copy;
+
+
 }
 
 void Vector_Clear(Vector_t *const vector)
 {
-  UNUSED(vector);
+  if(vector==NULL){
+    return;
+  }
+  myFree(vector->items);
+  vector->size = 0;
+  vector->items = NULL;
+  vector->next = NULL;
 }
 
 size_t Vector_Length(const Vector_t *const vector)
@@ -65,17 +84,26 @@ size_t Vector_Length(const Vector_t *const vector)
 
 bool Vector_At(const Vector_t *const vector, size_t position, Vector_DataType_t *const value)
 {
-  UNUSED(vector);
-  UNUSED(position);
-  UNUSED(value);
-  return false;
+  if(vector==NULL){
+    return false;
+  }
+  if(position>=Vector_Length(vector)){
+    return false;
+  }
+  *value = *(vector->items+position);
+  return true;
 }
 
 bool Vector_Remove(Vector_t *const vector, size_t position)
 {
-  UNUSED(vector);
-  UNUSED(position);
-  return false;
+  if(vector==NULL || position>=Vector_Length(vector)){
+    return false;
+  }
+  for(size_t i = position; i<Vector_Length(vector)-1; i++){
+    *(vector->items+i) = *(vector->items+i+1);
+  }
+  vector->next--;
+  return true;
 }
 
 size_t Vector_Append(Vector_t *vector, Vector_DataType_t value)
@@ -104,23 +132,37 @@ size_t Vector_Append(Vector_t *vector, Vector_DataType_t value)
 
 void Vector_Set(Vector_t *const vector, size_t position, Vector_DataType_t value)
 {
-  UNUSED(vector);
-  UNUSED(position);
-  UNUSED(value);
+
+  if(vector==NULL || position>= Vector_Length(vector)){
+    return;
+  }
+  *(vector->items+position) = value;
+
 }
 
 bool Vector_Contains(const Vector_t *const vector, Vector_DataType_t value)
 {
-  UNUSED(vector);
-  UNUSED(value);
+  if(vector==NULL){
+    return false;
+  }
+  for(size_t i = 0; i < Vector_Length(vector)-1; ++i) {
+    if(*(vector->items+i)==value){
+      return true;
+    }
+  }
   return false;
 }
 
 size_t Vector_IndexOf(const Vector_t *const vector, Vector_DataType_t value, size_t from)
 {
-  UNUSED(vector);
-  UNUSED(value);
-  UNUSED(from);
+  if(vector==NULL){
+    return SIZE_MAX;
+  }
+  for (size_t i = from; i < Vector_Length(vector)-1; ++i) {
+    if(*(vector->items+i)==value) {
+      return i;
+    }
+  }
   return SIZE_MAX;
 }
 
@@ -129,15 +171,33 @@ void Vector_Fill(const Vector_t *const vector,
                  size_t start_position,
                  size_t end_position)
 {
-  UNUSED(vector);
-  UNUSED(value);
-  UNUSED(start_position);
-  UNUSED(end_position);
+  if(vector==NULL){
+    return;
+  }
+  if(start_position>end_position){
+    return;
+  }
+  if(start_position>= Vector_Length(vector)){
+    return;
+  }
+  if(end_position>= Vector_Length(vector)){
+    end_position= Vector_Length(vector);
+  }
+  for (size_t i = start_position; i < end_position+1; ++i) {
+
+    *(vector->items+i) = value;
+  }
 }
 
 void Vector_Destroy(Vector_t **const vector)
 {
   UNUSED(vector);
+  if(*vector==NULL){
+    return;
+  }
+  myFree((*vector)->items);
+  myFree(*vector);
+  *vector = NULL;
 }
 
 /* Private function definitions ------------------------------------------------------------------*/

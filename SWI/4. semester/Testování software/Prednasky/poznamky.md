@@ -35,6 +35,7 @@
   - Příčina: bug v Unixu, který vypnul vizuální i zvukové alarmy, následné nezpracované události byly převedeny na záložní systém, který po čase zkolaboval
 
 - Corrupted Blood (2005)
+
   - Wow, pouze 1 lokace
   - Nákaza šířící se z postavy na postavu, ale tato postava se mohla teleppo
 
@@ -62,8 +63,11 @@
     - Menící se technologie
     - Mnoho systémových interakcí
     - Selhání zaviněné okolími podmínkami
+
 # 15.2
+
 - Root Cause (Kořenová příčina)
+
   - Příčina vzniku chyby (prvotní omyl)
   - řešením lze zabránit podobným selháním/defektum
     - prevence
@@ -74,6 +78,7 @@
     - Časový tlak
 
 - Statické vs Dynamické testování
+
   - Statické
     - Statická analýza - automatizované
     - Revize - manuální
@@ -81,8 +86,9 @@
     - Hledáme selhání
 
 - Kdy přestat s testováním?
+
   - Nikdy, testování není nikdy dost
-  - musíte brát v úvahu rizika 
+  - musíte brát v úvahu rizika
     - Technický
     - Bezpečnostní
     - Obchodní
@@ -92,6 +98,7 @@
     - Termíny odevzdání
 
 - Přínos testování ?
+
   - Včas -> odhalení defektů a prevence selhání
   - Hodnotit -> kvalitu
   - Pomoc s rozhodnutím
@@ -101,6 +108,7 @@
   - Ponaučení
 
 - Typické cíle testování
+
   - Poskytnout iformace pro rozhodování
   - Zvýšení duvěry v kvalitu
   - Kontrola funkcionalit a očekávání všech zúčastněných stran
@@ -108,7 +116,8 @@
   - Prevence
 
 - Cíle závisí na kontextu
-  - Kontext dle 
+
+  - Kontext dle
     - SDLC -> Zvolený životní cyklus vývoje SW
     - Konkurence
   - SW pro jadrovou elektrárnu
@@ -120,8 +129,8 @@
     - minimální dokumentace
     - nefunkcionální testy - uživatelská přívětivost, zátěž, kompatibilita a další
 
-
 - Quality Assurance vs. Testování (Quality Control)
+
   - QA
     - Preventivní prístup
     - Zavádení a zlepsování procesu
@@ -138,3 +147,44 @@
     - tester
   - Ladeni-> hledá priciny selháni a odstranit je
     - vyvojár
+
+# 22.2
+
+## Princípy testování
+
+- Princip 1. - Testování poukazuje na přítomnost defektu
+  - nikoliv na jejich nepřítomnost
+  - nedokáže nepřítomnost
+  - Snižuje pravděpodobnost výskytu
+  - žadné defekty nalezeny neznamená, že defekty nie sú
+- Princíp 2. - Kompletní testování není možné
+  - Vše otestovat nejde -> myslíme opravdu vše
+  - co testovat první
+- Princíp 3. - Včasné testování šetři čas a peníze
+  - chyba nalezená ve specifikaci / na produkci
+  - čím dřív -> lépe
+    - statistické testování
+    - Vývojář -> Unit testy
+- Princíp 4. - Shlukování defektu
+  - Paretovo pravidlo -> 80:20 (80% problémú je v 20% kódu)
+  - Faktory
+    - Období
+    - Vývojář
+    - Část aplikace
+    - Technologie
+- Princip 5. - Testy se opotřebovávají
+  - Stejné testy neodhalí nové chyby
+  - regresní testy (konfirmační testy)
+  - Změny v SW => změny v testech
+    - Testy
+    - Data
+    - Přidání/modifikace/odebírání
+- Princíp 6. - Testování je závislé na kontextu
+  - Každou věc testujeme jinak
+- Princíp 7. - Nepřítomnost defektu je klam
+  - Business cíle zákazníky nejsou naplněny
+  - Praktické využití
+  - Očekávání
+  - Subjektivní kvalita
+  - Konkurence
+  - "Použitelnost"
