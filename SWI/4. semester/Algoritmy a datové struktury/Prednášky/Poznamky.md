@@ -69,7 +69,7 @@
 - Je dobré si nakreslit obrázek
 - Je taktické používat enum - kompatibilný int
 
-### Príklad enum
+## Príklad enum
 
 ```C
 #include <stdio.h>
@@ -87,7 +87,7 @@ int main() {
 
 ```
 
-### Príklad konečný automat
+## Príklad konečný automat
 
 Spracovanie dvoch stavov
 
@@ -142,4 +142,34 @@ int main() {
   return 0
 }
 
+```
+# Prednáška 19.2.
+
+## Datové struktury 
+  - Jeden ze základních stavebních prvku
+  - Delení
+    - Lineární
+      - Vector 
+      - Halda
+      - List
+      - Frnta
+    - Nelineární
+      - Strom
+      - Graf
+## Vektor
+  - Dynamické pole
+  - Lineární datová struktura
+  - schopnost zvětšovat/zmenšovat svoji velikost během běhu programu
+  
+- Segfault
+```C
+#include <stdio.h>
+int main(){
+  int* ptr = NULL;
+  printf("%d\n", *ptr);
+  return 0;
+} // Spôsobí chybu
+```
+```C
+if ()
 ```

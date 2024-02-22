@@ -38,13 +38,19 @@ void FSM_RemoveNotes(FILE* input, FILE* output) {
     // /*
     // */
     // \n
+  /* fputc => insetrs character */
+
 
   enum {
     STATE_DEFAULT, 
-    STATE_SLASH, /* Ceck for / */
-    STATE_COMMENT, /* */
-    STATE_STAR, /* Check for * */
-    STATE_END /* Check for end of comment */
+    STATE_SLASH,
+    STATE_SINGLE_LINE_COMMENT,
+    STATE_MULTI_LINE_COMMENT,
+    STATE_POSSIBLE_END_MULTI_LINE_COMMENT,
+    STATE_DOUBLE_QUOTE,
+    STATE_SINGLE_QUOTE,
+    STATE_ESCAPE_SEQUENCE_DOUBLE_QUOTE,
+    STATE_ESCAPE_SEQUENCE_SINGLE_QUOTE
   } state = STATE_DEFAULT;
   
   int ch;
@@ -52,30 +58,73 @@ void FSM_RemoveNotes(FILE* input, FILE* output) {
   while((ch = fgetc(input)) != EOF) {
     switch (state) {
       case STATE_DEFAULT:
-        if (ch == '/') {
+        if(ch == '/') {
           state = STATE_SLASH;
-        } else {
+        } else if(ch == '"') { 
+          state = STATE_DOUBLE_QUOTE;
+          fputc(ch, output);
+        } else if(ch == '\'') { 
+          state = STATE_SINGLE_QUOTE;
+          fputc(ch, output);
+        } else { 
           fputc(ch, output);
         }
         break;
       case STATE_SLASH:
-        if (ch == '/') {
-          state = STATE_COMMENT;
-        } else if (ch == '*') {
-          state = STATE_STAR;
-        } else {
-          fputc('/', output);
+        if(ch == '/') {
+          state = STATE_SINGLE_LINE_COMMENT;
+        } else if(ch == '*') {
+          state = STATE_MULTI_LINE_COMMENT;
+        } else { 
+          fputc('/', output); 
           fputc(ch, output);
           state = STATE_DEFAULT;
         }
         break;
-      case STATE_COMMENT:
-        if (ch == ''
-    }
-
+      case STATE_SINGLE_LINE_COMMENT:
+        if(ch == '\n') {
+          fputc(ch, output);
+          state = STATE_DEFAULT;
+        }
+        break;
+      case STATE_MULTI_LINE_COMMENT:
+        if(ch == '*') {
+          state = STATE_POSSIBLE_END_MULTI_LINE_COMMENT;
+        }
+        break;
+      case STATE_POSSIBLE_END_MULTI_LINE_COMMENT:
+        if(ch == '/') { 
+          state = STATE_DEFAULT;
+        } else if(ch != '*') {
+          state = STATE_MULTI_LINE_COMMENT;
+        }
+        break;
+      case STATE_DOUBLE_QUOTE:
+          fputc(ch, output);
+          if(ch == '\\') {
+              state = STATE_ESCAPE_SEQUENCE_DOUBLE_QUOTE;
+          } else if(ch == '"') {
+              state = STATE_DEFAULT;
+          }
+          break;
+      case STATE_ESCAPE_SEQUENCE_DOUBLE_QUOTE:
+          fputc(ch, output);
+          state = STATE_DOUBLE_QUOTE;
+          break;
+      case STATE_SINGLE_QUOTE:
+          fputc(ch, output);
+          if(ch == '\\') {
+              state = STATE_ESCAPE_SEQUENCE_SINGLE_QUOTE;
+          } else if(ch == '\'') {
+              state = STATE_DEFAULT;
+          }
+          break;
+      case STATE_ESCAPE_SEQUENCE_SINGLE_QUOTE:
+          fputc(ch, output);
+          state = STATE_SINGLE_QUOTE;
+          break;
+          }
   }
-
-
 
 }
 

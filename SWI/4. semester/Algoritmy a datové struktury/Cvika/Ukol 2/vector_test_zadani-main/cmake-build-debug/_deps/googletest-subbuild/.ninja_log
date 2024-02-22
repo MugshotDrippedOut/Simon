@@ -1,0 +1,21 @@
+# ninja log v5
+1	85	7301392158674928	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	47411f83e11d9385
+1	85	7301392158674928	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 2/vector_test_zadani-main/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	47411f83e11d9385
+86	5069	7301392208508409	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	8f58d7f482f04c11
+86	5069	7301392208508409	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 2/vector_test_zadani-main/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	8f58d7f482f04c11
+5072	5160	7301392209413628	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	b6a291af4286eb15
+5072	5160	7301392209413628	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 2/vector_test_zadani-main/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	b6a291af4286eb15
+5160	5248	7301392210300806	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	e42bf8c86afd3437
+5160	5248	7301392210300806	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 2/vector_test_zadani-main/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	e42bf8c86afd3437
+5248	5337	7301392211184370	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	dd4c3e190daf0d2c
+5248	5337	7301392211184370	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 2/vector_test_zadani-main/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	dd4c3e190daf0d2c
+5337	5427	7301392212086423	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	944c1bf2158819f0
+5337	5427	7301392212086423	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 2/vector_test_zadani-main/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	944c1bf2158819f0
+5428	5517	7301392212985508	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	7ddf1648e178a41b
+5428	5517	7301392212985508	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 2/vector_test_zadani-main/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	7ddf1648e178a41b
+5517	5604	7301392213857497	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	1597cb1c0a0368fc
+5517	5604	7301392213857497	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 2/vector_test_zadani-main/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	1597cb1c0a0368fc
+5605	5711	7301392214941004	CMakeFiles/googletest-populate-complete	bd611f9efc64f852
+5605	5711	7301392214941004	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	bd611f9efc64f852
+5605	5711	7301392214941004	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 2/vector_test_zadani-main/cmake-build-debug/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete	bd611f9efc64f852
+5605	5711	7301392214941004	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 2/vector_test_zadani-main/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	bd611f9efc64f852

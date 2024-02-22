@@ -9,3 +9,10 @@
 - Potenciálne firmy
     - Armáda 6. republiky
     - monet
+
+# 19.2. KroupALidé GenAI a právo
+- Co je GenAI
+
+
+- Ďalšie bude edHouse
+- Potom nejaký plukovník

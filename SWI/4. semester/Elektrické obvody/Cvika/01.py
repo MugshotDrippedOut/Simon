@@ -45,31 +45,31 @@ meranie5 = {
 
 meranie6 = {
     "Uv": 20,
-    "Ia": 0.000042,
+    "Ia": 0.00042,
     "Ra": 226,
 }
 
 meranie7 = {
     "Uv": 16,
-    "Ia": 0.000034,
+    "Ia": 0.00034,
     "Ra": 226,
 }
 
 meranie8 = {
     "Uv": 12,
-    "Ia": 0.000025,
+    "Ia": 0.00025,
     "Ra": 658,
 }
 
 meranie9 = {
     "Uv": 8,
-    "Ia": 0.0000165,
+    "Ia": 0.000165,
     "Ra": 658,
 }
 
 meranie10 = {
     "Uv": 4,
-    "Ia": 0.0000083,
+    "Ia": 0.000083,
     "Ra": 3130,
 }
 
@@ -110,31 +110,31 @@ meranie15 = {
 
 meranie16 = {
     "Uv": 20,
-    "Ia": 0.000042,
+    "Ia": 0.00042,
     "Rv": 1580000,
 }
 
 meranie17 = {
     "Uv": 16,
-    "Ia": 0.000034,
+    "Ia": 0.00034,
     "Rv": 1580000,
 }
 
 meranie18 = {
     "Uv": 12,
-    "Ia": 0.000025,
+    "Ia": 0.00025,
     "Rv": 1580000,
 }
 
 meranie19 = {
     "Uv": 8,
-    "Ia": 0.0000165,
+    "Ia": 0.000165,
     "Rv": 500000,
 }
 
 meranie20 = {
     "Uv": 4,
-    "Ia": 0.0000083,
+    "Ia": 0.000083,
     "Rv": 500000,
 }
 
@@ -150,10 +150,9 @@ def vypocet_odporu(meranie):
     if "Rv" in meranie:
         Rxx = round((meranie["Uv"]/meranie["Ia"]),2)
         Rx = round((Rxx*meranie["Rv"])/(meranie["Rv"]-Rxx),2)
-        print((Rxx*meranie["Rv"]), (meranie["Rv"]-Rxx))
         P = round((meranie["Uv"]*meranie["Ia"]),5)
         chyba = round(100-((Rxx/Rx)*100),5)
-        return Rxx, Rx, P, chyba
+        return meranie["Uv"],meranie["Ia"], Rxx, Rx, P, chyba
     
     if "Rv" not in meranie:
         Ra = meranie["Ra"]
@@ -161,14 +160,14 @@ def vypocet_odporu(meranie):
         Raa = round((Rxx-Ra),2)
         P = round((meranie["Uv"]*meranie["Ia"]),5)
         chyba = round(100-((Raa/Rxx)*100),3)
-        return Rxx, Raa, P, chyba
+        return meranie["Uv"],meranie["Ia"], Rxx, Raa, P, chyba
 
 def vypis_merania(merania):
     for meranie in vsetky_merania:
         print(f"Meranie: {merania.index(meranie)+1}")
         for i in meranie:
-            Rxx, Rx, P, chyba = vypocet_odporu(i)
-            print(f"R'x: {Rxx} Ohm", f"     Rx: {Rx} Ohm", f"       P: {P} W", f"       Chyba: {chyba}%")
+            Uv,Ia,Rxx, Rx, P, chyba = vypocet_odporu(i)
+            print(f"Uv: {Uv}",f"    Ia: {Ia}",f"     R'x: {Rxx} Ohm", f"     Rx: {Rx} Ohm", f"       P: {P} W", f"       Chyba: {chyba}%")
         print("\n\n")
 
 

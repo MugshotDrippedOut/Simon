@@ -25,4 +25,47 @@ Pro získání klasifikovaného zápočtu je potřeba splnit následující podm
 
 # Cviko 15.2
 
-[krakovany.sk](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwj3_L7Cva2EAxUo3wIHHTyCAF4QFnoECBIQAQ&url=https%3A%2F%2Fwww.krakovany.sk%2F&usg=AOvVaw3STrm75z8TWCEdQbPir6TG&opi=89978449)
+<span style="color:red"><b>[krakovany.sk](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwj3_L7Cva2EAxUo3wIHHTyCAF4QFnoECBIQAQ&url=https%3A%2F%2Fwww.krakovany.sk%2F&usg=AOvVaw3STrm75z8TWCEdQbPir6TG&opi=89978449)
+</b></span>
+
+# Cviko 22.2
+
+- Nainštaloval som robot framework
+
+  - pip install robotframework
+
+- Test case je nedílnou součástí testování -> základní stavebni prvek testu
+
+- Testovací případ
+
+  - muže byt jeden krok až tsíce
+  - sdružuje se do testovacích sad (Test Suite)
+  - Obsahuje testovací kroky (Test Step)
+    - mali by na seba navazovat (krok po kroku)
+  - Musí vždy obsahovat očekávaný výsledek
+    - Muže být pro jednotlivé kroky -> spojení pak celý TC (Test case)
+
+- Testovací případ obsahuje
+
+  - Název + ID
+  - Očekávaný výsledek
+  - Testovací kroky
+  - Možné nastavení před začátkem testu spuštení testu (pre-conditions)
+  - Možné výstupní kroky (post-conditions)
+    - nastavení, nejaké akce po skončení testu
+    - Vyprázdnit pamět
+    - Smazat dočastné soubory
+    - Export logu
+  - Popis (stručná sumarizace, k čemu slouží)
+  - Vstupní data
+    - cokoliv čo vstupuje do testú
+    - napr. kontrolovaný text, šablony obrázku
+  - Dále muže obsahovat
+    - Prioritu spuštení
+    - Datum vytvoření, autora
+    - Odhadovaný čas doby spuštení
+    - Manuální/automatizovyný
+    - Verzi
+
+- Testovací případy je vhodné sdružovat do testovacích sad
+  ![alt](testovaciSada.excalidraw.png)
