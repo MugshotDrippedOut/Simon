@@ -1,0 +1,8 @@
+01 - Testování kalkulaèky
+	001 - Operace sèítání
+		S0001 - Sèítání dvou kladnıch èísel
+		S0002 - Sèítání jednoho kladného a jednoho záporného èísla
+		S0003 - Sèítání dvou zápornıch èísel
+	002 - Operace odeèítání
+		O_0001 - Odeèítání
+		O_0002 - ....

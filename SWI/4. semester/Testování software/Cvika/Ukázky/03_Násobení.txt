@@ -1,0 +1,27 @@
+Id -> 03
+Název -> Násobení
+
+Struèný popis -> Testovací pøípad testující funkcionalitu násobení kalkulaèky Windows 10 v režimu - Programátorská
+
+Pre-conditions -> 
+	1. Windows 10 - [Version 10.0.17134.81]
+	2. Kalkulaèka je otevøena v režimu - Programatorská
+	3. Pokud byla kalkulaèka otevøená, je vhodné ji zavøít a otevøít.
+	4. Verze aplikace kalkulaèka -> 10.1805.1201.0
+	5. (myš, klávesnice, obrazovka)
+
+Testovací kroky:
+	1. Zadáme èíslo 2 pomocí myši -> V patøièném místì (zobrazovací panel) se zobrazí místo hodnoty 0 hodnota 2 a zárovìò hodnoty HEX = 2, DEC = 2, OCT = 2 a BIN = 0010
+	2. Pomocí myši klikneme na tlaèítko reprezentující násobení (viz specifikace ...) -> V panelu nad zobrazením výsledku se ukáže naznaèení aktuální operace ("2 x ")
+	3. Pomocí myši zadáme druhé èíslo - 5 -> Hodnota 2 se pøepíše na všech místech (HEX, OCT, BIN, DEC) a v panelu nad výsledkem se zobrazí 2 x 5
+	4. Pomocí myší klikneme na tlaèítko "=", které provede výpoèet -> Na obrazovce se èíslo 5 zmìni na hodnotu A, stejnì tak na všech místech -> HEX = A, DEC = 10, OCT = 12 a BIN = 1010
+
+Vstupní data:
+	1. èísla 2 a 5
+	2. Funkce násobení a "="
+	3. Myš, klávesnice, lidská ruka ....
+
+Specifikace -> viz manuál ....
+
+Verze TC -> 0.0.0.0.0.0.0.0.1f
+

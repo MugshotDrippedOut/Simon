@@ -1,0 +1,22 @@
+ID -> TS011
+Název -> Odeèítání
+Popis -> Testovací sad, která testuje funkcionalitu odeèítání a zahrnuje positivní i negativní testy. Testuje i odeèítání kladných i záporných èísel. 2 a více. V nastavení programátorská.
+Pre-conditions -> 
+	1. Windows 10 - [Version 10.0.17134.81]
+	2. Kalkulaèka je otevøena v režimu - Programatorská
+	3. Pokud byla kalkulaèka otevøená, je vhodné ji zavøít a otevøít.
+	4. Verze aplikace kalkulaèka -> 10.1805.1201.0
+	5. (myš, klávesnice, obrazovka)
+
+Vstupní data:
+	Validní:
+	1. kladná a záporná èísla (pøirozená, celá, reálná)
+	2. HEX, DEC, OCT, BIN
+	3. Klávesnice + myš
+	4. Operace "=" + "-"
+	Nevalidní
+	1. nevalidní poøadí operací -> 3 ---3
+	2. Nevalidní vstup -> prázdný, string, apod.
+
+Post-conditions
+	1. Pro každý testovací pøípad platí, že se po jeho provedení aplikace zavøe.
