@@ -48,7 +48,6 @@ Vector_t *Vector_Copy(const Vector_t *const original)
   if (copy == NULL){
     return  NULL;
   }
-
   copy->size = original->size;
   copy->alloc_step = original->alloc_step;
   if(original->items==NULL){

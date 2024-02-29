@@ -131,8 +131,8 @@ int main() {
         if (znak==’1’) {putchar(’L’); stav=LICHA;}
         else if (znak==’0’) putchar(’S’);
         else if (!isspace(znak)){puts("Error, neocakavane pismeno")}
-
         break;
+
       case LICHA:
         if (znak==’1’) {putchar(’S’); stav=SUDA;}
         else if (znak==’0’) putchar(’L’);
@@ -143,25 +143,30 @@ int main() {
 }
 
 ```
+
 # Prednáška 19.2.
 
-## Datové struktury 
-  - Jeden ze základních stavebních prvku
-  - Delení
-    - Lineární
-      - Vector 
-      - Halda
-      - List
-      - Frnta
-    - Nelineární
-      - Strom
-      - Graf
+## Datové struktury
+
+- Jeden ze základních stavebních prvku
+- Delení
+  - Lineární
+    - Vector
+    - Halda
+    - List
+    - Frnta
+  - Nelineární
+    - Strom
+    - Graf
+
 ## Vektor
-  - Dynamické pole
-  - Lineární datová struktura
-  - schopnost zvětšovat/zmenšovat svoji velikost během běhu programu
-  
+
+- Dynamické pole
+- Lineární datová struktura
+- schopnost zvětšovat/zmenšovat svoji velikost během běhu programu
+
 - Segfault
+
 ```C
 #include <stdio.h>
 int main(){
@@ -170,6 +175,114 @@ int main(){
   return 0;
 } // Spôsobí chybu
 ```
+
+# Prednáška 26.2.
+
 ```C
-if ()
+/*
+Príklad alokovania pamäte
+*/
+#include <stdio.h>
+#include <stdlib.h>
+
+int gpole[1000000]; // Fuj, globálne nechceme, spomaluju
+
+int pocitej (int velikost){
+  char * lokPole = malloc(velikost); // Dobŕe používať, ale treba na konci uvolniť
+  puts("vypocitano OK..");
+  for(int i=0;i<velikost>;i++){
+    lokPole[i]=i;
+  }
+  getchar();
+  getchar();
+  free(lokPole)
+  return 0;
+  // Lokálna pamäť je super, len má limit 2Mb
+}
+
+int main(){
+  printf("Kolik potrebujes dat? \n");
+  int velikost;
+  int status = scanf("%d,velikost");
+  char pole[velikost];
+
+  puts("Done");
+  picitej(velikost);
+  puts("Funkce skoncila Ok..");
+
+  getchar();
+  getchar();
+
+  return 0;
+}
+```
+
+- ADT Lineární seznam
+
+```C
+typedef struct _ListNode {
+  tData data;
+  struct _ListNode * next; // Ukazatel má typ ktorý práve vzniká => _ListNode
+} ListNode
+
+typedef struct {
+  ListNode * first;
+  ListNode * active;
+} List;
+```
+
+```C
+/*
+Testování assertem
+*/
+#include <stdio.h>
+#include <stdlib.h>
+#include <assert.h>
+
+
+int pocitej (int velikost){
+  char * lokPole = malloc(velikost);
+  assert(lokPole!=NULL); // zhodí aplikaci, nemalo by sa moc abusovat lebo znićí progress
+  puts("vypocitano OK..");
+  for(int i=0;i<velikost>;i++){
+    lokPole[i]=i;
+  }
+  free(lokPole)
+  return 0;
+
+}
+int main(){
+  return 0;
+}
+```
+
+- Po vložení prvku do seznamu bude seznam vypadat v paměti takto:
+
+  ![alt](Images/ADTList.png)
+
+- Příklad sady metod pro práci s lineárním seznam
+
+```C
+void list_init(List * list);
+// Provede inicializaci seznamu před jeho prvním použitím
+void list_insert_first(List * list, tData data);
+// Vloží prvek na začátek seznamu.
+void list_seek_first(List * list);
+// Nastaví aktivitu seznamu na první prvek.
+tData list_get_first_data(List * list);
+// Vrátí hodnotu prvního prvku. Pokud je seznam prázdný, volá proceduru Error.
+void list_delete_first(List * list);
+// Maže 1. prvek. Pokud byl aktivní, aktivita se ztrácí. Pokud byl seznam prázdný, nedělá nic.
+void list_delete_next(List * list);
+// Maže první prvek seznamu za aktivním prvkem. Pokud nebyl seznam aktivní, nic se neděje.
+void list_insert_next(List * list, tData data);
+// Vloží prvek za aktivní. Pokud nebyl seznam aktivní, nic se neděje
+tData list_get_next_data(List * list);
+// Vrátí hodnotu aktivního prvku. Pokud seznam není aktivní, volá se procedura Error.
+void list_set_active_data(List* list, tData data);
+// přepíše obsah aktivní položky.  Pokud není žádná položka aktivní, nedělá nic.
+void list_next(List * list);
+// posune aktivitu na následující prvek seznamu.
+bool list_is_active(List * list);
+// Je-li seznam aktivní, vrací True.  V opačném případě vrací false.
 ```

@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datov\u00e9 struktury/Cvika/Ukol 3/DTMF_generator-master/cmake-build-debug/_deps/mymalloc-subbuild/CMakeFiles/mymalloc-populate"
+		},
+		{
+			"file" : "C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datov\u00e9 struktury/Cvika/Ukol 3/DTMF_generator-master/cmake-build-debug/_deps/mymalloc-subbuild/CMakeFiles/mymalloc-populate.rule"
+		},
+		{
+			"file" : "C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datov\u00e9 struktury/Cvika/Ukol 3/DTMF_generator-master/cmake-build-debug/_deps/mymalloc-subbuild/CMakeFiles/mymalloc-populate-complete.rule"
+		},
+		{
+			"file" : "C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datov\u00e9 struktury/Cvika/Ukol 3/DTMF_generator-master/cmake-build-debug/_deps/mymalloc-subbuild/mymalloc-populate-prefix/src/mymalloc-populate-stamp/mymalloc-populate-build.rule"
+		},
+		{
+			"file" : "C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datov\u00e9 struktury/Cvika/Ukol 3/DTMF_generator-master/cmake-build-debug/_deps/mymalloc-subbuild/mymalloc-populate-prefix/src/mymalloc-populate-stamp/mymalloc-populate-configure.rule"
+		},
+		{
+			"file" : "C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datov\u00e9 struktury/Cvika/Ukol 3/DTMF_generator-master/cmake-build-debug/_deps/mymalloc-subbuild/mymalloc-populate-prefix/src/mymalloc-populate-stamp/mymalloc-populate-download.rule"
+		},
+		{
+			"file" : "C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datov\u00e9 struktury/Cvika/Ukol 3/DTMF_generator-master/cmake-build-debug/_deps/mymalloc-subbuild/mymalloc-populate-prefix/src/mymalloc-populate-stamp/mymalloc-populate-install.rule"
+		},
+		{
+			"file" : "C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datov\u00e9 struktury/Cvika/Ukol 3/DTMF_generator-master/cmake-build-debug/_deps/mymalloc-subbuild/mymalloc-populate-prefix/src/mymalloc-populate-stamp/mymalloc-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datov\u00e9 struktury/Cvika/Ukol 3/DTMF_generator-master/cmake-build-debug/_deps/mymalloc-subbuild/mymalloc-populate-prefix/src/mymalloc-populate-stamp/mymalloc-populate-patch.rule"
+		},
+		{
+			"file" : "C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datov\u00e9 struktury/Cvika/Ukol 3/DTMF_generator-master/cmake-build-debug/_deps/mymalloc-subbuild/mymalloc-populate-prefix/src/mymalloc-populate-stamp/mymalloc-populate-test.rule"
+		},
+		{
+			"file" : "C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datov\u00e9 struktury/Cvika/Ukol 3/DTMF_generator-master/cmake-build-debug/_deps/mymalloc-subbuild/mymalloc-populate-prefix/src/mymalloc-populate-stamp/mymalloc-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"mymalloc-populate"
+		],
+		"name" : "mymalloc-populate"
+	}
+}
