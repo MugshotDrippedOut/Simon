@@ -1,0 +1,213 @@
+:root {
+  --nav-footer: black;
+  --bg-primary: black;
+  --nav-footer-text: #ffffff;
+  --btn-hover: #bdbdbd;
+}
+
+body {
+  margin: 0px;
+  overflow: hidden;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--nav-footer);
+  padding: 10px 20px;
+}
+
+nav select {
+  background-color: var(--nav-footer);
+  color: var(--nav-footer-text);
+  border: none;
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  outline: none;
+  border-radius: 3px;
+  font-weight: 700;
+}
+main {
+  background-color: var(--bg-primary);
+  height: 90vh;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  position: absolute;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 1;
+}
+
+.card.active {
+  z-index: 2;
+}
+
+.card.active > img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30vmin;
+  z-index: 2;
+}
+
+.card-groups,
+.card-group,
+.card {
+  aspect-ratio: 5/7;
+}
+
+.card-groups,
+.card-group,
+.big-card {
+  width: 30vmin;
+}
+
+.card-group {
+  position: absolute;
+  transition: transform 0.2s ease;
+}
+
+.card-group[data-status="unknown"] {
+  transform: scale(0);
+}
+.card-group[data-status="active"] {
+  transition-delay: 100ms;
+}
+.card-group[data-status="after"] {
+  transform: translateX(50%) scale(0);
+}
+.card-group[data-status="before"] {
+  transform: translateX(-50%) scale(0);
+}
+
+.card-group[data-status="becoming-active-from-before"] {
+  transform: translateX(-50%) scale(0);
+  transition: none;
+}
+.card-group[data-status="becoming-active-from-after"] {
+  transform: translateX(50%) scale(0);
+  transition: none;
+}
+.big-card, .big-card img{
+  width: 30vmin;
+  border-radius: 1vmin;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.little-card, .little-card img{
+  width: 12vmin;
+  border-radius: 2vmin;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.big-card:nth-child(2) {
+  transform: translateX(-10%) rotate(-1deg);
+}
+
+.big-card:nth-child(4) {
+  transform: rotate(3deg);
+}
+
+.big-card:nth-child(6) {
+  transform: translateX(-6%) rotate(-3deg);
+}
+
+.big-card:nth-child(8) {
+  transform: translate(10%, 3%) rotate(-1deg);
+}
+
+.little-card:nth-child(1) {
+  transform: translate(-50%, -50%) rotate(-5deg);
+}
+
+.little-card:nth-child(3) {
+  transform: translate(-50%, -50%) rotate(-5deg);
+}
+
+.little-card:nth-child(5) {
+  transform: translate(-50%, -50%) rotate(-5deg);
+
+}
+
+.little-card:nth-child(7) {
+  transform: translate(-50%, -50%) rotate(-5deg);
+
+}
+
+.card-group:hover > .big-card:nth-child(2) {
+  transform: translate(-75%, 15%) rotate(-24deg);
+}
+
+.card-group:hover > .big-card:nth-child(4) {
+  transform: translate(-25%, 5%) rotate(-8deg);
+}
+
+.card-group:hover > .big-card:nth-child(6) {
+  transform: translate(25%, 5%) rotate(8deg);
+}
+
+.card-group:hover > .big-card:nth-child(8) {
+  transform: translate(75%, 15%) rotate(24deg);
+}
+
+.card-group:hover > .little-card:nth-child(1) {
+  transform: translate(200%, -160%) rotate(-30deg);
+}
+
+.card-group:hover > .little-card:nth-child(3) {
+  transform: translate(200%, 160%) rotate(-15deg);
+}
+
+.card-group:hover > .little-card:nth-child(5) {
+  transform: translate(-200%, 160%) rotate(15deg);
+}
+
+.card-group:hover > .little-card:nth-child(7) {
+  transform: translate(-200%, -160%) rotate(30deg);
+}
+
+.card-swiper-buttons {
+  margin-top: 8vmin;
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-swiper-buttons button {
+  background-color: var(--nav-footer);
+  color: var(--nav-footer-text);
+  border: none;
+  padding: 10px 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 3.3rem;
+  outline: none;
+  border-radius: 3px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.card-swiper-buttons button:hover {
+  transform: scale(2.1);
+}
+
+.card-swiper-buttons button:active {
+  transform: scale(1.9);
+}
+
+footer {
+  background-color: var(--nav-footer);
+  color: var(--nav-footer-text);
+  text-align: center;
+  flex-shrink: 0;
+  padding: 10px 0;
+}

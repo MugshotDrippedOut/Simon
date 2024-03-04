@@ -80,7 +80,7 @@ bool DTMF_Generate(Vector_t *vector, char symbol)
     }
     else{
       tone = VOLUME * (sin(lowF* mSamplesLUT[i]) + sin(highF* mSamplesLUT[i])) ;
-      Vector_Appe nd(vector,tone);
+      Vector_Append(vector,tone);
     }
   }
 

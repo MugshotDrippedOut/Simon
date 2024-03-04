@@ -1,0 +1,150 @@
+@font-face {
+  font-family: "Rocher";
+  src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+}
+:root {
+  --nav-footer: #847106;
+  --bg-primary: #eed45d;
+  --bg-secondary: #fcfee8;
+  --nav-footer-text: #ffffff;
+}
+/*Themes*/
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-size: 1.3rem;
+  background-image: radial-gradient(
+    circle,
+    var(--bg-secondary),
+    var(--bg-primary)
+  );
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--nav-footer);
+  padding: 10px 20px;
+}
+
+nav select {
+  background-color: var(--nav-footer);
+  color: var(--nav-footer-text);
+  border: none;
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  outline: none;
+  border-radius: 3px;
+  font-weight: 700;
+}
+
+#theme {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  color: var(--nav-footer-text);
+}
+
+#theme:hover {
+  color: yellow;
+}
+
+main {
+  flex: 1 0 auto;
+  padding: 50px;
+}
+
+main h1 {
+  text-align: center;
+  font-size: 4rem;
+  font-family: "Rocher", sans-serif;
+}
+
+main h1 .roblox {
+  font-size: 6rem;
+}
+
+#first {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+}
+#first img {
+  width: 100%;
+  max-height: 100vh;
+  object-fit: contain;
+  border-radius: 5px;
+  animation: flip 0.5s steps(2) infinite;
+}
+#first div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer {
+  background-color: var(--nav-footer);
+  color: var(--nav-footer-text);
+  text-align: center;
+  flex-shrink: 0;
+  padding: 10px 0;
+}
+
+/* Animations */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Media */
+
+@media (max-width: 768px) {
+  main {
+    padding: 20px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 300px;
+  }
+  .container img {
+    max-width: 50%;
+  }
+  main h1 {
+    font-size: 4rem;
+  }
+}

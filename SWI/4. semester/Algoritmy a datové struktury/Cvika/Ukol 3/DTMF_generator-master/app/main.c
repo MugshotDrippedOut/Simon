@@ -103,6 +103,7 @@ int main(int argc, char **argv)
             }
           }
           printf("WAV file created successfully!\n");
+
           wavfile_close(f);
         }
         break;

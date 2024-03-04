@@ -1,8 +1,10 @@
 # TW úkol
 - Téma: HRY
 - Podstránky: 
-    - Galerie
     - Úvodní stránka
+    - Galerie
     - Trailery
     - Obchod
     - Recenze
+
+![alt](stranka.excalidraw.png)

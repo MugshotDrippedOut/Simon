@@ -286,3 +286,8 @@ void list_next(List * list);
 bool list_is_active(List * list);
 // Je-li seznam aktivní, vrací True.  V opačném případě vrací false.
 ```
+
+# Prednáška 4.3.
+
+## ADT zásobník
+- Implementace zásobníku polem
