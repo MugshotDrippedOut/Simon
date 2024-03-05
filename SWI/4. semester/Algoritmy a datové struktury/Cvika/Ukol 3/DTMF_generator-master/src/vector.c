@@ -44,21 +44,27 @@ Vector_t *Vector_Create(size_t initial_size, size_t alloc_step)
 
 Vector_t *Vector_Copy(const Vector_t *const original)
 {
+  if(original==NULL){
+    return NULL;
+  }
   Vector_t *copy = myMalloc(sizeof(&original));
   if (copy == NULL){
     return  NULL;
   }
-
   copy->size = original->size;
   copy->alloc_step = original->alloc_step;
+
   if(original->items==NULL){
     return NULL;
   }
   copy->items = myMalloc(original->size*sizeof(Vector_DataType_t ));
   copy->next = copy->items;
+
+  for (size_t i = 0;i < Vector_Length(original); ++i) {
+    Vector_Append(copy, *(original->items+i));
+  }
+
   return copy;
-
-
 }
 
 void Vector_Clear(Vector_t *const vector)
@@ -151,7 +157,7 @@ size_t Vector_IndexOf(const Vector_t *const vector, Vector_DataType_t value, siz
   if(vector==NULL){
     return SIZE_MAX;
   }
-  for (size_t i = from; i < Vector_Length(vector)-1; ++i) {
+  for (size_t i = from; i < Vector_Length(vector); ++i) {
     if(*(vector->items+i)==value) {
       return i;
     }

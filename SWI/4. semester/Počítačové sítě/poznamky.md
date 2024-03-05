@@ -40,10 +40,14 @@
 # Prednáška 13.2.
 
 - 2.7 - 5.2
-[Počítačové síte](Počítačové%20sítě%2021.12.23.pdf)
+  [Počítačové síte](Počítačové%20sítě%2021.12.23.pdf)
 
 # Prednáška 20.2.
+
 - 5.2 - 9
-  
+
 # Prednáška 27.2.
+
 - 9 - 9.19
+
+# Prednáška 5.3.

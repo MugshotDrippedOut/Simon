@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="reviews.css" />
+    <title>Reviews</title>
+  </head>
+  <body>
+    <nav>
+      <select name="links" id="links" onchange="location = this.value;">
+        <option value="reviews.html">Reviews</option>
+        <option value="main.html">Home</option>
+        <option value="gallery.html">Gallery</option>
+        <option value="trailer.html">Trailers</option>
+        <option value="shop.html">Shop</option>
+      </select>
+    </nav>
+    <main>
+      <div id="reviews"></div>
+    </main>
+    <footer>
+      <p>&copy; Šimon</p>
+    </footer>
+  </body>
+  <script src="reviews.js"></script>
+</html>

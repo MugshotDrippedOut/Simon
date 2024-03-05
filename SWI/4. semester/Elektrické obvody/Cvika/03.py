@@ -272,11 +272,14 @@ def vypocetQ(Xls, odpor):
     Q = Xls / odpor
     Q = round(Q, 1)
     return Q
-
 for meranie in merania:
+    avgLs = 0
+    
     for x in meranie:
+        avgLs += vypocetLs(x, tretiakonst, prvaF)
         print(f"Meranie: {meranie.index(x)+1}"+f"    f: {x['f']} Hz" + f"      Ug: {x['Ug']} V" + f"     Ul: {x['Ul']} V" + f"     I: {x['I']} A" + f"      Ls: {vypocetLs(x, tretiakonst, prvaF)} H")
-        
+    avgLs = round(avgLs/len(meranie), 3)
+    print(f"Prumerna indukcnost: {avgLs} H")
     print("\n")
         #print(f"Meranie: {prve.index(meranie)+1}"+f"    f: {meranie['f']} Hz" + f"      Ug: {meranie['Ug']} V" + f"     Ul: {meranie['Ul']} V" + f"     I: {meranie['I']} A" + f"      Ls: {vypocetLs(meranie, tretiakonst, prvaF)} H")
     
@@ -428,6 +431,6 @@ def graphs(prve,druhe,tretie):
 # grafUgI(prve,druhe)
 # grafFQFLs(tretie)
 
-graphs(prve,druhe,tretie)
+# graphs(prve,druhe,tretie)
     
     
