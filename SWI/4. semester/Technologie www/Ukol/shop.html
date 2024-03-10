@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="shop.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <title>Shop</title>
+  </head>
+  <body>
+    <nav>
+      <select name="links" id="links" onchange="location = this.value;">
+        <option value="shop.html">Shop</option>
+        <option value="main.html">Home</option>
+        <option value="gallery.html">Gallery</option>
+        <option value="trailer.html">Trailers</option>
+        <option value="reviews.html">Reviews</option>
+      </select>
+      <div class="cart">
+        <i class="fas fa-shopping-cart"></i>
+        <span>0</span>
+      </div>
+    </nav>
+    <main>
+      <section id="welcome">
+        <img src="Images/thumbsUp.png" alt="Welcome image" />
+        <h1>Welcome to our shop!</h1>
+        <p>
+          You're obligated to buy something. We have the best products in the
+          world. You can't resist. You have to buy something. You can't leave
+          without buying something. You have to buy something. You have to buy
+          something. You have to buy something.
+        </p>
+      </section>
+      <section id="products">
+        <div class="product">
+          <img src="https://via.placeholder.com/150" alt="product" />
+          <h2>Product 1</h2>
+          <p>Price: 100$</p>
+          <div class="buttons">
+            <button class="heart"><i class="fas fa-heart"></i></button>
+            <button class="add"><i class="fas fa-shopping-cart"></i></button>
+          </div>
+        </div>
+        <div class="product">
+          <img src="https://via.placeholder.com/150" alt="product" />
+          <h2>Product 2</h2>
+          <p>Price: 200$</p>
+          <div class="buttons">
+            <button class="heart"><i class="fas fa-heart"></i></button>
+            <button class="add"><i class="fas fa-shopping-cart"></i></button>
+          </div>
+        </div>
+        <div class="product">
+          <img src="https://via.placeholder.com/150" alt="product" />
+          <h2>Product 3</h2>
+          <p>Price: 300$</p>
+          <div class="buttons">
+            <button class="heart"><i class="fas fa-heart"></i></button>
+            <button class="add"><i class="fas fa-shopping-cart"></i></button>
+          </div>
+        </div>
+        
+      </section>
+    </main>
+    <footer>
+      <p>&copy; Šimon</p>
+    </footer>
+  </body>
+</html>

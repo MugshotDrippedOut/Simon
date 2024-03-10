@@ -50,14 +50,29 @@ bool DTMF_Generate(Vector_t *vector, char symbol)
   Vector_DataType_t highF = 0;
   Vector_DataType_t tone =0;
   
-  char arr[20] ={'1','2','3','A','a','4','5','6','B','7','8','b','9','C','c','*','0','#','D','d'};
-  Vector_DataType_t highs[5] = {1209,1336,1477,1633, 1633};
+  char arr[16] ={'1','2','3','A','4','5','6','B','7','8','9','C','*','0','#','D'};
+  Vector_DataType_t highs[4] = {1209,1336,1477,1633};
   Vector_DataType_t lows[4] = {697,770,852,941};
-
+  switch (symbol) {
+    case 'a':
+      symbol = 'A';
+      break;
+    case 'b':
+      symbol = 'B';
+      break;
+    case 'c':
+      symbol = 'C';
+      break;
+    case 'd':
+      symbol = 'D';
+      break;
+    default:
+      break;
+  }
   // Filter symbols
   bool validSymbol = false;
-  for (int i = 0; i < 20; i++) {
-    if (symbol == arr[i] || symbol == ' ') {
+  for (int i = 0; i < 16; i++) {
+    if (symbol == arr[i]  || symbol == ' ') {
       validSymbol = true;
       break;
     }
@@ -65,10 +80,10 @@ bool DTMF_Generate(Vector_t *vector, char symbol)
   if (!validSymbol)return false;
 
 
-  for(int i = 0; i<20;i++){
+  for(int i = 0; i<16;i++){
     if(symbol == arr[i]){
       lowF = lows[i/4];
-      highF = highs[i%5];
+      highF = highs[i%4];
       printf("%d",highF);
       printf("%d",lowF);
 

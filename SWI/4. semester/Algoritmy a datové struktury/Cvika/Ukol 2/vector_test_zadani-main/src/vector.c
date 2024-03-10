@@ -47,7 +47,7 @@ Vector_t *Vector_Copy(const Vector_t *const original)
   if(original==NULL){
     return NULL;
   }
-  Vector_t *copy = myMalloc(sizeof(&original));
+  Vector_t *copy = myMalloc(sizeof(Vector_t));
   if (copy == NULL){
     return  NULL;
   }
