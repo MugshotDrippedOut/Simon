@@ -1,0 +1,21 @@
+# ninja log v5
+1	72	7319523218552393	mymalloc-populate-prefix/src/mymalloc-populate-stamp/mymalloc-populate-mkdir	299c6043e7b6dc3e
+1	72	7319523218552393	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 5/List-master/cmake-build-debug/_deps/mymalloc-subbuild/mymalloc-populate-prefix/src/mymalloc-populate-stamp/mymalloc-populate-mkdir	299c6043e7b6dc3e
+73	3907	7319523256751401	mymalloc-populate-prefix/src/mymalloc-populate-stamp/mymalloc-populate-download	79a80817edbbcb4a
+73	3907	7319523256751401	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 5/List-master/cmake-build-debug/_deps/mymalloc-subbuild/mymalloc-populate-prefix/src/mymalloc-populate-stamp/mymalloc-populate-download	79a80817edbbcb4a
+3908	6764	0	mymalloc-populate-prefix/src/mymalloc-populate-stamp/mymalloc-populate-update	8ea134a7ec1d9dce
+3908	6764	0	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 5/List-master/cmake-build-debug/_deps/mymalloc-subbuild/mymalloc-populate-prefix/src/mymalloc-populate-stamp/mymalloc-populate-update	8ea134a7ec1d9dce
+6764	6834	7319523286169095	mymalloc-populate-prefix/src/mymalloc-populate-stamp/mymalloc-populate-patch	df8f74d6c1b2348e
+6764	6834	7319523286169095	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 5/List-master/cmake-build-debug/_deps/mymalloc-subbuild/mymalloc-populate-prefix/src/mymalloc-populate-stamp/mymalloc-populate-patch	df8f74d6c1b2348e
+6834	6921	7319523287039552	mymalloc-populate-prefix/src/mymalloc-populate-stamp/mymalloc-populate-configure	97abb448150957f1
+6834	6921	7319523287039552	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 5/List-master/cmake-build-debug/_deps/mymalloc-subbuild/mymalloc-populate-prefix/src/mymalloc-populate-stamp/mymalloc-populate-configure	97abb448150957f1
+6922	6992	7319523287757632	mymalloc-populate-prefix/src/mymalloc-populate-stamp/mymalloc-populate-build	36c6281df91792d4
+6922	6992	7319523287757632	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 5/List-master/cmake-build-debug/_deps/mymalloc-subbuild/mymalloc-populate-prefix/src/mymalloc-populate-stamp/mymalloc-populate-build	36c6281df91792d4
+6993	7075	7319523288576933	mymalloc-populate-prefix/src/mymalloc-populate-stamp/mymalloc-populate-install	cbd2fb8cf3135463
+6993	7075	7319523288576933	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 5/List-master/cmake-build-debug/_deps/mymalloc-subbuild/mymalloc-populate-prefix/src/mymalloc-populate-stamp/mymalloc-populate-install	cbd2fb8cf3135463
+7076	7148	7319523289310981	mymalloc-populate-prefix/src/mymalloc-populate-stamp/mymalloc-populate-test	5e82a3bc2d21afbf
+7076	7148	7319523289310981	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 5/List-master/cmake-build-debug/_deps/mymalloc-subbuild/mymalloc-populate-prefix/src/mymalloc-populate-stamp/mymalloc-populate-test	5e82a3bc2d21afbf
+7148	7240	7319523290239695	CMakeFiles/mymalloc-populate-complete	ee142183d64557a2
+7148	7240	7319523290239695	mymalloc-populate-prefix/src/mymalloc-populate-stamp/mymalloc-populate-done	ee142183d64557a2
+7148	7240	7319523290239695	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 5/List-master/cmake-build-debug/_deps/mymalloc-subbuild/CMakeFiles/mymalloc-populate-complete	ee142183d64557a2
+7148	7240	7319523290239695	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 5/List-master/cmake-build-debug/_deps/mymalloc-subbuild/mymalloc-populate-prefix/src/mymalloc-populate-stamp/mymalloc-populate-done	ee142183d64557a2

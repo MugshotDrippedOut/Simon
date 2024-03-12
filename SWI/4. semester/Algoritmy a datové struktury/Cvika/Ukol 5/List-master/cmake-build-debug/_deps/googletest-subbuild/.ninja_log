@@ -1,0 +1,21 @@
+# ninja log v5
+0	82	7319523294635811	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	e450fd5ea42d7670
+0	82	7319523294635811	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 5/List-master/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	e450fd5ea42d7670
+82	2140	7319523315204188	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	7abf3f8077624580
+82	2140	7319523315204188	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 5/List-master/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	7abf3f8077624580
+2142	2249	7319523316218742	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	3dbad2627f97dedd
+2142	2249	7319523316218742	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 5/List-master/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	3dbad2627f97dedd
+2249	2351	7319523317295859	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	f5b7ddcf23b93b1f
+2249	2351	7319523317295859	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 5/List-master/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	f5b7ddcf23b93b1f
+2351	2453	7319523318292374	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	4b2fdae11bfbf83b
+2351	2453	7319523318292374	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 5/List-master/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	4b2fdae11bfbf83b
+2453	2589	7319523319652728	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	a18afe48169ada6e
+2453	2589	7319523319652728	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 5/List-master/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	a18afe48169ada6e
+2589	2751	7319523321251194	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	8bac6f251e6da61a
+2589	2751	7319523321251194	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 5/List-master/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	8bac6f251e6da61a
+2752	2911	7319523322891399	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	f5a69cadae221dee
+2752	2911	7319523322891399	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 5/List-master/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	f5a69cadae221dee
+2911	3208	7319523325848125	CMakeFiles/googletest-populate-complete	581f1f9da096961
+2911	3208	7319523325848125	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	581f1f9da096961
+2911	3208	7319523325848125	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 5/List-master/cmake-build-debug/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete	581f1f9da096961
+2911	3208	7319523325848125	C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 5/List-master/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	581f1f9da096961

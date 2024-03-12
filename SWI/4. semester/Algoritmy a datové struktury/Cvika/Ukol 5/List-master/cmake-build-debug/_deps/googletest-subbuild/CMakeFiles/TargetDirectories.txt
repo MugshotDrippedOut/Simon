@@ -1,0 +1,3 @@
+C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 5/List-master/cmake-build-debug/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir
+C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 5/List-master/cmake-build-debug/_deps/googletest-subbuild/CMakeFiles/edit_cache.dir
+C:/Users/bucka/Documents/GitHub/Simon/SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 5/List-master/cmake-build-debug/_deps/googletest-subbuild/CMakeFiles/rebuild_cache.dir

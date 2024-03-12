@@ -21,6 +21,7 @@
 
 /* Private macro ---------------------------------------------------------------------------------*/
 #define UNUSED(x) (void)x
+#define SWAP(x, y) (x ^= y ^= x ^= y)
 
 /* Private types ---------------------------------------------------------------------------------*/
 /* Private variables -----------------------------------------------------------------------------*/
@@ -61,14 +62,22 @@ bool Heap_Insert(tHeap *heap, Data_t insertData)
   
   heap->array[heap->count] = insertData; // at the end of array insert data
 
-  size_t i = heap->count;
-  while(i > 0 && Data_Cmp(&heap->array[i], &heap->array[(i-1)/2]) < 0){
+  void swap(Data_t first, Data_t second){
+    Data_t temp;
+    temp = first;
+  }
+
+  size_t i = heap->count ;
+  /*
+  while( i  > 0 && Data_Cmp(&heap->array[i], &heap->array[(i-1)/2]) < 0 ){
     Data_t value = heap->array[i];
     heap->array[i] = heap->array[i/2];
     heap->array[i/2] = value;
 
     i = i/2;
-  }
+  }*/
+
+
 
   heap->count++;
   return true;
@@ -105,7 +114,27 @@ bool Heap_DeleteMin(tHeap *heap, Data_t *deletedValue)
   *deletedValue = heap->array[0];
   heap->array[0] = heap->array[heap->count-1];
   heap->count--;
+  size_t i = 0;
+  while(true) {
+    size_t left = 2 * i + 1;
+    size_t right = 2 * i + 2;
+    size_t min = i;
+    Data_Print(heap->array);
+    if (heap->count > 0 && Data_Cmp(&heap->array[i], &heap->array[right]) < 0) {
+      min = left;
+    }
+    if (heap->count > 0 && Data_Cmp(&heap->array[i], &heap->array[left]) < 0) {
+      min = left;
+    }
+    if (min == i) {
+      break;
+    }
+    Data_t temp = heap->array[i];
+    heap->array[i] = heap->array[min];
+    heap->array[min] = temp;
 
+    i = min / 2;
+  }
   return true;
 }
 

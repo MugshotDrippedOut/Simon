@@ -55,7 +55,7 @@ nav select {
 
 main {
   flex: 1 0 auto;
-  padding: 50px;
+  padding: 20px;
 }
 
 #welcome {
@@ -71,7 +71,7 @@ main {
   padding: 0;
   margin: 0;
 }
-#welcome p {
+#welcome > p {
   font-size: 0.5rem;
   font-weight: 700;
 }
@@ -80,7 +80,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 5vw;
+  gap: 3vw;
 }
 
 .product {
@@ -90,7 +90,7 @@ main {
   gap: 20px;
   padding: 20px;
   font-size: clamp(1rem, 2vmin, 2.5rem);
-  width: 25%;
+  width: 18%;
   margin: 20px 0;
   background-color: var(--bg-secondary);
   border-radius: 10px;
@@ -101,14 +101,14 @@ main {
   border-radius: 10px;
 }
 
-.product .buttons {
+.buttons {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   width: 100%;
 }
 
-.product .buttons button {
+.buttons > button {
   background-color: var(--btn-background);
   color: var(--nav-footer-text);
   border: none;
@@ -160,12 +160,21 @@ footer {
 
 
 @media (max-width: 768px) {
+  #welcome {
+    font-size: clamp(1.7rem, 5vw, 3rem);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #welcome img {
+    width: 90vw;
+  }
   #products {
     flex-direction: column;
     align-items: center;
   }
   .product {
-    width: 80%;
-    font-size: clamp(1rem, 5vmin, 2.5rem);
+    width: 75%;
   }
 }
