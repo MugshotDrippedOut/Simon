@@ -21,7 +21,7 @@
 
 /* Private macro ---------------------------------------------------------------------------------*/
 #define UNUSED(x) (void)x
-#define SWAP(x, y) (x ^= y ^= x ^= y)
+#define SWAP(x, y) Data_t temp = x; x = y; y = temp;
 
 /* Private types ---------------------------------------------------------------------------------*/
 /* Private variables -----------------------------------------------------------------------------*/
@@ -62,22 +62,17 @@ bool Heap_Insert(tHeap *heap, Data_t insertData)
   
   heap->array[heap->count] = insertData; // at the end of array insert data
 
-  void swap(Data_t first, Data_t second){
-    Data_t temp;
-    temp = first;
-  }
-
   size_t i = heap->count ;
-  /*
-  while( i  > 0 && Data_Cmp(&heap->array[i], &heap->array[(i-1)/2]) < 0 ){
-    Data_t value = heap->array[i];
-    heap->array[i] = heap->array[i/2];
-    heap->array[i/2] = value;
-
-    i = i/2;
-  }*/
-
-
+  while (true) {
+    if (i <= 0) {
+      break;
+    }
+    if(Data_Cmp(&heap->array[i], &heap->array[(i-1)/2]) >= 0){
+      break;
+    }
+    SWAP(heap->array[i], heap->array[(i-1)/2]);
+    i = (i-1)/2;
+  }
 
   heap->count++;
   return true;
@@ -115,25 +110,21 @@ bool Heap_DeleteMin(tHeap *heap, Data_t *deletedValue)
   heap->array[0] = heap->array[heap->count-1];
   heap->count--;
   size_t i = 0;
-  while(true) {
-    size_t left = 2 * i + 1;
-    size_t right = 2 * i + 2;
-    size_t min = i;
-    Data_Print(heap->array);
-    if (heap->count > 0 && Data_Cmp(&heap->array[i], &heap->array[right]) < 0) {
-      min = left;
+  while(true){
+    size_t left = 2*i+1;
+    size_t right = 2*i+2;
+    size_t smallest = i;
+    if(left < heap->count && Data_Cmp(&heap->array[left], &heap->array[smallest]) < 0){
+      smallest = left;
     }
-    if (heap->count > 0 && Data_Cmp(&heap->array[i], &heap->array[left]) < 0) {
-      min = left;
+    if(right < heap->count && Data_Cmp(&heap->array[right], &heap->array[smallest]) < 0){
+      smallest = right;
     }
-    if (min == i) {
+    if(smallest == i){
       break;
     }
-    Data_t temp = heap->array[i];
-    heap->array[i] = heap->array[min];
-    heap->array[min] = temp;
-
-    i = min / 2;
+    SWAP(heap->array[i], heap->array[smallest]);
+    i = smallest;
   }
   return true;
 }

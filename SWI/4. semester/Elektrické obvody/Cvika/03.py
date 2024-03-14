@@ -431,6 +431,6 @@ def graphs(prve,druhe,tretie):
 # grafUgI(prve,druhe)
 # grafFQFLs(tretie)
 
-# graphs(prve,druhe,tretie)
+graphs(prve,druhe,tretie)
     
     
