@@ -54,5 +54,4 @@ AP4TS test:
     - Zadání
     - dokumentaci
 22. vyber spravne tvrzeni: pokud nenajdeme defekt, neznamenato, ze nedojde k selhani
-    - 
 23. vyber spravne tvrzeni k principu Testy se opotrebavaji (jedna nebo vice)

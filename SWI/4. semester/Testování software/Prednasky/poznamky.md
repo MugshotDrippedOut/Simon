@@ -188,3 +188,118 @@
   - Subjektivní kvalita
   - Konkurence
   - "Použitelnost"
+
+# <center>1. TEST DONE</center>
+
+# 14.3.
+
+## Testware
+
+- je jakýkoliv produkt související s testováním
+  - Testovací plán
+  - Testovací sady
+  - Testovací skripty
+  - Testovací data
+  - Simulátory a další
+- Cokoli co přináši podporu testování
+
+- Role v testování -> Tester vs Manažer testování
+
+  - Záleží na kontextu
+  - Obě role mohou vykonávat ruzní lidé na projektu
+  - Tester - technická stránka
+  - Manažer - procesy
+
+- V praxi dělíme na více rolí dle odpovědnosti
+
+## Testovací činnosti
+
+- Plánování testování (QA + QC)
+  - Testovací analýza
+  - Návrh testu
+  - Implementace testu
+  - Provádění testu
+- Dokončení testování (QA)
+- Monitoring a řízení (QA)
+
+## Plánování testování
+
+- Hlavní činnosti
+  - Definování cílu testování
+  - Výběr přístupu, technik
+- Testare
+  - Harmonogram/plán
+  - Rizika
+  - Vstupní a výstupní kritéria
+
+## Testovací analýza -> CO
+
+- Hlavní činnosti
+  - Analýza testovací báze -> posouzení testovatelnosti + revize
+  - Identifikace "features" a testovacích podmínek
+- Testware
+  - Reporty o defektech v bázi
+  - Seznam testovacích podmínek
+
+## Návrh testu -> JAK, KDE, ČÍM
+
+- Hlavní činnosti
+  - Prvotní návrh testovacích případu
+  - Stanovení potřeby testovacích dat
+  - Návrh testovacího prostředí, infrastruktury
+  - Volba technik
+  - Volba nástroju
+- Testware
+  - Reporty o defektech v bázi
+  - Seznam testovacích podmínek
+
+## Implementace testů
+
+- Hlavní činnosti
+  - Tvorba a prioritizace TS + TC -> Testovací procedury
+  - Harmonogram spouštění testů
+  - Příprava testovacího prostředí a ověření
+  - Zajištění testovacích dat
+  - Konfigurace nástrojů
+- Testware
+  - Testovací procedury
+  - Testovací data
+  - Testovací prostředí + připravené nástroje
+
+## Spouštění / provedení testů
+
+- Hlavní činnosti
+  - Manuální / automatizované testování
+  - Vyhodnocení PASSED/FAILED
+  - Report incidentů (bugů)
+- Testware
+  - Test logy
+  - Reporty incidentů (defektů)
+
+## Dokončení testování
+
+- Hlavní činnosti
+  - Kontrola „milníku“ projektu – kontrola výstupních kritérií
+  - Testovací úroveň, iterace, nasazení
+  - Tvorba souhrnné reportu testování
+  - Vyhodnocení incidentů – co s nimi ?
+  - Archivace testware
+  - Zpětná kontrola procesů (Poučení)
+- Testware
+  - Report z testování (souhrn)
+  - Změny + vylepšení
+  - Dokumentace do budoucna
+
+## Faktory, které ovlivní proces testování
+- Potřeby, očekávání -> cíle
+- Dovednosti a znalosti týmu
+- Typ software (princip č. 6)
+- Rizika a omezení
+- SDLC (životní cyklus projektu)
+- Nástroje
+
+## Na co budou mít vliv faktory ?
+- Techniky testování
+- Míra testování (hloubka)
+- Míra automatizace
+- Míra podrobnosti – dokumentace, reportů

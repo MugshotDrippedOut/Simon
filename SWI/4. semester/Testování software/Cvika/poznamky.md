@@ -70,3 +70,13 @@ Pro získání klasifikovaného zápočtu je potřeba splnit následující podm
 - Testovací případy je vhodné sdružovat do testovacích sad
 
   ![alt](testovaciSada.excalidraw.png)
+
+# TEST 1 DONE
+
+# Cviko 14.3.
+
+- Xpath a full Xpath
+- možné otázky na dalšom teste
+  - vsechny divy na strance => //div
+  - 111 div => (//div)[111]
+  - kombinace relativniho a absolutniho zápisu => /html/body/div[1]//div
