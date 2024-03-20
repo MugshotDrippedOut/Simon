@@ -84,9 +84,6 @@ bool DTMF_Generate(Vector_t *vector, char symbol)
     if(symbol == arr[i]){
       lowF = lows[i/4];
       highF = highs[i%4];
-      printf("%d",highF);
-      printf("%d",lowF);
-
     }
   }
 

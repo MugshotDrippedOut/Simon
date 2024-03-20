@@ -290,7 +290,11 @@ bool list_is_active(List * list);
 # Prednáška 4.3.
 
 ## ADT zásobník
+
 - Implementace zásobníku polem
 
 # Prednáška 11.3.
-- 
+
+- linked list
+
+# Prednáška 18.3.

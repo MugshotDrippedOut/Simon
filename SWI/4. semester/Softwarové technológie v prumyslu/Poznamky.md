@@ -87,3 +87,4 @@
 - Vývoj - sprint 2
   - to isté s novými požiadavkami
 
+# 19.2. Armáda => KySIO AČR
