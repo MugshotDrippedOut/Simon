@@ -291,6 +291,7 @@
   - Dokumentace do budoucna
 
 ## Faktory, které ovlivní proces testování
+
 - Potřeby, očekávání -> cíle
 - Dovednosti a znalosti týmu
 - Typ software (princip č. 6)
@@ -299,7 +300,64 @@
 - Nástroje
 
 ## Na co budou mít vliv faktory ?
+
 - Techniky testování
 - Míra testování (hloubka)
 - Míra automatizace
 - Míra podrobnosti – dokumentace, reportů
+
+# 21.3.
+
+Základní dovednosti a postupy
+
+## Dovednosti testera ?
+
+- Znalost testování a principů
+- Znalost domény
+- Důkladnost, pečlivost, zvídavost, „puntičkář“
+- Metodická práce
+- Analytické, kritické a logické myšlení
+- Technické znalosti
+- Nástroje
+- Psychologie
+
+## Tester poskytuje informace … i ty špatné.
+
+- Opět lepší incident => bug
+- Něčí práce/výstup -> „neukazovat prstem“
+- Konstruktivnost
+- Práce/vývoj je „tým“ => spokojený tým => kvalitní produkt => spokojený zákazník => spokojené vedení => spokojený tým :)
+
+## Podpora komunikace
+
+- Komunikace je základ
+- Věcnost, důraz na fakta, konstruktivnost
+- Neutrální nezaujaté reportování
+- Spolupráce nad „souboj“
+- Komunikace musí být oboustranná
+- Odpovědnost má celý TÝM.
+
+## Nezávislé testování ?
+
+- Autor vs. Vývojář vs. Tester vs. Zákazník
+- Další nezávislý pohled na věc.
+
+  - Je nezbytný
+
+- míra zaujetí
+
+  ![pyramida](pyramida.excalidraw.png)
+
+<!-- 2. prezentácia -->
+
+## Testování v kontextu SDLC
+- Modely SDLC
+  - Sekvenční (Tradiční)
+    - Vodopádový, V-Model
+  - Iterativní (Agilní)
+    - Spirálový model, prototypování
+  - Inkrementální (Agilní)
+    - RUP
+  - Iterativně-inkrementální
+
+![Interative & Incremental](image.png)
