@@ -351,7 +351,9 @@ Základní dovednosti a postupy
 <!-- 2. prezentácia -->
 
 ## Testování v kontextu SDLC
+
 - Modely SDLC
+
   - Sekvenční (Tradiční)
     - Vodopádový, V-Model
   - Iterativní (Agilní)
@@ -360,4 +362,15 @@ Základní dovednosti a postupy
     - RUP
   - Iterativně-inkrementální
 
-![Interative & Incremental](image.png)
+  ![Interative & Incremental](image.png)
+
+## Specifické přístupy
+
+- Extrémní programování
+  - Velmi prísné (dbá se nekdy i na jídlo)
+- Scrum 
+  - Agilní, volné
+- Kanban
+  - deelání vecí ktré na sobě nesovisí najednou, šetření času
+- TDD, ATDD, BDD, DDD, FDD
+  - … driven development
