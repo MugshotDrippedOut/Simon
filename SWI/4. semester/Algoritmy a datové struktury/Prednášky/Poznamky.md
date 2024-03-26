@@ -298,3 +298,7 @@ bool list_is_active(List * list);
 - linked list
 
 # Prednáška 18.3.
+
+# Prednáška 25.3.
+
+- hash

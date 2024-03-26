@@ -19,6 +19,7 @@
 /* Private macros --------------------------------------------------------------------------------*/
 #define UNUSED(x) (void)x
 
+
 /* Private variables -----------------------------------------------------------------------------*/
 /* Private function declarations -----------------------------------------------------------------*/
 /* Exported functions definitions ----------------------------------------------------------------*/
@@ -26,26 +27,39 @@
 bool Tree_Init(Tree *const tree)
 {
   UNUSED(tree);
-  if(!tree){
-    return false;
-  }
+  if(!tree)return false;
+
   tree->root=NULL;
   tree->nodeCount=0;
   return true;
 }
 
+// Helper function to delete all nodes in a tree
+void Delete_node(TreeNode *nodeToDelete) {
+
+  if (nodeToDelete == NULL) return;
+
+  Delete_node(nodeToDelete->left);
+  Delete_node(nodeToDelete->right);
+
+  myFree(nodeToDelete);
+}
+
 void Tree_Clear(Tree *const tree)
 {
-  UNUSED(tree);
+  if (tree == NULL) return;
+
+  Delete_node(tree->root);
+
+  tree->root = NULL;
+  tree->nodeCount = 0;
 }
+
 
 bool Tree_Insert(Tree *const tree, const Data_t data)
 {
-  UNUSED(tree);
-  UNUSED(data);
-  if(!tree){
-    return false;
-  }
+
+  if(!tree)return false;
   if (!tree->root){
     TreeNode *node = myMalloc(sizeof (TreeNode));
     if(!node)return false;
@@ -88,27 +102,74 @@ bool Tree_Insert(Tree *const tree, const Data_t data)
 
 void Tree_Delete(Tree *const tree, const Data_t data)
 {
-  UNUSED(tree);
-  UNUSED(data);
+  if (!tree) return;
+
+  TreeNode *search = tree->root;
+  TreeNode *parent = NULL;
+  int res;
+
+  while (search != NULL) {
+    res = Data_Cmp(&data, &search->data);
+    if (res == 0) break;
+
+    parent = search;
+    search = (res < 0) ? search->left : search->right;
+  }
+
+  if (search == NULL) return;
+
+  TreeNode **parentLink = (parent == NULL) ? &tree->root :
+                          (parent->left == search) ? &parent->left : &parent->right;
+
+  if (search->left == NULL || search->right == NULL) {
+    *parentLink = (search->left != NULL) ? search->left : search->right;
+  } else {
+    TreeNode *min = search->right;
+    parent = search;
+    while (min->left != NULL) {
+      parent = min;
+      min = min->left;
+    }
+
+    search->data = min->data;
+    parentLink = (parent->left == min) ? &parent->left : &parent->right;
+    *parentLink = min->right;
+  }
+
+  myFree(search);
+  tree->nodeCount--;
 }
 
 const Data_t *Tree_Get_Data(const TreeNode *const node)
 {
-  UNUSED(node);
-  return NULL;
+  if(!node)return NULL;
+
+  return &node->data;
 }
 
 TreeNode *Tree_Find_Node(Tree tree, const Data_t data)
 {
-  UNUSED(tree);
-  UNUSED(data);
+  TreeNode *search = tree.root;
+  int res;
+  while (search !=NULL){
+    res = Data_Cmp(&data, &search->data);
+    if(res<0){
+      search = search->left;
+    }
+    if(res>0){
+      search = search->right;
+    }
+    if(res == 0){
+      return search;
+    }
+  }
+
   return NULL;
 }
 
 size_t Tree_Get_Count(Tree tree)
 {
-  UNUSED(tree);
-  return 0;
+  return tree.nodeCount;
 }
 
 void inOrder(TreeNode *node, TreeNodeProc proc){
@@ -137,13 +198,7 @@ void postOrder(TreeNode *node, TreeNodeProc proc){
 }
 void Tree_Process(Tree tree, TreeNodeProc proc, TreeProcessMode mode)
 {
-  UNUSED(tree);
-  UNUSED(proc);
-  UNUSED(mode);
-
-  if(!proc || !tree.root){
-    return;
-  }
+  if(!proc || !tree.root)return;
 
   switch (mode) {
     case IN_ORDER:
