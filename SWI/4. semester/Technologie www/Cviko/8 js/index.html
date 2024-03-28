@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js" async defer></script>
+    <style>
+      body {
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+        position: relative;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 30px;
+        cursor: pointer;
+        border-radius: 5px;
+        border: none;
+        background-color: #00a846;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      button:hover {
+        background-color: #0dff56;
+      }
+      button:active {
+        background-color: #93ffb3;
+      }
+
+      #clicks {
+        font-size: 50px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+      }
+    </style>
+    <title>Index</title>
+  </head>
+  <body>
+    <div id="clicks">0</div>
+    <button>Click me</button>
+  </body>
+</html>
