@@ -118,28 +118,37 @@ void Tree_Delete(Tree *const tree, const Data_t data)
 
   if (search == NULL) return;
 
-  TreeNode **parentLink = (parent == NULL) ? &tree->root :
-                          (parent->left == search) ? &parent->left : &parent->right;
-
   if (search->left == NULL || search->right == NULL) {
-    *parentLink = (search->left != NULL) ? search->left : search->right;
+    TreeNode *temp = (search->left != NULL) ? search->left : search->right;
+
+    if (parent == NULL) {
+      tree->root = temp;
+    } else if (parent->left == search) {
+      parent->left = temp;
+    } else {
+      parent->right = temp;
+    }
+    myFree(search);
   } else {
-    TreeNode *min = search->right;
+    TreeNode *max = search->left;
     parent = search;
-    while (min->left != NULL) {
-      parent = min;
-      min = min->left;
+    while (max->right != NULL) {
+      parent = max;
+      max = max->right;
     }
 
-    search->data = min->data;
-    parentLink = (parent->left == min) ? &parent->left : &parent->right;
-    *parentLink = min->right;
-  }
+    search->data = max->data;
 
-  myFree(search);
+    if (parent->left == max) {
+      parent->left = max->left;
+    } else {
+      parent->right = max->left;
+    }
+
+    myFree(max);
+  }
   tree->nodeCount--;
 }
-
 const Data_t *Tree_Get_Data(const TreeNode *const node)
 {
   if(!node)return NULL;
