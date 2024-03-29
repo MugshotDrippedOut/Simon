@@ -150,7 +150,7 @@
 
 # 22.2
 
-## Princípy testování
+### Princípy testování
 
 - Princip 1. - Testování poukazuje na přítomnost defektu
   - nikoliv na jejich nepřítomnost
@@ -193,7 +193,7 @@
 
 # 14.3.
 
-## Testware
+### Testware
 
 - je jakýkoliv produkt související s testováním
   - Testovací plán
@@ -212,7 +212,7 @@
 
 - V praxi dělíme na více rolí dle odpovědnosti
 
-## Testovací činnosti
+### Testovací činnosti
 
 - Plánování testování (QA + QC)
   - Testovací analýza
@@ -222,7 +222,7 @@
 - Dokončení testování (QA)
 - Monitoring a řízení (QA)
 
-## Plánování testování
+### Plánování testování
 
 - Hlavní činnosti
   - Definování cílu testování
@@ -232,7 +232,7 @@
   - Rizika
   - Vstupní a výstupní kritéria
 
-## Testovací analýza -> CO
+### Testovací analýza -> CO
 
 - Hlavní činnosti
   - Analýza testovací báze -> posouzení testovatelnosti + revize
@@ -241,7 +241,7 @@
   - Reporty o defektech v bázi
   - Seznam testovacích podmínek
 
-## Návrh testu -> JAK, KDE, ČÍM
+### Návrh testu -> JAK, KDE, ČÍM
 
 - Hlavní činnosti
   - Prvotní návrh testovacích případu
@@ -253,7 +253,7 @@
   - Reporty o defektech v bázi
   - Seznam testovacích podmínek
 
-## Implementace testů
+### Implementace testů
 
 - Hlavní činnosti
   - Tvorba a prioritizace TS + TC -> Testovací procedury
@@ -266,7 +266,7 @@
   - Testovací data
   - Testovací prostředí + připravené nástroje
 
-## Spouštění / provedení testů
+### Spouštění / provedení testů
 
 - Hlavní činnosti
   - Manuální / automatizované testování
@@ -276,7 +276,7 @@
   - Test logy
   - Reporty incidentů (defektů)
 
-## Dokončení testování
+### Dokončení testování
 
 - Hlavní činnosti
   - Kontrola „milníku“ projektu – kontrola výstupních kritérií
@@ -290,7 +290,7 @@
   - Změny + vylepšení
   - Dokumentace do budoucna
 
-## Faktory, které ovlivní proces testování
+### Faktory, které ovlivní proces testování
 
 - Potřeby, očekávání -> cíle
 - Dovednosti a znalosti týmu
@@ -299,7 +299,7 @@
 - SDLC (životní cyklus projektu)
 - Nástroje
 
-## Na co budou mít vliv faktory ?
+### Na co budou mít vliv faktory ?
 
 - Techniky testování
 - Míra testování (hloubka)
@@ -310,7 +310,7 @@
 
 Základní dovednosti a postupy
 
-## Dovednosti testera ?
+### Dovednosti testera ?
 
 - Znalost testování a principů
 - Znalost domény
@@ -321,14 +321,14 @@ Základní dovednosti a postupy
 - Nástroje
 - Psychologie
 
-## Tester poskytuje informace … i ty špatné.
+### Tester poskytuje informace … i ty špatné.
 
 - Opět lepší incident => bug
 - Něčí práce/výstup -> „neukazovat prstem“
 - Konstruktivnost
 - Práce/vývoj je „tým“ => spokojený tým => kvalitní produkt => spokojený zákazník => spokojené vedení => spokojený tým :)
 
-## Podpora komunikace
+### Podpora komunikace
 
 - Komunikace je základ
 - Věcnost, důraz na fakta, konstruktivnost
@@ -337,7 +337,7 @@ Základní dovednosti a postupy
 - Komunikace musí být oboustranná
 - Odpovědnost má celý TÝM.
 
-## Nezávislé testování ?
+### Nezávislé testování ?
 
 - Autor vs. Vývojář vs. Tester vs. Zákazník
 - Další nezávislý pohled na věc.
@@ -350,7 +350,7 @@ Základní dovednosti a postupy
 
 <!-- 2. prezentácia -->
 
-## Testování v kontextu SDLC
+### Testování v kontextu SDLC
 
 - Modely SDLC
 
@@ -364,13 +364,156 @@ Základní dovednosti a postupy
 
   ![Interative & Incremental](image.png)
 
-## Specifické přístupy
+### Specifické přístupy
 
 - Extrémní programování
   - Velmi prísné (dbá se nekdy i na jídlo)
-- Scrum 
+- Scrum
   - Agilní, volné
 - Kanban
   - deelání vecí ktré na sobě nesovisí najednou, šetření času
 - TDD, ATDD, BDD, DDD, FDD
   - … driven development
+
+# 28.3.
+
+### TDD – Test Driven Development
+
+- Tvořím test
+- Spouštím test
+- Pokud fail -> vyvíjím dokud neprojde
+- Ověřuji že procházejí všechny testy
+- Refactoring -> opět ověřuji všechny testy
+
+### ATDD, BDD a další
+
+- Více k akceptační úrovni
+- Zápis testů „Gherkin“
+  - Given, When, Then
+
+### SDLC ovlivní v testování
+
+- Rozsah a načasování (kdy začít)
+- Úroveň detailu dokumentace
+- Volbu technik a přístupu
+- Míra automatizace
+- Role a odpovědnost testera
+
+- Tester by měl znát specifikace a přizpůsobit se
+
+### Tradiční vs. Agilní
+
+| Sekvenční                          | Iterativní a inkrementální                        |
+| ---------------------------------- | ------------------------------------------------- |
+| Více plánuje, odhady dříve         | Iterace => funkční prototyp                       |
+| Intenzivní statické testy a revize | Statické + dynamické každou iteraci               |
+| Dynamické testy až na závěr        | Co iterace všechny úrovně testování               |
+| Důraz na dokumentaci               | Změny jsou „vítané“                               |
+| Méně automatizace                  | Méně dokumentace                                  |
+| Black and white-box                | Více využívání technik založených na zkušenostech |
+| Úrovně testů postupně              | Regresní testy + automatizace                     |
+
+### Praktické postupy nezávislé na SDLC
+
+- Vývojová aktivita má svou testovací aktivitu
+- Testování má své úrovně
+- Testovací aktivita by měla začít paralelně s vývojovou
+- Testeři by se měli zapojit do revizí
+
+  - Podpora včasného testování a shift-left principu
+
+  ![alt text](TheWModel.png)
+
+### Shift-left“ princip
+
+- Zaměřuje se na prevenci
+- Návrh testů před kódem
+- Statické testování
+- Revize
+- Princip č. 3
+
+## Úrovně testování a typy testů
+
+### Specifika pro testovací úroveň
+
+- Testované objekty – CO testujeme
+- Cíle testování – CO chceme dosáhnout
+- Testovací báze – z ČEHO vycházíme 
+- Typické defekty – CO může být za problém
+- Přístupy a role – KDO a JAK testuje 
+
+### Testovací úrovně dle SDLC
+
+- Sekvenční – navazují 
+- Iterativně-inkrementální – překrývají 
+
+### Testovací úrovně
+
+- Testování komponent
+- Integrační testování
+  - Komponent
+  - Systémů
+- Systémové testování
+- Akceptační testování
+
+### Testování komponent
+
+- Testování „elementárních“ částí
+- V izolaci -> neřešíme okolí <!-- IMPORTANT -->
+- Obvykle vývojář
+- Speciální nástroje -> míra pokrytí 
+- Jednotkové testy
+- Testovací báze
+  - Detailní technický návrh
+  - Datový model
+  - „kód“ <!-- Muzeme měřit pokriti kodu, ale nikdy byhc nemnel navrhovat unit-testy v souvislosti s kódem => nevycházim z kódu -->
+
+### Testování komponent
+
+- Stuby, drivery (Test harness – náhrady)
+  - Stub (volaná komponenta)
+  - Driver (volající komponenta)
+
+### Integrační testování - komponent
+
+- Interakce komponent <!-- Rozhrani - tlumočnník, spojnice --> 
+- Kdo s kým a jak komunikuje
+- Typicky testuje vývojář
+- Defekty spočívají v chybějícím rozhraní nebo kompatibilitě
+- Testovací báze
+- Detailní technický návrh
+- Specifikace rozhraní
+
+### Integrační testování - komponent
+
+- Shora – dolů
+- Zespodu – nahoru
+- „Big-bang“ -> nahodile
+
+### Systémové testování
+
+- Obvykle tester<!-- Testuje výhradne tester -->
+- End-to-end testování (celek)
+  - Vše je zintegrované
+- Máme zde funkcionální a nefunkcionální testy
+  - CO a JAK
+- Testovací báze
+  - Funkcionální specifikace <!-- Funkcionální (Co ten systém delá) a nefunkcionální (jak to ten systém delá, jak rychle?...) -->
+  - Případy užití (Use cases)
+- Po sem verifikace <!-- Deláme správne? -->
+
+### Akceptační testování
+
+- Validace <!-- Udelalli sme správny? -->
+- Provádí výhradně uživatel
+- Zde už není prostor pro hledání defektů
+- Potvrzuje shodu se zákazníkovým očekáváním
+
+### Akceptační testování
+<!-- Akceptačních testu je více -->
+- UAT -> Uživatelské akceptační testy
+- Alfa a Beta testování <!-- Neplést si s alpha a beta verzemi -->
+  - Alfa – interně externí
+  - Beta – externí
+- Smluvní a regulatorní akceptační testy
+- Provozně akceptační testy
