@@ -64,8 +64,10 @@
 
 # Prednáška 26.3.
 
-- 13.2 -14.1
+- 13.2 - 14.1
 
 # Prednáška 26.3.
 
-- 14.1
+- 14.1 - 
+
+PDU - protocol data unit
