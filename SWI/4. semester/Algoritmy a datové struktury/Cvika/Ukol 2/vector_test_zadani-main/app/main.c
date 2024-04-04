@@ -11,6 +11,7 @@
  * Proprietary and confidential
  */
 #include "ioutils.h"
+#include "mymalloc.h"
 #include "vector.h"
 
 /* Includes --------------------------------------------------------------------------------------*/
@@ -84,6 +85,7 @@ int main(void)
            "8 to fill a portion of the vector with desired value\n"
            "9 to create a copy of a vector\n"
            "0 to print one item\n"
+           "M to merge two vectors\n"
            "S to set value of item in vector\n"
            "anything else to finish.\n");
     char c;
@@ -201,6 +203,29 @@ int main(void)
         } else {
           printf("Item at position %zu was not found within the vector.\n", i);
         }
+      } break;
+      case 'M': {
+        Vector_t *second_vector = Vector_Create(10, 2);
+
+        // Fill the second vector with values
+        for (Vector_DataType_t value = 100; value < 200; value += 5) {
+          Vector_Append(second_vector, value);
+        }
+
+        // Create a new vector for the result
+        Vector_t *result_vector = Vector_Create(Vector_Length(vector) + Vector_Length(second_vector), 2);
+
+        // Merge the vectors
+        Vector_Merge(result_vector, vector, second_vector);
+
+        // Swap the result vector with the first vector
+        Vector_t *temp = vector;
+        vector = result_vector;
+        result_vector = temp;
+
+        // Free the second and result vectors
+        Vector_Destroy(&second_vector);
+        Vector_Destroy(&result_vector);
       } break;
 
       case 'S': {

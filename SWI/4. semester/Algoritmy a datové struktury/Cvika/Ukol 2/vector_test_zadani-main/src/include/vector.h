@@ -82,7 +82,13 @@ Vector_t *Vector_Create(size_t initial_size, size_t alloc_step);
  * failure.
  */
 Vector_t *Vector_Copy(const Vector_t *const original);
-
+/*!
+ * @brief Merges two vectors into one.
+ * @param result Vector where the result will be stored
+ * @param v1 Vector to merge
+ * @param v2 Vector to merge
+ */
+void Vector_Merge(Vector_t* result, Vector_t* v1, Vector_t* v2);
 /*! Erases the content of a vector, allocated memory for \ref Vector_t.items is freed, the \ref
  * Vector_t.size of a vector is set to 0, \ref Vector_t.items and \ref Vector_t.next pointers are
  * set to NULL. The \ref Vector_t.alloc_step remains unchanged.
@@ -187,6 +193,8 @@ void Vector_Fill(const Vector_t *const vector,
  * \param[in,out] vector  Pointer to an adress of a structure that holds the vector.
  */
 void Vector_Destroy(Vector_t **const vector);
+
+
 
 /*! \} */
 #endif  //__VECTOR_H

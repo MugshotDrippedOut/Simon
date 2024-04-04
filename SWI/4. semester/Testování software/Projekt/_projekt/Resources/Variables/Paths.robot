@@ -1,2 +1,0 @@
-// xPaths
-*** Variables ***

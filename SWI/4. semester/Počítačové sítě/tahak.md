@@ -2206,3 +2206,8 @@ Které zařízení používá ke směrování dat adresy sít'ových protokolů?
 
 - Subsíťová maska s hodnotou 255.255.255.128 nebo /25 rozděluje síť třídy C na:
   - 2 subsítě
+
+Obrázky:
+
+![alt text](download.png)
+![alt text](download-1.png)

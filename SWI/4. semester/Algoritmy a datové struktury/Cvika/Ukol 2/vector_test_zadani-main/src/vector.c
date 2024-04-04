@@ -69,6 +69,45 @@ Vector_t *Vector_Copy(const Vector_t *const original)
 
 }
 
+void Vector_Merge(Vector_t* result, Vector_t* v1, Vector_t* v2)
+{
+    if (result == NULL || v1 == NULL || v2 == NULL)
+        return;
+
+    size_t i = 0, j = 0;
+
+    // Merge elements from v1 and v2 into result
+    while (i < Vector_Length(v1) && j < Vector_Length(v2)) {
+        Vector_DataType_t item1, item2;
+        Vector_At(v1, i, &item1);
+        Vector_At(v2, j, &item2);
+
+        if (item1 <= item2) {
+            Vector_Append(result, item1);
+            i++;
+        } else {
+            Vector_Append(result, item2);
+            j++;
+        }
+    }
+
+    // Append remaining elements from v1, if any
+    while (i < Vector_Length(v1)) {
+        Vector_DataType_t item;
+        Vector_At(v1, i, &item);
+        Vector_Append(result, item);
+        i++;
+    }
+
+    // Append remaining elements from v2, if any
+    while (j < Vector_Length(v2)) {
+        Vector_DataType_t item;
+        Vector_At(v2, j, &item);
+        Vector_Append(result, item);
+        j++;
+    }
+}
+
 void Vector_Clear(Vector_t *const vector)
 {
   if(vector==NULL){
