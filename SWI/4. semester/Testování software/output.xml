@@ -1,136 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.0 on win32)" generated="2024-04-04T14:17:34.688280" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.11.0 on win32)" generated="2024-04-04T15:45:52.152870" rpa="false" schemaversion="5">
 <suite id="s1" name="TS 001 003" source="C:\Users\bucka\Documents\GitHub\Simon\SWI\4. semester\Testování software\Projekt\_projekt\TS_001_003.robot">
 <test id="s1-t1" name="Pre-conditions" line="19">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-04T14:17:35.170920" level="INFO">Slept 200 milliseconds.</msg>
+<msg time="2024-04-04T15:45:52.643071" level="INFO">Slept 200 milliseconds.</msg>
 <arg>200 milliseconds</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-04T14:17:34.969739" elapsed="0.201181"/>
+<status status="PASS" start="2024-04-04T15:45:52.442708" elapsed="0.200874"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-04T14:17:35.173463" level="INFO">Opening browser 'Chrome' to base url 'https://www.krakovany.sk'.</msg>
-<msg time="2024-04-04T14:17:35.755533" level="WARN">The chromedriver version (122.0.6261.69) detected in PATH at C:\Users\bucka\AppData\Local\Programs\Python\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (123.0.6312.105); currently, chromedriver 123.0.6312.86 is recommended for chrome 123.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-04-04T15:45:52.645586" level="INFO">Opening browser 'Chrome' to base url 'https://www.krakovany.sk'.</msg>
+<msg time="2024-04-04T15:45:53.196581" level="WARN">The chromedriver version (122.0.6261.69) detected in PATH at C:\Users\bucka\AppData\Local\Programs\Python\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (123.0.6312.105); currently, chromedriver 123.0.6312.86 is recommended for chrome 123.*, so it is advised to delete the driver in PATH and retry</msg>
 <arg>${URL_MainPage}</arg>
 <arg>${BROWSER_CHROME}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-04T14:17:35.172418" elapsed="14.574863"/>
+<status status="PASS" start="2024-04-04T15:45:52.644587" elapsed="11.218549"/>
 </kw>
-<status status="PASS" start="2024-04-04T14:17:34.968742" elapsed="14.779536"/>
-</test>
-<test id="s1-t2" name="TC_001_003-001 - Kontorla interakcie s tlačítkom &quot;+&quot;" line="23">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${tVitam}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-04T14:17:49.753271" elapsed="0.084341"/>
+<status status="PASS" start="2024-04-04T15:46:03.865131" elapsed="0.121007"/>
 </kw>
-<kw name="Get WebElement" owner="SeleniumLibrary">
-<msg time="2024-04-04T14:17:49.861728" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="527a0bc5fe4769dfefb7c28277b2d3fd", element="f.A33EF132B5EDF5392EE6A1D83E3977C1.d.8BBC9C68190DCE7C83295AD0BBB1BB66.e.41")&gt;</msg>
-<var>${element}</var>
-<arg>${tVitam}</arg>
-<doc>Returns the first WebElement matching the given ``locator``.</doc>
-<status status="PASS" start="2024-04-04T14:17:49.839607" elapsed="0.022267"/>
-</kw>
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2024-04-04T14:17:49.863124" level="INFO">Executing JavaScript:
-return window.getComputedStyle(arguments[0]).fontSize;
-By using argument:
-'&lt;selenium.webdriver.remote.webelement.WebElement (session="527a0bc5fe4769dfefb7c28277b2d3fd", element="f.A33EF132B5EDF5392EE6A1D83E3977C1.d.8BBC9C68190DCE7C83295AD0BBB1BB66.e.41")&gt;'</msg>
-<msg time="2024-04-04T14:17:49.881038" level="INFO">${style_before} = 16px</msg>
-<var>${style_before}</var>
-<arg>return window.getComputedStyle(arguments[0]).fontSize;</arg>
-<arg>ARGUMENTS</arg>
-<arg>${element}</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2024-04-04T14:17:49.862127" elapsed="0.018911"/>
-</kw>
-<kw name="Convert To Number" owner="BuiltIn">
-<msg time="2024-04-04T14:17:49.884025" level="INFO">${font_size_before} = 16.0</msg>
-<var>${font_size_before}</var>
-<arg>${style_before.split('px')[0]}</arg>
-<doc>Converts the given item to a floating point number.</doc>
-<status status="PASS" start="2024-04-04T14:17:49.882035" elapsed="0.002993"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-04-04T14:17:49.886023" level="INFO">Font size before clicking is: 16.0</msg>
-<arg>Font size before clicking is: ${font_size_before}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-04-04T14:17:49.886023" elapsed="0.000000"/>
-</kw>
+<status status="PASS" start="2024-04-04T15:45:52.441710" elapsed="11.546423"/>
+</test>
+<test id="s1-t2" name="TC_001_003-001 - Kontorla interakcie s tlačítkom &quot;+&quot;" line="25">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-04T14:17:49.888014" level="INFO">Clicking element '//img[@id='plus']'.</msg>
+<msg time="2024-04-04T15:46:03.998507" level="INFO">Clicking element '//img[@id='plus']'.</msg>
 <arg>${bPlus}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-04T14:17:49.887024" elapsed="0.212901"/>
+<status status="PASS" start="2024-04-04T15:46:03.997502" elapsed="0.224061"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-04-04T15:46:04.249849" level="INFO">${font_size} = font-size: 110%;</msg>
+<var>${font_size}</var>
 <arg>${tVitam}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-04T14:17:50.100920" elapsed="0.027234"/>
+<arg>style</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-04-04T15:46:04.222598" elapsed="0.027251"/>
 </kw>
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2024-04-04T14:17:50.130225" level="INFO">Executing JavaScript:
-return window.getComputedStyle(arguments[0]).fontSize;
-By using argument:
-'&lt;selenium.webdriver.remote.webelement.WebElement (session="527a0bc5fe4769dfefb7c28277b2d3fd", element="f.A33EF132B5EDF5392EE6A1D83E3977C1.d.8BBC9C68190DCE7C83295AD0BBB1BB66.e.41")&gt;'</msg>
-<msg time="2024-04-04T14:17:50.137744" level="INFO">${style_after} = 16px</msg>
-<var>${style_after}</var>
-<arg>return window.getComputedStyle(arguments[0]).fontSize;</arg>
-<arg>ARGUMENTS</arg>
-<arg>${element}</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2024-04-04T14:17:50.129152" elapsed="0.008592"/>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${font_size}</arg>
+<arg>font-size: 110%;</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-04T15:46:04.250955" elapsed="0.000000"/>
 </kw>
-<kw name="Convert To Number" owner="BuiltIn">
-<msg time="2024-04-04T14:17:50.139766" level="INFO">${font_size_after} = 16.0</msg>
-<var>${font_size_after}</var>
-<arg>${style_after.split('px')[0]}</arg>
-<doc>Converts the given item to a floating point number.</doc>
-<status status="PASS" start="2024-04-04T14:17:50.138782" elapsed="0.000984"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-04-04T14:17:50.140969" level="INFO">Font size after clicking is: 16.0</msg>
-<arg>Font size after clicking is: ${font_size_after}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-04-04T14:17:50.140831" elapsed="0.000138"/>
-</kw>
-<kw name="Should Be True" owner="BuiltIn">
-<msg time="2024-04-04T14:17:50.141966" level="FAIL">'16.0 &gt; 16.0' should be true.</msg>
-<arg>${font_size_after} &gt; ${font_size_before}</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="FAIL" start="2024-04-04T14:17:50.140969" elapsed="0.000997">'16.0 &gt; 16.0' should be true.</status>
-</kw>
-<status status="FAIL" start="2024-04-04T14:17:49.751270" elapsed="0.390696">'16.0 &gt; 16.0' should be true.</status>
+<status status="PASS" start="2024-04-04T15:46:03.994217" elapsed="0.257577"/>
 </test>
-<test id="s1-t3" name="post conditions" line="36">
+<test id="s1-t3" name="Kontorla interakcie s tlačítkom &quot;-&quot;" line="30">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-04T15:46:04.255103" level="INFO">Clicking element '//img[@id='minus']'.</msg>
+<arg>${bMinus}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-04T15:46:04.254105" elapsed="0.108125"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-04T15:46:04.363228" level="INFO">Clicking element '//img[@id='minus']'.</msg>
+<arg>${bMinus}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-04T15:46:04.362230" elapsed="0.113555"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-04-04T15:46:04.497058" level="INFO">${font_size} = font-size: 90%;</msg>
+<var>${font_size}</var>
+<arg>${tVitam}</arg>
+<arg>style</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-04-04T15:46:04.476748" elapsed="0.020310"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${font_size}</arg>
+<arg>font-size: 90%;</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-04T15:46:04.498059" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-04-04T15:46:04.254105" elapsed="0.243954"/>
+</test>
+<test id="s1-t4" name="Kontorla interakcie s tlačítkom &quot;100%&quot;" line="36">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-04T15:46:04.500406" level="INFO">Clicking element '//img[@id='100']'.</msg>
+<arg>${b100}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-04T15:46:04.500406" elapsed="0.075867"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-04-04T15:46:04.601679" level="INFO">${font_size} = font-size: 100%;</msg>
+<var>${font_size}</var>
+<arg>${tVitam}</arg>
+<arg>style</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-04-04T15:46:04.577270" elapsed="0.024409"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${font_size}</arg>
+<arg>font-size: 100%;</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-04T15:46:04.602398" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-04-04T15:46:04.499405" elapsed="0.103995"/>
+</test>
+<test id="s1-t5" name="post conditions" line="41">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-04T14:17:52.145056" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-04-04T15:46:06.605847" level="INFO">Slept 2 seconds.</msg>
 <arg>2 seconds</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-04T14:17:50.144728" elapsed="2.000328"/>
+<status status="PASS" start="2024-04-04T15:46:04.604552" elapsed="2.001295"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-04-04T14:17:52.147300" elapsed="2.298417"/>
+<status status="PASS" start="2024-04-04T15:46:06.607195" elapsed="2.297718"/>
 </kw>
-<status status="PASS" start="2024-04-04T14:17:50.143726" elapsed="4.303727"/>
+<status status="PASS" start="2024-04-04T15:46:04.604552" elapsed="4.302280"/>
 </test>
-<status status="FAIL" start="2024-04-04T14:17:34.690278" elapsed="19.760798"/>
+<status status="PASS" start="2024-04-04T15:45:52.156054" elapsed="16.755190"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="1" skip="0">All Tests</stat>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="1" skip="0" id="s1" name="TS 001 003">TS 001 003</stat>
+<stat pass="5" fail="0" skip="0" id="s1" name="TS 001 003">TS 001 003</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-04-04T14:17:34.960557" level="WARN">Imported resource file 'C:\Users\bucka\Documents\GitHub\Simon\SWI\4. semester\Testování software\Projekt\_projekt\resources\keywords.robot' is empty.</msg>
-<msg time="2024-04-04T14:17:35.755533" level="WARN">The chromedriver version (122.0.6261.69) detected in PATH at C:\Users\bucka\AppData\Local\Programs\Python\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (123.0.6312.105); currently, chromedriver 123.0.6312.86 is recommended for chrome 123.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-04-04T15:45:52.433761" level="WARN">Imported resource file 'C:\Users\bucka\Documents\GitHub\Simon\SWI\4. semester\Testování software\Projekt\_projekt\resources\keywords.robot' is empty.</msg>
+<msg time="2024-04-04T15:45:53.196581" level="WARN">The chromedriver version (122.0.6261.69) detected in PATH at C:\Users\bucka\AppData\Local\Programs\Python\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (123.0.6312.105); currently, chromedriver 123.0.6312.86 is recommended for chrome 123.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>

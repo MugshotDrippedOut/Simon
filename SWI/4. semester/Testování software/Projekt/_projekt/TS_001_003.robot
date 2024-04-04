@@ -19,19 +19,24 @@ Resource  Resources/variables/Texts.robot
 Pre-conditions
     Sleep  200 milliseconds
     Open Browser  ${URL_MainPage}  ${BROWSER_CHROME}
+    Wait Until Element Is Visible  ${tVitam}  10s
+    
 
 TC_001_003-001 - Kontorla interakcie s tlačítkom "+"
-    Wait Until Element Is Visible  ${tVitam}  10s
-    ${element}=  Get Webelement  ${tVitam}
-    ${style_before}=  Execute JavaScript  return window.getComputedStyle(arguments[0]).fontSize;  ARGUMENTS  ${element}
-    ${font_size_before}=  Convert To Number  ${style_before.split('px')[0]}  # Extract font size from style attribute
-    Log  Font size before clicking is: ${font_size_before}
     Click Element  ${bPlus}
-    Wait Until Element Is Visible  ${tVitam}  10s
-    ${style_after}=  Execute JavaScript  return window.getComputedStyle(arguments[0]).fontSize;  ARGUMENTS  ${element}
-    ${font_size_after}=  Convert To Number  ${style_after.split('px')[0]}  # Extract font size from style attribute
-    Log  Font size after clicking is: ${font_size_after}
-    Should Be True  ${font_size_after} > ${font_size_before}
+    ${font_size}=  Get Element Attribute  ${tVitam}  style
+    Should Be Equal  ${font_size}  font-size: 110%;
+
+TC_001_003-002 - Kontorla interakcie s tlačítkom "-"
+    Click Element  ${bMinus}
+    Click Element  ${bMinus}
+    ${font_size}=  Get Element Attribute  ${tVitam}  style
+    Should Be Equal  ${font_size}  font-size: 90%;
+
+TC_001_003-003 - Kontorla interakcie s tlačítkom "100%"
+    Click Element  ${b100}
+    ${font_size}=  Get Element Attribute  ${tVitam}  style
+    Should Be Equal  ${font_size}  font-size: 100%;
 
 post conditions
     Sleep  2 seconds

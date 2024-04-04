@@ -80,3 +80,8 @@ Pro získání klasifikovaného zápočtu je potřeba splnit následující podm
   - vsechny divy na strance => //div
   - 111 div => (//div)[111]
   - kombinace relativniho a absolutniho zápisu => /html/body/div[1]//div
+
+# Cviko 4.4.
+rozdelenie
+- SeleniumLibrary
+- resources

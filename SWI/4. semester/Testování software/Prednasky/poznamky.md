@@ -1,4 +1,4 @@
-# 8.2.
+## 8.2.
 
 - Proč je duležité testovat?
 
@@ -64,7 +64,7 @@
     - Mnoho systémových interakcí
     - Selhání zaviněné okolími podmínkami
 
-# 15.2
+## 15.2
 
 - Root Cause (Kořenová příčina)
 
@@ -148,7 +148,7 @@
   - Ladeni-> hledá priciny selháni a odstranit je
     - vyvojár
 
-# 22.2
+## 22.2
 
 ### Princípy testování
 
@@ -189,9 +189,9 @@
   - Konkurence
   - "Použitelnost"
 
-# <center>1. TEST DONE</center>
+## <center>1. TEST DONE</center>
 
-# 14.3.
+## 14.3.
 
 ### Testware
 
@@ -306,7 +306,7 @@
 - Míra automatizace
 - Míra podrobnosti – dokumentace, reportů
 
-# 21.3.
+## 21.3.
 
 Základní dovednosti a postupy
 
@@ -375,7 +375,7 @@ Základní dovednosti a postupy
 - TDD, ATDD, BDD, DDD, FDD
   - … driven development
 
-# 28.3.
+## 28.3.
 
 ### TDD – Test Driven Development
 
@@ -432,20 +432,20 @@ Základní dovednosti a postupy
 - Revize
 - Princip č. 3
 
-## Úrovně testování a typy testů
+# Úrovně testování a typy testů
 
 ### Specifika pro testovací úroveň
 
 - Testované objekty – CO testujeme
 - Cíle testování – CO chceme dosáhnout
-- Testovací báze – z ČEHO vycházíme 
+- Testovací báze – z ČEHO vycházíme
 - Typické defekty – CO může být za problém
-- Přístupy a role – KDO a JAK testuje 
+- Přístupy a role – KDO a JAK testuje
 
 ### Testovací úrovně dle SDLC
 
-- Sekvenční – navazují 
-- Iterativně-inkrementální – překrývají 
+- Sekvenční – navazují
+- Iterativně-inkrementální – překrývají
 
 ### Testovací úrovně
 
@@ -461,7 +461,7 @@ Základní dovednosti a postupy
 - Testování „elementárních“ částí
 - V izolaci -> neřešíme okolí <!-- IMPORTANT -->
 - Obvykle vývojář
-- Speciální nástroje -> míra pokrytí 
+- Speciální nástroje -> míra pokrytí
 - Jednotkové testy
 - Testovací báze
   - Detailní technický návrh
@@ -476,7 +476,7 @@ Základní dovednosti a postupy
 
 ### Integrační testování - komponent
 
-- Interakce komponent <!-- Rozhrani - tlumočnník, spojnice --> 
+- Interakce komponent <!-- Rozhrani - tlumočnník, spojnice -->
 - Kdo s kým a jak komunikuje
 - Typicky testuje vývojář
 - Defekty spočívají v chybějícím rozhraní nebo kompatibilitě
@@ -510,10 +510,106 @@ Základní dovednosti a postupy
 - Potvrzuje shodu se zákazníkovým očekáváním
 
 ### Akceptační testování
+
 <!-- Akceptačních testu je více -->
+
 - UAT -> Uživatelské akceptační testy
 - Alfa a Beta testování <!-- Neplést si s alpha a beta verzemi -->
   - Alfa – interně externí
   - Beta – externí
 - Smluvní a regulatorní akceptační testy
 - Provozně akceptační testy
+
+## 4.4.
+
+### Typy testů
+
+- Aktivity sdílející testovací cíle ve vazbě na konkrétní charakteristiky testované úrovně / části.
+
+- Funkcionální / nefunkcionální
+- Testování černé a bíle skříňky
+
+### Funkcionální testy
+
+- CO systém dělá
+
+- Ověřuje funkcionalitu a co systém vykonává pro jeho
+  - Úplnost
+  - Správnost
+  - Vhodnost
+
+### Nefunkcionální testy
+
+- JAK to systém vykonává
+
+- Ověřuje nefunkcionální charakteristiky
+  - Kvantifikovatelné / měřitelné (časem / jednotkou)
+
+### Nefunkcionální testy
+
+- JAK je systém výkonný / rychlý / efektivní
+
+- Rychlost vykonání operace – odezva v ms
+- Chování v čase – zátěž / výdrž
+- Nakládání se zdroji – škálování / paměť
+
+### Nefunkcionální testy
+
+- JAK je systém použitelný
+
+- UX / UI
+- Snadnost použití
+- Snadnost osvojení použití
+- Snadnost pochopení použití
+- Resistence milného použití
+
+### Nefunkcionální testy
+
+- JAK je systém odolný / spolehlivý
+
+- Jak funguje v nestandardních podmínkách
+- Jak dlouho zvládne fungovat
+- Jak se zotaví
+
+### Nefunkcionální testy
+
+- JAK je systém kompatibilní <!-- kolik ruznych HW/SW dokazu podporovat -->
+
+- Jak funguje na různých HW
+- Jak poběží pod různým OS
+- Jak poběží v rámci prohlížečů / mobilních zařízení
+- Jak dokáže koexistovat s jinými systémy
+
+### Nefunkcionální testy
+
+- JAK je systém přenositelný
+
+- Jak jej lze přenést / upravit z jednoho HW (SW) na druhý, aby byl plně kompatibilní
+- Jak jej lze snadno instalovat / odinstalovat
+
+### Nefunkcionální testy
+
+- JAK je systém udržovatelný
+
+- Jak systém „reaguje“ na změny
+- Jak lehké je provést změny / úpravy
+- Jak je potřeba se o systém „starat“
+
+### Testování černé skříňky
+
+- Testy tvoříme na základě specifikace
+
+- „Nevidíme“ dovnitř -> strukturu systému / komponenty => kód
+
+<!--
+Co znamena videt nevidet
+Vidim/nevidim kód - vidim interni struktury, vazby, integrační testy
+
+Black-box test tak mne to nezajíma, je mi jedno co je vvnitř - všichni
+-specification based testy
+
+White-box tak mně zajíma co sa vevnitř deje - vyvojář
+
+Gray-box testing - kombinace
+
+-->
