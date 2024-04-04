@@ -9,13 +9,27 @@ Testy webovej stránky obce [Krakovany](https://www.krakovany.sk)
   - TS_001_001 - Navigační/hlavné menu
     - TC_001_001-001 - Kontrola tlačítek
     - TS_001_001_001 - Obec
+      - TC_001_001_001-001 - Kontrola interakcie tláčítka Základné údaje a kontakty
+      - TC_001_001_001-002 - Kontrola interakcie tláčítka Geografická poloha
+      - TC_001_001_001-003 - Kontrola interakcie tláčítka História obce Krakovany
+      - TC_001_001_001-004 - Kontrola interakcie tláčítka Monografia obce
+      - TC_001_001_001-005 - Kontrola interakcie tláčítka Erb obce
+      - TC_001_001_001-006 - Kontrola interakcie tláčítka Územný plán obce
+      - TC_001_001_001-007 - Kontrola interakcie tláčítka Program rozvoja obce
+      - TC_001_001_001-008 - Kontrola interakcie tláčítka Prevádzkový poriadok Zberného dvora
+      - TC_001_001_001-009 - Kontrola interakcie tláčítka Starosta obce
+      - TC_001_001_001-010 - Kontrola interakcie tláčítka Obecné zastupiteľstvo
+      - TC_001_001_001-011 - Kontrola interakcie tláčítka Obecná knižnica
+      - TC_001_001_001-012 - Kontrola interakcie tláčítka Fotogaléria
+      - TC_001_001_001-013 - Kontrola interakcie tláčítka Podnikateľské subjekty
+      - TC_001_001_001-014 - Kontrola interakcie tláčítka Červ. kríž
+      - TC_001_001_001-015 - Kontrola interakcie tláčítka Mikroregión
       - TS_001_001_001_001 - Základné údaje a kontakty
         - TC_001_001_001_001-001 - Kontrola interakcie pola "Komentár"
         - TC_001_001_001_001-002 - Kontrola interakcie pola "Meno"
         - TC_001_001_001_001-003 - Kontrola interakcie pola "E-mail"
         - TC_001_001_001_001-004 - Kontrola interakcie pola "Adresa webu"
         - TC_001_001_001_001-005 - Kontrola interakcie tlačidla "Pridať komentár"
-      - TC_001_001_001-001 - Geografická poloha
     - TS_001_001_002 - Občan
       - TC_001_001_002-001 - Elektronická úradná tabuľa
     - TS_001_001_013 - PRIHLÁSIŤ SA / REGISTRÁCIA

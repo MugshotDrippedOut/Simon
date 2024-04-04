@@ -19,23 +19,23 @@ Resource  Resources/variables/Texts.robot
 Pre-conditions
     Sleep  200 milliseconds
     Open Browser  ${URL_MainPage}  ${BROWSER_CHROME}
-    Wait Until Element Is Visible  ${tVitam}  10s
+    Wait Until Element Is Visible  ${TEXT_Vitam}  10s
     
 
 TC_001_003-001 - Kontorla interakcie s tlačítkom "+"
-    Click Element  ${bPlus}
-    ${font_size}=  Get Element Attribute  ${tVitam}  style
+    Click Element  ${BUTTON_Plus}
+    ${font_size}=  Get Element Attribute  ${TEXT_Vitam}  style
     Should Be Equal  ${font_size}  font-size: 110%;
 
 TC_001_003-002 - Kontorla interakcie s tlačítkom "-"
-    Click Element  ${bMinus}
-    Click Element  ${bMinus}
-    ${font_size}=  Get Element Attribute  ${tVitam}  style
+    Click Element  ${BUTTON_Minus}
+    Click Element  ${BUTTON_Minus}
+    ${font_size}=  Get Element Attribute  ${TEXT_Vitam}  style
     Should Be Equal  ${font_size}  font-size: 90%;
 
 TC_001_003-003 - Kontorla interakcie s tlačítkom "100%"
-    Click Element  ${b100}
-    ${font_size}=  Get Element Attribute  ${tVitam}  style
+    Click Element  ${BUTTON_100}
+    ${font_size}=  Get Element Attribute  ${TEXT_Vitam}  style
     Should Be Equal  ${font_size}  font-size: 100%;
 
 post conditions

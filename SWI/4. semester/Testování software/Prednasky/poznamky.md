@@ -189,7 +189,7 @@
   - Konkurence
   - "Použitelnost"
 
-## <center>1. TEST DONE</center>
+# <center>1. TEST DONE</center>
 
 ## 14.3.
 
@@ -350,9 +350,9 @@ Základní dovednosti a postupy
 
 <!-- 2. prezentácia -->
 
-### Testování v kontextu SDLC
+# Testování v kontextu SDLC
 
-- Modely SDLC
+### Modely SDLC
 
   - Sekvenční (Tradiční)
     - Vodopádový, V-Model
@@ -613,3 +613,45 @@ White-box tak mně zajíma co sa vevnitř deje - vyvojář
 Gray-box testing - kombinace
 
 -->
+
+### Testování bílé skříňky
+
+- Testy tvoříme na základě struktury
+
+- „Vidíme“ dovnitř -> strukturu systému / komponenty => kód, architekturu
+
+# 2.3 Testování údržby
+
+### Testování údržby -> kdy ?
+
+- Úprava / oprava systému
+  - Patch, fix, update
+- Změna prostředí
+  - Změna platformy
+  - Změna HW
+  - Změna „formátu“ dat
+- „Vyřazení aplikace z provozu“
+  - Archivace a obnova dat
+  - Kontrola ovlivněného okolí fungování systému
+
+### Testování údržby -> dopadová analýza
+
+- Vyhodnocení zamyšlených i potenciálně nežádoucích vlivů změny
+- Vazba na princip č. 5
+- Výběr regresních testů
+
+### Konfirmační (re-testy) vs. regresní testy
+- Konfirmační testy
+
+- Konfirmujeme / potvrzujeme že je něco …
+- Opraveno (re-testy)
+- Správně upraveno
+- Korektně „vylepšeno“
+
+### Konfirmační (re-testy) vs. regresní testy
+- Regresní testy
+
+- Kontrolujeme, jestli zásah / změna neovlivnil něco dalšího, co přímo nesouviselo se změnou.
+- Agilní vývoj => časté změny => větší regresní riziko => potenciál pro automatizaci testů
+
+

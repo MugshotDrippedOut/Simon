@@ -1,131 +1,699 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.0 on win32)" generated="2024-04-04T15:45:52.152870" rpa="false" schemaversion="5">
-<suite id="s1" name="TS 001 003" source="C:\Users\bucka\Documents\GitHub\Simon\SWI\4. semester\Testování software\Projekt\_projekt\TS_001_003.robot">
-<test id="s1-t1" name="Pre-conditions" line="19">
+<robot generator="Robot 7.0 (Python 3.11.0 on win32)" generated="2024-04-05T00:49:49.890024" rpa="false" schemaversion="5">
+<suite id="s1" name="TS 001 001 001" source="C:\Users\bucka\Documents\GitHub\Simon\SWI\4. semester\Testování software\Projekt\_projekt\TS_001_001_001.robot">
+<test id="s1-t1" name="Pre-conditions" line="31">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-04T15:45:52.643071" level="INFO">Slept 200 milliseconds.</msg>
+<msg time="2024-04-05T00:49:50.372930" level="INFO">Slept 200 milliseconds.</msg>
 <arg>200 milliseconds</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-04T15:45:52.442708" elapsed="0.200874"/>
+<status status="PASS" start="2024-04-05T00:49:50.172753" elapsed="0.200698"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-04T15:45:52.645586" level="INFO">Opening browser 'Chrome' to base url 'https://www.krakovany.sk'.</msg>
-<msg time="2024-04-04T15:45:53.196581" level="WARN">The chromedriver version (122.0.6261.69) detected in PATH at C:\Users\bucka\AppData\Local\Programs\Python\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (123.0.6312.105); currently, chromedriver 123.0.6312.86 is recommended for chrome 123.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-04-05T00:49:50.375884" level="INFO">Opening browser 'Chrome' to base url 'https://www.krakovany.sk'.</msg>
+<msg time="2024-04-05T00:49:51.044568" level="WARN">The chromedriver version (122.0.6261.69) detected in PATH at C:\Users\bucka\AppData\Local\Programs\Python\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (123.0.6312.105); currently, chromedriver 123.0.6312.105 is recommended for chrome 123.*, so it is advised to delete the driver in PATH and retry</msg>
 <arg>${URL_MainPage}</arg>
 <arg>${BROWSER_CHROME}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-04T15:45:52.644587" elapsed="11.218549"/>
+<status status="PASS" start="2024-04-05T00:49:50.374879" elapsed="7.085305"/>
+</kw>
+<status status="PASS" start="2024-04-05T00:49:50.171713" elapsed="7.291034"/>
+</test>
+<test id="s1-t2" name="TC_001_001_001-001 - Kontrola interakcie tláčítka Základné údaje a kontakty" line="35">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON_Obec}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-05T00:49:57.467572" elapsed="0.114382"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:49:57.584968" level="INFO">Simulating Mouse Over on element '//*[@id="menu-hlavne-1"]/li[2]/a'.</msg>
+<arg>${BUTTON_Obec}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-04-05T00:49:57.583966" elapsed="0.363261"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${tVitam}</arg>
-<arg>10s</arg>
+<arg>${BUTTON_ZakladneUdajeAkontakty}</arg>
+<arg>10 seconds</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-04T15:46:03.865131" elapsed="0.121007"/>
-</kw>
-<status status="PASS" start="2024-04-04T15:45:52.441710" elapsed="11.546423"/>
-</test>
-<test id="s1-t2" name="TC_001_003-001 - Kontorla interakcie s tlačítkom &quot;+&quot;" line="25">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-04T15:46:03.998507" level="INFO">Clicking element '//img[@id='plus']'.</msg>
-<arg>${bPlus}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-04T15:46:03.997502" elapsed="0.224061"/>
-</kw>
-<kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2024-04-04T15:46:04.249849" level="INFO">${font_size} = font-size: 110%;</msg>
-<var>${font_size}</var>
-<arg>${tVitam}</arg>
-<arg>style</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2024-04-04T15:46:04.222598" elapsed="0.027251"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${font_size}</arg>
-<arg>font-size: 110%;</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-04-04T15:46:04.250955" elapsed="0.000000"/>
-</kw>
-<status status="PASS" start="2024-04-04T15:46:03.994217" elapsed="0.257577"/>
-</test>
-<test id="s1-t3" name="Kontorla interakcie s tlačítkom &quot;-&quot;" line="30">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-04T15:46:04.255103" level="INFO">Clicking element '//img[@id='minus']'.</msg>
-<arg>${bMinus}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-04T15:46:04.254105" elapsed="0.108125"/>
+<status status="PASS" start="2024-04-05T00:49:57.948184" elapsed="0.137263"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-04T15:46:04.363228" level="INFO">Clicking element '//img[@id='minus']'.</msg>
-<arg>${bMinus}</arg>
+<msg time="2024-04-05T00:49:58.088020" level="INFO">Clicking element '//*[@id="menu-hlavne-1"]/li[2]/ul/li[1]/a'.</msg>
+<arg>${BUTTON_ZakladneUdajeAkontakty}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-04T15:46:04.362230" elapsed="0.113555"/>
+<status status="PASS" start="2024-04-05T00:49:58.086980" elapsed="3.284643"/>
 </kw>
-<kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2024-04-04T15:46:04.497058" level="INFO">${font_size} = font-size: 90%;</msg>
-<var>${font_size}</var>
-<arg>${tVitam}</arg>
-<arg>style</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2024-04-04T15:46:04.476748" elapsed="0.020310"/>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:01.398849" level="INFO">Current location is 'https://www.krakovany.sk/?p=979'.</msg>
+<arg>${URL_ZakladneUdajeAkontakty}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-05T00:50:01.373138" elapsed="0.026707"/>
 </kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${font_size}</arg>
-<arg>font-size: 90%;</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-04-04T15:46:04.498059" elapsed="0.000000"/>
-</kw>
-<status status="PASS" start="2024-04-04T15:46:04.254105" elapsed="0.243954"/>
+<status status="PASS" start="2024-04-05T00:49:57.466178" elapsed="3.935267"/>
 </test>
-<test id="s1-t4" name="Kontorla interakcie s tlačítkom &quot;100%&quot;" line="36">
+<test id="s1-t3" name="TC_001_001_001-002 - Kontrola interakcie tláčítka Geografická poloha" line="42">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON_Obec}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-05T00:50:01.406442" elapsed="0.258734"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:01.666170" level="INFO">Simulating Mouse Over on element '//*[@id="menu-hlavne-1"]/li[2]/a'.</msg>
+<arg>${BUTTON_Obec}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-04-05T00:50:01.665176" elapsed="0.294139"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON_GeografickaPoloha}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-05T00:50:01.960311" elapsed="0.102483"/>
+</kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-04T15:46:04.500406" level="INFO">Clicking element '//img[@id='100']'.</msg>
-<arg>${b100}</arg>
+<msg time="2024-04-05T00:50:02.065914" level="INFO">Clicking element '//*[@id="menu-hlavne-1"]/li[2]/ul/li[2]/a'.</msg>
+<arg>${BUTTON_GeografickaPoloha}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-04T15:46:04.500406" elapsed="0.075867"/>
+<status status="PASS" start="2024-04-05T00:50:02.064736" elapsed="2.945922"/>
 </kw>
-<kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2024-04-04T15:46:04.601679" level="INFO">${font_size} = font-size: 100%;</msg>
-<var>${font_size}</var>
-<arg>${tVitam}</arg>
-<arg>style</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2024-04-04T15:46:04.577270" elapsed="0.024409"/>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:05.030098" level="INFO">Current location is 'https://www.krakovany.sk/?p=48'.</msg>
+<arg>${URL_GeografickaPoloha}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-05T00:50:05.012926" elapsed="0.017172"/>
 </kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${font_size}</arg>
-<arg>font-size: 100%;</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-04-04T15:46:04.602398" elapsed="0.000000"/>
-</kw>
-<status status="PASS" start="2024-04-04T15:46:04.499405" elapsed="0.103995"/>
+<status status="PASS" start="2024-04-05T00:50:01.404455" elapsed="3.627276"/>
 </test>
-<test id="s1-t5" name="post conditions" line="41">
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-04T15:46:06.605847" level="INFO">Slept 2 seconds.</msg>
-<arg>2 seconds</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-04T15:46:04.604552" elapsed="2.001295"/>
+<test id="s1-t4" name="TC_001_001_001-003 - Kontrola interakcie tláčítka História obce Krakovany" line="49">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON_Obec}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-05T00:50:05.038786" elapsed="0.090133"/>
 </kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:05.131508" level="INFO">Simulating Mouse Over on element '//*[@id="menu-hlavne-1"]/li[2]/a'.</msg>
+<arg>${BUTTON_Obec}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-04-05T00:50:05.129915" elapsed="0.355875"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON_HistoriaObce}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-05T00:50:05.486750" elapsed="0.096243"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:05.586559" level="INFO">Clicking element '//*[@id="menu-hlavne-1"]/li[2]/ul/li[3]/a'.</msg>
+<arg>${BUTTON_HistoriaObce}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-05T00:50:05.584053" elapsed="2.882740"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:08.486099" level="INFO">Current location is 'https://www.krakovany.sk/?p=1'.</msg>
+<arg>${URL_HistoriaObce}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-05T00:50:08.468791" elapsed="0.017308"/>
+</kw>
+<status status="PASS" start="2024-04-05T00:50:05.035796" elapsed="3.451571"/>
+</test>
+<test id="s1-t5" name="TC_001_001_001-004 - Kontrola interakcie tláčítka Monografia obce" line="56">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON_Obec}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-05T00:50:08.492679" elapsed="0.071040"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:08.566712" level="INFO">Simulating Mouse Over on element '//*[@id="menu-hlavne-1"]/li[2]/a'.</msg>
+<arg>${BUTTON_Obec}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-04-05T00:50:08.565715" elapsed="0.361408"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON_MonografiaObce}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-05T00:50:08.928520" elapsed="0.093216"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:09.023738" level="INFO">Clicking element '//*[@id="menu-hlavne-1"]/li[2]/ul/li[4]/a'.</msg>
+<arg>${BUTTON_MonografiaObce}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-05T00:50:09.022757" elapsed="3.113192"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:12.160216" level="INFO">Current location is 'https://www.krakovany.sk/?p=1454'.</msg>
+<arg>${URL_MonografiaObce}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-05T00:50:12.137896" elapsed="0.022320"/>
+</kw>
+<status status="PASS" start="2024-04-05T00:50:08.491582" elapsed="3.670546"/>
+</test>
+<test id="s1-t6" name="TC_001_001_001-005 - Kontrola interakcie tláčítka Erb obce" line="63">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON_Obec}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-05T00:50:12.168384" elapsed="0.157355"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:12.328067" level="INFO">Simulating Mouse Over on element '//*[@id="menu-hlavne-1"]/li[2]/a'.</msg>
+<arg>${BUTTON_Obec}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-04-05T00:50:12.327071" elapsed="0.327705"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON_ErbObce}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-05T00:50:12.655801" elapsed="0.133395"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:12.790191" level="INFO">Clicking element '//*[@id="menu-hlavne-1"]/li[2]/ul/li[5]/a'.</msg>
+<arg>${BUTTON_ErbObce}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-05T00:50:12.790191" elapsed="3.351537"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:16.167061" level="INFO">Current location is 'https://www.krakovany.sk/?p=1136'.</msg>
+<arg>${URL_ErbObce}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-05T00:50:16.143245" elapsed="0.023816"/>
+</kw>
+<status status="PASS" start="2024-04-05T00:50:12.166385" elapsed="4.002663"/>
+</test>
+<test id="s1-t7" name="TC_001_001_001-006 - Kontrola interakcie tláčítka Územný plán obce" line="70">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON_Obec}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-05T00:50:16.176647" elapsed="0.046105"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:16.222752" level="INFO">Simulating Mouse Over on element '//*[@id="menu-hlavne-1"]/li[2]/a'.</msg>
+<arg>${BUTTON_Obec}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-04-05T00:50:16.222752" elapsed="0.297868"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON_UzemnyPlanObce}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-05T00:50:16.523140" elapsed="0.071333"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:16.595472" level="INFO">Clicking element '//*[@id="menu-hlavne-1"]/li[2]/ul/li[6]/a'.</msg>
+<arg>${BUTTON_UzemnyPlanObce}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-05T00:50:16.594473" elapsed="2.840108"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:19.442841" level="INFO">Current location is 'https://www.krakovany.sk/?p=1423'.</msg>
+<arg>${URL_UzemnyPlanObce}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-05T00:50:19.434581" elapsed="0.008260"/>
+</kw>
+<status status="PASS" start="2024-04-05T00:50:16.173629" elapsed="3.270675"/>
+</test>
+<test id="s1-t8" name="TC_001_001_001-007 - Kontrola interakcie tláčítka Program rozvoja obce" line="77">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON_Obec}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-05T00:50:19.446300" elapsed="0.028543"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:19.475841" level="INFO">Simulating Mouse Over on element '//*[@id="menu-hlavne-1"]/li[2]/a'.</msg>
+<arg>${BUTTON_Obec}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-04-05T00:50:19.475841" elapsed="0.292170"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON_ProgramRozvojaObce}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-05T00:50:19.769008" elapsed="0.030917"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:19.801437" level="INFO">Clicking element '//*[@id="menu-hlavne-1"]/li[2]/ul/li[7]/a'.</msg>
+<arg>${BUTTON_ProgramRozvojaObce}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-05T00:50:19.801437" elapsed="2.321433"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:22.129970" level="INFO">Current location is 'https://www.krakovany.sk/?p=9257'.</msg>
+<arg>${URL_ProgramRozvojaObce}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-05T00:50:22.122870" elapsed="0.007100"/>
+</kw>
+<status status="PASS" start="2024-04-05T00:50:19.445302" elapsed="2.684668"/>
+</test>
+<test id="s1-t9" name="TC_001_001_001-008 - Kontrola interakcie tláčítka Prevádzkový poriadok Zberného dvora" line="84">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON_Obec}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-05T00:50:22.131477" elapsed="0.026538"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:22.159045" level="INFO">Simulating Mouse Over on element '//*[@id="menu-hlavne-1"]/li[2]/a'.</msg>
+<arg>${BUTTON_Obec}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-04-05T00:50:22.158015" elapsed="0.293847"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON_PrevadzkovyPoriadokZbernehoDvora}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-05T00:50:22.452156" elapsed="0.030644"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:22.482800" level="INFO">Clicking element '//*[@id="menu-hlavne-1"]/li[2]/ul/li[8]/a'.</msg>
+<arg>${BUTTON_PrevadzkovyPoriadokZbernehoDvora}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-05T00:50:22.482800" elapsed="3.807054"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:26.299285" level="INFO">Current location is 'https://www.krakovany.sk/?p=39673'.</msg>
+<arg>${URL_PrevadzkovyPoriadokZbernehoDvora}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-05T00:50:26.289854" elapsed="0.009431"/>
+</kw>
+<status status="PASS" start="2024-04-05T00:50:22.131477" elapsed="4.167808"/>
+</test>
+<test id="s1-t10" name="TC_001_001_001-009 - Kontrola interakcie tláčítka Starosta obce" line="91">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON_Obec}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-05T00:50:26.301791" elapsed="0.025681"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:26.328467" level="INFO">Simulating Mouse Over on element '//*[@id="menu-hlavne-1"]/li[2]/a'.</msg>
+<arg>${BUTTON_Obec}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-04-05T00:50:26.328467" elapsed="0.297699"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON_StarostaObce}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-05T00:50:26.626166" elapsed="0.033580"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:26.660742" level="INFO">Clicking element '//*[@id="menu-hlavne-1"]/li[2]/ul/li[9]/a'.</msg>
+<arg>${BUTTON_StarostaObce}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-05T00:50:26.659746" elapsed="2.838693"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:29.522310" level="INFO">Current location is 'https://www.krakovany.sk/?p=569'.</msg>
+<arg>${URL_StarostaObce}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-05T00:50:29.499886" elapsed="0.023439"/>
+</kw>
+<status status="PASS" start="2024-04-05T00:50:26.300284" elapsed="3.224037"/>
+</test>
+<test id="s1-t11" name="TC_001_001_001-010 - Kontrola interakcie tláčítka Obecné zastupiteľstvo" line="98">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON_Obec}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-05T00:50:29.531527" elapsed="0.063609"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:29.596132" level="INFO">Simulating Mouse Over on element '//*[@id="menu-hlavne-1"]/li[2]/a'.</msg>
+<arg>${BUTTON_Obec}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-04-05T00:50:29.595136" elapsed="0.304170"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON_ObecneZastupitelstvo}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-05T00:50:29.900310" elapsed="0.037108"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:29.938418" level="INFO">Clicking element '//*[@id="menu-hlavne-1"]/li[2]/ul/li[10]/a'.</msg>
+<arg>${BUTTON_ObecneZastupitelstvo}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-05T00:50:29.938418" elapsed="2.661061"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:32.608715" level="INFO">Current location is 'https://www.krakovany.sk/?p=1123'.</msg>
+<arg>${URL_ObecneZastupitelstvo}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-05T00:50:32.599479" elapsed="0.009236"/>
+</kw>
+<status status="PASS" start="2024-04-05T00:50:29.528532" elapsed="3.081178"/>
+</test>
+<test id="s1-t12" name="TC_001_001_001-011 - Kontrola interakcie tláčítka Obecná knižnica" line="105">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON_Obec}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-05T00:50:32.611708" elapsed="0.037984"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:32.651726" level="INFO">Simulating Mouse Over on element '//*[@id="menu-hlavne-1"]/li[2]/a'.</msg>
+<arg>${BUTTON_Obec}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-04-05T00:50:32.650727" elapsed="0.292907"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON_ObecnaKniznica}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-05T00:50:32.943634" elapsed="0.045277"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:32.989907" level="INFO">Clicking element '//*[@id="menu-hlavne-1"]/li[2]/ul/li[11]/a'.</msg>
+<arg>${BUTTON_ObecnaKniznica}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-05T00:50:32.989907" elapsed="2.800082"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:35.798861" level="INFO">Current location is 'https://www.krakovany.sk/?cat=49'.</msg>
+<arg>${URL_ObecnaKniznica}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-05T00:50:35.791497" elapsed="0.007364"/>
+</kw>
+<status status="PASS" start="2024-04-05T00:50:32.610712" elapsed="3.189151"/>
+</test>
+<test id="s1-t13" name="TC_001_001_001-012 - Kontrola interakcie tláčítka Fotogaléria" line="112">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON_Obec}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-05T00:50:35.801460" elapsed="0.025089"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:35.827545" level="INFO">Simulating Mouse Over on element '//*[@id="menu-hlavne-1"]/li[2]/a'.</msg>
+<arg>${BUTTON_Obec}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-04-05T00:50:35.827545" elapsed="0.287737"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON_Fotogaleria}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-05T00:50:36.116424" elapsed="0.062275"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:36.181289" level="INFO">Clicking element '//*[@id="menu-hlavne-1"]/li[2]/ul/li[12]/a'.</msg>
+<arg>${BUTTON_Fotogaleria}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-05T00:50:36.180242" elapsed="5.086802"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:41.289749" level="INFO">Current location is 'https://www.krakovany.sk/?cat=8'.</msg>
+<arg>${URL_Fotogaleria}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-05T00:50:41.270028" elapsed="0.019721"/>
+</kw>
+<status status="PASS" start="2024-04-05T00:50:35.801460" elapsed="5.490285"/>
+</test>
+<test id="s1-t14" name="TC_001_001_001-013 - Kontrola interakcie tláčítka Podnikateľské subjekty" line="119">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON_Obec}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-05T00:50:41.297758" elapsed="0.045833"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:41.344593" level="INFO">Simulating Mouse Over on element '//*[@id="menu-hlavne-1"]/li[2]/a'.</msg>
+<arg>${BUTTON_Obec}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-04-05T00:50:41.344593" elapsed="0.322672"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON_PodnikatelskeSubjekty}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-05T00:50:41.668219" elapsed="0.083259"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:41.753601" level="INFO">Clicking element '//*[@id="menu-hlavne-1"]/li[2]/ul/li[13]/a'.</msg>
+<arg>${BUTTON_PodnikatelskeSubjekty}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-05T00:50:41.752651" elapsed="3.133374"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:44.905692" level="INFO">Current location is 'https://www.krakovany.sk/?p=1437'.</msg>
+<arg>${URL_PodnikatelskeSubjekty}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-04-05T00:50:44.888031" elapsed="0.018131"/>
+</kw>
+<status status="PASS" start="2024-04-05T00:50:41.295747" elapsed="3.611687"/>
+</test>
+<test id="s1-t15" name="TC_001_001_001-014 - Kontrola interakcie tláčítka Červ. kríž" line="126">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON_Obec}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-05T00:50:44.912580" elapsed="0.103217"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:45.017800" level="INFO">Simulating Mouse Over on element '//*[@id="menu-hlavne-1"]/li[2]/a'.</msg>
+<arg>${BUTTON_Obec}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-04-05T00:50:45.016803" elapsed="0.337851"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON_CervenyKriz}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-05T00:50:45.356992" elapsed="0.089012"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BUTTON_CervenyKriz}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-05T00:50:45.447451" elapsed="0.354164"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:45.803778" level="INFO">Clicking element '//*[@id="menu-hlavne-1"]/li[2]/ul/li[14]/a'.</msg>
+<msg time="2024-04-05T00:50:45.894230" level="FAIL">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=123.0.6312.105)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7A5BA4C82+3505170]
+	(No symbol) [0x00007FF7A57D0852]
+	(No symbol) [0x00007FF7A5683FFD]
+	(No symbol) [0x00007FF7A56CAE92]
+	(No symbol) [0x00007FF7A56BF978]
+	(No symbol) [0x00007FF7A56EBE8A]
+	(No symbol) [0x00007FF7A56BF27A]
+	(No symbol) [0x00007FF7A56EC0A0]
+	(No symbol) [0x00007FF7A57083B2]
+	(No symbol) [0x00007FF7A56EBC33]
+	(No symbol) [0x00007FF7A56BD618]
+	(No symbol) [0x00007FF7A56BE6B1]
+	GetHandleVerifier [0x00007FF7A5BD67DD+3708781]
+	GetHandleVerifier [0x00007FF7A5C2FC5D+4074477]
+	GetHandleVerifier [0x00007FF7A5C27DDF+4042095]
+	GetHandleVerifier [0x00007FF7A58FA136+708806]
+	(No symbol) [0x00007FF7A57DCB0F]
+	(No symbol) [0x00007FF7A57D7D14]
+	(No symbol) [0x00007FF7A57D7E6C]
+	(No symbol) [0x00007FF7A57C79A4]
+	BaseThreadInitThunk [0x00007FFFA909257D+29]
+	RtlUserThreadStart [0x00007FFFA9B4AA58+40]
+</msg>
+<arg>${BUTTON_CervenyKriz}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-04-05T00:50:45.802785" elapsed="0.101013">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=123.0.6312.105)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7A5BA4C82+3505170]
+	(No symbol) [0x00007FF7A57D0852]
+	(No symbol) [0x00007FF7A5683FFD]
+	(No symbol) [0x00007FF7A56CAE92]
+	(No symbol) [0x00007FF7A56BF978]
+	(No symbol) [0x00007FF7A56EBE8A]
+	(No symbol) [0x00007FF7A56BF27A]
+	(No symbol) [0x00007FF7A56EC0A0]
+	(No symbol) [0x00007FF7A57083B2]
+	(No symbol) [0x00007FF7A56EBC33]
+	(No symbol) [0x00007FF7A56BD618]
+	(No symbol) [0x00007FF7A56BE6B1]
+	GetHandleVerifier [0x00007FF7A5BD67DD+3708781]
+	GetHandleVerifier [0x00007FF7A5C2FC5D+4074477]
+	GetHandleVerifier [0x00007FF7A5C27DDF+4042095]
+	GetHandleVerifier [0x00007FF7A58FA136+708806]
+	(No symbol) [0x00007FF7A57DCB0F]
+	(No symbol) [0x00007FF7A57D7D14]
+	(No symbol) [0x00007FF7A57D7E6C]
+	(No symbol) [0x00007FF7A57C79A4]
+	BaseThreadInitThunk [0x00007FFFA909257D+29]
+	RtlUserThreadStart [0x00007FFFA9B4AA58+40]
+</status>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<arg>${URL_CervenyKriz}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="NOT RUN" start="2024-04-05T00:50:45.905275" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-04-05T00:50:44.910011" elapsed="0.997069">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=123.0.6312.105)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7A5BA4C82+3505170]
+	(No symbol) [0x00007FF7A57D0852]
+	(No symbol) [0x00007FF7A5683FFD]
+	(No symbol) [0x00007FF7A56CAE92]
+	(No symbol) [0x00007FF7A56BF978]
+	(No symbol) [0x00007FF7A56EBE8A]
+	(No symbol) [0x00007FF7A56BF27A]
+	(No symbol) [0x00007FF7A56EC0A0]
+	(No symbol) [0x00007FF7A57083B2]
+	(No symbol) [0x00007FF7A56EBC33]
+	(No symbol) [0x00007FF7A56BD618]
+	(No symbol) [0x00007FF7A56BE6B1]
+	GetHandleVerifier [0x00007FF7A5BD67DD+3708781]
+	GetHandleVerifier [0x00007FF7A5C2FC5D+4074477]
+	GetHandleVerifier [0x00007FF7A5C27DDF+4042095]
+	GetHandleVerifier [0x00007FF7A58FA136+708806]
+	(No symbol) [0x00007FF7A57DCB0F]
+	(No symbol) [0x00007FF7A57D7D14]
+	(No symbol) [0x00007FF7A57D7E6C]
+	(No symbol) [0x00007FF7A57C79A4]
+	BaseThreadInitThunk [0x00007FFFA909257D+29]
+	RtlUserThreadStart [0x00007FFFA9B4AA58+40]
+</status>
+</test>
+<test id="s1-t16" name="TC_001_001_001-015 - Kontrola interakcie tláčítka Mikroregión" line="134">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON_Obec}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-05T00:50:45.920074" elapsed="0.075411"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:45.998470" level="INFO">Simulating Mouse Over on element '//*[@id="menu-hlavne-1"]/li[2]/a'.</msg>
+<arg>${BUTTON_Obec}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-04-05T00:50:45.997480" elapsed="0.342855"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON_Mikroregion}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-05T00:50:46.341956" elapsed="0.083504"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BUTTON_Mikroregion}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-05T00:50:46.426976" elapsed="0.332956"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-05T00:50:46.761633" level="INFO">Clicking element '//*[@id="menu-hlavne-1"]/li[2]/ul/li[15]'.</msg>
+<msg time="2024-04-05T00:50:46.855090" level="FAIL">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=123.0.6312.105)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7A5BA4C82+3505170]
+	(No symbol) [0x00007FF7A57D0852]
+	(No symbol) [0x00007FF7A5683FFD]
+	(No symbol) [0x00007FF7A56CAE92]
+	(No symbol) [0x00007FF7A56BF978]
+	(No symbol) [0x00007FF7A56EBE8A]
+	(No symbol) [0x00007FF7A56BF27A]
+	(No symbol) [0x00007FF7A56EC0A0]
+	(No symbol) [0x00007FF7A57083B2]
+	(No symbol) [0x00007FF7A56EBC33]
+	(No symbol) [0x00007FF7A56BD618]
+	(No symbol) [0x00007FF7A56BE6B1]
+	GetHandleVerifier [0x00007FF7A5BD67DD+3708781]
+	GetHandleVerifier [0x00007FF7A5C2FC5D+4074477]
+	GetHandleVerifier [0x00007FF7A5C27DDF+4042095]
+	GetHandleVerifier [0x00007FF7A58FA136+708806]
+	(No symbol) [0x00007FF7A57DCB0F]
+	(No symbol) [0x00007FF7A57D7D14]
+	(No symbol) [0x00007FF7A57D7E6C]
+	(No symbol) [0x00007FF7A57C79A4]
+	BaseThreadInitThunk [0x00007FFFA909257D+29]
+	RtlUserThreadStart [0x00007FFFA9B4AA58+40]
+</msg>
+<arg>${BUTTON_Mikroregion}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-04-05T00:50:46.761633" elapsed="0.097696">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=123.0.6312.105)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7A5BA4C82+3505170]
+	(No symbol) [0x00007FF7A57D0852]
+	(No symbol) [0x00007FF7A5683FFD]
+	(No symbol) [0x00007FF7A56CAE92]
+	(No symbol) [0x00007FF7A56BF978]
+	(No symbol) [0x00007FF7A56EBE8A]
+	(No symbol) [0x00007FF7A56BF27A]
+	(No symbol) [0x00007FF7A56EC0A0]
+	(No symbol) [0x00007FF7A57083B2]
+	(No symbol) [0x00007FF7A56EBC33]
+	(No symbol) [0x00007FF7A56BD618]
+	(No symbol) [0x00007FF7A56BE6B1]
+	GetHandleVerifier [0x00007FF7A5BD67DD+3708781]
+	GetHandleVerifier [0x00007FF7A5C2FC5D+4074477]
+	GetHandleVerifier [0x00007FF7A5C27DDF+4042095]
+	GetHandleVerifier [0x00007FF7A58FA136+708806]
+	(No symbol) [0x00007FF7A57DCB0F]
+	(No symbol) [0x00007FF7A57D7D14]
+	(No symbol) [0x00007FF7A57D7E6C]
+	(No symbol) [0x00007FF7A57C79A4]
+	BaseThreadInitThunk [0x00007FFFA909257D+29]
+	RtlUserThreadStart [0x00007FFFA9B4AA58+40]
+</status>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<arg>${URL_Mikroregion}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="NOT RUN" start="2024-04-05T00:50:46.860283" elapsed="0.001556"/>
+</kw>
+<status status="FAIL" start="2024-04-05T00:50:45.918081" elapsed="0.944886">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=123.0.6312.105)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7A5BA4C82+3505170]
+	(No symbol) [0x00007FF7A57D0852]
+	(No symbol) [0x00007FF7A5683FFD]
+	(No symbol) [0x00007FF7A56CAE92]
+	(No symbol) [0x00007FF7A56BF978]
+	(No symbol) [0x00007FF7A56EBE8A]
+	(No symbol) [0x00007FF7A56BF27A]
+	(No symbol) [0x00007FF7A56EC0A0]
+	(No symbol) [0x00007FF7A57083B2]
+	(No symbol) [0x00007FF7A56EBC33]
+	(No symbol) [0x00007FF7A56BD618]
+	(No symbol) [0x00007FF7A56BE6B1]
+	GetHandleVerifier [0x00007FF7A5BD67DD+3708781]
+	GetHandleVerifier [0x00007FF7A5C2FC5D+4074477]
+	GetHandleVerifier [0x00007FF7A5C27DDF+4042095]
+	GetHandleVerifier [0x00007FF7A58FA136+708806]
+	(No symbol) [0x00007FF7A57DCB0F]
+	(No symbol) [0x00007FF7A57D7D14]
+	(No symbol) [0x00007FF7A57D7E6C]
+	(No symbol) [0x00007FF7A57C79A4]
+	BaseThreadInitThunk [0x00007FFFA909257D+29]
+	RtlUserThreadStart [0x00007FFFA9B4AA58+40]
+</status>
+</test>
+<test id="s1-t17" name="Post-conditions" line="142">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-04-04T15:46:06.607195" elapsed="2.297718"/>
+<status status="PASS" start="2024-04-05T00:50:46.875896" elapsed="2.339163"/>
 </kw>
-<status status="PASS" start="2024-04-04T15:46:04.604552" elapsed="4.302280"/>
+<status status="PASS" start="2024-04-05T00:50:46.873909" elapsed="2.342905"/>
 </test>
-<status status="PASS" start="2024-04-04T15:45:52.156054" elapsed="16.755190"/>
+<status status="FAIL" start="2024-04-05T00:49:49.894081" elapsed="59.327970"/>
 </suite>
 <statistics>
 <total>
-<stat pass="5" fail="0" skip="0">All Tests</stat>
+<stat pass="15" fail="2" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="5" fail="0" skip="0" id="s1" name="TS 001 003">TS 001 003</stat>
+<stat pass="15" fail="2" skip="0" id="s1" name="TS 001 001 001">TS 001 001 001</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-04-04T15:45:52.433761" level="WARN">Imported resource file 'C:\Users\bucka\Documents\GitHub\Simon\SWI\4. semester\Testování software\Projekt\_projekt\resources\keywords.robot' is empty.</msg>
-<msg time="2024-04-04T15:45:53.196581" level="WARN">The chromedriver version (122.0.6261.69) detected in PATH at C:\Users\bucka\AppData\Local\Programs\Python\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (123.0.6312.105); currently, chromedriver 123.0.6312.86 is recommended for chrome 123.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-04-05T00:49:50.160288" level="WARN">Imported resource file 'C:\Users\bucka\Documents\GitHub\Simon\SWI\4. semester\Testování software\Projekt\_projekt\resources\keywords.robot' is empty.</msg>
+<msg time="2024-04-05T00:49:51.044568" level="WARN">The chromedriver version (122.0.6261.69) detected in PATH at C:\Users\bucka\AppData\Local\Programs\Python\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (123.0.6312.105); currently, chromedriver 123.0.6312.105 is recommended for chrome 123.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>
