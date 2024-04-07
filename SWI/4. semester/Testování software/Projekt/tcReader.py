@@ -18,7 +18,7 @@ def printRobotFiles(path, exceptionDir = "Resources", fileStart = "TC"):
                     for line in f:
                         if "TC" in line and line.startswith("TC"):
                             count += line.count("TC")
-                            print(os.path.join("        " + line))
+                            print(os.path.join("        " + line)[:-1])
     print("\nNumber of TCs found: " + str(count))
 
 
