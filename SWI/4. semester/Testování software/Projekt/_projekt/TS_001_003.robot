@@ -14,6 +14,9 @@ Resource  resources/variables/URLs.robot
 Resource  resources/variables/Inputs.robot
 Resource  resources/variables/Buttons.robot
 Resource  Resources/variables/Texts.robot
+Resource  Resources/variables/Images.robot
+
+
 
 *** Test Cases ***
 Pre-conditions
@@ -23,18 +26,18 @@ Pre-conditions
     
 
 TC_001_003-001 - Kontorla interakcie s tlačítkom "+"
-    Click Element  ${BUTTON_Plus}
+    Click Element  ${IMAGE_Plus}
     ${font_size}=  Get Element Attribute  ${TEXT_Vitam}  style
     Should Be Equal  ${font_size}  font-size: 110%;
 
 TC_001_003-002 - Kontorla interakcie s tlačítkom "-"
-    Click Element  ${BUTTON_Minus}
-    Click Element  ${BUTTON_Minus}
+    Click Element  ${IMAGE_Minus}
+    Click Element  ${IMAGE_Minus}
     ${font_size}=  Get Element Attribute  ${TEXT_Vitam}  style
     Should Be Equal  ${font_size}  font-size: 90%;
 
 TC_001_003-003 - Kontorla interakcie s tlačítkom "100%"
-    Click Element  ${BUTTON_100}
+    Click Element  ${IMAGE_100}
     ${font_size}=  Get Element Attribute  ${TEXT_Vitam}  style
     Should Be Equal  ${font_size}  font-size: 100%;
 

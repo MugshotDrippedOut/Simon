@@ -5,7 +5,7 @@ Testy webovej stránky obce [Krakovany](https://www.krakovany.sk)
 # - znamená test case, eg. 001_001-001 je prvý test case prvej sady prvej sady
 -->
 
-- TS_001 - Hlavná stránka obce Krakovany
+- TS_001 - Stránka obce Krakovany
   - TS_001_001 - Navigační/hlavné menu
     - TC_001_001-001 - Kontrola tlačítek
     - TS_001_001_001 - Obec
@@ -46,11 +46,10 @@ Testy webovej stránky obce [Krakovany](https://www.krakovany.sk)
   - TS_001_004 - Cookies
     - TC_001_004-001 - Kontrola obsahu cookies
   - TS_001_005 - Kontrola Generovania Elementov
-  - TC_001_005-001 - Kontrola, či sú všetky očakávané `div` elementy prítomné
+    - TC_001_005-001 - Kontrola, či sú všetky očakávané `div` elementy prítomné
     - TC_001_005-002 - Kontrola, či sú všetky očakávané `img` elementy prítomné a či majú správne nastavené `src` a `alt` atribúty
-    - TC_001_005-003 - Kontrola, či sú všetky očakávané `a` elementy prítomné a či majú správne nastavené `href` atribúty
-    - TC_001_005-004 - Kontrola, či sú všetky očakávané `input` elementy prítomné a či majú správne nastavené `type`, `name` a `id` atribúty
-    - TC_001_005-005 - Kontrola, či sú všetky očakávané `button` elementy prítomné a či majú správne nastavené `type` a `name` atribúty
+    - TC_001_005-003 - Kontrola, či sú všetky očakávané `a` elementy prítomné 
+    - TC_001_005-004 - Kontrola, či sú všetky očakávané `input` elementy prítomné a či majú správne nastavené `type` a `name` atribúty atribúty
   - TS_001_100 - UI/UX
     - TC_001_100-001 - Konzistentnosť elementov
     - TC_001_100-002 - Čitelnosť a vizibilita textu

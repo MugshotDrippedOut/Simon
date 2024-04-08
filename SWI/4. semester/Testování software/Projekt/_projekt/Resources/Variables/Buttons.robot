@@ -22,7 +22,3 @@ ${BUTTON_Mikroregion}  //*[@id="menu-hlavne-1"]/li[2]/ul/li[15]
 # TS_001_001_001_001 - Základné údaje a kontakty
 ${BUTTON_PridatKomentar}  //input[@id='submit'] 
 
-# TS_001_003 - Testovanie zmeny zobrazenie
-${BUTTON_Plus}  //img[@id='plus']
-${BUTTON_Minus}  //img[@id='minus']
-${BUTTON_100}  //img[@id='100']

@@ -11,6 +11,7 @@ Resource  resources/variables/URLs.robot
 Resource  resources/variables/Inputs.robot
 Resource  resources/variables/Buttons.robot
 Resource  Resources/variables/Texts.robot
+Resource  Resources/variables/Images.robot
 
 *** Test Cases ***
 Pre-conditions
@@ -18,8 +19,8 @@ Pre-conditions
     Open Browser  ${URL_MainPage}  ${BROWSER_CHROME}
 
 TC_001_004-001 - Kontrola obsahu cookies
-    Wait Until Element Is Visible  ${BUTTON_Plus}  10s
-    Click Element  ${BUTTON_Plus}
+    Wait Until Element Is Visible  ${IMAGE_Plus}  10s
+    Click Element  ${IMAGE_Plus}
     Reload Page
     ${cookies_before} =  Get Cookie  name=fontSize
     Reload Page

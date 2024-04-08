@@ -302,3 +302,7 @@ bool list_is_active(List * list);
 # Prednáška 25.3.
 
 - hash
+
+# Prednáška 8.4.
+
+- BNF - Backus-Naur Form
