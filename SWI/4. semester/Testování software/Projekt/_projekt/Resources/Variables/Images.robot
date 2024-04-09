@@ -1,4 +1,5 @@
 *** Variables ***
+# Main page
 ${IMAGE_ObecKrakovany}  //img[@alt='Obec Krakovany']
 ${IMAGE_ObecKrakovany_src}  https://www.krakovany.sk/wp-content/uploads/2017/03/2017_logo_wewe358.png
 ${IMAGE_ObecKrakovany_alt}  Obec Krakovany

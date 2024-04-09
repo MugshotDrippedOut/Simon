@@ -1,730 +1,167 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.0 on win32)" generated="2024-04-07T23:54:02.765054" rpa="false" schemaversion="5">
-<suite id="s1" name="TS 001 005" source="C:\Users\bucka\Documents\GitHub\Simon\SWI\4. semester\Testování software\Projekt\_projekt\TS_001_005.robot">
-<test id="s1-t1" name="Pre-conditions" line="19">
+<robot generator="Robot 7.0 (Python 3.11.0 on win32)" generated="2024-04-09T13:23:24.830394" rpa="false" schemaversion="5">
+<suite id="s1" name="TS 001 006" source="C:\Users\bucka\Documents\GitHub\Simon\SWI\4. semester\Testování software\Projekt\_projekt\TS_001_006.robot">
+<test id="s1-t1" name="Pre-conditions" line="28">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-07T23:54:03.260755" level="INFO">Slept 200 milliseconds.</msg>
+<msg time="2024-04-09T13:23:25.349102" level="INFO">Slept 200 milliseconds.</msg>
 <arg>200 milliseconds</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-07T23:54:03.059360" elapsed="0.201395"/>
+<status status="PASS" start="2024-04-09T13:23:25.148900" elapsed="0.200202"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-07T23:54:03.263764" level="INFO">Opening browser 'Chrome' to base url 'https://www.krakovany.sk'.</msg>
-<msg time="2024-04-07T23:54:03.970026" level="WARN">The chromedriver version (122.0.6261.69) detected in PATH at C:\Users\bucka\AppData\Local\Programs\Python\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (123.0.6312.106); currently, chromedriver 123.0.6312.105 is recommended for chrome 123.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-04-09T13:23:25.349102" level="INFO">Opening browser 'Chrome' to base url 'https://www.krakovany.sk'.</msg>
+<msg time="2024-04-09T13:23:25.916881" level="WARN">The chromedriver version (122.0.6261.69) detected in PATH at C:\Users\bucka\AppData\Local\Programs\Python\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (123.0.6312.106); currently, chromedriver 123.0.6312.105 is recommended for chrome 123.*, so it is advised to delete the driver in PATH and retry</msg>
 <arg>${URL_MainPage}</arg>
 <arg>${BROWSER_CHROME}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-07T23:54:03.262766" elapsed="5.225003"/>
+<status status="PASS" start="2024-04-09T13:23:25.349102" elapsed="4.559430"/>
 </kw>
-<status status="PASS" start="2024-04-07T23:54:03.058809" elapsed="5.429961"/>
+<status status="PASS" start="2024-04-09T13:23:25.148900" elapsed="4.759632"/>
 </test>
-<test id="s1-t2" name="TC_001_005-001 - Kontrola, či sú všetky očakávané `div` elementy prítomné" line="23">
-<kw name="Get Element Count" owner="SeleniumLibrary">
-<msg time="2024-04-07T23:54:08.521744" level="INFO">${divs} = 259</msg>
-<var>${divs}</var>
-<arg>locator=//div</arg>
-<doc>Returns the number of elements matching ``locator``.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.490770" elapsed="0.030974"/>
-</kw>
-<kw name="Should Be Equal As Numbers" owner="BuiltIn">
-<msg time="2024-04-07T23:54:08.522707" level="INFO">Argument types are:
-&lt;class 'int'&gt;
-&lt;class 'str'&gt;</msg>
-<arg>${divs}</arg>
-<arg>259</arg>
-<doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.522707" elapsed="0.000000"/>
-</kw>
-<status status="PASS" start="2024-04-07T23:54:08.489768" elapsed="0.032939"/>
-</test>
-<test id="s1-t3" name="TC_001_005-002 - Kontrola, či sú všetky očakávané `img` elementy prítomné a či majú správne nastavené `src` a `alt` atribúty" line="27">
-<kw name="Get Element Count" owner="SeleniumLibrary">
-<msg time="2024-04-07T23:54:08.542364" level="INFO">${images_count} = 24</msg>
-<var>${images_count}</var>
-<arg>locator=//img</arg>
-<doc>Returns the number of elements matching ``locator``.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.525731" elapsed="0.016633"/>
-</kw>
-<kw name="Should Be Equal As Numbers" owner="BuiltIn">
-<msg time="2024-04-07T23:54:08.543029" level="INFO">Argument types are:
-&lt;class 'int'&gt;
-&lt;class 'str'&gt;</msg>
-<arg>${images_count}</arg>
-<arg>24</arg>
-<doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.543029" elapsed="0.000000"/>
-</kw>
-<kw name="Create List" owner="BuiltIn">
-<msg time="2024-04-07T23:54:08.543936" level="INFO">${images} = ["//img[@alt='Obec Krakovany']", "//img[@alt='Print Friendly, PDF &amp; Email']", "//img[@class='size-full wp-image-40517 aligncenter']", "//img[@title='Click to open a larger map']", "//img[@id='plus']",...</msg>
-<var>${images}</var>
-<arg>${IMAGE_ObecKrakovany}</arg>
-<arg>${IMAGE_Print}</arg>
-<arg>${IMAGE_Starosta}</arg>
+<test id="s1-t2" name="TC_001_006-001 - Kontrola zobrazenia mapy" line="32">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${IMAGE_Map}</arg>
-<arg>${IMAGE_Plus}</arg>
-<arg>${IMAGE_Minus}</arg>
-<arg>${IMAGE_100}</arg>
-<arg>${IMAGE_Dcom}</arg>
-<arg>${IMAGE_Mobec}</arg>
-<arg>${IMAGE_Lsvr}</arg>
-<arg>${IMAGE_Zmaos}</arg>
-<arg>${IMAGE_Zmo}</arg>
-<arg>${IMAGE_Mnh}</arg>
-<doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.543936" elapsed="0.000000"/>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-09T13:23:29.908532" elapsed="0.057080"/>
 </kw>
-<kw name="Create List" owner="BuiltIn">
-<msg time="2024-04-07T23:54:08.544937" level="INFO">${srcs} = ['https://www.krakovany.sk/wp-content/uploads/2017/03/2017_logo_wewe358.png', 'https://cdn.printfriendly.com/icons/printfriendly-icon-md.png', 'https://www.krakovany.sk/wp-content/uploads/2020/12/2020...</msg>
-<var>${srcs}</var>
-<arg>${IMAGE_ObecKrakovany_src}</arg>
-<arg>${IMAGE_Print_src}</arg>
-<arg>${IMAGE_Starosta_src}</arg>
-<arg>${IMAGE_Map_src}</arg>
-<arg>${IMAGE_Plus_src}</arg>
-<arg>${IMAGE_Minus_src}</arg>
-<arg>${IMAGE_100_src}</arg>
-<arg>${IMAGE_Dcom_src}</arg>
-<arg>${IMAGE_Mobec_src}</arg>
-<arg>${IMAGE_Lsvr_src}</arg>
-<arg>${IMAGE_Zmaos_src}</arg>
-<arg>${IMAGE_Zmo_src}</arg>
-<arg>${IMAGE_Mnh_src}</arg>
-<doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.544937" elapsed="0.000998"/>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${IMAGE_Map}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-09T13:23:29.965612" elapsed="0.289997"/>
 </kw>
-<kw name="Create List" owner="BuiltIn">
-<msg time="2024-04-07T23:54:08.545935" level="INFO">${alts} = ['Obec Krakovany', 'Print Friendly, PDF &amp; Email', '', 'Click to open a larger map', 'Zoom in', 'Zoom out', 'Regular', '', '', '', '', '', '']</msg>
-<var>${alts}</var>
-<arg>${IMAGE_ObecKrakovany_alt}</arg>
-<arg>${IMAGE_Print_alt}</arg>
-<arg>${IMAGE_Starosta_alt}</arg>
-<arg>${IMAGE_Map_alt}</arg>
-<arg>${IMAGE_Plus_alt}</arg>
-<arg>${IMAGE_Minus_alt}</arg>
-<arg>${IMAGE_100_alt}</arg>
-<arg>${IMAGE_Dcom_alt}</arg>
-<arg>${IMAGE_Mobec_alt}</arg>
-<arg>${IMAGE_Lsvr_alt}</arg>
-<arg>${IMAGE_Zmaos_alt}</arg>
-<arg>${IMAGE_Zmo_alt}</arg>
-<arg>${IMAGE_Mnh_alt}</arg>
-<doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.545935" elapsed="0.000000"/>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-04-09T13:23:30.255609" elapsed="0.000000"/>
 </kw>
-<kw name="Convert To Integer" owner="BuiltIn">
-<msg time="2024-04-07T23:54:08.547536" level="INFO">${count} = 0</msg>
-<var>${count}</var>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-09T13:23:30.263605" level="INFO">Clicking element '//img[@title='Click to open a larger map']'.</msg>
+<arg>${IMAGE_Map}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-09T13:23:30.263605" elapsed="1.223705"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${IFRAME_Map}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-09T13:23:31.487310" elapsed="1.122855"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${IFRAME_Map}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-09T13:23:32.610165" elapsed="1.331136"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2024-04-09T13:23:33.941588" level="INFO">Selecting frame '//*[@id="cboxLoadedContent"]/div/iframe'.</msg>
+<arg>${IFRAME_Map}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2024-04-09T13:23:33.941588" elapsed="1.058615"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
 <arg>0</arg>
-<doc>Converts the given item to an integer number.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.547536" elapsed="0.000000"/>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-04-09T13:23:35.000203" elapsed="0.000000"/>
 </kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2024-04-07T23:54:08.574480" level="INFO">${src} = https://www.krakovany.sk/wp-content/uploads/2017/03/2017_logo_wewe358.png</msg>
-<var>${src}</var>
-<arg>${image}</arg>
-<arg>src</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.548534" elapsed="0.025946"/>
-</kw>
-<kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2024-04-07T23:54:08.594577" level="INFO">${alt} = Obec Krakovany</msg>
-<var>${alt}</var>
-<arg>${image}</arg>
-<arg>alt</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.574480" elapsed="0.020097"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${src}</arg>
-<arg>${srcs}[${count}]</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.595579" elapsed="0.000000"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${alt}</arg>
-<arg>${alts}[${count}]</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.595579" elapsed="0.001000"/>
-</kw>
-<kw name="Convert To Integer" owner="BuiltIn">
-<msg time="2024-04-07T23:54:08.598083" level="INFO">${count} = 1</msg>
-<var>${count}</var>
-<arg>${count+1}</arg>
-<doc>Converts the given item to an integer number.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.596579" elapsed="0.001504"/>
-</kw>
-<var name="${image}">//img[@alt='Obec Krakovany']</var>
-<status status="PASS" start="2024-04-07T23:54:08.548534" elapsed="0.049549"/>
-</iter>
-<iter>
-<kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2024-04-07T23:54:08.620230" level="INFO">${src} = https://cdn.printfriendly.com/icons/printfriendly-icon-md.png</msg>
-<var>${src}</var>
-<arg>${image}</arg>
-<arg>src</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.598083" elapsed="0.022147"/>
-</kw>
-<kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2024-04-07T23:54:08.639211" level="INFO">${alt} = Print Friendly, PDF &amp; Email</msg>
-<var>${alt}</var>
-<arg>${image}</arg>
-<arg>alt</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.620230" elapsed="0.018981"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${src}</arg>
-<arg>${srcs}[${count}]</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.639211" elapsed="0.000000"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${alt}</arg>
-<arg>${alts}[${count}]</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.639211" elapsed="0.000000"/>
-</kw>
-<kw name="Convert To Integer" owner="BuiltIn">
-<msg time="2024-04-07T23:54:08.641233" level="INFO">${count} = 2</msg>
-<var>${count}</var>
-<arg>${count+1}</arg>
-<doc>Converts the given item to an integer number.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.640236" elapsed="0.000997"/>
-</kw>
-<var name="${image}">//img[@alt='Print Friendly, PDF &amp; Email']</var>
-<status status="PASS" start="2024-04-07T23:54:08.598083" elapsed="0.043150"/>
-</iter>
-<iter>
-<kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2024-04-07T23:54:08.662990" level="INFO">${src} = https://www.krakovany.sk/wp-content/uploads/2020/12/2020_starosta_web.png</msg>
-<var>${src}</var>
-<arg>${image}</arg>
-<arg>src</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.641233" elapsed="0.021757"/>
-</kw>
-<kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2024-04-07T23:54:08.681129" level="INFO">${alt} = </msg>
-<var>${alt}</var>
-<arg>${image}</arg>
-<arg>alt</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.662990" elapsed="0.018139"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${src}</arg>
-<arg>${srcs}[${count}]</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.681129" elapsed="0.000997"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${alt}</arg>
-<arg>${alts}[${count}]</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.682126" elapsed="0.000000"/>
-</kw>
-<kw name="Convert To Integer" owner="BuiltIn">
-<msg time="2024-04-07T23:54:08.683381" level="INFO">${count} = 3</msg>
-<var>${count}</var>
-<arg>${count+1}</arg>
-<doc>Converts the given item to an integer number.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.682126" elapsed="0.001255"/>
-</kw>
-<var name="${image}">//img[@class='size-full wp-image-40517 aligncenter']</var>
-<status status="PASS" start="2024-04-07T23:54:08.641233" elapsed="0.042148"/>
-</iter>
-<iter>
-<kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2024-04-07T23:54:08.704668" level="INFO">${src} = https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyC9_m-wpCMWh6l5gE5OtpAOw_yi-vGHX5A&amp;scale=1&amp;format=png&amp;zoom=13&amp;size=300x300&amp;language=en&amp;maptype=hybrid&amp;markers=size%3Adefault%7Ccolor%3A0xff0000%...</msg>
-<var>${src}</var>
-<arg>${image}</arg>
-<arg>src</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.683381" elapsed="0.021287"/>
-</kw>
-<kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2024-04-07T23:54:08.723541" level="INFO">${alt} = Click to open a larger map</msg>
-<var>${alt}</var>
-<arg>${image}</arg>
-<arg>alt</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.705666" elapsed="0.017875"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${src}</arg>
-<arg>${srcs}[${count}]</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.723541" elapsed="0.000000"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${alt}</arg>
-<arg>${alts}[${count}]</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.723541" elapsed="0.000000"/>
-</kw>
-<kw name="Convert To Integer" owner="BuiltIn">
-<msg time="2024-04-07T23:54:08.725535" level="INFO">${count} = 4</msg>
-<var>${count}</var>
-<arg>${count+1}</arg>
-<doc>Converts the given item to an integer number.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.724538" elapsed="0.000997"/>
-</kw>
-<var name="${image}">//img[@title='Click to open a larger map']</var>
-<status status="PASS" start="2024-04-07T23:54:08.683381" elapsed="0.042154"/>
-</iter>
-<iter>
-<kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2024-04-07T23:54:08.747325" level="INFO">${src} = https://www.krakovany.sk/wp-content/plugins/zoom-widget/elements/images/14/plus.png</msg>
-<var>${src}</var>
-<arg>${image}</arg>
-<arg>src</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.725535" elapsed="0.021790"/>
-</kw>
-<kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2024-04-07T23:54:08.764335" level="INFO">${alt} = Zoom in</msg>
-<var>${alt}</var>
-<arg>${image}</arg>
-<arg>alt</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.747325" elapsed="0.017010"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${src}</arg>
-<arg>${srcs}[${count}]</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.764335" elapsed="0.000000"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${alt}</arg>
-<arg>${alts}[${count}]</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.765336" elapsed="0.000000"/>
-</kw>
-<kw name="Convert To Integer" owner="BuiltIn">
-<msg time="2024-04-07T23:54:08.767329" level="INFO">${count} = 5</msg>
-<var>${count}</var>
-<arg>${count+1}</arg>
-<doc>Converts the given item to an integer number.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.765336" elapsed="0.001993"/>
-</kw>
-<var name="${image}">//img[@id='plus']</var>
-<status status="PASS" start="2024-04-07T23:54:08.725535" elapsed="0.042298"/>
-</iter>
-<iter>
-<kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2024-04-07T23:54:08.789558" level="INFO">${src} = https://www.krakovany.sk/wp-content/plugins/zoom-widget/elements/images/14/minus.png</msg>
-<var>${src}</var>
-<arg>${image}</arg>
-<arg>src</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.767833" elapsed="0.021725"/>
-</kw>
-<kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2024-04-07T23:54:08.806048" level="INFO">${alt} = Zoom out</msg>
-<var>${alt}</var>
-<arg>${image}</arg>
-<arg>alt</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.789558" elapsed="0.016490"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${src}</arg>
-<arg>${srcs}[${count}]</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.806048" elapsed="0.000000"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${alt}</arg>
-<arg>${alts}[${count}]</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.807075" elapsed="0.000000"/>
-</kw>
-<kw name="Convert To Integer" owner="BuiltIn">
-<msg time="2024-04-07T23:54:08.808659" level="INFO">${count} = 6</msg>
-<var>${count}</var>
-<arg>${count+1}</arg>
-<doc>Converts the given item to an integer number.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.807662" elapsed="0.000997"/>
-</kw>
-<var name="${image}">//img[@id='minus']</var>
-<status status="PASS" start="2024-04-07T23:54:08.767833" elapsed="0.040826"/>
-</iter>
-<iter>
-<kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2024-04-07T23:54:08.829997" level="INFO">${src} = https://www.krakovany.sk/wp-content/plugins/zoom-widget/elements/images/14/100.png</msg>
-<var>${src}</var>
-<arg>${image}</arg>
-<arg>src</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.808659" elapsed="0.021338"/>
-</kw>
-<kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2024-04-07T23:54:08.844471" level="INFO">${alt} = Regular</msg>
-<var>${alt}</var>
-<arg>${image}</arg>
-<arg>alt</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.829997" elapsed="0.015472"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${src}</arg>
-<arg>${srcs}[${count}]</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.845469" elapsed="0.000000"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${alt}</arg>
-<arg>${alts}[${count}]</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.845469" elapsed="0.000996"/>
-</kw>
-<kw name="Convert To Integer" owner="BuiltIn">
-<msg time="2024-04-07T23:54:08.847464" level="INFO">${count} = 7</msg>
-<var>${count}</var>
-<arg>${count+1}</arg>
-<doc>Converts the given item to an integer number.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.846465" elapsed="0.000999"/>
-</kw>
-<var name="${image}">//img[@id='100']</var>
-<status status="PASS" start="2024-04-07T23:54:08.808659" elapsed="0.038805"/>
-</iter>
-<iter>
-<kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2024-04-07T23:54:08.866109" level="INFO">${src} = https://www.krakovany.sk/wp-content/uploads/2024/01/dcom-krakovany.jpg</msg>
-<var>${src}</var>
-<arg>${image}</arg>
-<arg>src</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.848547" elapsed="0.018557"/>
-</kw>
-<kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2024-04-07T23:54:08.880709" level="INFO">${alt} = </msg>
-<var>${alt}</var>
-<arg>${image}</arg>
-<arg>alt</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.867104" elapsed="0.013605"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${src}</arg>
-<arg>${srcs}[${count}]</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.880709" elapsed="0.000996"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${alt}</arg>
-<arg>${alts}[${count}]</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.881705" elapsed="0.000000"/>
-</kw>
-<kw name="Convert To Integer" owner="BuiltIn">
-<msg time="2024-04-07T23:54:08.883859" level="INFO">${count} = 8</msg>
-<var>${count}</var>
-<arg>${count+1}</arg>
-<doc>Converts the given item to an integer number.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.881705" elapsed="0.002154"/>
-</kw>
-<var name="${image}">//a[@href='https://www.dcom.sk/?obec=krakovany']//img</var>
-<status status="PASS" start="2024-04-07T23:54:08.848547" elapsed="0.035312"/>
-</iter>
-<iter>
-<kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2024-04-07T23:54:08.905271" level="INFO">${src} = https://www.krakovany.sk/wp-content/uploads/2024/01/geoportal-krakovany.jpg</msg>
-<var>${src}</var>
-<arg>${image}</arg>
-<arg>src</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.883859" elapsed="0.021412"/>
-</kw>
-<kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2024-04-07T23:54:08.923948" level="INFO">${alt} = </msg>
-<var>${alt}</var>
-<arg>${image}</arg>
-<arg>alt</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.906269" elapsed="0.017679"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${src}</arg>
-<arg>${srcs}[${count}]</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.924949" elapsed="0.000000"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${alt}</arg>
-<arg>${alts}[${count}]</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.924949" elapsed="0.000000"/>
-</kw>
-<kw name="Convert To Integer" owner="BuiltIn">
-<msg time="2024-04-07T23:54:08.927454" level="INFO">${count} = 9</msg>
-<var>${count}</var>
-<arg>${count+1}</arg>
-<doc>Converts the given item to an integer number.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.925946" elapsed="0.001508"/>
-</kw>
-<var name="${image}">//a[@href='https://mobec.sk/krakovany#base']//img</var>
-<status status="PASS" start="2024-04-07T23:54:08.883859" elapsed="0.043595"/>
-</iter>
-<iter>
-<kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2024-04-07T23:54:08.952992" level="INFO">${src} = https://www.krakovany.sk/wp-content/uploads/2017/08/2017_aplikacia_krakovany-300x300.png</msg>
-<var>${src}</var>
-<arg>${image}</arg>
-<arg>src</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.928473" elapsed="0.024519"/>
-</kw>
-<kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2024-04-07T23:54:08.969313" level="INFO">${alt} = </msg>
-<var>${alt}</var>
-<arg>${image}</arg>
-<arg>alt</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.952992" elapsed="0.016321"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${src}</arg>
-<arg>${srcs}[${count}]</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.969313" elapsed="0.001073"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${alt}</arg>
-<arg>${alts}[${count}]</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.970386" elapsed="0.000000"/>
-</kw>
-<kw name="Convert To Integer" owner="BuiltIn">
-<msg time="2024-04-07T23:54:08.972544" level="INFO">${count} = 10</msg>
-<var>${count}</var>
-<arg>${count+1}</arg>
-<doc>Converts the given item to an integer number.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.970386" elapsed="0.003158"/>
-</kw>
-<var name="${image}">//div[@id='lsvr_image_widget-2']//img</var>
-<status status="PASS" start="2024-04-07T23:54:08.927454" elapsed="0.046090"/>
-</iter>
-<iter>
-<kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2024-04-07T23:54:08.994603" level="INFO">${src} = https://www.krakovany.sk/wp-content/uploads/2022/03/ZMOS.png</msg>
-<var>${src}</var>
-<arg>${image}</arg>
-<arg>src</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.973544" elapsed="0.021059"/>
-</kw>
-<kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2024-04-07T23:54:09.010713" level="INFO">${alt} = </msg>
-<var>${alt}</var>
-<arg>${image}</arg>
-<arg>alt</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2024-04-07T23:54:08.994603" elapsed="0.016110"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${src}</arg>
-<arg>${srcs}[${count}]</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-04-07T23:54:09.010713" elapsed="0.000000"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${alt}</arg>
-<arg>${alts}[${count}]</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-04-07T23:54:09.010713" elapsed="0.000997"/>
-</kw>
-<kw name="Convert To Integer" owner="BuiltIn">
-<msg time="2024-04-07T23:54:09.012898" level="INFO">${count} = 11</msg>
-<var>${count}</var>
-<arg>${count+1}</arg>
-<doc>Converts the given item to an integer number.</doc>
-<status status="PASS" start="2024-04-07T23:54:09.011710" elapsed="0.001188"/>
-</kw>
-<var name="${image}">//*[@id="lsvr_image_widget-4"]/div/div/a/img</var>
-<status status="PASS" start="2024-04-07T23:54:08.973544" elapsed="0.039354"/>
-</iter>
-<iter>
-<kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2024-04-07T23:54:09.035256" level="INFO">${src} = https://www.krakovany.sk/wp-content/uploads/2022/03/ZMO_JB_30Y.png</msg>
-<var>${src}</var>
-<arg>${image}</arg>
-<arg>src</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2024-04-07T23:54:09.012898" elapsed="0.022358"/>
-</kw>
-<kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2024-04-07T23:54:09.053465" level="INFO">${alt} = </msg>
-<var>${alt}</var>
-<arg>${image}</arg>
-<arg>alt</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2024-04-07T23:54:09.035256" elapsed="0.018209"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${src}</arg>
-<arg>${srcs}[${count}]</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-04-07T23:54:09.053465" elapsed="0.000000"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${alt}</arg>
-<arg>${alts}[${count}]</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-04-07T23:54:09.053465" elapsed="0.001620"/>
-</kw>
-<kw name="Convert To Integer" owner="BuiltIn">
-<msg time="2024-04-07T23:54:09.056115" level="INFO">${count} = 12</msg>
-<var>${count}</var>
-<arg>${count+1}</arg>
-<doc>Converts the given item to an integer number.</doc>
-<status status="PASS" start="2024-04-07T23:54:09.055085" elapsed="0.001030"/>
-</kw>
-<var name="${image}">//*[@id="lsvr_image_widget-3"]/div/div/a/img</var>
-<status status="PASS" start="2024-04-07T23:54:09.012898" elapsed="0.043217"/>
-</iter>
-<iter>
-<kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2024-04-07T23:54:09.079030" level="INFO">${src} = https://www.krakovany.sk/wp-content/uploads/2022/03/MRNH.png</msg>
-<var>${src}</var>
-<arg>${image}</arg>
-<arg>src</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2024-04-07T23:54:09.056115" elapsed="0.022915"/>
-</kw>
-<kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2024-04-07T23:54:09.097409" level="INFO">${alt} = </msg>
-<var>${alt}</var>
-<arg>${image}</arg>
-<arg>alt</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2024-04-07T23:54:09.079030" elapsed="0.018379"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${src}</arg>
-<arg>${srcs}[${count}]</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-04-07T23:54:09.097409" elapsed="0.000000"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${alt}</arg>
-<arg>${alts}[${count}]</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-04-07T23:54:09.097409" elapsed="0.001026"/>
-</kw>
-<kw name="Convert To Integer" owner="BuiltIn">
-<msg time="2024-04-07T23:54:09.099433" level="INFO">${count} = 13</msg>
-<var>${count}</var>
-<arg>${count+1}</arg>
-<doc>Converts the given item to an integer number.</doc>
-<status status="PASS" start="2024-04-07T23:54:09.098435" elapsed="0.000998"/>
-</kw>
-<var name="${image}">//*[@id="lsvr_image_widget-5"]/div/div/a/img</var>
-<status status="PASS" start="2024-04-07T23:54:09.056115" elapsed="0.043318"/>
-</iter>
-<var>${image}</var>
-<value>@{images}</value>
-<status status="PASS" start="2024-04-07T23:54:08.548534" elapsed="0.550899"/>
-</for>
-<status status="PASS" start="2024-04-07T23:54:08.524701" elapsed="0.575679"/>
+<status status="PASS" start="2024-04-09T13:23:29.908532" elapsed="5.091671"/>
 </test>
-<test id="s1-t4" name="TC_001_005-003 - Kontrola, či sú všetky očakávané `a` elementy prítomné" line="42">
-<kw name="Get Element Count" owner="SeleniumLibrary">
-<msg time="2024-04-07T23:54:09.135646" level="INFO">${a} = 350</msg>
-<var>${a}</var>
-<arg>locator=//a</arg>
-<doc>Returns the number of elements matching ``locator``.</doc>
-<status status="PASS" start="2024-04-07T23:54:09.102363" elapsed="0.033283"/>
+<test id="s1-t3" name="TC_001_006-002 - Kontrola tlačítka `Zoom in`" line="42">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON_ZoomIn}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-09T13:23:35.008244" elapsed="0.088433"/>
 </kw>
-<kw name="Should Be Equal As Numbers" owner="BuiltIn">
-<msg time="2024-04-07T23:54:09.137155" level="INFO">Argument types are:
-&lt;class 'int'&gt;
-&lt;class 'str'&gt;</msg>
-<arg>${a}</arg>
-<arg>350</arg>
-<doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<status status="PASS" start="2024-04-07T23:54:09.137155" elapsed="0.000000"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-09T13:23:35.096677" level="INFO">Clicking element '//button[@title='Zoom in']'.</msg>
+<arg>${BUTTON_ZoomIn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-09T13:23:35.096677" elapsed="0.325811"/>
 </kw>
-<status status="PASS" start="2024-04-07T23:54:09.101362" elapsed="0.035793"/>
+<status status="PASS" start="2024-04-09T13:23:35.000203" elapsed="0.422285"/>
 </test>
-<test id="s1-t5" name="TC_001_005-004 - Kontrola, či sú všetky očakávané `input` elementy prítomné a či majú správne nastavené `type` a `name` atribúty" line="46">
-<kw name="Get Element Count" owner="SeleniumLibrary">
-<msg time="2024-04-07T23:54:09.153824" level="INFO">${inputs_count} = 1</msg>
-<var>${inputs_count}</var>
-<arg>locator=//input</arg>
-<doc>Returns the number of elements matching ``locator``.</doc>
-<status status="PASS" start="2024-04-07T23:54:09.139180" elapsed="0.014644"/>
+<test id="s1-t4" name="TC_001_006-003 - Kontrola tlačítka `Zoom out`" line="46">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON_ZoomOut}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-09T13:23:35.430491" elapsed="0.080630"/>
 </kw>
-<kw name="Should Be Equal As Numbers" owner="BuiltIn">
-<msg time="2024-04-07T23:54:09.154804" level="INFO">Argument types are:
-&lt;class 'int'&gt;
-&lt;class 'str'&gt;</msg>
-<arg>${inputs_count}</arg>
-<arg>1</arg>
-<doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<status status="PASS" start="2024-04-07T23:54:09.154804" elapsed="0.000000"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-09T13:23:35.511121" level="INFO">Clicking element '//*[@id="mapDiv"]/div/div[3]/div[12]/div/div/div/button[2]'.</msg>
+<arg>${BUTTON_ZoomOut}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-09T13:23:35.511121" elapsed="0.122125"/>
 </kw>
-<kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2024-04-07T23:54:09.178433" level="INFO">${type} = text</msg>
-<var>${type}</var>
-<arg>${INPUT_Vyhladavanie}</arg>
-<arg>type</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2024-04-07T23:54:09.155544" elapsed="0.022889"/>
-</kw>
-<kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2024-04-07T23:54:09.199867" level="INFO">${name} = s</msg>
-<var>${name}</var>
-<arg>${INPUT_Vyhladavanie}</arg>
-<arg>name</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2024-04-07T23:54:09.178433" elapsed="0.021434"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${type}</arg>
-<arg>${INPUT_Vyhladavanie_type}</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-04-07T23:54:09.199867" elapsed="0.001001"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${name}</arg>
-<arg>${INPUT_Vyhladavanie_name}</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-04-07T23:54:09.200868" elapsed="0.000000"/>
-</kw>
-<status status="PASS" start="2024-04-07T23:54:09.139180" elapsed="0.062685"/>
+<status status="PASS" start="2024-04-09T13:23:35.422488" elapsed="0.210758"/>
 </test>
-<test id="s1-t6" name="post conditions" line="54">
+<test id="s1-t5" name="TC_001_006-004 - Kontrola funkcie `Scroll in`" line="50">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-04-09T13:23:35.633246" level="INFO">Sending key(s) ('CTRL',) to page.</msg>
+<msg time="2024-04-09T13:23:35.633246" level="INFO">Pressing special key CONTROL to browser.</msg>
+<msg time="2024-04-09T13:23:35.633246" level="INFO">Releasing special key CONTROL.</msg>
+<arg>None</arg>
+<arg>CTRL</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-04-09T13:23:35.633246" elapsed="0.016213"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-04-09T13:23:35.649459" level="INFO">Executing JavaScript:
+window.scrollBy(0,500);
+Without any arguments.</msg>
+<arg>window.scrollBy(0,500);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-04-09T13:23:35.649459" elapsed="0.007994"/>
+</kw>
+<status status="PASS" start="2024-04-09T13:23:35.633246" elapsed="0.024207"/>
+</test>
+<test id="s1-t6" name="TC_001_006-005 - Kontrola funkcie `Scroll out`" line="54">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-04-09T13:23:35.665848" level="INFO">Sending key(s) ('CTRL',) to page.</msg>
+<msg time="2024-04-09T13:23:35.665848" level="INFO">Pressing special key CONTROL to browser.</msg>
+<msg time="2024-04-09T13:23:35.665848" level="INFO">Releasing special key CONTROL.</msg>
+<arg>None</arg>
+<arg>CTRL</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-04-09T13:23:35.665848" elapsed="0.016164"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-04-09T13:23:35.682012" level="INFO">Executing JavaScript:
+window.scrollBy(0,-500);
+Without any arguments.</msg>
+<arg>window.scrollBy(0,-500);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-04-09T13:23:35.682012" elapsed="0.008289"/>
+</kw>
+<status status="PASS" start="2024-04-09T13:23:35.657453" elapsed="0.032848"/>
+</test>
+<test id="s1-t7" name="post conditions" line="60">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-07T23:54:11.205176" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-04-09T13:23:37.698658" level="INFO">Slept 2 seconds.</msg>
 <arg>2 seconds</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-07T23:54:09.203861" elapsed="2.001315"/>
+<status status="PASS" start="2024-04-09T13:23:35.690301" elapsed="2.008357"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-04-07T23:54:11.205176" elapsed="2.236066"/>
+<status status="PASS" start="2024-04-09T13:23:37.698658" elapsed="2.269848"/>
 </kw>
-<status status="PASS" start="2024-04-07T23:54:09.202862" elapsed="4.240600"/>
+<status status="PASS" start="2024-04-09T13:23:35.690301" elapsed="4.278205"/>
 </test>
-<status status="PASS" start="2024-04-07T23:54:02.767557" elapsed="10.680087"/>
+<status status="PASS" start="2024-04-09T13:23:24.830394" elapsed="15.138112"/>
 </suite>
 <statistics>
 <total>
-<stat pass="6" fail="0" skip="0">All Tests</stat>
+<stat pass="7" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="6" fail="0" skip="0" id="s1" name="TS 001 005">TS 001 005</stat>
+<stat pass="7" fail="0" skip="0" id="s1" name="TS 001 006">TS 001 006</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-04-07T23:54:03.037408" level="WARN">Imported resource file 'C:\Users\bucka\Documents\GitHub\Simon\SWI\4. semester\Testování software\Projekt\_projekt\resources\keywords.robot' is empty.</msg>
-<msg time="2024-04-07T23:54:03.970026" level="WARN">The chromedriver version (122.0.6261.69) detected in PATH at C:\Users\bucka\AppData\Local\Programs\Python\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (123.0.6312.106); currently, chromedriver 123.0.6312.105 is recommended for chrome 123.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-04-09T13:23:25.132727" level="WARN">Imported resource file 'C:\Users\bucka\Documents\GitHub\Simon\SWI\4. semester\Testování software\Projekt\_projekt\resources\keywords.robot' is empty.</msg>
+<msg time="2024-04-09T13:23:25.916881" level="WARN">The chromedriver version (122.0.6261.69) detected in PATH at C:\Users\bucka\AppData\Local\Programs\Python\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (123.0.6312.106); currently, chromedriver 123.0.6312.105 is recommended for chrome 123.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>

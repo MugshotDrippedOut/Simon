@@ -24,7 +24,6 @@ Resource  resources/variables/Browsers.robot
 Resource  resources/variables/URLs.robot
 Resource  resources/variables/Inputs.robot
 Resource  resources/variables/Buttons.robot
-Resource  Resources/variables/Texts.robot
 
 
 *** Test Cases ***

@@ -22,3 +22,6 @@ ${BUTTON_Mikroregion}  //*[@id="menu-hlavne-1"]/li[2]/ul/li[15]
 # TS_001_001_001_001 - Základné údaje a kontakty
 ${BUTTON_PridatKomentar}  //input[@id='submit'] 
 
+# Map
+${BUTTON_ZoomIn}  //button[@title='Zoom in']
+${BUTTON_ZoomOut}  //*[@id="mapDiv"]/div/div[3]/div[12]/div/div/div/button[2]

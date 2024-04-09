@@ -7,7 +7,6 @@ Testy webovej stránky obce [Krakovany](https://www.krakovany.sk)
 
 - TS_001 - Stránka obce Krakovany
   - TS_001_001 - Navigační/hlavné menu
-    - TC_001_001-001 - Kontrola tlačítek
     - TS_001_001_001 - Obec
       - TC_001_001_001-001 - Kontrola interakcie tláčítka `Základné údaje a kontakty`
       - TC_001_001_001-002 - Kontrola interakcie tláčítka `Geografická poloha`
@@ -48,8 +47,21 @@ Testy webovej stránky obce [Krakovany](https://www.krakovany.sk)
   - TS_001_005 - Kontrola Generovania Elementov
     - TC_001_005-001 - Kontrola, či sú všetky očakávané `div` elementy prítomné
     - TC_001_005-002 - Kontrola, či sú všetky očakávané `img` elementy prítomné a či majú správne nastavené `src` a `alt` atribúty
-    - TC_001_005-003 - Kontrola, či sú všetky očakávané `a` elementy prítomné 
-    - TC_001_005-004 - Kontrola, či sú všetky očakávané `input` elementy prítomné a či majú správne nastavené `type` a `name` atribúty atribúty
+    - TC_001_005-003 - Kontrola, či sú všetky očakávané `a` elementy prítomné
+    - TC_001_005-004 - Kontrola, či sú všetky očakávané `input` elementy prítomné a či majú správne nastavené `type` a `name` atribúty
+  - TS_001_006 - Mapa
+    - TC_001_006-001 - Kontrola zobrazenia mapy
+    - TC_001_006-002 - Kontrola tlačítka `Zoom in`
+    - TC_001_006-003 - Kontrola tlačítka `Zoom out`
+    - TC_001_006-004 - Kontrola funkcie `Scroll in`
+    - TC_001_006-005 - Kontrola funkcie `Scroll out`
+    - TC_001_006-006 - Kontrola funkcie `Move left`
+    - TC_001_006-007 - Kontrola funkcie `Move right`
+    - TC_001_006-008 - Kontrola funkcie `Move up`
+    - TC_001_006-009 - Kontrola funkcie `Move down`
+    - TC_001_006-010 - Kontrola tlačítka `Show satellite imagery`
+    - TC_001_006-011 - Kontrola tlačítka `Show street map`
+    - TC_001_006-011 - Kontrola tlačítka `View larger map`
   - TS_001_100 - UI/UX
     - TC_001_100-001 - Konzistentnosť elementov
     - TC_001_100-002 - Čitelnosť a vizibilita textu
