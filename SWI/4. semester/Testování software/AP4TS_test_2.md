@@ -3,39 +3,39 @@
 - Která fáze nespadá do TDD ? A která fáze je z uvedených první ?
 
   - Spouštění testů
-  - **<u>Formální reportování incidentů vyššímu stakeholdingu</u>**
+  - **<u>Formální reportování incidentů vyššímu stakeholdingu✅</u>**
   - Refactoring kódu und
   - Opětovné spuštění testů
-  - **<u>Tvorba testů</u>**
+  - **<u>Tvorba testů✅</u>**
   - Přidávání testůu
 
 - Vyberte možnosti a pádné důvody, které souvisí s tím, kdy začít s testováním údržby.
 
   - Archivace dat
-  - **<u>Odebrání stávající funkcionality</u>**
+  - **<u>Odebrání stávající funkcionality✅</u>**
   - Rozkaz nadřízeného
-  - **<u>Změna HW na kterém aplikace běží</u>**
-  - **<u>Změna formátu dat, které aplikace odesílá</u>**
+  - **<u>Změna HW na kterém aplikace běží✅</u>**
+  - **<u>Změna formátu dat, které aplikace odesílá✅</u>**
   - Názor kolegy vývojáře
-  - **<u>Změna v legislativě</u>**
+  - **<u>Změna v legislativě✅</u>**
   - Názor věštce
-  - **<u>Přidání nové funkcionality</u>**
-  - **<u>Patchování</u>**
-  - **<u>Update OS na kterém aplikace běží</u>**
+  - **<u>Přidání nové funkcionality✅</u>**
+  - **<u>Patchování✅</u>**
+  - **<u>Update OS na kterém aplikace běží✅</u>**
 
 - Co jsou faktory, co odlišují testovací úroveň. Vyberte všechny správně možnosti.
 
-  - **<u>Nástroje</u>**
+  - **<u>Nástroje✅</u>**
   - Odpovědnost za bugy
-  - **<u>Role a kdo testování provádí</u>**
+  - **<u>Role a kdo testování provádí✅</u>**
   - Odměna za nalezený bug
   - Jestli se bude jednat o incident či bug
-  - **<u>Typické defekty</u>**
-  - **<u>Přístupy</u>**
-  - **<u>Cíle testování</u>**
-  - **<u>Testovací báze</u>**
-  - **<u>Testované objekty</u>**
-  - **<u>UI/UX</u>**
+  - **<u>Typické defekty✅</u>**
+  - **<u>Přístupy✅</u>**
+  - **<u>Cíle testování✅</u>**
+  - **<u>Testovací báze✅</u>**
+  - **<u>Testované objekty✅</u>**
+  - **<u>UI/UX✅</u>**
 
 - Kolik mezer lze použít na oddělení Keywords a lokátorů v rámci Robot frameworku ?
 
@@ -45,29 +45,29 @@
   - 5
   - 0
   - 4
-  - **<u>libovolný počet</u>**
+  - **<u>libovolný počet✅</u>**
 
 - Vyberte typy a druhy testů, které jsme si uváděli. (prej bonusová otázka)
-  - **<u>End-to-end testování</u>**
-  - **<u>Nefunkcionální testy</u>**
+  - **<u>End-to-end testování✅</u>**
+  - **<u>Nefunkcionální testy✅</u>**
   - testování odvozené od kritérií rozhodování
   - Red-box
   - Omega testování
-  - **<u>V-Model testování</u>**
-  - **<u>Alfa testování</u>**
+  - **<u>V-Model testování✅</u>**
+  - **<u>Alfa testování✅</u>**
   - Testování založené na hodu mincí
   - Testování založené na čase
-  - **<u>Black-box</u>**
-  - **<u>Beta testování</u>**
+  - **<u>Black-box✅</u>**
+  - **<u>Beta testování✅</u>**
   - Random testování
   - Big-box
   - Green-box
-  - **<u>White-box</u>**
-  - **<u>Funkcionální testy</u>**
-  - **<u>Systémově integrační testování</u>**
+  - **<u>White-box✅</u>**
+  - **<u>Funkcionální testy✅</u>**
+  - **<u>Systémově integrační testování✅</u>**
   - Pink-box
-  - **<u>Glass-box</u>**
-  - **<u>Grey-box</u>**
+  - **<u>Glass-box✅</u>**
+  - **<u>Grey-box✅</u>**
 
 # Otevřená odpověď
 
@@ -140,11 +140,11 @@
   - Volanou komponentu
   - Rozhraní komponenty
   - Nic takového neexistuje
-  - **<u>Volající komponentu</u>**
+  - **<u>Volající komponentu✅</u>**
 
 - Co nahrazuje stub?
     - Volanou i volající komponentu
-    - **<u>Volanou komponentu</u>**
+    - **<u>Volanou komponentu✅</u>**
     - Rozhraní komponenty
     - Nic takového neexistuje
     - Volající komponentu
@@ -155,7 +155,7 @@
   - Princip 2.
   - Princip 3.
   - Princip 4.
-  - **<u>Princip 5.</u>**
+  - **<u>Princip 5.✅</u>**
   - Princip 6.
   - Princip 7.
 
@@ -163,19 +163,19 @@
   - Integrační
   - Na všech
   - Akceptační
-  - **<u>Komponentní</u>**
+  - **<u>Komponentní✅</u>**
   - Systémová
 
 - S kterou úrovní nejvíce souvisí validace ?
   - Systémová
   - Komponentní
   - Integrační
-  - **<u>Akceptační</u>**
+  - **<u>Akceptační✅</u>**
 
 - Na které úrovní využíváme black-box testy ?
   - Komponentní
   - Integrační
-  - **<u>Na všech</u>**
+  - **<u>Na všech✅</u>**
   - Systémová
   - Akceptační
 
