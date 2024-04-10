@@ -73,38 +73,38 @@
 
 - S jakým principem nejvíce souvisí "Shift-left" princip ? (Uveďte číslici na intervalu 0-1111)
 
-  - 3
+  - `3`
 
 - Které slovo je zásadní pro Keywords, které používáme pro kontrolu očekávaných výsledků?
 
-  - Should
+  - `Should`
 
 - Doplňte slovo. White-box testování je založené na . (Jedno slovo, bez diakritiky)
 
-  - strukture
+  - `strukture`
 
 - Doplňte slovo. Black-box testování je založené na . (Jedno slovo, bez diakritiky)
 
-  - specifikaci
+  - `specifikaci`
 
 - Napište XPath, která vyhledá všechny elementy na stránce dle následujících pravidel. Jedná se o HTML tag typu odkaz na URL a zahrnuje text "klikni". (Pro zápis stringu využijte uvozovek)
 
-  - //a[contains(text(),"klikni")]
+  - `//a[contains(text(),"klikni")]`
 
 - Jak by měl vypadat první řádek skriptu .robot, který slouží pro objektový repozitář
 
-  - **_ Variables _**
+  - `*** Variables ***`
 
 - Napište XPath, která vyhledá a určí 155 prvek na stránce s HTML tagem div.
 
-  - (//div)[155]
+  - `(//div)[155]`
 
 - Napište XPath, která lokalizuje 155 element na webové stránce.
 
-  - (//\*)[155]
+  - `(//\*)[155]`
 
 - Napište XPath, která lokalizuje element na stránce, pokud víme, že má atribut TestID roven Tlacitko1. (Pro zápis stringu využijte uvozovky")
-  - //\*[@TestID="Tlacitko1"]
+  - `//\*[@TestID="Tlacitko1"]`
 
 # Pravda / Nepravda
 
@@ -178,6 +178,8 @@
   - **<u>Na všech✅</u>**
   - Systémová
   - Akceptační
+
+# Seřazení
 
 - Seřaďte úrovně od nenižší po nejvyšší.
     1. Komponentní

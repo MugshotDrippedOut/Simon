@@ -137,7 +137,17 @@ bool HashTable_Replace(HashTable *table, Data_t *key, Data_t *value)
     node = node->next;
   }
 
-  return false;
+  HashTableNode *newNode = myMalloc(sizeof(HashTableNode));
+  if(!newNode)
+    return false;
+
+  newNode->key = key;
+  newNode->value = value;
+  newNode->next = table->buckets[i];
+  table->buckets[i] = newNode;
+  table->count++;
+
+  return true;
 }
 
 bool HashTable_Delete(HashTable *table, Data_t *key)
@@ -172,18 +182,67 @@ Data_t *HashTable_Find(HashTable *table, Data_t *key)
 {
   UNUSED(table);
   UNUSED(key);
+
+  if(!table || !key)
+    return NULL;
+
+  size_t i = hash(table,key);
+  HashTableNode *node = table->buckets[i];
+  while (node){
+    if (Data_Cmp(node->key, key) == 0){
+      return node->value;
+    }
+    node = node->next;
+  }
+
+
   return NULL;
+
 }
 
 size_t HashTable_Get_Count(HashTable table)
 {
   UNUSED(table);
-  return 0;
+  /*! Gets the count of the items in the table.
+ *
+ * \param[in] table Pointer at the table.
+ *
+ * \return Returns number of items in table.
+   */
+  if(!table.buckets)
+    return 0;
+  return table.count;
 }
+
 
 void HashTable_Clear(HashTable *table)
 {
+
   UNUSED(table);
+
+  if(!table)
+    return;
+
+for(size_t i = 0; i < table->size; i++)
+  {
+    HashTableNode *node = table->buckets[i];
+    while(node)
+    {
+      HashTableNode *next = node->next;
+      if(table->take_ownership)
+      {
+        Data_Destruct(node->key);
+        Data_Destruct(node->value);
+      }
+      myFree(node);
+      node = next;
+    }
+  }
+  table->count = 0;
+  for(size_t i = 0; i < table->size; i++)
+  {
+    table->buckets[i] = NULL;
+  }
 }
 
 void HashTable_Process(HashTable *table, TableNodeProc proc)
