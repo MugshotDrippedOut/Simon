@@ -77,7 +77,7 @@
 
 - Které slovo je zásadní pro Keywords, které používáme pro kontrolu očekávaných výsledků?
 
-  - Assert
+  - Should
 
 - Doplňte slovo. White-box testování je založené na . (Jedno slovo, bez diakritiky)
 
@@ -88,14 +88,92 @@
   - specifikaci
 
 - Napište XPath, která vyhledá všechny elementy na stránce dle následujících pravidel. Jedná se o HTML tag typu odkaz na URL a zahrnuje text "klikni". (Pro zápis stringu využijte uvozovek)
+
   - //a[contains(text(),"klikni")]
 
 - Jak by měl vypadat první řádek skriptu .robot, který slouží pro objektový repozitář
-  - *** Variables ***
+
+  - **_ Variables _**
 
 - Napište XPath, která vyhledá a určí 155 prvek na stránce s HTML tagem div.
+
   - (//div)[155]
+
 - Napište XPath, která lokalizuje 155 element na webové stránce.
-  - (//*)[155]
+
+  - (//\*)[155]
+
 - Napište XPath, která lokalizuje element na stránce, pokud víme, že má atribut TestID roven Tlacitko1. (Pro zápis stringu využijte uvozovky")
-    - //*[@TestID="Tlacitko1"]
+  - //\*[@TestID="Tlacitko1"]
+
+# Pravda / Nepravda
+
+- Jsou stejné testovací úrovně jak pro sekvenční způsob vývoje, tak pro iterativně-inkrementalní ?
+
+  - P
+
+- Je pravda, že testování bílé skříňky souvisí pouze s kódem ?
+
+  - N
+
+- Jsou si zápisy při selekci atributy @class ekvivalentní, pokud uvedu název v rámci apostrofů a uvozovek ?
+
+  - P
+
+- Je pravda, že se v rámci agilního vývoje nedokumentuje ?
+
+  - N
+
+- Je pravda, že regresní testy jsou důležitější, a proto je musíme provádět jako první před konfirmačními ?
+
+  - P
+
+- Není pravda, že se nejedná o čistě relativní zápis následující XPath ? //div[@class="abc"]/div[3]
+
+  - P
+
+# Jedna možnost
+
+- Co nahrazuje driver ?
+
+  - Volanou i volající komponentu
+  - Volanou komponentu
+  - Rozhraní komponenty
+  - Nic takového neexistuje
+  - **<u>Volající komponentu</u>**
+
+- Vyberte číslo principu, na který se hlavně váže problematika testování údržby a dopadové analýzy
+
+  - Princip 1.
+  - Princip 2.
+  - Princip 3.
+  - Princip 4.
+  - **<u>Princip 5.</u>**
+  - Princip 6.
+  - Princip 7.
+
+- Na které úrovní využíváme white-box testy ?
+  - Integrační
+  - Na všech
+  - Akceptační
+  - **<u>Komponentní</u>**
+  - Systémová
+
+- S kterou úrovní nejvíce souvisí validace ?
+  - Systémová
+  - Komponentní
+  - Integrační
+  - **<u>Akceptační</u>**
+
+- Na které úrovní využíváme black-box testy ?
+  - Komponentní
+  - Integrační
+  - **<u>Na všech</u>**
+  - Systémová
+  - Akceptační
+
+- Seřaďte úrovně od nenižší po nejvyšší.
+    1. Komponentní
+    2. Integrační
+    3. Systémová
+    4. Akceptační
