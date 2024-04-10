@@ -142,6 +142,13 @@
   - Nic takového neexistuje
   - **<u>Volající komponentu</u>**
 
+- Co nahrazuje stub?
+    - Volanou i volající komponentu
+    - **<u>Volanou komponentu</u>**
+    - Rozhraní komponenty
+    - Nic takového neexistuje
+    - Volající komponentu
+
 - Vyberte číslo principu, na který se hlavně váže problematika testování údržby a dopadové analýzy
 
   - Princip 1.
