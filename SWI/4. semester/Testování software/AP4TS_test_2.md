@@ -101,10 +101,10 @@
 
 - Napište XPath, která lokalizuje 155 element na webové stránce.
 
-  - `(//\*)[155]`
+  - `(//*)[155]`
 
 - Napište XPath, která lokalizuje element na stránce, pokud víme, že má atribut TestID roven Tlacitko1. (Pro zápis stringu využijte uvozovky")
-  - `//\*[@TestID="Tlacitko1"]`
+  - `//*[@TestID="Tlacitko1"]`
 
 # Pravda / Nepravda
 
