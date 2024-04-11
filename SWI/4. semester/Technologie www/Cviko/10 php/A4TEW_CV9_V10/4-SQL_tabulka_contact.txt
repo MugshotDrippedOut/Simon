@@ -1,0 +1,22 @@
+--
+-- Struktura tabulky `contact`
+--
+
+CREATE TABLE IF NOT EXISTS `contact` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) COLLATE utf8_czech_ci NOT NULL,
+  `surname` varchar(30) COLLATE utf8_czech_ci NOT NULL,
+  `email` varchar(150) COLLATE utf8_czech_ci DEFAULT NULL,
+  `phone` varchar(20) COLLATE utf8_czech_ci DEFAULT NULL,
+  `mobile` varchar(20) COLLATE utf8_czech_ci DEFAULT NULL,
+  `address` varchar(255) COLLATE utf8_czech_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_czech_ci AUTO_INCREMENT=5 ;
+
+--
+-- Vypisuji data pro tabulku `contact`
+--
+
+INSERT INTO `contact` (`id`, `name`, `surname`, `email`, `phone`, `mobile`, `address`) VALUES
+(1, 'Radek', 'Vala', 'vala@fai.utb.cz', '777111222', '737111222', 'Nová 5, Zlín'),
+(2, 'Josef', 'Novak', NULL, NULL, NULL, NULL);

@@ -1,0 +1,255 @@
+Obsah souboru index.php nahradit tímto:
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CV9</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+    <?php
+      // https://www.php.net/manual/en/pdo.connections.php
+      // http://www.mysqltutorial.org/php-querying-data-from-mysql-table/
+      // PDO = PHP Data Objects
+      // Objektové rozhraní pro práci s databázemi v jazyce PHP
+      $mypdo = new PDO('mysql:host=localhost;dbname=contacts_ut11', 'root', 'root');
+      //$mypdo = new PDO('mysql:host=localhost;dbname=contacts_ut13', 'root', 'root');
+      
+      // VYTVORENI DOTAZU
+      $myquery = $mypdo->query('SELECT * FROM contact');
+
+      echo '<ul>';
+      foreach ($myquery as $row)
+      {
+        // VERZE 1:
+        // $row JE POLE
+        echo '<li>' . $row . '</li>';
+
+        /*
+        // VERZE 2:
+        // PRISTUP DO POLE $row POMOCI INDEXU
+        echo '<li>';
+        for ($i = 0; $i < count($row); $i++) 
+        {
+          // &nbsp; je Non Breaking SPace, tj. HTML nedělitelná mezera
+          echo $row[$i] . '&nbsp;';
+        }
+        echo '</li>';
+        */
+
+        // VERZE 3:
+        // PRISTUP DO POLE $row POMOCI JMEN SLOUPCU TABULKY contact
+        //echo '<li>' . $row['name'] . '&nbsp;' . $row['surname'] . '</li>';
+      }
+      echo '</ul>';
+      
+      // PRACE S DB JE UKONCENA, MUZEME PROVEST UKLID:
+      $myquery = null;
+      $mypdo = null;
+    ?>
+  </body>
+</html>
+
+*****************************************************************
+
+V Chrome se podívat na adresu http://localhost:8888/jmenoStudenta/.
+NA VÝSLEDEK SE PODÍVAT DO PREZENTACE
+
+*****************************************************************
+
+V souboru index.html
+
+TOTO (ř 34):
+echo '<li>' . $row . '</li>';
+
+Nahradit TÍMTO:
+echo '<li>' . $row[1] . '</li>';
+
+*****************************************************************
+
+V Chrome se podívat na adresu http://localhost:8888/jmenoStudenta/.
+NA VÝSLEDEK SE PODÍVAT DO PREZENTACE
+
+!!! ZAPNOUT MONITOR, VIZ PREZENTACE !!!
+
+*****************************************************************
+
+Obsah souboru index.php nahradit tímto:
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CV9</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+    <?php      
+      for($i = 0; $i < 10; $i++)
+      {
+        // PRIPOJENI VERZE 1:
+        $mypdo = new PDO('mysql:host=localhost;dbname=contacts_ut11', 'root', 'root');
+        //$mypdo = new PDO('mysql:host=localhost;dbname=contacts_ut13', 'root', 'root');
+
+        echo 'Number of connection: ' . ($i + 1) . '<br>';
+      }
+
+      // VYTVORENI DOTAZU
+      $myquery = $mypdo->query('SELECT * FROM contact');
+
+      echo '<ul>';
+      foreach ($myquery as $row)
+      {
+        // PRISTUP DO POLE $row POMOCI JMEN SLOUPCU TABULKY contact
+        echo '<li>' . $row['name'] . '&nbsp;' . $row['surname'] . '</li>';
+      }
+      echo '</ul>';
+      
+      // PRACE S DB JE UKONCENA, MUZEME PROVEST UKLID:
+      $myquery = null;
+      $mypdo = null;
+    ?>
+  </body>
+</html>
+
+*****************************************************************
+
+V Chrome se podívat na adresu http://localhost:8888/jmenoStudenta/.
+Podívat se na Monitor: http://localhost:8888/phpMyAdmin/server_status_monitor.php
+NA VÝSLEDEK SE PODÍVAT DO PREZENTACE
+
+*****************************************************************
+
+!!! POZOR !!!
+Ve VS Studiu v souboru Database.class.php
+TOTO (ř 11):
+self::$instance = new PDO('mysql:host=localhost;dbname=twww', 'root', 'root');
+
+ZMĚNIT NA TOTO:
+self::$instance = new PDO('mysql:host=localhost;dbname=contacts_ut11', 'root', 'root');
+//self::$instance = new PDO('mysql:host=localhost;dbname=contacts_ut13', 'root', 'root');
+
+POZNÁMKA:
+pokud není nastaveno heslo k DB (např. pod operačním systémem Windows) pak použít:
+self::$instance = new PDO('mysql:host=localhost;dbname=contacts_ut11', 'root', '');
+//self::$instance = new PDO('mysql:host=localhost;dbname=contacts_ut13', 'root', '');
+
+*****************************************************************
+
+Obsah souboru index.php nahradit tímto:
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CV9</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+    <?php   
+      // PRO VERZI 2 a 3:
+      require('classes/Database.class.php');
+      require('classes/ContactModel.class.php');   
+      for($i = 0; $i < 10; $i++)
+      {
+        // PRIPOJENI VERZE 2:
+        // KONSTRUKTOR
+        $myContact = new Contact();
+        $allContacts = $myContact->LoadAll();
+
+        echo 'Number of connection: ' . ($i + 1) . '<br>';
+      }
+
+      echo '<ul>';
+      foreach ($allContacts as $row)
+      {
+        // PRISTUP POMOCI GETTERU S HODNOTOU Name
+        echo '<li>' . $row->Name . '&nbsp;' . $row->Surname . '</li>';
+      }
+      echo '</ul>';
+    ?>
+  </body>
+</html>
+
+*****************************************************************
+
+V Chrome se podívat na adresu http://localhost:8888/jmenoStudenta/.
+Podívat se na Monitor: http://localhost:8888/phpMyAdmin/server_status_monitor.php
+NA VÝSLEDEK SE PODÍVAT DO PREZENTACE
+
+*****************************************************************
+
+Obsah souboru index.php nahradit tímto:
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CV9</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+    <?php   
+      // PRO VERZI 2 a 3:
+      require('classes/Database.class.php');
+      require('classes/ContactModel.class.php');   
+      for($i = 0; $i < 10; $i++)
+      {
+        // PRIPOJENI VERZE 3:
+        // PRIME VOLANI
+        $allContacts = Contact::LoadAll();
+
+        echo 'Number of connection: ' . ($i + 1) . '<br>';
+      }
+
+      echo '<ul>';
+      foreach ($allContacts as $row)
+      {
+        // PRISTUP POMOCI GETTERU S HODNOTOU Name
+        echo '<li>' . $row->Name . '&nbsp;' . $row->Surname . '</li>';
+      }
+      echo '</ul>';
+    ?>
+  </body>
+</html>
+
+*****************************************************************
+
+V Chrome se podívat na adresu http://localhost:8888/jmenoStudenta/.
+Podívat se na Monitor: http://localhost:8888/phpMyAdmin/server_status_monitor.php
+NA VÝSLEDEK SE PODÍVAT DO PREZENTACE
+
+*****************************************************************

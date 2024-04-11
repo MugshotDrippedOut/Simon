@@ -1,0 +1,65 @@
+V Documents --> JmenoStudenta vytvořit adresář php
+
+V adresáři php vytvořit adresář: "1"
+
+***************************************************************** 
+
+Adresář "1" otevřít ve VS Code a vytvořit zde soubor index.php 
+
+*****************************************************************
+
+index.php:
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <?php
+    $myStringVariable = "Counter is: ";
+
+    for ($i = 1; $i <= 10; $i++) 
+    {
+        echo $myStringVariable . $i . "<br>";
+    }
+    ?>
+</body>
+</html> 
+
+*****************************************************************
+
+Otevřít program Terminal a spustit příkazy:
+
+1)
+cd Documents/JmenoStudenta/php/1
+
+2)
+php -S 127.0.0.1:8080
+
+!!! OKNO PROGRAMU TERMINAL NECHAT OTEVŘENÉ !!!
+
+*****************************************************************
+
+Do webového prohlížeče Chrome zadat adresu:
+http://127.0.0.1:8080/index.php
+
+*****************************************************************
+
+V Chrome otevřít Network panel a provést Hard Reload
+
+Kliknout na index.php a prohlédnout HEADERS A RESPONSE
+
+POKRAČOVAT V PREZENTACI
+
+*****************************************************************
+
+
+
+
+
+

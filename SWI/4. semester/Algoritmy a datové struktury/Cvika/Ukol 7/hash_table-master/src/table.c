@@ -125,29 +125,19 @@ bool HashTable_Replace(HashTable *table, Data_t *key, Data_t *value)
   size_t i = hash(table,key);
   HashTableNode *node = table->buckets[i];
   while (node){
-    if (Data_Cmp(node->key, key) == 0){
-      if (table->take_ownership){
-        Data_Destruct(node->key);
+    if(Data_Cmp(key,node->key) == 0){
+      if(table->take_ownership){
         Data_Destruct(node->value);
+        node->value = value;
       }
-      node->key = key;
-      node->value = value;
+      else{
+        node->value = value;
+      }
       return true;
     }
     node = node->next;
   }
-
-  HashTableNode *newNode = myMalloc(sizeof(HashTableNode));
-  if(!newNode)
-    return false;
-
-  newNode->key = key;
-  newNode->value = value;
-  newNode->next = table->buckets[i];
-  table->buckets[i] = newNode;
-  table->count++;
-
-  return true;
+  return false;
 }
 
 bool HashTable_Delete(HashTable *table, Data_t *key)

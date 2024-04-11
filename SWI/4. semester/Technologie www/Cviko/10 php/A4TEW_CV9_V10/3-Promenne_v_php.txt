@@ -1,0 +1,67 @@
+V Documents --> JmenoStudenta vytvořit adresář "php" (pokud již neexistuje)
+
+V adresáři php vytvořit adresář: "3"
+
+***************************************************************** 
+
+Adresář "3" otevřít ve VS Code a vytvořit zde soubor index.php 
+
+*****************************************************************
+
+index.php:
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <?php
+        // !!! POZOR PROMENNE JSOU V UVOZOVKACH !!!
+        $mystringX = "10";
+        $mystringY = "20.30";
+     
+        echo '$mystringX=' . $mystringX;
+        echo '<BR>';
+        echo '$mystringY=' . $mystringY;
+        echo '<BR>';
+        echo '<BR>';
+        echo '$mystringX + $mystringY=';
+        echo $mystringX + $mystringY;
+        echo '<BR>';
+        echo '$mystringX . $mystringY=';
+        echo $mystringX . $mystringY;
+    ?>
+</body> 
+</html>  
+
+*****************************************************************
+
+Soubor index.php uložit
+
+*****************************************************************
+
+Otevřít program Terminal a spustit příkazy:
+
+1)
+cd Documents/JmenoStudenta/3
+
+2)
+php -S 127.0.0.1:8080 
+// POKUD JIŽ BĚŽÍ PHP SERVER JE NUTNÉ HO UKONČIT POMOCÍ 
+// CONTROL + C
+
+!!! OKNO PROGRAMU TERMINAL NECHAT OTEVŘENÉ !!!
+
+*****************************************************************
+
+Do Chrome zadat adresu: http://127.0.0.1:8080/index.php
+
+*****************************************************************
+
+POKRAČOVAT V PREZENTACI

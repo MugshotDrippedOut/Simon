@@ -1,0 +1,98 @@
+V Documents --> JmenoStudenta vytvořit adresář "php" (pokud již neexistuje)
+
+V adresáři php vytvořit adresář: "2"
+
+***************************************************************** 
+
+Adresář "2" otevřít ve VS Code a vytvořit zde soubor index.php 
+
+*****************************************************************
+
+Do prázdného index.php napsat:
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <?php
+        function myMainFunction() 
+        {
+            // DEKLARACE CISELNE PROMENNE:
+            $n = 2;
+
+            // DEKLARACE RETEZCE:
+            $message = 'Sude cislo: ';
+
+            // DEKLARACE POLE:
+            $myArray = array(1, 2, 3, 4, 5, 6, 7);
+
+            // SMYCKA FOR
+            for ($i = 0; $i < count($myArray); $i++) 
+            {
+                // PODMINKA A VOLANI FUNKCE: 
+                if(positiveMod($myArray[$i], $n) == 0)
+                {
+                    // VYTVORENI JavaScriptu
+                    echo '<script language="javascript">';
+                    echo 'alert("' . $message . $myArray[$i] . '");';
+                    echo 'console.log("' . $message . $myArray[$i] . '");';
+                    echo '</script>';
+                }
+            } 
+        }
+
+        // DEKLARACE POMOCNE FUNKCE
+        function positiveMod($x, $p) 
+        {
+            $x = $x % $p;
+            if ($x < 0) 
+            {
+                $x = $p + $x;
+            }
+            return $x;
+        } 
+        
+        // VOLANI FUNKCE PRI NACITANI STRANKY:
+        myMainFunction();
+    ?>
+    <p>DONE...</p>
+</body> 
+</html>  
+
+*****************************************************************
+
+Soubor index.php uložit
+
+*****************************************************************
+
+Otevřít program Terminal a spustit příkazy:
+
+1)
+cd Documents/JmenoStudenta/2
+
+2)
+php -S 127.0.0.1:8080 
+// POKUD JIŽ BĚŽÍ PHP SERVER JE NUTNÉ HO UKONČIT POMOCÍ 
+// CONTROL + C
+
+!!! OKNO PROGRAMU TERMINAL NECHAT OTEVŘENÉ !!!
+
+*****************************************************************
+
+Do Chrome zadat adresu: http://127.0.0.1:8080/index.php
+
+!!! V Chrome se podívat do panelu Console !!!
+
+!!! V Chrome otevřít panel Elements a podívat se na zdrojový kód !!!
+
+*****************************************************************
+
+PORKAČOVAT V PREZENTACI

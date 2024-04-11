@@ -1,0 +1,276 @@
+Obsah souboru index.php nahradit tímto:
+
+<?php
+
+require('classes/Database.class.php');
+require('classes/ContactModel.class.php');
+
+
+//vytvori novou instanci tridy Contact
+//$Contact = new Contact();
+//$Contact->Name = 'Emil';
+//$Contact->Surname = 'Novy';
+
+//ulozi vlastnosti objektu perzistentne do DB
+//$savedId = $Contact->Save();
+
+//nactu objekt dle prave ulozeneho id radku v DB
+//$savedContact = Contact::Load($savedId);
+
+//nactu vsechy kontakty z DB
+$allContacts = Contact::LoadAll();
+
+?>
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Contacts APP</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Contact APP</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Contact list <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Create New</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+    <ul class="list-group">
+    <?php foreach($allContacts as $Con){ ?>
+        <li class="list-group-item clearfix"><?php echo $Con->Id; ?><br ><?php echo $Con->Surname; ?> <?php echo $Con->Name; ?> <a class="btn btn-danger float-right" href="#" role="button">Delete</a></li>
+    </ul>
+    <?php } ?>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+*****************************************************************
+
+VYSVĚTLIT KÓD V PREZENTACI
+
+*****************************************************************
+
+Ve VS Code v classes/ContactModel.class.php 
+PŘEDPSAT FUNKCI __get($strName)(ř.107 - ř.124):
+
+    //getter - ziskani vlastnosti objektu
+    public function __get($strName){
+
+        switch ($strName) {
+    
+            case 'Id':
+                return $this->id;
+                break;
+                
+            case 'Name':
+                return $this->name;
+                break;
+
+            case 'Surname':
+                return $this->surname;
+                break;
+
+            case 'Email':
+                return $this->email;
+                break;
+        }
+    }
+    
+*****************************************************************
+
+REFRESH WEBOVÉ STRÁNKY
+UKÁZAT V PREZENTACI
+
+*****************************************************************
+
+PŘIDÁVÁNÍ KONTAKTŮ - FORMULÁŘ:
+
+1) vytvořit nový soubor: create.php
+
+2) napsat "b4" a vybrat: b4-$ Bootstrap master template 
+   (vygeneruje základní šablonu Bootstrapu)
+   
+3) do body před element script napsat "b4-con" a vybrat: b4-grid-container
+
+4) do vzniklého: 
+      <div class="container">
+
+      </div>
+
+VLOŽIT:
+        <form action="process.php" method="post">
+            <input type="hidden" name="action" value="insert">
+
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text"
+                class="form-control" name="name" id="name" aria-describedby="helpId" placeholder="">
+            </div>
+
+            <div class="form-group">
+                <label for="surname">Surname</label>
+                <input type="text"
+                class="form-control" name="surname" id="surname" aria-describedby="helpId" placeholder="">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+        </form>
+
+*****************************************************************
+
+PODÍVAT SE NA WEBOVOU STRÁNKU
+http://localhost:8888/PRIJMENI_STUDENTA/create.php
+
+Kliknout na tlačítko Submit --> Not Found
+The requested URL /PRIJMENI_STUDENTA/process.php was not found on this server.
+
+=> JE NUTNÉ VYTVOŘIT SOUBOR process.php
+
+*****************************************************************
+
+VYTVOŘENÍ SOUBORU process.php, 
+KTERÝ VLOŽÍ DATA Z WEBOVÉHO FORMULÁŘE DO DATABÁZE:
+
+1) vytvořit nový soubor: process.php
+
+2) Do souboru process.php vložit obsah:
+<?php
+    require('classes/Database.class.php');
+    require('classes/ContactModel.class.php');
+
+    // insert into DB
+    if(isset($_POST['action']))
+    {
+        // process actions
+        switch($_POST['action'])
+        {
+            case 'insert':
+                // insert new record to DB
+
+                // create new empty Contact object
+                $Contact = new Contact();
+                // fullfill properties from Form Data
+                $Contact->Name = $_POST['name'];
+                $Contact->Surname = $_POST['surname'];
+                // save to DB
+                $Contact->Save();
+                
+                break;
+
+            case 'delete':
+                // load Contact by ID
+                $toDelete = Contact::Load($_POST['id']);
+                // delete this Contact
+                $toDelete->Delete();
+                break;
+        }
+    }
+    
+    // redir to home page
+    //header('location: index.php');
+?>
+
+*****************************************************************
+
+PODÍVAT SE NA WEBOVOU STRÁNKU
+!!! REFRESH !!!
+http://localhost:8888/PRIJMENI_STUDENTA/create.php
+
+Vyplnit:
+Name
+Surname
+
+Kliknout na tlačítko Submit --> Stránka  http://localhost:8888/oulehla/process.php
+Neobsahuje žádné uživatelské HTML elementy, proto není na stránce nic vidět.
+
+=> JE NUTNÉ ZAŘÍDIT PŘESMĚROVÁNÍ --> Odkomentovat poslední řádek php skriptu process.php:
+
+header('location: index.php');
+
+*****************************************************************
+
+PODÍVAT SE NA WEBOVOU STRÁNKU
+!!! REFRESH !!!
+http://localhost:8888/PRIJMENI_STUDENTA/create.php
+
+Vyplnit:
+Name
+Surname
+
+Kliknout na tlačítko Submit --> Dojde k přesměrování na index.php
+
+*****************************************************************
+
+PODÍVAT SE V phpMyAdmin ZDA PŘIBYL ZÁZNAM V TABULCE contact
+!!! REFRESH !!!
+
+*****************************************************************
+
+Do index.php přidat do navbaru odkaz "Create New" na create.php:
+
+TOTO (ř.47):
+<a class="nav-link" href="#">Create New</a>
+
+ZMĚNIT NA TOTO:
+<a class="nav-link" href="create.php">Create New</a>
+
+*****************************************************************
+
+V index.php změnit odkaz pro mazaní:
+TOTO:
+    <ul class="list-group">
+    <?php foreach($allContacts as $Con){ ?>
+        <li class="list-group-item clearfix"><?php echo $Con->Id; ?><br ><?php echo $Con->Surname; ?> <?php echo $Con->Name; ?> <a class="btn btn-danger float-right" href="#" role="button">Delete</a></li>
+    </ul>
+    <?php } ?>
+
+NAHRADIT TÍMTO (FORM):
+<ul class="list-group">
+    <?php foreach($allContacts as $Con){ ?>
+        <li class="list-group-item clearfix">
+          <?php echo $Con->Id; ?><br ><?php echo $Con->Surname; ?> <?php echo $Con->Name; ?> 
+          <form class="float-right" action="process.php" method="post">
+            <input type="hidden" name="action" value="delete">
+            <input type="hidden" name="id" value="<?php echo $Con->Id; ?>">
+            <button type="submit" class="btn btn-danger">Delete</button>
+          </form>
+        </li>
+    </ul>
+    <?php } ?>
+    
+*****************************************************************
+
+PODÍVAT SE NA WEBOVOU STRÁNKU index.php
+
+LIBOVOLNÉM ŘÁDKU (DB ZÁZNAMU) KLIKNOUT NA TLAČÍTKO DELETE 
+
+*****************************************************************
+
+POKRAČOVAT V PREZENTACI

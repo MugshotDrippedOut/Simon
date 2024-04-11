@@ -130,7 +130,7 @@
 
 - Není pravda, že se nejedná o čistě relativní zápis následující XPath ? //div[@class="abc"]/div[3]
 
-  - P
+  - N
 
 # Jedna možnost
 
