@@ -40,12 +40,12 @@
 - Kolik mezer lze použít na oddělení Keywords a lokátorů v rámci Robot frameworku ?
 
   - 1
-  - 3
-  - 2
-  - 5
+  - **<u>3✅</u>**
+  - **<u>2✅</u>**
+  - **<u>5✅</u>**
   - 0
-  - 4
-  - **<u>libovolný počet✅</u>**
+  - **<u>4✅</u>**
+  - libovolný počet
 
 - Vyberte typy a druhy testů, které jsme si uváděli. (prej bonusová otázka)
   - **<u>End-to-end testování✅</u>**
