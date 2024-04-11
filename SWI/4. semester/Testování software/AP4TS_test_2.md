@@ -17,7 +17,7 @@
   - **<u>Změna HW na kterém aplikace běží✅</u>**
   - **<u>Změna formátu dat, které aplikace odesílá✅</u>**
   - Názor kolegy vývojáře
-  - **<u>Změna v legislativě🤷‍♂️</u>**
+  - **<u>Změna v legislativě✅</u>**
   - Názor věštce
   - **<u>Přidání nové funkcionality✅</u>**
   - **<u>Patchování✅</u>**
@@ -35,7 +35,7 @@
   - **<u>Cíle testování✅</u>**
   - **<u>Testovací báze✅</u>**
   - **<u>Testované objekty✅</u>**
-  - **<u>UI/UX✅</u>**
+  - UI/UX
 
 - Kolik mezer lze použít na oddělení Keywords a lokátorů v rámci Robot frameworku ?
 
@@ -143,11 +143,11 @@
   - **<u>Volající komponentu✅</u>**
 
 - Co nahrazuje stub?
-    - Volanou i volající komponentu
-    - **<u>Volanou komponentu✅</u>**
-    - Rozhraní komponenty
-    - Nic takového neexistuje
-    - Volající komponentu
+  - Volanou i volající komponentu
+  - **<u>Volanou komponentu✅</u>**
+  - Rozhraní komponenty
+  - Nic takového neexistuje
+  - Volající komponentu
 
 - Vyberte číslo principu, na který se hlavně váže problematika testování údržby a dopadové analýzy
 
@@ -182,7 +182,7 @@
 # Seřazení
 
 - Seřaďte úrovně od nenižší po nejvyšší.
-    1. Komponentní
-    2. Integrační
-    3. Systémová
-    4. Akceptační
+  1. Komponentní
+  2. Integrační
+  3. Systémová
+  4. Akceptační

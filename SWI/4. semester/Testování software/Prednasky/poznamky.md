@@ -354,15 +354,15 @@ Základní dovednosti a postupy
 
 ### Modely SDLC
 
-  - Sekvenční (Tradiční)
-    - Vodopádový, V-Model
-  - Iterativní (Agilní)
-    - Spirálový model, prototypování
-  - Inkrementální (Agilní)
-    - RUP
-  - Iterativně-inkrementální
+- Sekvenční (Tradiční)
+  - Vodopádový, V-Model
+- Iterativní (Agilní)
+  - Spirálový model, prototypování
+- Inkrementální (Agilní)
+  - RUP
+- Iterativně-inkrementální
 
-  ![Interative & Incremental](image.png)
+![Interative & Incremental](image.png)
 
 ### Specifické přístupy
 
@@ -641,6 +641,7 @@ Gray-box testing - kombinace
 - Výběr regresních testů
 
 ### Konfirmační (re-testy) vs. regresní testy
+
 - Konfirmační testy
 
 - Konfirmujeme / potvrzujeme že je něco …
@@ -649,9 +650,85 @@ Gray-box testing - kombinace
 - Korektně „vylepšeno“
 
 ### Konfirmační (re-testy) vs. regresní testy
+
 - Regresní testy
 
 - Kontrolujeme, jestli zásah / změna neovlivnil něco dalšího, co přímo nesouviselo se změnou.
 - Agilní vývoj => časté změny => větší regresní riziko => potenciál pro automatizaci testů
 
+## 11.4.
 
+# 3.1 TECHNIKY testování
+
+- Techniky testování černé skříňky
+  - Testování založené na specifikaci
+- Techniky testování bílé skříňky
+  - Testování založené na struktuře
+- Techniky testování založené na zkušenostech
+
+### Techniky testování černé skříňky
+
+- Rozdělení tříd ekvivalence
+- Analýza hraničních hodnot
+- Testování v kontextu rozhodovací tabulky
+- Testování na přechody a stavy
+
+### Rozdělení tříd ekvivalence
+
+- Vazba na princip č. 2 -> jak si pomoci
+- Třída ekvivalence je množina hodnot, od kterých se očekává stejný očekávaný výsledek.
+
+### Rozdělení tříd ekvivalence
+
+- Množina může být interval hodnot
+  - Klidně nekonečný počet hodnot
+- “Nezajímají“ nás mezní hodnoty
+- Pro otestování třídy ekvivalence stačí otestovat právě a pouze jednu hodnotu z množiny
+- Počet testovacích případů = počet tříd ekvivalence
+
+### Rozdělení tříd ekvivalence
+
+- Třídy obvykle dělíme do dvou skupin
+  - Validní třídy ekvivalence a nevalidní třídy ekvivalence
+  - Validní pokrývají „akceptovatelné“ hodnoty
+  - Nevalidní pokrývají „jiné“ nepřípustné
+  - **nespecifikované hodnoty -> testování na zkušenostech**
+
+### Rozdělení tříd ekvivalence – příklad 1
+
+- Na vstupu je hodnota string délky 10
+- Přípustné jsou pouze malá a velká písmena
+  - Systém dokáže vyhodnotit:
+  - Jestli se jedná o anglické slovo
+  - Jestli se jedná o české ženské / mužské jméno
+  - Jestli se jedná o arabské město
+
+### Rozdělení tříd ekvivalence – příklad 2
+
+- Na vstupu je desetinné číslo s platností na dvě desetinná místa
+- Systém vyhodnotí, jestli student splnil písemný test
+- Minimum je 0
+  - Prošel je 15 bodů
+  - Maximum je 25 bodů
+
+### Analýza hraničních hodnot
+
+- Opět základ je rozdělení tříd ekvivalence
+- Nyní nás ale zajímají hranice
+- Obvykle čísla
+- Typické defekty <= / < nebo negace nebo počítaní od 0 / 1
+
+### Analýza hraničních hodnot
+
+- Pro aplikování musí být jednoznačně specifikované krajní hodnoty !!!
+  - První krok je potřeba doplnit specifikaci
+  - Omezení datovým typem, standardem
+  - Nedomýšlet si
+  - MIN, MAX, KROK
+  - 1 třída obvykle 2 testy
+- Obvykle pro validní hodnoty, pro nevalidní doplnění o klasické třídy ekvivalence -> testování založené na zkušenostech
+
+### Analýza hraničních hodnot – příklad 1
+
+- Jako vstup akceptujeme jakýkoliv string délky 10 až 15 ascii znaků.
+- Délka je minimálně 1 znak.

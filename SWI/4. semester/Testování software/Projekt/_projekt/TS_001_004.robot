@@ -4,7 +4,7 @@
 *** Settings ***
 Library  SeleniumLibrary  run_on_failure=Nothing
 
-Resource  resources/keywords.robot
+Resource  resources/Keywords.robot
 
 Resource  resources/variables/Browsers.robot
 Resource  resources/variables/URLs.robot
@@ -12,8 +12,7 @@ Resource  Resources/variables/Images.robot
 
 *** Test Cases ***
 Pre-conditions
-    Sleep  200 milliseconds
-    Open Browser  ${URL_MainPage}  ${BROWSER_CHROME}
+    Pre-condition  ${BROWSER_CHROME}  ${URL_MainPage}
 
 TC_001_004-001 - Kontrola obsahu cookies
     Wait Until Element Is Visible  ${IMAGE_Plus}  10s
