@@ -11,13 +11,13 @@
 
 - Vyberte možnosti a pádné důvody, které souvisí s tím, kdy začít s testováním údržby.
 
-  - Archivace dat
+  - **<u>Archivace dat✅</u>**
   - **<u>Odebrání stávající funkcionality✅</u>**
   - Rozkaz nadřízeného
   - **<u>Změna HW na kterém aplikace běží✅</u>**
   - **<u>Změna formátu dat, které aplikace odesílá✅</u>**
   - Názor kolegy vývojáře
-  - **<u>Změna v legislativě✅</u>**
+  - **<u>Změna v legislativě🤷‍♂️</u>**
   - Názor věštce
   - **<u>Přidání nové funkcionality✅</u>**
   - **<u>Patchování✅</u>**
