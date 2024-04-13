@@ -19,4 +19,5 @@ ${URL_CervenyKriz}  https://www.krakovany.sk/?cat=7
 ${URL_Mikroregion}  https://www.holeska.sk/
 
 # map
-${URL_Map}  https://www.google.com/maps/place/922+02+Krakovany,+Slovakia/@48.6208768,17.7108142,13z/data=!3m1!4b1!4m6!3m5!1s0x476b555f2700479b:0x400f7d1c696fcf0!8m2!3d48.610409!4d17.7551104!16s%2Fm%2F026j_lv?hl=en&entry=ttu
+${URL_GoogleCookies}  https://consent.google.com/m?continue=https://maps.google.com/maps?t%3Dm%26hl%3Den%26gl%3DUS%26q%3DKrakovany%2B922%2B02&gl=SK&m=0&pc=m&uxe=eomtm&cm=2&hl=en&src=1
+${URL_GoogleMap}  https://www.google.com/maps/place/922+02+Krakovany,+Slovakia/@48.6208768,17.7108142,13z/data=!3m1!4b1!4m6!3m5!1s0x476b555f2700479b:0x400f7d1c696fcf0!8m2!3d48.610409!4d17.7551104!16s%2Fm%2F026j_lv?hl=en&entry=ttu

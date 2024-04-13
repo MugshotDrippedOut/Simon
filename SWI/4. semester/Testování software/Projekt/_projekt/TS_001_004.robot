@@ -1,6 +1,3 @@
-- TS_001_004 - Cookies
-    - TC_001_004-001 - Kontrola obsahu cookies
-
 *** Settings ***
 Library  SeleniumLibrary  run_on_failure=Nothing
 

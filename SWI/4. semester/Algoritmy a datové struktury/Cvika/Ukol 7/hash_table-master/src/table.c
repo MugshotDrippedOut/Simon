@@ -2,15 +2,15 @@
  * \file       table.c
  * \author     Ondřej Ševčík
  * \date       6/2019
- * \brief      Implementation of functions for HashTable.
+ * \brief      Implementation  of functions for HashTable.
  * **************************************************************
  * \attention
  * &copy; Copyright (c) 2022 FAI UTB. All rights reserved.
  *
- * Unauthorized copying of this file, via any medium is strictly prohibited
- * Proprietary and confidential
+ * Unauthorized  copying  of  this file, via any medium is strictly prohibited
+ * Proprietary  and  confidential
  */
-/*! \addtogroup hashTable
+/*! \addtogroup  hashTable
  *  \{
  */
 /* Includes --------------------------------------------------------------------------------------*/
@@ -41,7 +41,7 @@ bool HashTable_Init(HashTable *table, size_t size, bool deletecontents)
   table->count = 0;
   table->size = size;
   table->take_ownership = deletecontents;
-  table->buckets = myMalloc(sizeof(HashTableNode) * size);
+  table->buckets = myMalloc(sizeof(HashTableNode*) * size);
 
   if(!table->buckets)
     return false;
@@ -63,17 +63,17 @@ void HashTable_Destruct(HashTable *table)
 
   for(size_t i = 0; i < table->size; i++)
   {
-    HashTableNode *node = table->buckets[i];
-    while(node)
+    HashTableNode *myNode = table->buckets[i];
+    while(myNode)
     {
-      HashTableNode *next = node->next;
+      HashTableNode *next = myNode->next;
       if(table->take_ownership)
       {
-        Data_Destruct(node->key);
-        Data_Destruct(node->value);
+        Data_Destruct(myNode->key);
+        Data_Destruct(myNode->value);
       }
-      myFree(node);
-      node = next;
+      myFree(myNode);
+      myNode = next;
     }
   }
   myFree(table->buckets);
@@ -125,7 +125,7 @@ bool HashTable_Replace(HashTable *table, Data_t *key, Data_t *value)
   size_t i = hash(table,key);
   HashTableNode *node = table->buckets[i];
   while (node){
-    if(Data_Cmp(key,node->key) == 0){
+    if(Data_Cmp(key, node->key) == 0){
       if(table->take_ownership){
         Data_Destruct(node->value);
         node->value = value;
@@ -146,11 +146,11 @@ bool HashTable_Delete(HashTable *table, Data_t *key)
     return false;
   size_t i = hash(table,key);
   HashTableNode *node = table->buckets[i];
-  HashTableNode *prev = NULL;
+  HashTableNode *previous = NULL;
   while (node){
     if (Data_Cmp(node->key, key) == 0){
-      if (prev){
-        prev->next = node->next;
+      if (previous){
+        previous->next = node->next;
       } else {
         table->buckets[i] = node->next;
       }
@@ -162,7 +162,7 @@ bool HashTable_Delete(HashTable *table, Data_t *key)
       table->count--;
       return true;
     }
-    prev = node;
+    previous = node;
     node = node->next;
   }
   return false;
