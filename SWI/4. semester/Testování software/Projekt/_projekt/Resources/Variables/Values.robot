@@ -6,3 +6,11 @@ ${VALUE_Map_matrix_move_left}  position: absolute; z-index: 986; transform: matr
 ${VALUE_Map_matrix_move_right}  position: absolute; z-index: 986; transform: matrix(1, 0, 0, 1, -2, -79);
 ${VALUE_Map_matrix_move_up}  position: absolute; z-index: 986; transform: matrix(1, 0, 0, 1, -2, -73);
 ${VALUE_Map_matrix_move_down}  position: absolute; z-index: 986; transform: matrix(1, 0, 0, 1, -2, -79);
+
+${VALUE_Komentar}  This is a test comment
+${VALUE_Meno}  Test Name
+${VALUE_Email}  test@vevja.sg
+${VALUE_AdresaWebu}  www.test.com
+
+${VALUE_Search}  farnost
+${VALUE_SearchResults}  far

@@ -51,6 +51,5 @@ TC_001_005-004 - Kontrola, či sú všetky očakávané `input` elementy prítom
     Should Be Equal As Strings  ${type}  ${INPUT_Vyhladavanie_type}
     Should Be Equal As Strings  ${name}  ${INPUT_Vyhladavanie_name}
 
-post conditions
-    Sleep  2 seconds
-    Close Browser
+Post-conditions
+    Close

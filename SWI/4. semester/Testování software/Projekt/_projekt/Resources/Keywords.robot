@@ -22,7 +22,7 @@ Close
     Close Browser
 
 
-Main menu button interaction check
+Button interaction main menu 
     [Arguments]  ${BUTTON_MAIN}  ${BUTTON_SUB}  ${URL_TO_CHECK}
     
     Wait Until Element Is Visible  ${BUTTON_MAIN}  10 seconds
@@ -33,7 +33,7 @@ Main menu button interaction check
     Location Should Be  ${URL_TO_CHECK}
 
 
-Button interaction check
+Button interaction 
     [Arguments]  ${BUTTON}
     
     Wait Until Element Is Visible  ${BUTTON}  10 seconds
@@ -42,7 +42,14 @@ Button interaction check
     Set Selenium Speed  0
 
 
-Kontrola funkcie Move
+Input interaction
+    [Arguments]  ${INPUT}  ${VALUE}
+    
+    Wait Until Element Is Visible  ${INPUT}  10 seconds
+    Input Text  ${INPUT}  ${VALUE}
+
+
+Move functionality
     [Arguments]  ${DIV}  ${KEY}  ${MATRIX}  ${VALUE}
     
     ${count}=  Convert To Integer  0
@@ -53,3 +60,11 @@ Kontrola funkcie Move
     ${matrix}=  Get Element Attribute  ${MATRIX}  style
     Log  ${matrix}
     Should Be Equal  ${matrix}  ${VALUE}
+
+
+Convert To Lowercase
+    [Arguments]  ${TEXT}
+    
+    ${lowercase_text}=  Execute Javascript  return arguments[0].toLowerCase();  ARGUMENTS  ${TEXT}
+    Log  ${lowercase_text}
+    RETURN  ${lowercase_text}

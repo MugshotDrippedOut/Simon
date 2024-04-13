@@ -1,9 +1,3 @@
-# TS_001_003 - Testovanie zmeny zobrazenie
-#    - TC_001_003-001 - Kontorla interakcie s tlačítkom "+"
-#    - TC_001_003-002 - Kontorla interakcie s tlačítkom "-"
-#    - TC_001_003-003 - Kontorla interakcie s tlačítkom "100%"
-
-
 *** Settings ***
 Library  SeleniumLibrary  run_on_failure=Nothing
 
@@ -39,6 +33,5 @@ TC_001_003-003 - Kontorla interakcie s tlačítkom "100%"
     ${font_size}=  Get Element Attribute  ${P_Vitam}  style
     Should Be Equal  ${font_size}  font-size: 100%;
 
-post conditions
-    Sleep  2 seconds
-    Close Browser
+Post-conditions
+    Close

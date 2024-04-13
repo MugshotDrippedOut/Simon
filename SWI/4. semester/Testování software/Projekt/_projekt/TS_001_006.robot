@@ -14,9 +14,9 @@ Resource  Resources/variables/KeyboardKeys.robot
 
 *** Test Cases ***
 Pre-conditions
+    Keyword Should Exist  check move functionality
+    Keyword Should Exist  Check button interaction
     Open Incognito   ${BROWSER_CHROME}  ${URL_MainPage}
-    Keyword Should Exist  Kontrola funkcie Move
-    Keyword Should Exist  Button interaction check
 
 
 TC_001_006-001 - Kontrola zobrazenia mapy
@@ -51,27 +51,27 @@ TC_001_006-003 - Kontrola tlačítka `Zoom out`
 
 
 TC_001_006-004 - Kontrola funkcie `Move left`
-    Kontrola funkcie Move  ${DIV_Map_frame}  ${KEY_Left}  ${DIV_Map_matrix}  ${VALUE_Map_matrix_move_left}
+    Move functionality  ${DIV_Map_frame}  ${KEY_Left}  ${DIV_Map_matrix}  ${VALUE_Map_matrix_move_left}
 
 
 TC_001_006-005 - Kontrola funkcie `Move right`
-    Kontrola funkcie Move  ${DIV_Map_frame}  ${KEY_Right}  ${DIV_Map_matrix}  ${VALUE_Map_matrix_move_right}
+    Move functionality  ${DIV_Map_frame}  ${KEY_Right}  ${DIV_Map_matrix}  ${VALUE_Map_matrix_move_right}
 
 
 TC_001_006-006 - Kontrola funkcie `Move up`
-    Kontrola funkcie Move  ${DIV_Map_frame}  ${KEY_Up}  ${DIV_Map_matrix}  ${VALUE_Map_matrix_move_up}
+    Move functionality  ${DIV_Map_frame}  ${KEY_Up}  ${DIV_Map_matrix}  ${VALUE_Map_matrix_move_up}
 
 
 TC_001_006-007 - Kontrola funkcie `Move down`
-    Kontrola funkcie Move  ${DIV_Map_frame}  ${KEY_Down}  ${DIV_Map_matrix}  ${VALUE_Map_matrix_move_down}
+    Move functionality  ${DIV_Map_frame}  ${KEY_Down}  ${DIV_Map_matrix}  ${VALUE_Map_matrix_move_down}
 
 
 TC_001_006-008 - Kontrola tlačítka `Show satellite imagery`
-    Button interaction check  ${BUTTON_Satellite}
+    Button interaction   ${BUTTON_Satellite}
 
 
 TC_001_006-009 - Kontrola tlačítka `Show street map`
-    Button interaction check  ${BUTTON_Street}
+    Button interaction   ${BUTTON_Street}
 
 
 TC_001_006-010 - Kontrola tlačítka `View larger map`
@@ -83,5 +83,6 @@ TC_001_006-010 - Kontrola tlačítka `View larger map`
     Click Element  ${BUTTON_AcceptGoogle}
     Location Should Be  ${URL_GoogleMap}
 
-post conditions
+
+Post-conditions
     Close

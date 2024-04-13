@@ -35,9 +35,10 @@ Testy webovej stránky obce [Krakovany](https://www.krakovany.sk)
       - TC_001_001_013-001 - Kontrola interakcie `Prihlasovacie meno alebo e-mailová adresa`
       - TC_001_001_013-002 - Kontrola interakcie `Heslo`
       - TC_001_001_013-003 - Kontorla funkcie `Zapamätať`
+    - TS_001_001_014 - TV KRAKOVANY
+      - TC_001_001_014-001 - Kontrola interakcie videa
   - TS_001_002 - Kontrola Vyhľadávania
     - TC_001_002-001 - Kontrola interakcie vstupu `Vyhľadávanie`
-    - TC_001_002-002 - Kontrola funkčnosti vyhladávania
   - TS_001_003 - Testovanie zmeny zobrazenia
     - TC_001_003-001 - Kontorla interakcie s tlačítkom `+`
     - TC_001_003-002 - Kontorla interakcie s tlačítkom `-`

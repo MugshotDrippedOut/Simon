@@ -22,7 +22,7 @@ def printRobotFiles(path, exceptionDir = "Resources", fileStart = "TC"):
     print("\nNumber of TCs found: " + str(count))
 
 
-path = "Projekt\_projekt"
+path = "_projekt"
 exceptionDir = "Resources"
 path1 = "../"
 

@@ -20,6 +20,5 @@ TC_001_004-001 - Kontrola obsahu cookies
     ${cookies_after} =  Get Cookie  name=fontSize
     Should Be Equal  ${cookies_before.value}  ${cookies_after.value}
 
-post conditions
-    Sleep  2 seconds
-    Close Browser
+Post-conditions
+    Close
