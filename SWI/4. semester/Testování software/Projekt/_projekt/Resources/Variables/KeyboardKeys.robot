@@ -1,6 +1,6 @@
 *** Variables ***
-${KEY_Left}    LEFT_ARROW
-${KEY_Right}    RIGHT_ARROW
-${KEY_Up}    UP_ARROW
-${KEY_Down}    DOWN_ARROW
+${KEY_Left}    ARROW_LEFT
+${KEY_Right}    ARROW_RIGHT
+${KEY_Up}    ARROW_UP
+${KEY_Down}    ARROW_DOWN
 

@@ -9,7 +9,7 @@ Resource  Resources/variables/Images.robot
 
 *** Test Cases ***
 Pre-conditions
-    Pre-condition  ${BROWSER_CHROME}  ${URL_MainPage}
+    Open   ${BROWSER_CHROME}  ${URL_MainPage}
 
 TC_001_004-001 - Kontrola obsahu cookies
     Wait Until Element Is Visible  ${IMAGE_Plus}  10s

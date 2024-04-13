@@ -14,7 +14,9 @@ Resource  Resources/variables/KeyboardKeys.robot
 
 *** Test Cases ***
 Pre-conditions
-    Pre-condition  ${BROWSER_CHROME}  ${URL_MainPage}
+    Open Incognito   ${BROWSER_CHROME}  ${URL_MainPage}
+    Keyword Should Exist  Kontrola funkcie Move
+    Keyword Should Exist  Button interaction check
 
 
 TC_001_006-001 - Kontrola zobrazenia mapy
@@ -49,51 +51,19 @@ TC_001_006-003 - Kontrola tlačítka `Zoom out`
 
 
 TC_001_006-004 - Kontrola funkcie `Move left`
-    Press Keys  ${DIV_Map_frame}  ${KEY_Left} 
-    ${count}=  Convert To Integer  0
-    WHILE  ${count} < 5
-        Press Keys  ${DIV_Map_frame}  ${KEY_Left} 
-        ${count}=  Evaluate  ${count} + 1
-    END
-    ${matrix}=  Get Element Attribute  ${DIV_Map_matrix}  style
-    Log  ${matrix}
-    Should Be Equal  ${matrix}  ${VALUE_Map_matrix_move_left}
+    Kontrola funkcie Move  ${DIV_Map_frame}  ${KEY_Left}  ${DIV_Map_matrix}  ${VALUE_Map_matrix_move_left}
 
 
 TC_001_006-005 - Kontrola funkcie `Move right`
-    Press Keys  ${DIV_Map_frame}  ${KEY_Right}
-    ${count}=  Convert To Integer  0
-    WHILE  ${count} < 5
-        Press Keys  ${DIV_Map_frame}  ${KEY_Right}
-        ${count}=  Evaluate  ${count} + 1
-    END
-    ${matrix}=  Get Element Attribute  ${DIV_Map_matrix}  style
-    Log  ${matrix}
-    Should Be Equal  ${matrix}  ${VALUE_Map_matrix_move_right}
+    Kontrola funkcie Move  ${DIV_Map_frame}  ${KEY_Right}  ${DIV_Map_matrix}  ${VALUE_Map_matrix_move_right}
 
 
 TC_001_006-006 - Kontrola funkcie `Move up`
-    Press Keys  ${DIV_Map_frame}  ARROW_UP
-    ${count}=  Convert To Integer  0
-    WHILE  ${count} < 5
-        Press Keys  ${DIV_Map_frame}  ARROW_UP
-        ${count}=  Evaluate  ${count} + 1
-    END
-    ${matrix}=  Get Element Attribute  ${DIV_Map_matrix}  style
-    Log  ${matrix}
-    Should Be Equal  ${matrix}  ${VALUE_Map_matrix_move_up}
+    Kontrola funkcie Move  ${DIV_Map_frame}  ${KEY_Up}  ${DIV_Map_matrix}  ${VALUE_Map_matrix_move_up}
 
 
 TC_001_006-007 - Kontrola funkcie `Move down`
-    Press Keys  ${DIV_Map_frame}  ARROW_DOWN
-    ${count}=  Convert To Integer  0
-    WHILE  ${count} < 5
-        Press Keys  ${DIV_Map_frame}  ARROW_DOWN
-        ${count}=  Evaluate  ${count} + 1
-    END
-    ${matrix}=  Get Element Attribute  ${DIV_Map_matrix}  style
-    Log  ${matrix}
-    Should Be Equal  ${matrix}  ${VALUE_Map_matrix_move_down}
+    Kontrola funkcie Move  ${DIV_Map_frame}  ${KEY_Down}  ${DIV_Map_matrix}  ${VALUE_Map_matrix_move_down}
 
 
 TC_001_006-008 - Kontrola tlačítka `Show satellite imagery`
@@ -107,12 +77,11 @@ TC_001_006-009 - Kontrola tlačítka `Show street map`
 TC_001_006-010 - Kontrola tlačítka `View larger map`
     Wait Until Element Is Visible  ${BUTTON_LargerMap}  10s
     Click Element  ${BUTTON_LargerMap}
+    Switch Window  NEW
     Wait Until Element Is Visible  ${BUTTON_AcceptGoogle}  10s
     Scroll Element Into View  ${BUTTON_AcceptGoogle}
     Click Element  ${BUTTON_AcceptGoogle}
     Location Should Be  ${URL_GoogleMap}
 
 post conditions
-    Set Selenium Speed  0
-    Sleep  2 seconds
-    Close Browser
+    Close
