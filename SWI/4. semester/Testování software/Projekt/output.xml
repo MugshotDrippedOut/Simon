@@ -1,433 +1,754 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.0 on win32)" generated="2024-04-13T23:23:37.523963" rpa="false" schemaversion="5">
-<suite id="s1" name="TS 001 002" source="C:\Users\bucka\Documents\GitHub\Simon\SWI\4. semester\Testování software\Projekt\_projekt\TS_001_002.robot">
-<test id="s1-t1" name="Pre-conditions" line="18">
-<kw name="Open Incognito" owner="keywords">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-13T23:23:37.839430" level="INFO">Opening browser 'Chrome' to base url 'https://www.krakovany.sk'.</msg>
-<msg time="2024-04-13T23:23:38.415818" level="WARN">The chromedriver version (122.0.6261.69) detected in PATH at C:\Users\bucka\AppData\Local\Programs\Python\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (123.0.6312.107); currently, chromedriver 123.0.6312.122 is recommended for chrome 123.*, so it is advised to delete the driver in PATH and retry</msg>
+<robot generator="Robot 7.0 (Python 3.11.0 on win32)" generated="2024-04-14T11:52:00.930033" rpa="false" schemaversion="5">
+<suite id="s1" name="TS 001 001 014" source="C:\Users\bucka\Documents\GitHub\Simon\SWI\4. semester\Testování software\Projekt\_projekt\TS_001_001_014.robot">
+<test id="s1-t1" name="Pre-conditions" line="30">
+<kw name="Open EN Incognito Chrome Webdriver" owner="keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-04-14T11:52:01.296792" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001A0E5AAAA90&gt;</msg>
+<var>${chrome_options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-04-14T11:52:01.296792" elapsed="0.000000"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-04-14T11:52:01.297827" level="INFO">${prefs} = {'intl.accept_languages': 'en'}</msg>
+<var>${prefs}</var>
+<arg>intl.accept_languages</arg>
+<arg>en</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-04-14T11:52:01.297827" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_experimental_option</arg>
+<arg>prefs</arg>
+<arg>${prefs}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-04-14T11:52:01.297827" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--incognito</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-04-14T11:52:01.298823" elapsed="0.000000"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-04-14T11:52:01.299784" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2024-04-14T11:52:02.331606" level="WARN">The chromedriver version (122.0.6261.69) detected in PATH at C:\Users\bucka\AppData\Local\Programs\Python\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (123.0.6312.107); currently, chromedriver 123.0.6312.122 is recommended for chrome 123.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>Chrome</arg>
+<arg>options=${chrome_options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-04-14T11:52:01.298823" elapsed="2.506763"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-04-14T11:52:03.807629" level="INFO">Opening url 'https://www.krakovany.sk/?page_id=19224'</msg>
 <arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<arg>incognito=yes</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-13T23:23:37.838397" elapsed="8.151836"/>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-04-14T11:52:03.806634" elapsed="4.100182"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-04-13T23:23:45.990233" elapsed="0.132751"/>
+<status status="PASS" start="2024-04-14T11:52:07.906816" elapsed="0.136058"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-13T23:23:46.325170" level="INFO">Slept 200 milliseconds.</msg>
-<arg>200ms</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-13T23:23:46.124133" elapsed="0.201037"/>
+<arg>${URL_TvKrakovany}</arg>
+<status status="PASS" start="2024-04-14T11:52:01.295795" elapsed="6.748078"/>
 </kw>
-<arg>${BROWSER_CHROME}</arg>
-<arg>${URL_MainPage}</arg>
-<status status="PASS" start="2024-04-13T23:23:37.837399" elapsed="8.489250"/>
-</kw>
-<status status="PASS" start="2024-04-13T23:23:37.837399" elapsed="8.491241"/>
+<status status="PASS" start="2024-04-14T11:52:01.294171" elapsed="6.749702"/>
 </test>
-<test id="s1-t2" name="TC_001_002-001 - Kontrola interakcie vstupu `Vyhľadávanie`" line="21">
+<test id="s1-t2" name="TC_001_001_014-001 - Kontrola interakcie videa" line="34">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${INPUT_Search}</arg>
+<arg>${IFRAME_Video}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-13T23:23:46.336226" elapsed="0.167086"/>
+<status status="PASS" start="2024-04-14T11:52:08.048811" elapsed="0.100647"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-13T23:23:46.505640" level="INFO">Typing text 'farnost' into text field '//*[@id="header"]/div/div/div/div/div[4]/div/form/div/input'.</msg>
-<arg>${INPUT_Search}</arg>
-<arg>${VALUE_Search}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-13T23:23:46.504323" elapsed="0.505662"/>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${IFRAME_Video}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-04-14T11:52:08.150456" elapsed="0.343728"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2024-04-14T11:52:08.495694" level="INFO">Selecting frame '//*[@id="page-content"]/div/div/div/div[2]/iframe'.</msg>
+<arg>${IFRAME_Video}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2024-04-14T11:52:08.495694" elapsed="0.042248"/>
+</kw>
+<kw name="Button interaction" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<arg>15 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-14T11:52:08.538942" elapsed="0.035584"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.2</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-04-14T11:52:08.576032" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-14T11:52:08.577035" level="INFO">Clicking element '//*[@id="movie_player"]/div[4]/button'.</msg>
+<arg>${BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-14T11:52:08.577035" elapsed="0.556526"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-04-14T11:52:09.134068" elapsed="0.000000"/>
+</kw>
+<arg>${BUTTON_Video_PlayBig}</arg>
+<status status="PASS" start="2024-04-14T11:52:08.538942" elapsed="0.595126"/>
+</kw>
+<status status="PASS" start="2024-04-14T11:52:08.046424" elapsed="1.089153"/>
+</test>
+<test id="s1-t3" name="TC_001_001_014-006 - Kontrola funkcie `Play-back speed` a nastavenie rýchlosti prehrávania na 0.70 pomocou možnosti `Custom`" line="41">
+<kw name="Button interaction" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<arg>15 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-14T11:52:09.140593" elapsed="0.068745"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.2</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-04-14T11:52:09.210335" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-14T11:52:09.211331" level="INFO">Clicking element '//*[@id="movie_player"]/div[27]/div[2]/div[2]/button[2]'.</msg>
+<arg>${BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-14T11:52:09.210335" elapsed="0.598655"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-04-14T11:52:09.809498" elapsed="0.000000"/>
+</kw>
+<arg>${BUTTON_Video_Settings}</arg>
+<status status="PASS" start="2024-04-14T11:52:09.139594" elapsed="0.669904"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>1</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-04-14T11:52:09.810500" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-14T11:52:09.812494" level="INFO">Clicking element '//*[@id="ytp-id-17"]/div/div/div[1]'.</msg>
+<arg>${DIV_Video_PlayBackSpeed}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-14T11:52:09.811498" elapsed="2.206830"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-14T11:52:12.018835" level="INFO">Clicking element '//button[normalize-space()='Custom']'.</msg>
+<arg>${DIV_Video_PlayBackSpeed_Custom}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-14T11:52:12.018835" elapsed="2.207846"/>
+</kw>
+<kw name="Drag And Drop By Offset" owner="SeleniumLibrary">
+<msg time="2024-04-14T11:52:15.243276" level="FAIL">Element with locator '//button[normalize-space()='Custom']' not found.</msg>
+<arg>${DIV_Video_PlayBackSpeed_Custom}</arg>
+<arg>50</arg>
+<arg>0</arg>
+<doc>Drags the element identified with ``locator`` by ``xoffset/yoffset``.</doc>
+<status status="FAIL" start="2024-04-14T11:52:14.226681" elapsed="1.022675">Element with locator '//button[normalize-space()='Custom']' not found.</status>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" start="2024-04-14T11:52:15.249356" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-04-14T11:52:09.137594" elapsed="6.112759">Element with locator '//button[normalize-space()='Custom']' not found.</status>
+</test>
+<test id="s1-t4" name="TC_001_001_014-002 - Kontrola tlačítka `Play`" line="49">
+<kw name="Button interaction" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<arg>15 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-14T11:52:15.253911" elapsed="2.036426"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.2</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-04-14T11:52:17.290337" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-14T11:52:17.291735" level="INFO">Clicking element '//*[@id="movie_player"]/div[27]/div[2]/div[1]/button'.</msg>
+<arg>${BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-14T11:52:17.290337" elapsed="0.630755"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-04-14T11:52:17.921599" elapsed="0.000000"/>
+</kw>
+<arg>${BUTTON_Video_Play}</arg>
+<status status="PASS" start="2024-04-14T11:52:15.251350" elapsed="2.671252"/>
+</kw>
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-14T11:52:17.968847" level="INFO">Element '//*[@id="movie_player"]/div[27]/div[2]/div[1]/button' attribute 'data-title-no-tooltip' contains value 'Play'.</msg>
+<arg>${BUTTON_Video_Play}</arg>
+<arg>data-title-no-tooltip</arg>
+<arg>Play</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="PASS" start="2024-04-14T11:52:17.922602" elapsed="0.047241"/>
+</kw>
+<kw name="Button interaction" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<arg>15 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-14T11:52:17.970841" elapsed="0.020888"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.2</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-04-14T11:52:17.992727" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-14T11:52:17.993722" level="INFO">Clicking element '//*[@id="movie_player"]/div[27]/div[2]/div[1]/button'.</msg>
+<arg>${BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-14T11:52:17.993722" elapsed="0.506138"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-04-14T11:52:18.500858" elapsed="0.000999"/>
+</kw>
+<arg>${BUTTON_Video_Play}</arg>
+<status status="PASS" start="2024-04-14T11:52:17.969843" elapsed="0.532014"/>
+</kw>
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-14T11:52:18.570648" level="INFO">Element '//*[@id="movie_player"]/div[27]/div[2]/div[1]/button' attribute 'data-title-no-tooltip' contains value 'Pause'.</msg>
+<arg>${BUTTON_Video_Play}</arg>
+<arg>data-title-no-tooltip</arg>
+<arg>Pause</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="PASS" start="2024-04-14T11:52:18.530409" elapsed="0.041235"/>
+</kw>
+<status status="PASS" start="2024-04-14T11:52:15.251350" elapsed="3.321292"/>
+</test>
+<test id="s1-t5" name="TC_001_001_014-003 - Kontrola funkcie posunutia vpred o 5 sekúnd" line="56">
+<kw name="Button interaction" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<arg>15 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-14T11:52:18.578146" elapsed="0.036526"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.2</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-04-14T11:52:18.614672" elapsed="0.000997"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-14T11:52:18.616869" level="INFO">Clicking element '//*[@id="movie_player"]/div[27]/div[2]/div[1]/button'.</msg>
+<arg>${BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-14T11:52:18.615669" elapsed="0.538185"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-04-14T11:52:19.153854" elapsed="0.000000"/>
+</kw>
+<arg>${BUTTON_Video_Play}</arg>
+<status status="PASS" start="2024-04-14T11:52:18.576141" elapsed="0.577713"/>
+</kw>
+<kw name="Button interaction" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<arg>15 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-14T11:52:19.155367" elapsed="0.040025"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.2</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-04-14T11:52:19.196418" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-14T11:52:19.197415" level="INFO">Clicking element '//*[@id="movie_player"]/div[18]/div/button[1]'.</msg>
+<arg>${BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-14T11:52:19.197415" elapsed="0.547230"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-04-14T11:52:19.745217" elapsed="0.001005"/>
+</kw>
+<arg>${BUTTON_Video_ClosePopUp}</arg>
+<status status="PASS" start="2024-04-14T11:52:19.155367" elapsed="0.590855"/>
+</kw>
+<kw name="Get time from span YT video" owner="keywords">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-14T11:52:19.835316" level="INFO">${time} = 0:08</msg>
+<var>${time}</var>
+<arg>${SPAN}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-14T11:52:19.751221" elapsed="0.084095"/>
+</kw>
+<kw name="Get Last Two Characters" owner="keywords">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-04-14T11:52:19.837588" level="INFO">Executing JavaScript:
+return arguments[0].slice(-2);
+By using argument:
+'0:08'</msg>
+<msg time="2024-04-14T11:52:19.847075" level="INFO">${first_two_characters} = 08</msg>
+<var>${first_two_characters}</var>
+<arg>return arguments[0].slice(-2);</arg>
+<arg>ARGUMENTS</arg>
+<arg>${TEXT}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-04-14T11:52:19.836361" elapsed="0.010714"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-14T11:52:19.848075" level="INFO">08</msg>
+<arg>${first_two_characters}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-14T11:52:19.847075" elapsed="0.001000"/>
+</kw>
+<return>
+<value>${first_two_characters}</value>
+<status status="PASS" start="2024-04-14T11:52:19.848075" elapsed="0.000999"/>
+</return>
+<msg time="2024-04-14T11:52:19.849074" level="INFO">${time} = 08</msg>
+<var>${time}</var>
+<arg>${time}</arg>
+<status status="PASS" start="2024-04-14T11:52:19.836361" elapsed="0.012713"/>
+</kw>
+<kw name="Convert To Integer" owner="BuiltIn">
+<msg time="2024-04-14T11:52:19.850072" level="INFO">${time} = 8</msg>
+<var>${time}</var>
+<arg>${time}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<status status="PASS" start="2024-04-14T11:52:19.849074" elapsed="0.000998"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-14T11:52:19.851071" level="INFO">8</msg>
+<arg>${time}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-14T11:52:19.851071" elapsed="0.000997"/>
+</kw>
+<return>
+<value>${time}</value>
+<status status="PASS" start="2024-04-14T11:52:19.852068" elapsed="0.000000"/>
+</return>
+<msg time="2024-04-14T11:52:19.852068" level="INFO">${time_before} = 8</msg>
+<var>${time_before}</var>
+<arg>${SPAN_TimeCurrent}</arg>
+<status status="PASS" start="2024-04-14T11:52:19.749214" elapsed="0.102854"/>
 </kw>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2024-04-13T23:23:47.012009" level="INFO">Sending key(s) ('ENTER',) to //*[@id="header"]/div/div/div/div/div[4]/div/form/div/input element.</msg>
-<msg time="2024-04-13T23:23:47.335882" level="INFO">Pressing special key ENTER to element.</msg>
-<msg time="2024-04-13T23:23:47.335882" level="INFO">Releasing special key ENTER.</msg>
-<arg>${INPUT_Search}</arg>
-<arg>${KEY_Enter}</arg>
+<msg time="2024-04-14T11:52:19.853576" level="INFO">Sending key(s) ('ARROW_RIGHT',) to //*[@id="movie_player"]/div[1]/video element.</msg>
+<msg time="2024-04-14T11:52:20.225567" level="INFO">Pressing special key ARROW_RIGHT to element.</msg>
+<msg time="2024-04-14T11:52:20.225567" level="INFO">Releasing special key ARROW_RIGHT.</msg>
+<arg>${VIDEO_TvKrakovany}</arg>
+<arg>${KEY_Right}</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2024-04-13T23:23:47.010983" elapsed="3.144326"/>
+<status status="PASS" start="2024-04-14T11:52:19.852068" elapsed="0.415625"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${HEADING_SearchResults1}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-13T23:23:50.158309" elapsed="0.084101"/>
-</kw>
-<kw name="Create List" owner="BuiltIn">
-<msg time="2024-04-13T23:23:50.244459" level="INFO">@{HEADING_SearchResults} = [ //*[@id="page-content"]/div/div[2]/h3 | //*[@id="page-content"]/div/div[3]/h3 | //*[@id="page-content"]/div/div[4]/h3 | //*[@id="page-content"]/div/div[5]/h3 | //*[@id="page-content"]/div/div[6]/h3 ...</msg>
-<var>@{HEADING_SearchResults}</var>
-<arg>${HEADING_SearchResults1}</arg>
-<arg>${HEADING_SearchResults2}</arg>
-<arg>${HEADING_SearchResults3}</arg>
-<arg>${HEADING_SearchResults4}</arg>
-<arg>${HEADING_SearchResults5}</arg>
-<arg>${HEADING_SearchResults6}</arg>
-<arg>${HEADING_SearchResults7}</arg>
-<doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2024-04-13T23:23:50.243418" elapsed="0.001041"/>
-</kw>
-<for flavor="IN">
-<iter>
+<kw name="Get time from span YT video" owner="keywords">
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-04-13T23:23:50.321203" level="INFO">${TEXT} = Oznam pre veriacich našej farnosti</msg>
-<var>${TEXT}</var>
-<arg>${element}</arg>
+<msg time="2024-04-14T11:52:20.325334" level="INFO">${time} = 0:13</msg>
+<var>${time}</var>
+<arg>${SPAN}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-13T23:23:50.247401" elapsed="0.074800"/>
+<status status="PASS" start="2024-04-14T11:52:20.270714" elapsed="0.054620"/>
 </kw>
-<kw name="Convert To Lowercase" owner="keywords">
+<kw name="Get Last Two Characters" owner="keywords">
 <kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2024-04-13T23:23:50.326036" level="INFO">Executing JavaScript:
-return arguments[0].toLowerCase();
+<msg time="2024-04-14T11:52:20.328853" level="INFO">Executing JavaScript:
+return arguments[0].slice(-2);
 By using argument:
-'Oznam pre veriacich našej farnosti'</msg>
-<msg time="2024-04-13T23:23:50.343552" level="INFO">${lowercase_text} = oznam pre veriacich našej farnosti</msg>
-<var>${lowercase_text}</var>
-<arg>return arguments[0].toLowerCase();</arg>
+'0:13'</msg>
+<msg time="2024-04-14T11:52:20.344484" level="INFO">${first_two_characters} = 13</msg>
+<var>${first_two_characters}</var>
+<arg>return arguments[0].slice(-2);</arg>
 <arg>ARGUMENTS</arg>
 <arg>${TEXT}</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2024-04-13T23:23:50.324715" elapsed="0.018837"/>
+<status status="PASS" start="2024-04-14T11:52:20.327846" elapsed="0.016638"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-04-13T23:23:50.343552" level="INFO">oznam pre veriacich našej farnosti</msg>
-<arg>${lowercase_text}</arg>
+<msg time="2024-04-14T11:52:20.345988" level="INFO">13</msg>
+<arg>${first_two_characters}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-04-13T23:23:50.343552" elapsed="0.001266"/>
+<status status="PASS" start="2024-04-14T11:52:20.345482" elapsed="0.000506"/>
 </kw>
 <return>
-<value>${lowercase_text}</value>
-<status status="PASS" start="2024-04-13T23:23:50.344818" elapsed="0.000000"/>
+<value>${first_two_characters}</value>
+<status status="PASS" start="2024-04-14T11:52:20.345988" elapsed="0.000000"/>
 </return>
-<msg time="2024-04-13T23:23:50.344818" level="INFO">${TEXT} = oznam pre veriacich našej farnosti</msg>
-<var>${TEXT}</var>
-<arg>${TEXT}</arg>
-<status status="PASS" start="2024-04-13T23:23:50.322712" elapsed="0.022106"/>
+<msg time="2024-04-14T11:52:20.346990" level="INFO">${time} = 13</msg>
+<var>${time}</var>
+<arg>${time}</arg>
+<status status="PASS" start="2024-04-14T11:52:20.326850" elapsed="0.020140"/>
 </kw>
-<kw name="Should Contain" owner="BuiltIn">
-<arg>${TEXT}</arg>
-<arg>${VALUE_SearchResults}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2024-04-13T23:23:50.345864" elapsed="0.000956"/>
-</kw>
-<var name="${element}">//*[@id="page-content"]/div/div[2]/h3</var>
-<status status="PASS" start="2024-04-13T23:23:50.246406" elapsed="0.101412"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-04-13T23:23:50.420738" level="INFO">${TEXT} = Dotácie pre farnosť Krakovany</msg>
-<var>${TEXT}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-13T23:23:50.348818" elapsed="0.071920"/>
-</kw>
-<kw name="Convert To Lowercase" owner="keywords">
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2024-04-13T23:23:50.424343" level="INFO">Executing JavaScript:
-return arguments[0].toLowerCase();
-By using argument:
-'Dotácie pre farnosť Krakovany'</msg>
-<msg time="2024-04-13T23:23:50.440314" level="INFO">${lowercase_text} = dotácie pre farnosť krakovany</msg>
-<var>${lowercase_text}</var>
-<arg>return arguments[0].toLowerCase();</arg>
-<arg>ARGUMENTS</arg>
-<arg>${TEXT}</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2024-04-13T23:23:50.423304" elapsed="0.017010"/>
+<kw name="Convert To Integer" owner="BuiltIn">
+<msg time="2024-04-14T11:52:20.347988" level="INFO">${time} = 13</msg>
+<var>${time}</var>
+<arg>${time}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<status status="PASS" start="2024-04-14T11:52:20.347988" elapsed="0.000000"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-04-13T23:23:50.441916" level="INFO">dotácie pre farnosť krakovany</msg>
-<arg>${lowercase_text}</arg>
+<msg time="2024-04-14T11:52:20.348991" level="INFO">13</msg>
+<arg>${time}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-04-13T23:23:50.441916" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-14T11:52:20.348991" elapsed="0.000000"/>
 </kw>
 <return>
-<value>${lowercase_text}</value>
-<status status="PASS" start="2024-04-13T23:23:50.441916" elapsed="0.001004"/>
+<value>${time}</value>
+<status status="PASS" start="2024-04-14T11:52:20.349990" elapsed="0.000000"/>
 </return>
-<msg time="2024-04-13T23:23:50.442920" level="INFO">${TEXT} = dotácie pre farnosť krakovany</msg>
-<var>${TEXT}</var>
-<arg>${TEXT}</arg>
-<status status="PASS" start="2024-04-13T23:23:50.422308" elapsed="0.020612"/>
+<msg time="2024-04-14T11:52:20.349990" level="INFO">${time_after} = 13</msg>
+<var>${time_after}</var>
+<arg>${SPAN_TimeCurrent}</arg>
+<status status="PASS" start="2024-04-14T11:52:20.269704" elapsed="0.080286"/>
 </kw>
-<kw name="Should Contain" owner="BuiltIn">
-<arg>${TEXT}</arg>
-<arg>${VALUE_SearchResults}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2024-04-13T23:23:50.442920" elapsed="0.000997"/>
-</kw>
-<var name="${element}">//*[@id="page-content"]/div/div[3]/h3</var>
-<status status="PASS" start="2024-04-13T23:23:50.347818" elapsed="0.096099"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-04-13T23:23:50.506977" level="INFO">${TEXT} = História farnosti</msg>
-<var>${TEXT}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-13T23:23:50.444914" elapsed="0.062063"/>
-</kw>
-<kw name="Convert To Lowercase" owner="keywords">
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2024-04-13T23:23:50.510021" level="INFO">Executing JavaScript:
-return arguments[0].toLowerCase();
-By using argument:
-'História farnosti'</msg>
-<msg time="2024-04-13T23:23:50.529319" level="INFO">${lowercase_text} = história farnosti</msg>
-<var>${lowercase_text}</var>
-<arg>return arguments[0].toLowerCase();</arg>
-<arg>ARGUMENTS</arg>
-<arg>${TEXT}</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2024-04-13T23:23:50.509021" elapsed="0.020298"/>
+<kw name="Subtract" owner="keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-04-14T11:52:20.354486" level="INFO">${result} = 5</msg>
+<var>${result}</var>
+<arg>${VALUE1} - ${VALUE2}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-04-14T11:52:20.352982" elapsed="0.001504"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-04-13T23:23:50.530320" level="INFO">história farnosti</msg>
-<arg>${lowercase_text}</arg>
+<msg time="2024-04-14T11:52:20.355548" level="INFO">5</msg>
+<arg>${result}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-04-13T23:23:50.530320" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-14T11:52:20.354486" elapsed="0.001062"/>
 </kw>
 <return>
-<value>${lowercase_text}</value>
-<status status="PASS" start="2024-04-13T23:23:50.531876" elapsed="0.000000"/>
+<value>${result}</value>
+<status status="PASS" start="2024-04-14T11:52:20.355548" elapsed="0.000000"/>
 </return>
-<msg time="2024-04-13T23:23:50.531876" level="INFO">${TEXT} = história farnosti</msg>
-<var>${TEXT}</var>
-<arg>${TEXT}</arg>
-<status status="PASS" start="2024-04-13T23:23:50.507973" elapsed="0.023903"/>
-</kw>
-<kw name="Should Contain" owner="BuiltIn">
-<arg>${TEXT}</arg>
-<arg>${VALUE_SearchResults}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2024-04-13T23:23:50.532899" elapsed="0.000000"/>
-</kw>
-<var name="${element}">//*[@id="page-content"]/div/div[4]/h3</var>
-<status status="PASS" start="2024-04-13T23:23:50.443917" elapsed="0.088982"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-04-13T23:23:50.592662" level="INFO">${TEXT} = Farské oznamy od 8.4. do 14.4.2024</msg>
-<var>${TEXT}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-13T23:23:50.533896" elapsed="0.058766"/>
-</kw>
-<kw name="Convert To Lowercase" owner="keywords">
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2024-04-13T23:23:50.596162" level="INFO">Executing JavaScript:
-return arguments[0].toLowerCase();
-By using argument:
-'Farské oznamy od 8.4. do 14.4.2024'</msg>
-<msg time="2024-04-13T23:23:50.614026" level="INFO">${lowercase_text} = farské oznamy od 8.4. do 14.4.2024</msg>
-<var>${lowercase_text}</var>
-<arg>return arguments[0].toLowerCase();</arg>
-<arg>ARGUMENTS</arg>
-<arg>${TEXT}</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2024-04-13T23:23:50.595221" elapsed="0.018805"/>
+<msg time="2024-04-14T11:52:20.356552" level="INFO">${time_diff} = 5</msg>
+<var>${time_diff}</var>
+<arg>${time_after}</arg>
+<arg>${time_before}</arg>
+<status status="PASS" start="2024-04-14T11:52:20.351983" elapsed="0.004569"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-04-13T23:23:50.615143" level="INFO">farské oznamy od 8.4. do 14.4.2024</msg>
-<arg>${lowercase_text}</arg>
+<msg time="2024-04-14T11:52:20.358554" level="INFO">5</msg>
+<arg>${time_diff}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-04-13T23:23:50.614026" elapsed="0.001384"/>
+<status status="PASS" start="2024-04-14T11:52:20.357549" elapsed="0.001005"/>
 </kw>
-<return>
-<value>${lowercase_text}</value>
-<status status="PASS" start="2024-04-13T23:23:50.615410" elapsed="0.000000"/>
-</return>
-<msg time="2024-04-13T23:23:50.615410" level="INFO">${TEXT} = farské oznamy od 8.4. do 14.4.2024</msg>
-<var>${TEXT}</var>
-<arg>${TEXT}</arg>
-<status status="PASS" start="2024-04-13T23:23:50.594161" elapsed="0.021249"/>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-04-14T11:52:20.360550" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${time_diff}</arg>
+<arg>5</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-04-14T11:52:20.359552" elapsed="0.000998"/>
 </kw>
-<kw name="Should Contain" owner="BuiltIn">
-<arg>${TEXT}</arg>
-<arg>${VALUE_SearchResults}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2024-04-13T23:23:50.616411" elapsed="0.000000"/>
-</kw>
-<var name="${element}">//*[@id="page-content"]/div/div[5]/h3</var>
-<status status="PASS" start="2024-04-13T23:23:50.533896" elapsed="0.083511"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-04-13T23:23:50.676103" level="INFO">${TEXT} = Farské oznamy od 1.4. do 7.4.2024</msg>
-<var>${TEXT}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-13T23:23:50.617407" elapsed="0.059758"/>
-</kw>
-<kw name="Convert To Lowercase" owner="keywords">
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2024-04-13T23:23:50.680106" level="INFO">Executing JavaScript:
-return arguments[0].toLowerCase();
-By using argument:
-'Farské oznamy od 1.4. do 7.4.2024'</msg>
-<msg time="2024-04-13T23:23:50.696627" level="INFO">${lowercase_text} = farské oznamy od 1.4. do 7.4.2024</msg>
-<var>${lowercase_text}</var>
-<arg>return arguments[0].toLowerCase();</arg>
-<arg>ARGUMENTS</arg>
-<arg>${TEXT}</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2024-04-13T23:23:50.678159" elapsed="0.018468"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-04-13T23:23:50.697633" level="INFO">farské oznamy od 1.4. do 7.4.2024</msg>
-<arg>${lowercase_text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-04-13T23:23:50.697633" elapsed="0.000000"/>
-</kw>
-<return>
-<value>${lowercase_text}</value>
-<status status="PASS" start="2024-04-13T23:23:50.697633" elapsed="0.000997"/>
-</return>
-<msg time="2024-04-13T23:23:50.698630" level="INFO">${TEXT} = farské oznamy od 1.4. do 7.4.2024</msg>
-<var>${TEXT}</var>
-<arg>${TEXT}</arg>
-<status status="PASS" start="2024-04-13T23:23:50.677165" elapsed="0.021465"/>
-</kw>
-<kw name="Should Contain" owner="BuiltIn">
-<arg>${TEXT}</arg>
-<arg>${VALUE_SearchResults}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2024-04-13T23:23:50.699632" elapsed="0.000000"/>
-</kw>
-<var name="${element}">//*[@id="page-content"]/div/div[6]/h3</var>
-<status status="PASS" start="2024-04-13T23:23:50.617407" elapsed="0.082225"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-04-13T23:23:50.759488" level="INFO">${TEXT} = Farské oznamy od 25.3. do 31.3.2024</msg>
-<var>${TEXT}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-13T23:23:50.700629" elapsed="0.058859"/>
-</kw>
-<kw name="Convert To Lowercase" owner="keywords">
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2024-04-13T23:23:50.762166" level="INFO">Executing JavaScript:
-return arguments[0].toLowerCase();
-By using argument:
-'Farské oznamy od 25.3. do 31.3.2024'</msg>
-<msg time="2024-04-13T23:23:50.779423" level="INFO">${lowercase_text} = farské oznamy od 25.3. do 31.3.2024</msg>
-<var>${lowercase_text}</var>
-<arg>return arguments[0].toLowerCase();</arg>
-<arg>ARGUMENTS</arg>
-<arg>${TEXT}</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2024-04-13T23:23:50.760489" elapsed="0.018934"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-04-13T23:23:50.780414" level="INFO">farské oznamy od 25.3. do 31.3.2024</msg>
-<arg>${lowercase_text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-04-13T23:23:50.780414" elapsed="0.000000"/>
-</kw>
-<return>
-<value>${lowercase_text}</value>
-<status status="PASS" start="2024-04-13T23:23:50.780414" elapsed="0.000000"/>
-</return>
-<msg time="2024-04-13T23:23:50.781970" level="INFO">${TEXT} = farské oznamy od 25.3. do 31.3.2024</msg>
-<var>${TEXT}</var>
-<arg>${TEXT}</arg>
-<status status="PASS" start="2024-04-13T23:23:50.759488" elapsed="0.022607"/>
-</kw>
-<kw name="Should Contain" owner="BuiltIn">
-<arg>${TEXT}</arg>
-<arg>${VALUE_SearchResults}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2024-04-13T23:23:50.782095" elapsed="0.000998"/>
-</kw>
-<var name="${element}">//*[@id="page-content"]/div/div[7]/h3</var>
-<status status="PASS" start="2024-04-13T23:23:50.700629" elapsed="0.082464"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-04-13T23:23:50.841210" level="INFO">${TEXT} = Farské oznamy od 18.3. do 24.3.2024</msg>
-<var>${TEXT}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-13T23:23:50.784090" elapsed="0.057120"/>
-</kw>
-<kw name="Convert To Lowercase" owner="keywords">
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2024-04-13T23:23:50.843830" level="INFO">Executing JavaScript:
-return arguments[0].toLowerCase();
-By using argument:
-'Farské oznamy od 18.3. do 24.3.2024'</msg>
-<msg time="2024-04-13T23:23:50.860920" level="INFO">${lowercase_text} = farské oznamy od 18.3. do 24.3.2024</msg>
-<var>${lowercase_text}</var>
-<arg>return arguments[0].toLowerCase();</arg>
-<arg>ARGUMENTS</arg>
-<arg>${TEXT}</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2024-04-13T23:23:50.842783" elapsed="0.018137"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-04-13T23:23:50.861920" level="INFO">farské oznamy od 18.3. do 24.3.2024</msg>
-<arg>${lowercase_text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-04-13T23:23:50.860920" elapsed="0.001509"/>
-</kw>
-<return>
-<value>${lowercase_text}</value>
-<status status="PASS" start="2024-04-13T23:23:50.862429" elapsed="0.000000"/>
-</return>
-<msg time="2024-04-13T23:23:50.863439" level="INFO">${TEXT} = farské oznamy od 18.3. do 24.3.2024</msg>
-<var>${TEXT}</var>
-<arg>${TEXT}</arg>
-<status status="PASS" start="2024-04-13T23:23:50.842221" elapsed="0.021218"/>
-</kw>
-<kw name="Should Contain" owner="BuiltIn">
-<arg>${TEXT}</arg>
-<arg>${VALUE_SearchResults}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2024-04-13T23:23:50.864908" elapsed="0.000235"/>
-</kw>
-<var name="${element}">//*[@id="page-content"]/div/div[8]/h3</var>
-<status status="PASS" start="2024-04-13T23:23:50.783093" elapsed="0.082050"/>
-</iter>
-<var>${element}</var>
-<value>@{HEADING_SearchResults}</value>
-<status status="PASS" start="2024-04-13T23:23:50.245417" elapsed="0.619726"/>
-</for>
-<status status="PASS" start="2024-04-13T23:23:46.332228" elapsed="4.533955"/>
+<status status="PASS" start="2024-04-14T11:52:18.574636" elapsed="1.786908"/>
 </test>
-<test id="s1-t3" name="Post-conditions" line="34">
+<test id="s1-t6" name="TC_001_001_014-004 - Kontrola funkcie posunutia vzad o 5 sekúnd" line="67">
+<kw name="Button interaction" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<arg>15 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-14T11:52:20.365534" elapsed="0.039057"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.2</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-04-14T11:52:20.404591" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-14T11:52:20.405589" level="INFO">Clicking element '//*[@id="movie_player"]/div[27]/div[2]/div[1]/button'.</msg>
+<arg>${BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-14T11:52:20.405589" elapsed="0.539878"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-04-14T11:52:20.945467" elapsed="0.000000"/>
+</kw>
+<arg>${BUTTON_Video_Play}</arg>
+<status status="PASS" start="2024-04-14T11:52:20.364536" elapsed="0.580931"/>
+</kw>
+<kw name="Get time from span YT video" owner="keywords">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-14T11:52:20.972291" level="INFO">${time} = 0:14</msg>
+<var>${time}</var>
+<arg>${SPAN}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-14T11:52:20.946484" elapsed="0.025807"/>
+</kw>
+<kw name="Get Last Two Characters" owner="keywords">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-04-14T11:52:20.974286" level="INFO">Executing JavaScript:
+return arguments[0].slice(-2);
+By using argument:
+'0:14'</msg>
+<msg time="2024-04-14T11:52:20.981782" level="INFO">${first_two_characters} = 14</msg>
+<var>${first_two_characters}</var>
+<arg>return arguments[0].slice(-2);</arg>
+<arg>ARGUMENTS</arg>
+<arg>${TEXT}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-04-14T11:52:20.973289" elapsed="0.008493"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-14T11:52:20.982779" level="INFO">14</msg>
+<arg>${first_two_characters}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-14T11:52:20.982779" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${first_two_characters}</value>
+<status status="PASS" start="2024-04-14T11:52:20.982779" elapsed="0.000000"/>
+</return>
+<msg time="2024-04-14T11:52:20.982779" level="INFO">${time} = 14</msg>
+<var>${time}</var>
+<arg>${time}</arg>
+<status status="PASS" start="2024-04-14T11:52:20.972291" elapsed="0.010488"/>
+</kw>
+<kw name="Convert To Integer" owner="BuiltIn">
+<msg time="2024-04-14T11:52:20.983776" level="INFO">${time} = 14</msg>
+<var>${time}</var>
+<arg>${time}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<status status="PASS" start="2024-04-14T11:52:20.983776" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-14T11:52:20.985284" level="INFO">14</msg>
+<arg>${time}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-14T11:52:20.983776" elapsed="0.001508"/>
+</kw>
+<return>
+<value>${time}</value>
+<status status="PASS" start="2024-04-14T11:52:20.985284" elapsed="0.000000"/>
+</return>
+<msg time="2024-04-14T11:52:20.985284" level="INFO">${time_before} = 14</msg>
+<var>${time_before}</var>
+<arg>${SPAN_TimeCurrent}</arg>
+<status status="PASS" start="2024-04-14T11:52:20.946484" elapsed="0.038800"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-04-14T11:52:20.990306" level="INFO">Sending key(s) ('ARROW_LEFT',) to //*[@id="movie_player"]/div[1]/video element.</msg>
+<msg time="2024-04-14T11:52:26.397412" level="INFO">Pressing special key ARROW_LEFT to element.</msg>
+<msg time="2024-04-14T11:52:26.397412" level="INFO">Releasing special key ARROW_LEFT.</msg>
+<arg>${VIDEO_TvKrakovany}</arg>
+<arg>${KEY_Left}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-04-14T11:52:20.989307" elapsed="5.437048"/>
+</kw>
+<kw name="Get time from span YT video" owner="keywords">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-14T11:52:26.483538" level="INFO">${time} = 0:09</msg>
+<var>${time}</var>
+<arg>${SPAN}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-14T11:52:26.429669" elapsed="0.053869"/>
+</kw>
+<kw name="Get Last Two Characters" owner="keywords">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-04-14T11:52:26.485533" level="INFO">Executing JavaScript:
+return arguments[0].slice(-2);
+By using argument:
+'0:09'</msg>
+<msg time="2024-04-14T11:52:26.493660" level="INFO">${first_two_characters} = 09</msg>
+<var>${first_two_characters}</var>
+<arg>return arguments[0].slice(-2);</arg>
+<arg>ARGUMENTS</arg>
+<arg>${TEXT}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-04-14T11:52:26.484537" elapsed="0.009123"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-14T11:52:26.495173" level="INFO">09</msg>
+<arg>${first_two_characters}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-14T11:52:26.495173" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${first_two_characters}</value>
+<status status="PASS" start="2024-04-14T11:52:26.495173" elapsed="0.000000"/>
+</return>
+<msg time="2024-04-14T11:52:26.495173" level="INFO">${time} = 09</msg>
+<var>${time}</var>
+<arg>${time}</arg>
+<status status="PASS" start="2024-04-14T11:52:26.483538" elapsed="0.012658"/>
+</kw>
+<kw name="Convert To Integer" owner="BuiltIn">
+<msg time="2024-04-14T11:52:26.496196" level="INFO">${time} = 9</msg>
+<var>${time}</var>
+<arg>${time}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<status status="PASS" start="2024-04-14T11:52:26.496196" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-14T11:52:26.497194" level="INFO">9</msg>
+<arg>${time}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-14T11:52:26.497194" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${time}</value>
+<status status="PASS" start="2024-04-14T11:52:26.497194" elapsed="0.000000"/>
+</return>
+<msg time="2024-04-14T11:52:26.497194" level="INFO">${time_after} = 9</msg>
+<var>${time_after}</var>
+<arg>${SPAN_TimeCurrent}</arg>
+<status status="PASS" start="2024-04-14T11:52:26.428349" elapsed="0.068845"/>
+</kw>
+<kw name="Subtract" owner="keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-04-14T11:52:26.499526" level="INFO">${result} = 5</msg>
+<var>${result}</var>
+<arg>${VALUE1} - ${VALUE2}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-04-14T11:52:26.498525" elapsed="0.001001"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-14T11:52:26.499526" level="INFO">5</msg>
+<arg>${result}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-14T11:52:26.499526" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${result}</value>
+<status status="PASS" start="2024-04-14T11:52:26.500524" elapsed="0.000000"/>
+</return>
+<msg time="2024-04-14T11:52:26.500524" level="INFO">${time_diff} = 5</msg>
+<var>${time_diff}</var>
+<arg>${time_before}</arg>
+<arg>${time_after}</arg>
+<status status="PASS" start="2024-04-14T11:52:26.498525" elapsed="0.001999"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-14T11:52:26.501525" level="INFO">5</msg>
+<arg>${time_diff}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-14T11:52:26.501525" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-04-14T11:52:26.502519" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${time_diff}</arg>
+<arg>5</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-04-14T11:52:26.502519" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-04-14T11:52:20.362541" elapsed="6.140974"/>
+</test>
+<test id="s1-t7" name="TC_001_001_014-005 - Kontrola tlačítka `Mute`" line="77">
+<kw name="Button interaction" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<arg>15 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-14T11:52:26.505514" elapsed="0.035166"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.2</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-04-14T11:52:26.540680" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-14T11:52:26.541682" level="INFO">Clicking element '//*[@id="movie_player"]/div[27]/div[2]/div[1]/span/button'.</msg>
+<arg>${BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-14T11:52:26.541682" elapsed="0.700883"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-04-14T11:52:27.243590" elapsed="0.000000"/>
+</kw>
+<arg>${BUTTON_Video_Mute}</arg>
+<status status="PASS" start="2024-04-14T11:52:26.505514" elapsed="0.739660"/>
+</kw>
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-14T11:52:27.312658" level="INFO">Element '//*[@id="movie_player"]/div[27]/div[2]/div[1]/span/button' attribute 'data-title-no-tooltip' contains value 'Unmute'.</msg>
+<arg>${BUTTON_Video_Mute}</arg>
+<arg>data-title-no-tooltip</arg>
+<arg>Unmute</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="PASS" start="2024-04-14T11:52:27.247168" elapsed="0.065490"/>
+</kw>
+<kw name="Button interaction" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<arg>15 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-14T11:52:27.316253" elapsed="0.040877"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.2</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-04-14T11:52:27.358131" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-14T11:52:27.359129" level="INFO">Clicking element '//*[@id="movie_player"]/div[27]/div[2]/div[1]/span/button'.</msg>
+<arg>${BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-14T11:52:27.358131" elapsed="0.654106"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-04-14T11:52:28.012237" elapsed="0.001017"/>
+</kw>
+<arg>${BUTTON_Video_Mute}</arg>
+<status status="PASS" start="2024-04-14T11:52:27.313655" elapsed="0.699599"/>
+</kw>
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-14T11:52:28.056568" level="INFO">Element '//*[@id="movie_player"]/div[27]/div[2]/div[1]/span/button' attribute 'data-title-no-tooltip' contains value 'Mute'.</msg>
+<arg>${BUTTON_Video_Mute}</arg>
+<arg>data-title-no-tooltip</arg>
+<arg>Mute</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="PASS" start="2024-04-14T11:52:28.014249" elapsed="0.042319"/>
+</kw>
+<status status="PASS" start="2024-04-14T11:52:26.504513" elapsed="1.554044"/>
+</test>
+<test id="s1-t8" name="Post-conditions" line="84">
 <kw name="Close" owner="keywords">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-13T23:23:51.073080" level="INFO">Slept 200 milliseconds.</msg>
+<msg time="2024-04-14T11:52:28.264873" level="INFO">Slept 200 milliseconds.</msg>
 <arg>200ms</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-13T23:23:50.872386" elapsed="0.200694"/>
+<status status="PASS" start="2024-04-14T11:52:28.063635" elapsed="0.201767"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-04-13T23:23:51.073080" elapsed="2.347945"/>
+<status status="PASS" start="2024-04-14T11:52:28.266431" elapsed="2.352745"/>
 </kw>
-<status status="PASS" start="2024-04-13T23:23:50.870866" elapsed="2.551109"/>
+<status status="PASS" start="2024-04-14T11:52:28.062638" elapsed="2.557538"/>
 </kw>
-<status status="PASS" start="2024-04-13T23:23:50.869879" elapsed="2.553671"/>
+<status status="PASS" start="2024-04-14T11:52:28.061642" elapsed="2.560526"/>
 </test>
-<status status="PASS" start="2024-04-13T23:23:37.526957" elapsed="15.900783"/>
+<status status="FAIL" start="2024-04-14T11:52:00.932030" elapsed="29.693647"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0" skip="0">All Tests</stat>
+<stat pass="7" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="3" fail="0" skip="0" id="s1" name="TS 001 002">TS 001 002</stat>
+<stat pass="7" fail="1" skip="0" id="s1" name="TS 001 001 014">TS 001 001 014</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-04-13T23:23:38.415818" level="WARN">The chromedriver version (122.0.6261.69) detected in PATH at C:\Users\bucka\AppData\Local\Programs\Python\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (123.0.6312.107); currently, chromedriver 123.0.6312.122 is recommended for chrome 123.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-04-14T11:52:02.331606" level="WARN">The chromedriver version (122.0.6261.69) detected in PATH at C:\Users\bucka\AppData\Local\Programs\Python\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (123.0.6312.107); currently, chromedriver 123.0.6312.122 is recommended for chrome 123.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>

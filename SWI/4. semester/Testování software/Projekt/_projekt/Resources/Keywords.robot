@@ -1,5 +1,6 @@
 *** Settings ***
 Library  SeleniumLibrary  run_on_failure=Nothing
+
 *** Keywords ***
 Open 
     [Arguments]  ${BROWSER}  ${URL}
@@ -15,6 +16,16 @@ Open Incognito
     Open Browser    ${URL}    ${BROWSER}    incognito=yes
     Maximize Browser Window
     Sleep   200ms
+
+Open EN Incognito Chrome Webdriver
+    [Arguments]  ${URL}
+    ${chrome_options}=  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
+    ${prefs}=  Create Dictionary  intl.accept_languages  en
+    Call Method  ${chrome_options}  add_experimental_option  prefs  ${prefs}
+    Call Method  ${chrome_options}  add_argument  --incognito
+    Create WebDriver  Chrome  options=${chrome_options}
+    Go To  ${URL}
+    Maximize Browser Window
 
 
 Close
@@ -36,7 +47,7 @@ Button interaction main menu
 Button interaction 
     [Arguments]  ${BUTTON}
     
-    Wait Until Element Is Visible  ${BUTTON}  10 seconds
+    Wait Until Element Is Visible  ${BUTTON}  15 seconds
     Set Selenium Speed  0.2
     Click Element  ${BUTTON}
     Set Selenium Speed  0
@@ -68,3 +79,31 @@ Convert To Lowercase
     ${lowercase_text}=  Execute Javascript  return arguments[0].toLowerCase();  ARGUMENTS  ${TEXT}
     Log  ${lowercase_text}
     RETURN  ${lowercase_text}
+
+
+Get Last Two Characters
+    [Arguments]  ${TEXT}
+    
+    ${first_two_characters}=  Execute Javascript  return arguments[0].slice(-2);  ARGUMENTS  ${TEXT}
+    Log  ${first_two_characters}
+    RETURN  ${first_two_characters}
+
+
+Subtract
+    [Arguments]  ${VALUE1}  ${VALUE2}
+    
+    ${result}=  Evaluate  ${VALUE1} - ${VALUE2}
+    Log  ${result}
+    RETURN  ${result}
+
+
+Get time from span YT video
+    [Arguments]  ${SPAN}
+
+    ${time}=  Get Text  ${SPAN}
+    ${time}=  Get Last Two Characters  ${time}
+    ${time}=  Convert To Integer  ${time}
+    Log  ${time}
+    RETURN  ${time}
+    
+    

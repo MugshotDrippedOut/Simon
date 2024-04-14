@@ -1,4 +1,3 @@
-//buttons
 *** Variables ***
 # TS_001_001_001 - Obec
 ${BUTTON_Obec}  //*[@id="menu-hlavne-1"]/li[2]/a
@@ -18,7 +17,6 @@ ${BUTTON_Obec_PodnikatelskeSubjekty}  //*[@id="menu-hlavne-1"]/li[2]/ul/li[13]/a
 ${BUTTON_Obec_CervenyKriz}  //*[@id="menu-hlavne-1"]/li[2]/ul/li[14]/a
 ${BUTTON_Obec_Mikroregion}  //*[@id="menu-hlavne-1"]/li[2]/ul/li[15]
 
-
 # TS_001_001_001_001 - Základné údaje a kontakty
 ${BUTTON_PridatKomentar}  //input[@id='submit'] 
 
@@ -28,5 +26,13 @@ ${BUTTON_ZoomOut}  //*[@id="mapDiv"]/div/div[3]/div[12]/div/div/div/button[2]
 ${BUTTON_Satellite}  //*[@id="mapDiv"]/div/div[3]/div[13]/div/div/button/div[1]
 ${BUTTON_Street}  //*[@id="mapDiv"]/div/div[3]/div[13]/div/div/button/div[1]
 ${BUTTON_LargerMap}  //*[@id="mapDiv"]/div/div[3]/div[3]/div/div/div/div/a
-    # accept google thing
+
+# accept google thing
 ${BUTTON_AcceptGoogle}  //*[@id="yDmH0d"]/c-wiz/div/div/div/div[2]/div[1]/div[3]/div[1]/div[1]/form[2]/div/div/button
+
+# Video
+${BUTTON_Video_PlayBig}  //*[@id="movie_player"]/div[4]/button
+${BUTTON_Video_Play}  //*[@id="movie_player"]/div[27]/div[2]/div[1]/button
+${BUTTON_Video_Mute}  //*[@id="movie_player"]/div[27]/div[2]/div[1]/span/button
+${BUTTON_Video_ClosePopUp}  //*[@id="movie_player"]/div[18]/div/button[1]
+${BUTTON_Video_Settings}  //*[@id="movie_player"]/div[27]/div[2]/div[2]/button[2]
