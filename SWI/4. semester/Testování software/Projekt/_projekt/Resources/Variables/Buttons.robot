@@ -36,3 +36,4 @@ ${BUTTON_Video_Play}  //*[@id="movie_player"]/div[27]/div[2]/div[1]/button
 ${BUTTON_Video_Mute}  //*[@id="movie_player"]/div[27]/div[2]/div[1]/span/button
 ${BUTTON_Video_ClosePopUp}  //*[@id="movie_player"]/div[18]/div/button[1]
 ${BUTTON_Video_Settings}  //*[@id="movie_player"]/div[27]/div[2]/div[2]/button[2]
+${BUTTON_Video_FullScreen}  //*[@id="movie_player"]/div[27]/div[2]/div[2]/button[6]

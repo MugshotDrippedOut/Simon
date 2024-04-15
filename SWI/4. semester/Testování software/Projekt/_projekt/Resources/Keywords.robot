@@ -19,6 +19,7 @@ Open Incognito
 
 Open EN Incognito Chrome Webdriver
     [Arguments]  ${URL}
+    [Documentation]  Open Chrome browser in incognito mode with English language
     ${chrome_options}=  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
     ${prefs}=  Create Dictionary  intl.accept_languages  en
     Call Method  ${chrome_options}  add_experimental_option  prefs  ${prefs}
@@ -35,7 +36,7 @@ Close
 
 Button interaction main menu 
     [Arguments]  ${BUTTON_MAIN}  ${BUTTON_SUB}  ${URL_TO_CHECK}
-    
+
     Wait Until Element Is Visible  ${BUTTON_MAIN}  10 seconds
     Mouse Over  ${BUTTON_MAIN}
     Wait Until Element Is Visible  ${BUTTON_SUB}  10 seconds
@@ -46,7 +47,7 @@ Button interaction main menu
 
 Button interaction 
     [Arguments]  ${BUTTON}
-    
+
     Wait Until Element Is Visible  ${BUTTON}  15 seconds
     Set Selenium Speed  0.2
     Click Element  ${BUTTON}
@@ -55,14 +56,14 @@ Button interaction
 
 Input interaction
     [Arguments]  ${INPUT}  ${VALUE}
-    
+    [Documentation]  Input text into input field
     Wait Until Element Is Visible  ${INPUT}  10 seconds
     Input Text  ${INPUT}  ${VALUE}
 
 
 Move functionality
     [Arguments]  ${DIV}  ${KEY}  ${MATRIX}  ${VALUE}
-    
+
     ${count}=  Convert To Integer  0
     WHILE  ${count} <= 5
         Press Keys  ${DIV}  ${KEY}
@@ -75,7 +76,7 @@ Move functionality
 
 Convert To Lowercase
     [Arguments]  ${TEXT}
-    
+    [Documentation]  Convert text to lowercase
     ${lowercase_text}=  Execute Javascript  return arguments[0].toLowerCase();  ARGUMENTS  ${TEXT}
     Log  ${lowercase_text}
     RETURN  ${lowercase_text}
@@ -83,7 +84,7 @@ Convert To Lowercase
 
 Get Last Two Characters
     [Arguments]  ${TEXT}
-    
+    [Documentation]  Get last two characters from string
     ${first_two_characters}=  Execute Javascript  return arguments[0].slice(-2);  ARGUMENTS  ${TEXT}
     Log  ${first_two_characters}
     RETURN  ${first_two_characters}
@@ -91,7 +92,7 @@ Get Last Two Characters
 
 Subtract
     [Arguments]  ${VALUE1}  ${VALUE2}
-    
+    [Documentation]  Subtract two values
     ${result}=  Evaluate  ${VALUE1} - ${VALUE2}
     Log  ${result}
     RETURN  ${result}
@@ -99,11 +100,22 @@ Subtract
 
 Get time from span YT video
     [Arguments]  ${SPAN}
-
+    [Documentation]  Get time from span element
     ${time}=  Get Text  ${SPAN}
     ${time}=  Get Last Two Characters  ${time}
     ${time}=  Convert To Integer  ${time}
     Log  ${time}
     RETURN  ${time}
-    
-    
+
+
+Should Be Equal or Heigher
+    [Arguments]  ${VALUE1}  ${VALUE2}
+    [Documentation]  Check if value1 is heigher or equal to value2
+    Should Be True  ${VALUE1} >= ${VALUE2}
+
+
+Should Be In Range
+    [Arguments]  ${VALUE}  ${MIN}  ${MAX}
+    [Documentation]  Check if value is in range
+    Should Be True  ${VALUE} >= ${MIN}
+    Should Be True  ${VALUE} <= ${MAX}

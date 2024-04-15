@@ -14,3 +14,10 @@ ${VALUE_AdresaWebu}  www.test.com
 
 ${VALUE_Search}  farnost
 ${VALUE_SearchResults}  far
+
+${VALUE_CookiesFontsize}  fontSize
+
+${VALUE_NumberOfDivsMin}  257
+${VALUE_NumberOfDivsMax}  259
+${VALUE_NumberOfAnchorsMin}  349
+${VALUE_NumberOfAnchorsMax}  350

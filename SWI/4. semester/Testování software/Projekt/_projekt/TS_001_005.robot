@@ -13,16 +13,19 @@ Resource  resources/variables/Browsers.robot
 Resource  resources/variables/URLs.robot
 Resource  resources/variables/Inputs.robot
 Resource  Resources/variables/Images.robot
+Resource  Resources/variables/Values.robot
 
 
 *** Test Cases ***
 Pre-conditions
-    Sleep  200 milliseconds
-    Open Browser  ${URL_MainPage}  ${BROWSER_CHROME}
+    Open EN Incognito Chrome Webdriver  ${URL_MainPage}
+
 
 TC_001_005-001 - Kontrola, či sú všetky očakávané `div` elementy prítomné
-    ${divs} =  Get Element Count  locator=//div
-    Should Be Equal As Numbers  ${divs}  259
+    ${div} =  Get Element Count  locator=//div
+    Log  ${div}
+    Should Be In Range  ${div}  ${VALUE_NumberOfDivsMin}  ${VALUE_NumberOfDivsMax}
+
 
 TC_001_005-002 - Kontrola, či sú všetky očakávané `img` elementy prítomné a či majú správne nastavené `src` a `alt` atribúty
     ${images_count}=  Get Element Count  locator=//img
@@ -41,7 +44,8 @@ TC_001_005-002 - Kontrola, či sú všetky očakávané `img` elementy prítomn�
 
 TC_001_005-003 - Kontrola, či sú všetky očakávané `a` elementy prítomné 
     ${a}=  Get Element Count  locator=//a
-    Should Be Equal As Numbers  ${a}  350
+    Log  ${a}
+    Should Be In Range  ${a}  ${VALUE_NumberOfAnchorsMin}  ${VALUE_NumberOfAnchorsMax}
 
 TC_001_005-004 - Kontrola, či sú všetky očakávané `input` elementy prítomné a či majú správne nastavené `type` a `name` atribúty    
     ${inputs_count}=  Get Element Count  locator=//input

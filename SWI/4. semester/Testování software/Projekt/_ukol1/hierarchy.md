@@ -41,10 +41,10 @@ Testy webovej stránky obce [Krakovany](https://www.krakovany.sk)
       - TC_001_001_014-003 - Kontrola funkcie posunutia vpred o 5 sekúnd
       - TC_001_001_014-004 - Kontrola funkcie posunutia vzad o 5 sekúnd
       - TC_001_001_014-005 - Kontrola tlačítka `Mute`
-      - TC_001_001_014-006 - Kontrola funkcie `Play-back speed` a nastavenie rýchlosti prehrávania na 0.70 pomocou možnosti `Custom`
-      - TC_001_001_014-007 - Kontrola funkcie `Full-screen` 
+      - TC_001_001_014-006 - Kontrola funkcie `Play-back speed` a nastavenie rýchlosti prehrávania na 0.5
+      - TC_001_001_014-007 - Kontrola funkcie `Full-screen` a minimalizoavanie
       - TC_001_001_014-008 - Kontrola tlačítka `Quality` a zmena kvality na 144p
-      - TC_001_001_014-009 - Kontrola funkcie `Watch on YouTube` 
+      - TC_001_001_014-009 - Kontrola funkcie `Watch on YouTube`
   - TS_001_002 - Kontrola Vyhľadávania
     - TC_001_002-001 - Kontrola interakcie vstupu `Vyhľadávanie`
   - TS_001_003 - Testovanie zmeny zobrazenia

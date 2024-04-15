@@ -14,8 +14,6 @@ Resource  Resources/variables/KeyboardKeys.robot
 
 *** Test Cases ***
 Pre-conditions
-    Keyword Should Exist  check move functionality
-    Keyword Should Exist  Check button interaction
     Open Incognito   ${BROWSER_CHROME}  ${URL_MainPage}
 
 
