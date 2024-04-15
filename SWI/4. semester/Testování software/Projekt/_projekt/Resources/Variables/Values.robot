@@ -17,7 +17,28 @@ ${VALUE_SearchResults}  far
 
 ${VALUE_CookiesFontsize}  fontSize
 
+${VALUE_ImgSrc}  src
+${VALUE_ImgAlt}  alt
 ${VALUE_NumberOfDivsMin}  257
 ${VALUE_NumberOfDivsMax}  259
 ${VALUE_NumberOfAnchorsMin}  349
 ${VALUE_NumberOfAnchorsMax}  350
+${VALUE_AttributeType}  type
+${VALUE_AttributeName}  name
+${VALUE_NumberOfImages}  24
+${VALUE_NumberOfInputs}  1
+
+${VALUE_FontSizeNormal}  font-size: 100%;
+${VALUE_FontSizeLarge}  font-size: 110%;
+${VALUE_FontSizeSmall}  font-size: 90%
+${VALUE_AttributeStyle}  style
+
+${VALUE_AttributeDTNT}  data-title-no-tooltip
+${VALUE_Play}  Play
+${VALUE_Pause}  Pause
+${VALUE_Mute}  Mute
+${VALUE_Unmute}  Unmute
+${VALUE_AttributeTitle}  title
+${VALUE_ExitFullscreen}  Exit Fullscreen (f)
+${VALUE_FullScreen}  Full screen (f)
+${VALUE_144p}  144p

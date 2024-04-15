@@ -11,7 +11,7 @@ Resource  resources/variables/Buttons.robot
 
 *** Test Cases ***
 Pre-conditions
-    Open   ${BROWSER_Chrome}  ${URL_MainPage}
+    Open EN Incognito Chrome Webdriver  ${URL_MainPage}
 
 
 TC_001_001_001-001 - Kontrola interakcie tláčítka Základné údaje a kontakty

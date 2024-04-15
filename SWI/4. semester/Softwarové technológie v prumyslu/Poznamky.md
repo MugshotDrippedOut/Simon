@@ -1,32 +1,36 @@
 # 5.2.
+
 - pýtať sa otázky
 - hodina každé 2 týdny
 - eg.
-    - Ako dlho možem programovať?
-    - Je možný home-office?
-    - Aké znalosti sa požadujú od softwaroveho programatora?
+
+  - Ako dlho možem programovať?
+  - Je možný home-office?
+  - Aké znalosti sa požadujú od softwaroveho programatora?
 
 - Potenciálne firmy
-    - Armáda 6. republiky
-    - monet
+  - Armáda 6. republiky
+  - monet
 
 # 19.2. KroupALidé GenAI a právo
-- Co je GenAI
 
+- Co je GenAI
 
 - Ďalšie bude edHouse
 - Potom nejaký plukovník
 
 # 4.3. edhouse
-- máme nápad a máme peníze 
+
+- máme nápad a máme peníze
   - very nicee
-- máme nápad a nemáme peníze 
+- máme nápad a nemáme peníze
   - sháníme, kde se dá
 - Nemáme nic
   - nabízíme se reklamou, hledáme, co by kde by
   - čekáme na poptávku
 
 ## Analýza
+
 - cílem je
   - zjistit co chce zákatnik
   - zjistit jestil to jde vubec udelat
@@ -43,25 +47,28 @@
     - je třeba do pořebné míry roumět danému oboru,
 - 5 proč ku zistení root cause
 
-- Proveditelnost 
+- Proveditelnost
   - Meli bychom zjistit, jestli to jde vubec udělat - technicky
   - Je technické řešení adekvátní k porblému
 
 ## Víme co, teď jak?
+
 - Návrh řešení
   - Funkčí analýza
   - jaké funkce musí system mít, aby řešil daný problém?
 - Modulová dekompozice
 - Architektura a design řešení
 - Technologie vhodné pro dané řešení
-- Výsledek je, že víme jak to uďeláme  proč to tak udeláme
+- Výsledek je, že víme jak to uďeláme proč to tak udeláme
 
 ## Plán testování a aplikace
+
 - Analýza musí stanovit i strategie řízení kvality
 - Definition of Done
-  
+
 ## Začíname vyvoj
-- už víme 
+
+- už víme
   - co zákazník chce vyrobit
   - jak to budeme delat
   - kdo to bude dělat
@@ -81,10 +88,34 @@
   1. Požadavky
   2. Návrh/Dizajn
   3. Vývoj/Development
-  3. Testing
-  4. Deployment
-  1. Demo/Review
+  4. Testing
+  5. Deployment
+  6. Demo/Review
 - Vývoj - sprint 2
   - to isté s novými požiadavkami
 
-# 19.2. Armáda => KySIO AČR
+# 18.3. Armáda => KySIO AČR
+
+# 15.4. Monet => Treat modeling
+
+- Digital identity
+- Electronic Payments
+
+## Technologies
+
+- PKI
+- EMV payments
+- Smart cards
+- Mobile ID
+- Federated ID
+- Perso lab
+
+## Treat modeling
+
+- Je to analyzovanie
+
+### Prečo chceme thread modeling
+
+- Zlepšenie ochrane pomocou skorého a častého analyzovania
+
+

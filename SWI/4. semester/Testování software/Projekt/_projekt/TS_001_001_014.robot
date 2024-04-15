@@ -40,9 +40,9 @@ TC_001_001_014-001 - Kontrola interakcie videa
 
 TC_001_001_014-002 - Kontrola tlačítka `Play`
     Button interaction  ${BUTTON_Video_Play}
-    Element Attribute Value Should Be  ${BUTTON_Video_Play}  data-title-no-tooltip  Play
+    Element Attribute Value Should Be  ${BUTTON_Video_Play}  ${VALUE_AttributeDTNT}  ${VALUE_Play}
     Button interaction  ${BUTTON_Video_Play}
-    Element Attribute Value Should Be  ${BUTTON_Video_Play}  data-title-no-tooltip  Pause
+    Element Attribute Value Should Be  ${BUTTON_Video_Play}  ${VALUE_AttributeDTNT}  ${VALUE_Pause}
 
 
 TC_001_001_014-003 - Kontrola funkcie posunutia vpred o 5 sekúnd
@@ -68,9 +68,9 @@ TC_001_001_014-004 - Kontrola funkcie posunutia vzad o 5 sekúnd
 
 TC_001_001_014-005 - Kontrola tlačítka `Mute`
     Button interaction  ${BUTTON_Video_Mute}
-    Element Attribute Value Should Be  ${BUTTON_Video_Mute}  data-title-no-tooltip  Unmute
+    Element Attribute Value Should Be  ${BUTTON_Video_Mute}  ${VALUE_AttributeDTNT}  ${VALUE_Unmute}
     Button interaction  ${BUTTON_Video_Mute}
-    Element Attribute Value Should Be  ${BUTTON_Video_Mute}  data-title-no-tooltip  Mute 
+    Element Attribute Value Should Be  ${BUTTON_Video_Mute}  ${VALUE_AttributeDTNT}  ${VALUE_Mute}
 
 
 TC_001_001_014-006 - Kontrola funkcie `Play-back speed` a nastavenie rýchlosti prehrávania na 0.5
@@ -89,9 +89,9 @@ TC_001_001_014-006 - Kontrola funkcie `Play-back speed` a nastavenie rýchlosti 
 
 TC_001_001_014-007 - Kontrola funkcie `Full-screen` a minimalizoavanie
     Button interaction  ${BUTTON_Video_FullScreen}
-    Element Attribute Value Should Be  ${BUTTON_Video_FullScreen}  title  Exit full screen (f)
+    Element Attribute Value Should Be  ${BUTTON_Video_FullScreen}  ${VALUE_AttributeTitle}  ${VALUE_ExitFullscreen}
     Button interaction  ${BUTTON_Video_FullScreen}
-    Element Attribute Value Should Be  ${BUTTON_Video_FullScreen}  title  Full screen (f)
+    Element Attribute Value Should Be  ${BUTTON_Video_FullScreen}  ${VALUE_AttributeTitle}  ${VALUE_FullScreen}
 
 
 TC_001_001_014-008 - Kontrola tlačítka `Quality` a zmena kvality na 144p
@@ -103,7 +103,7 @@ TC_001_001_014-008 - Kontrola tlačítka `Quality` a zmena kvality na 144p
     Wait Until Element Is Visible  ${SPAN_Quality}  10s
     ${text}=  Get Text  ${SPAN_Quality}
     log  ${text}
-    Should Be Equal  ${text}  144p
+    Should Be Equal  ${text}  ${VALUE_144p}
     Set Selenium Speed  0
 
 
