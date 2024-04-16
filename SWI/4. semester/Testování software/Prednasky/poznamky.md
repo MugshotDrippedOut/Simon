@@ -55,7 +55,7 @@
   - produkují defekty (chyby, bugy) v programu
   - Pokud je defekt v kódu proveden, systém muže selhat
     - Omyl (lidský faktor)=> defekt (chyba, bug)=> |incident| =>selhání
-    - ![alt](omyl.excalidraw.png)
+    - ![alt](Images/omyl.excalidraw.png)
   - Príčiny softwarových defektu
     - Lidé sú omylní
     - Software a infrastruktura jsou složité
@@ -346,7 +346,7 @@ Základní dovednosti a postupy
 
 - míra zaujetí
 
-  ![pyramida](pyramida.excalidraw.png)
+  ![pyramida](Images/pyramida.excalidraw.png)
 
 <!-- 2. prezentácia -->
 
@@ -362,7 +362,7 @@ Základní dovednosti a postupy
   - RUP
 - Iterativně-inkrementální
 
-![Interative & Incremental](image.png)
+![Interative & Incremental](Images/image.png)
 
 ### Specifické přístupy
 
@@ -422,7 +422,7 @@ Základní dovednosti a postupy
 
   - Podpora včasného testování a shift-left principu
 
-  ![alt text](TheWModel.png)
+  ![alt text](Images/TheWModel.png)
 
 ### Shift-left“ princip
 
@@ -732,3 +732,9 @@ Gray-box testing - kombinace
 
 - Jako vstup akceptujeme jakýkoliv string délky 10 až 15 ascii znaků.
 - Délka je minimálně 1 znak.
+
+### Analýza hraničních hodnot – příklad 2
+
+- Systém testuje rok výroby automobilu, pro automobily starší než roky výroby 1950 platí větší daň za používání dálnice -> dálniční známka je o 20% dražší, kdežto pro automobily vyrobené po roce 2020 lze dálnice využívat zdarma, pro ostatní automobily je dálniční známka klasické ceny.
+
+  ![alt](Images/ukol2.excalidraw.png)
