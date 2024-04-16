@@ -6,40 +6,120 @@ Ra = 5.6
 Rwi =5.2
 Rwu =2006
 
-LbezJadra = 0.31
-LsJadrom = 0.752
-Ckapacita = 0.000_025
-
+L_bezJadra = 0.31
+L_sJadrom = 0.752
+C_kapacita = 0.000_025
 
 Ug = [30, 35, 40, 45, 50]
 
-def Pwx(Ug, Rwu):
+U_bezJadra = [29.95,35.45,39.6,44.9,50]
+U_sJadrom = [30, 35.3,40.1,45.5,49.8]
+U_pkk = [30.2,34.6,39.9,44.7,50]
+
+I_bezJadra = [63.4, 75, 82, 94.6,107]
+I_sJadrom = [50,59,66.6,75.4,82.6]
+I_Pkk = [236.6,271.4,314,374.6,389.2]
+
+P_bezJadra = [2,2.75,3.25,4.25,5.25]
+P_sJadrom = [1.5,1.75,2.25,2.75,3.5]
+P_pkk = [1,1.25,1.5,1.75,2] # Paralelni kombinace kondenzatoru
+
+def Pwu(Ug, Rwu):
     return (Ug**2)/(Rwu)
 
-Pwx1 = [Pwx(i, Rwu) for i in Ug]
-print("Pwx")
-for i in Pwx1:
-    print(round(i,3))
+def Pwi(I,Rwi):
+    I = I/1_000 # mA -> A
+    return (I)**2 * Rwi
 
 
-def Px(Ug, Rv):
+def Pu(Ug, Rv):
     return (Ug**2)/(Rv)
 
-print("\nPx")
-Px1 = [Px(i, Rv) for i in Ug]
+def Pi(I, Ra):
+    I = I/1_000 # mA -> A
+    return (I)**2 * Ra
 
-for i in Px1:
-    print(round(i*1_000_000,2))
+def Pzu(P, Pwu, Pu):
+    return P - Pwu - Pu
+
+def Pzi(P, Pwi, Pi):
+    return P - Pwi - Pi
+
+Pwu_res = [Pwu(i, Rwu) for i in Ug]
+Pwi_res = [Pwi(i, Rwi) for i in I_bezJadra]
+Pu_res = [Pu(i, Rv) for i in Ug]
+
+Pwu_bezJadra_res = [Pwu(i, Rwu) for i in U_bezJadra]
+Pwu_sJadrom_res = [Pwu(i, Rwu) for i in U_sJadrom]
+Pwu_pkk_res = [Pwu(i, Rwu) for i in U_pkk]
+
+Pwi_bezJadra_res = [Pwi(i, Rwi) for i in I_bezJadra]
+Pwi_sJadrom_res = [Pwi(i, Rwi) for i in I_sJadrom]
+Pwi_pkk_res = [Pwi(i, Rwi) for i in I_Pkk]
+
+Pu_bezJadra_res = [Pu(i, Rv) for i in U_bezJadra]
+Pu_sJadrom_res = [Pu(i, Rv) for i in U_sJadrom]
+Pu_pkk_res = [Pu(i, Rv) for i in U_pkk]
+
+Pi_bezJadra_res = [Pi(i, Ra) for i in I_bezJadra]
+Pi_sJadrom_res = [Pi(i, Ra) for i in I_sJadrom]
+Pi_pkk_res = [Pi(i, Ra) for i in I_Pkk]
+
+Pzu_bezJadra_res = [Pzu(P_bezJadra[i], Pwu_bezJadra_res[i], Pu_bezJadra_res[i]) for i in range(len(Ug))]
+Pzu_sJadrom_res = [Pzu(P_sJadrom[i], Pwu_sJadrom_res[i], Pu_sJadrom_res[i]) for i in range(len(Ug))]
+Pzu_pkk_res = [Pzu(P_pkk[i], Pwu_pkk_res[i], Pu_pkk_res[i]) for i in range(len(Ug))]
+
+Pzi_bezJadra_res = [Pzi(P_bezJadra[i], Pwi_bezJadra_res[i], Pi_bezJadra_res[i]) for i in range(len(Ug))]
+Pzi_sJadrom_res = [Pzi(P_sJadrom[i], Pwi_sJadrom_res[i], Pi_sJadrom_res[i]) for i in range(len(Ug))]
+Pzi_pkk_res = [Pzi(P_pkk[i], Pwi_pkk_res[i], Pi_pkk_res[i]) for i in range(len(Ug))]
 
 
-PbezJadra = [2,2.75,3.25,4.25,5.25]
-PsJadrom = [1.5,1.75,2.25,2.75,3.5]
-def Pz(P, Pwx, Px):
-    return round(P - Pwx - Px, 2)
-print("\nPz")
-for p in PbezJadra:
-    print(f"{Ug[PbezJadra.index(p)]} => {Pz(p, Pwx1[0], Px1[0])}")
-""" 
-print("\nPz")
-for p in PsJadrom:
-    print(f"{Ug[PsJadrom.index(p)]} => {Pz(p, Pwx1[0], Px1[0])}") """
+# Výpočet výkonů spotřebovaných wattmetrem, voltmetrem, ampérmetrem a zátěží
+print("Bez jadra")
+print("|  Ug[V]  |  U[V]  |  I[mA]  |  Pwu[W]  |  Pwi[W]  |  Pu[W]  |  Pi[W]  |  Pzu[W]  |  Pzi[W]  |")
+for i in range(len(Ug)):
+    print(f"|  {Ug[i]:<6} | {U_bezJadra[i]:<6} | {I_bezJadra[i]:<7} | {Pwu_bezJadra_res[i]:<8.3f} | {Pwi_bezJadra_res[i]:<8.3f} | {(Pu_bezJadra_res[i]*1_000):<7.2f} | {Pi_bezJadra_res[i]:<7.3f} | {Pzu_bezJadra_res[i]:<8.3f} | {Pzi_bezJadra_res[i]:<7.3f}  |")
+
+print("\nS Jadrem")
+print("|  Ug[V]  |  U[V]  |  I[mA]  |  Pwu[W]  |  Pwi[W]  |  Pu[W]  |  Pi[W]  |  Pzu[W]  |  Pzi[W]  |")
+for i in range(len(Ug)):
+    print(f"|  {Ug[i]:<6} | {U_sJadrom[i]:<6} | {I_sJadrom[i]:<7} | {Pwu_sJadrom_res[i]:<8.3f} | {Pwi_sJadrom_res[i]:<8.3f} | {(Pu_sJadrom_res[i]*1_000):<7.2f} | {Pi_sJadrom_res[i]:<7.3f} | {Pzu_sJadrom_res[i]:<8.3f} | {Pzi_sJadrom_res[i]:<7.3f}  |")
+print("\nParalelni kombinace kondenzatoru")
+print("|  Ug[V]  |  U[V]  |  I[mA]  |  Pwu[W]  |  Pwi[W]  |  Pu[W]  |  Pi[W]  |  Pzu[W]  |  Pzi[W]  |")
+for i in range(len(Ug)):
+    print(f"|  {Ug[i]:<6} | {U_pkk[i]:<6} | {I_Pkk[i]:<7} | {Pwu_pkk_res[i]:<8.3f} | {Pwi_pkk_res[i]:<8.3f} | {(Pu_pkk_res[i]*1_000):<7.2f} | {Pi_pkk_res[i]:<7.3f} | {Pzu_pkk_res[i]:<8.3f} | {Pzi_pkk_res[i]:<7.3f}  |")
+
+# Teoretický výpočet činného, zdánlivého a jalového výkonu 
+# symbolicko-komplexní metodou pro jednotlivé zátěží
+def Z(U,I):
+    return U/I
+
+def S(U,I):
+    return U*I
+
+def Q(S, P):
+    return math.sqrt(S**2 - P**2)
+
+
+Z_bezJadra = [Z(U_bezJadra[i], I_bezJadra[i]) for i in range(len(Ug))]
+Z_sJadrom = [Z(U_sJadrom[i], I_sJadrom[i]) for i in range(len(Ug))]
+Z_pkk = [Z(U_pkk[i], I_Pkk[i]) for i in range(len(Ug))]
+
+S_bezJadra = [S(U_bezJadra[i], I_bezJadra[i]) for i in range(len(Ug))]
+S_sJadrom = [S(U_sJadrom[i], I_sJadrom[i]) for i in range(len(Ug))]
+S_pkk = [S(U_pkk[i], I_Pkk[i]) for i in range(len(Ug))]
+
+print("\nBez jadra")
+print("|  Ug[V]  |  Z[Ohm]  |  I[mA]  |  P[W]  |  Q[VAr]  |  S[VA]  |")
+for i in range(len(Ug)):
+    print(f"|  {Ug[i]:<6} | {Z_bezJadra[i]:<8.3f} | {I_bezJadra[i]:<7.1f} | {P_bezJadra[i]:<5.2f} | {Q(S_bezJadra[i], P_bezJadra[i]):<8.3f} | {S_bezJadra[i]:<6.2f} |")
+    
+print("\nS Jadrem")
+print("|  Ug[V]  |  Z[Ohm]  |  I[mA]  |  P[W]  |  Q[VAr]  |  S[VA]  |")
+for i in range(len(Ug)):
+    print(f"|  {Ug[i]:<6} | {Z_sJadrom[i]:<8.3f} | {I_sJadrom[i]:<7.1f} | {P_sJadrom[i]:<5.2f} | {Q(S_sJadrom[i], P_sJadrom[i]):<8.3f} | {S_sJadrom[i]:<6.2f} |")
+
+print("\nParalelni kombinace kondenzatoru")
+print("|  Ug[V]  |  Z[Ohm]  |  I[mA]  |  P[W]  |  Q[VAr]  |  S[VA]  |")
+for i in range(len(Ug)):
+    print(f"|  {Ug[i]:<6} | {Z_pkk[i]:<8.3f} | {I_Pkk[i]:<7.1f} | {P_pkk[i]:<5.2f} | {Q(S_pkk[i], P_pkk[i]):<9.3f}| {S_pkk[i]:<6.2f} |")   
