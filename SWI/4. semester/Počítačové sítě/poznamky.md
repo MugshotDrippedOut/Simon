@@ -74,4 +74,7 @@ PDU - protocol data unit
 
 # Prednáška 9.4
 
-- 17
+- 17 - 17.3
+
+# Prednáška 16.4
+- 18 - 

@@ -1069,11 +1069,14 @@ Frekvenční multiplex (FDM) rozděluje celkovou frekvenční šířku kanálu n
 - Skoková změna indexu lomu se používá:
   - u jednovidovych i mnohovidovych vláken
 
-Snížení napětí signálu v dB na 25% = -12
+- Snížení napětí signálu v dB na 25% 
+  - -12
 
-Snížení napětí signálu v dB na 50% = -6
+- Snížení napětí signálu v dB na 50% 
+  - -6
 
-Snížení výkonu signálu v dB na 25% = -6
+- Snížení výkonu signálu v dB na 25% 
+  - -6
 
 - Správný tvar IPX/SPX adresy je:
 
