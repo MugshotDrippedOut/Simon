@@ -101,25 +101,25 @@ def Q(S, P):
     return math.sqrt(S**2 - P**2)
 
 
-Z_bezJadra = [Z(U_bezJadra[i], I_bezJadra[i]) for i in range(len(Ug))]
-Z_sJadrom = [Z(U_sJadrom[i], I_sJadrom[i]) for i in range(len(Ug))]
-Z_pkk = [Z(U_pkk[i], I_Pkk[i]) for i in range(len(Ug))]
+Z_bezJadra = [Z(Ug[i], I_bezJadra[i]) for i in range(len(Ug))]
+Z_sJadrom = [Z(Ug[i], I_sJadrom[i]) for i in range(len(Ug))]
+Z_pkk = [Z(Ug[i], I_Pkk[i]) for i in range(len(Ug))]
 
-S_bezJadra = [S(U_bezJadra[i], I_bezJadra[i]) for i in range(len(Ug))]
-S_sJadrom = [S(U_sJadrom[i], I_sJadrom[i]) for i in range(len(Ug))]
-S_pkk = [S(U_pkk[i], I_Pkk[i]) for i in range(len(Ug))]
+S_bezJadra = [S(Ug[i], I_bezJadra[i]) for i in range(len(Ug))]
+S_sJadrom = [S(Ug[i], I_sJadrom[i]) for i in range(len(Ug))]
+S_pkk = [S(Ug[i], I_Pkk[i]) for i in range(len(Ug))]
 
 print("\nBez jadra")
 print("|  Ug[V]  |  Z[Ohm]  |  I[mA]  |  P[W]  |  Q[VAr]  |  S[VA]  |")
 for i in range(len(Ug)):
-    print(f"|  {Ug[i]:<6} | {Z_bezJadra[i]:<8.3f} | {I_bezJadra[i]:<7.1f} | {P_bezJadra[i]:<5.2f} | {Q(S_bezJadra[i], P_bezJadra[i]):<8.3f} | {S_bezJadra[i]:<6.2f} |")
+    print(f"|  {Ug[i]:<6} | {Z_bezJadra[i]:<8.3f} | {I_bezJadra[i]:<7.1f} | {P_bezJadra[i]:<5.2f} | {Q(S_bezJadra[i], P_bezJadra[i]):<8.3f} | {S_bezJadra[i]:<6.1f} |")
     
 print("\nS Jadrem")
 print("|  Ug[V]  |  Z[Ohm]  |  I[mA]  |  P[W]  |  Q[VAr]  |  S[VA]  |")
 for i in range(len(Ug)):
-    print(f"|  {Ug[i]:<6} | {Z_sJadrom[i]:<8.3f} | {I_sJadrom[i]:<7.1f} | {P_sJadrom[i]:<5.2f} | {Q(S_sJadrom[i], P_sJadrom[i]):<8.3f} | {S_sJadrom[i]:<6.2f} |")
+    print(f"|  {Ug[i]:<6} | {Z_sJadrom[i]:<8.3f} | {I_sJadrom[i]:<7.1f} | {P_sJadrom[i]:<5.2f} | {Q(S_sJadrom[i], P_sJadrom[i]):<8.3f} | {S_sJadrom[i]:<6.1f} |")
 
 print("\nParalelni kombinace kondenzatoru")
 print("|  Ug[V]  |  Z[Ohm]  |  I[mA]  |  P[W]  |  Q[VAr]  |  S[VA]  |")
 for i in range(len(Ug)):
-    print(f"|  {Ug[i]:<6} | {Z_pkk[i]:<8.3f} | {I_Pkk[i]:<7.1f} | {P_pkk[i]:<5.2f} | {Q(S_pkk[i], P_pkk[i]):<9.3f}| {S_pkk[i]:<6.2f} |")   
+    print(f"|  {Ug[i]:<6} | {Z_pkk[i]:<8.3f} | {I_Pkk[i]:<7.1f} | {P_pkk[i]:<5.2f} | {Q(S_pkk[i], P_pkk[i]):<9.3f}| {S_pkk[i]:<6.1f} |")   
