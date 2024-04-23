@@ -1,5 +1,4 @@
 import math
-import matplotlib.pyplot as plt
 
 Rv = 11_040_000
 Ra = 5.6
