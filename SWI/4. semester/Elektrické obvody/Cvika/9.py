@@ -16,6 +16,7 @@ U_bezJadra = [29.95,35.45,39.6,44.9,50]
 U_sJadrom = [30, 35.3,40.1,45.5,49.8]
 U_pkk = [30.2, 34.6, 39.9 ,44.7,50]
 
+# I je v mA
 I_bezJadra = [63.4, 75, 82, 94.6,107]
 I_sJadrom = [50,59,66.6,75.4,82.6]
 I_Pkk = [236.6, 271.4, 314, 374.6, 389.2]
@@ -110,8 +111,10 @@ def S(U,I):
 
 def Q(S, P):
     # využití Pythagorovy věty
-    return math.sqrt(abs(S**2 - P**2))
-
+    try:
+        return math.sqrt(S**2 - P**2)
+    except:
+        return -1
 
 Z_bezJadra = [Z(Ug[i], I_bezJadra[i]) for i in range(len(Ug))]
 Z_sJadrom = [Z(Ug[i], I_sJadrom[i]) for i in range(len(Ug))]
@@ -125,14 +128,14 @@ print("\Vypocet cinneho, zdanliveho a jaloveho vykonu")
 print("\nBez jadra")
 print("|  Ug[V]  |  Z[Ohm]  |  I[mA]  |  P[W]  |  Q[VAr]  |  S[VA]  |")
 for i in range(len(Ug)):
-    print(f"|  {Ug[i]:<6} | {Z_bezJadra[i]:<8.3f} | {I_bezJadra[i]:<7.1f} | {P_bezJadra[i]:<5.2f} | {Q(S_bezJadra[i], P_bezJadra[i]):<8.3f} | {S_bezJadra[i]:<6.2f} |")
+    print(f"|  {Ug[i]:<6} | {Z_bezJadra[i]:<8.3f} | {I_bezJadra[i]:<7.1f} | {Pzi_bezJadra_res[i]:<5.2f} | {Q(S_bezJadra[i], Pzi_bezJadra_res[i]):<8.3f} | {S_bezJadra[i]:<6.2f} |")
     
 print("\nS Jadrem")
 print("|  Ug[V]  |  Z[Ohm]  |  I[mA]  |  P[W]  |  Q[VAr]  |  S[VA]  |")
 for i in range(len(Ug)):
-    print(f"|  {Ug[i]:<6} | {Z_sJadrom[i]:<8.3f} | {I_sJadrom[i]:<7.1f} | {P_sJadrom[i]:<5.2f} | {Q(S_sJadrom[i], P_sJadrom[i]):<8.3f} | {S_sJadrom[i]:<6.2f} |")
+    print(f"|  {Ug[i]:<6} | {Z_sJadrom[i]:<8.3f} | {I_sJadrom[i]:<7.1f} | {Pzi_sJadrom_res[i]:<5.2f} | {Q(S_sJadrom[i], Pzi_sJadrom_res[i]):<8.3f} | {S_sJadrom[i]:<6.2f} |")
 
 print("\nParalelni kombinace kondenzatoru")
 print("|  Ug[V]  |  Z[Ohm]  |  I[mA]  |  P[W]  |  Q[VAr]  |  S[VA]  |")
 for i in range(len(Ug)):
-    print(f"|  {Ug[i]:<6} | {Z_pkk[i]:<8.3f} | {I_Pkk[i]:<7.1f} | {P_pkk[i]:<5.2f} | {Q(S_pkk[i], P_pkk[i]):<9.3f}| {S_pkk[i]:<6.2f} |")   
+    print(f"|  {Ug[i]:<6} | {Z_pkk[i]:<8.3f} | {I_Pkk[i]:<7.1f} | {Pzi_pkk_res[i]:<5.2f} | {Q(S_pkk[i], Pzi_pkk_res[i]):<9.3f}| {S_pkk[i]:<6.2f} |")   
