@@ -16,7 +16,7 @@
 #include "mymalloc.h"
 #include "heap.h"
 
-#define MAX_CITY_CONNECTIONS 10
+#define MAX_CITY_CONNECTIONS 8
 
 /* Private types ---------------------------------------------------------------------------------*/
 /* Private macros --------------------------------------------------------------------------------*/
@@ -56,15 +56,40 @@ bool Dijkstra_Init(tDijkstra *dijkstra, unsigned cityCount, unsigned sourceCityI
 
 void Dijkstra_Destruct(tDijkstra *dijkstra)
 {
-  (void)dijkstra;
-
+  if(dijkstra)
+  {
+    if(dijkstra->distances)
+    {
+      myFree(dijkstra->distances);
+      dijkstra->distances = NULL;
+    }
+    if(dijkstra->visited)
+    {
+      myFree(dijkstra->visited);
+      dijkstra->visited = NULL;
+    }
+  }
 }
-
+/*! Counts the distance between sourceCityID city and every other one.
+ *
+ * \param[in] mapHeap       Heap, that stores each city and it's details.
+ * \param[in] dijkstra      \ref tDijkstra structure, where are the shortest paths stored and
+ * informations if cities were visited already.
+ * \param[in] sourceCityID  Index of starting city.
+ * \param[in] destination   Index of our destination.
+ *
+ * \return  Returns true if the destination is reachable and the value was found, return false
+ * otherwise.
+ */
 bool Dijkstra_Dist(Data_t *mapHeap,
                    tDijkstra *dijkstra,
                    unsigned sourceCityID,
                    unsigned destination)
 {
+  (void)mapHeap;
+  (void)dijkstra;
+  (void)sourceCityID;
+  (void)destination;
   if(!mapHeap || !dijkstra)
   {
     return false;
@@ -75,28 +100,38 @@ bool Dijkstra_Dist(Data_t *mapHeap,
     return false;
   }
 
+  dijkstra->distances[sourceCityID] = 0; // Vzdialeost od zdrojoveho mesta je vzdy 0
   Heap_Insert(&Heap, mapHeap[sourceCityID]);
 
   Data_t city;
-  Heap_DeleteMin(&Heap, &city);
-
-
-  for(size_t i=0; i<MAX_CITY_CONNECTIONS; i++)
+  while(Heap_DeleteMin(&Heap, &city))
   {
-    if(city.roadLength[i] > 0){
+    dijkstra->visited[city.id] = true; // Vybrane mesto je navstivene
 
+    for(size_t i=0; i<MAX_CITY_CONNECTIONS; i++) // Prejdeme vsetky cesty z mesta
+    {
+      if(city.roadCityIndex[i] == UINT_MAX)
+      {
+        break;
+      }
+      unsigned newDistance = dijkstra->distances[city.id] + city.roadLength[i];
+      if(!dijkstra->visited[city.roadCityIndex[i]] && dijkstra->distances[city.roadCityIndex[i]] > newDistance)
+        // Ak sme mesto este nenavstivili a nova vzdialenost je mensia ako predosla
+        // tak ju ulozime
+      {
+        dijkstra->distances[city.roadCityIndex[i]] = newDistance;
+        Heap_Insert(&Heap, mapHeap[city.roadCityIndex[i]]);
+      }
     }
   }
 
-
   Heap_Destruct(&Heap);
 
-  (void)mapHeap;
-  (void)dijkstra;
-  (void)sourceCityID;
-  (void)destination;
-  return false;
-
+  if(dijkstra->distances[destination] == INF)
+  {
+    return false;
+  }
+  return true;
 }
 
 /* Private function definitions ------------------------------------------------------------------*/
