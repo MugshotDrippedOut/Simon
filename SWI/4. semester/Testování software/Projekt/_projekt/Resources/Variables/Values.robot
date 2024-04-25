@@ -30,7 +30,7 @@ ${VALUE_NumberOfInputs}  1
 
 ${VALUE_FontSizeNormal}  font-size: 100%;
 ${VALUE_FontSizeLarge}  font-size: 110%;
-${VALUE_FontSizeSmall}  font-size: 90%
+${VALUE_FontSizeSmall}  font-size: 90%;
 ${VALUE_AttributeStyle}  style
 
 ${VALUE_AttributeDTNT}  data-title-no-tooltip
