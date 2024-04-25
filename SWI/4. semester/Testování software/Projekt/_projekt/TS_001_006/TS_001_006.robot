@@ -1,20 +1,20 @@
 *** Settings ***
 Library  SeleniumLibrary  run_on_failure=Nothing
 
-Resource  resources/keywords.robot
+Resource  ../Resources/keywords.robot
 
-Resource  resources/variables/Browsers.robot
-Resource  resources/variables/URLs.robot
-Resource  Resources/variables/Images.robot
-Resource  Resources/variables/Iframes.robot
-Resource  Resources/variables/Buttons.robot
-Resource  Resources/variables/Divs.robot
-Resource  Resources/variables/Values.robot
-Resource  Resources/variables/KeyboardKeys.robot
+Resource  ../Resources/variables/Browsers.robot
+Resource  ../Resources/variables/URLs.robot
+Resource  ../Resources/variables/Images.robot
+Resource  ../Resources/variables/Iframes.robot
+Resource  ../Resources/variables/Buttons.robot
+Resource  ../Resources/variables/Divs.robot
+Resource  ../Resources/variables/Values.robot
+Resource  ../Resources/variables/KeyboardKeys.robot
 
 *** Test Cases ***
 Pre-conditions
-    Open Incognito   ${BROWSER_CHROME}  ${URL_MainPage}
+    Open EN Incognito Chrome Webdriver  ${URL_MainPage}
 
 
 TC_001_006-001 - Kontrola zobrazenia mapy

@@ -39,6 +39,6 @@ ${VALUE_Pause}  Pause
 ${VALUE_Mute}  Mute
 ${VALUE_Unmute}  Unmute
 ${VALUE_AttributeTitle}  title
-${VALUE_ExitFullscreen}  Exit Fullscreen (f)
+${VALUE_ExitFullscreen}  Exit full screen (f)
 ${VALUE_FullScreen}  Full screen (f)
 ${VALUE_144p}  144p

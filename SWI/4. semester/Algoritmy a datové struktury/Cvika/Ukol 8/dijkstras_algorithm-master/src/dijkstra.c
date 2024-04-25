@@ -86,10 +86,6 @@ bool Dijkstra_Dist(Data_t *mapHeap,
                    unsigned sourceCityID,
                    unsigned destination)
 {
-  (void)mapHeap;
-  (void)dijkstra;
-  (void)sourceCityID;
-  (void)destination;
   if(!mapHeap || !dijkstra)
   {
     return false;
@@ -100,15 +96,15 @@ bool Dijkstra_Dist(Data_t *mapHeap,
     return false;
   }
 
-  dijkstra->distances[sourceCityID] = 0; // Vzdialeost od zdrojoveho mesta je vzdy 0
+  dijkstra->distances[sourceCityID] = 0;
   Heap_Insert(&Heap, mapHeap[sourceCityID]);
 
   Data_t city;
   while(Heap_DeleteMin(&Heap, &city))
   {
-    dijkstra->visited[city.id] = true; // Vybrane mesto je navstivene
+    dijkstra->visited[city.id] = true;
 
-    for(size_t i=0; i<MAX_CITY_CONNECTIONS; i++) // Prejdeme vsetky cesty z mesta
+    for(size_t i=0; i<MAX_CITY_CONNECTIONS; i++)
     {
       if(city.roadCityIndex[i] == UINT_MAX)
       {
@@ -116,8 +112,6 @@ bool Dijkstra_Dist(Data_t *mapHeap,
       }
       unsigned newDistance = dijkstra->distances[city.id] + city.roadLength[i];
       if(!dijkstra->visited[city.roadCityIndex[i]] && dijkstra->distances[city.roadCityIndex[i]] > newDistance)
-        // Ak sme mesto este nenavstivili a nova vzdialenost je mensia ako predosla
-        // tak ju ulozime
       {
         dijkstra->distances[city.roadCityIndex[i]] = newDistance;
         Heap_Insert(&Heap, mapHeap[city.roadCityIndex[i]]);
