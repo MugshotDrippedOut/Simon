@@ -29,8 +29,6 @@ Testy webovej stránky obce [Krakovany](https://www.krakovany.sk)
         - TC_001_001_001_001-003 - Kontrola interakcie pola `E-mail`
         - TC_001_001_001_001-004 - Kontrola interakcie pola `Adresa webu`
         - TC_001_001_001_001-005 - Kontrola interakcie tlačidla `Pridať komentár`
-    - TS_001_001_002 - Občan
-      - TC_001_001_002-001 - Elektronická úradná tabuľa
     - TS_001_001_013 - PRIHLÁSIŤ SA / REGISTRÁCIA
       - TC_001_001_013-001 - Kontrola interakcie `Prihlasovacie meno alebo e-mailová adresa`
       - TC_001_001_013-002 - Kontrola interakcie `Heslo`
@@ -69,6 +67,20 @@ Testy webovej stránky obce [Krakovany](https://www.krakovany.sk)
     - TC_001_006-008 - Kontrola tlačítka `Show satellite imagery`
     - TC_001_006-009 - Kontrola tlačítka `Show street map`
     - TC_001_006-010 - Kontrola tlačítka `View larger map`
+  - TS_001_010 - TLAČIVÁ A FORMULÁRE
+    - TC_001_010-001 - Kontrola odkazu `tlačivá pre potreby občanov a organizácií`
+    - TC_001_010_002 - Kontorla stahovania `Ohlásenie_stavebných_úprav`
+    - TC_001_010_003 - Kontorla stahovania `Žiadosť o vydanie stavebného povolenia (fyzická osoba)`
+    - TC_001_010_004 - Kontorla stahovania `Žiadosť_o vydanie stavebného povolenia (právnická osoba)`
+  - TS_001_015 - NÁJDETE NÁS AJ NA FACEBOOKU
+    - TC_001_015-001 - Kontrola odkazu `Futbal: Majcichov-Krakovany` 
+    - TC_001_015-002 - Kontrola odkazu `Pozvánka na Stavanie mája`
+    - TC_001_015-003 - Kontrola odkazu `Futbal: Krakovany-Bohdanovce`
+  - TS_001_020 - Socialne siete
+    - TC_001_020-001 - Facebook
+    - TC_001_020-002 - Instagram
+    - TC_001_020-003 - X
+    - TC_001_020-004 - YouTube
   - TS_001_100 - UI/UX
     - TC_001_100-001 - Konzistentnosť elementov
     - TC_001_100-002 - Čitelnosť a vizibilita textu
