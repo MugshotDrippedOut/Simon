@@ -29,6 +29,26 @@ Testy webovej stránky obce [Krakovany](https://www.krakovany.sk)
         - TC_001_001_001_001-003 - Kontrola interakcie pola `E-mail`
         - TC_001_001_001_001-004 - Kontrola interakcie pola `Adresa webu`
         - TC_001_001_001_001-005 - Kontrola interakcie tlačidla `Pridať komentár`
+    - TS_001_001_008 - POVINNÉ ZVEREJŇOVANIE
+      - TC_001_001_008-001 - Kontrola interakcie tlačítka `Rozpočet obce`
+      - TC_001_001_008-002 - Kontrola interakcie tlačítka `Rozpočtové opatrenia`
+      - TC_001_001_008-003 - Kontrola interakcie tlačítka `Záverečný účet`
+      - TC_001_001_008-004 - Kontrola interakcie tlačítka `Zmluvy`
+      - TC_001_001_008-005 - Kontrola interakcie tlačítka `Faktúry`
+      - TC_001_001_008-006 - Kontrola interakcie tlačítka `Objednávky`
+      - TC_001_001_008-007 - Kontrola interakcie tlačítka `Majetok obce`
+      - TC_001_001_008-008 - Kontrola interakcie tlačítka `Dotácie pre obec Krakovany`
+      - TC_001_001_008-009 - Kontrola interakcie tlačítka `Ročný výkaz o komunálnom odpade`
+      - TC_001_001_008-010 - Kontrola interakcie tlačítka `Majetkové priznania`
+      - TC_001_001_008-011 - Kontrola interakcie tlačítka `Ostatné`
+      - TS_001_001_008_001 - Rozpočet obce
+        - TC_001_001_008_001-001 - Kontrola odkazu `Rozpočet obce na roky 2024-2026`
+        - TC_001_001_008_001-002 - Kontrola odkazu `Záverečný účet obce za rok 2022`
+        - TC_001_001_008_001-003 - Kontrola odkazu `Rozpočet obce na roky 2023-2025`
+        - TS_001_001_008_001_001 - Rozpočet obce na roky 2024-2026
+          - TC_001_001_008_001_001-001 - Kontrola odkazu `Rozpočet obce Krakovany na roky 2024-2026`
+          - TC_001_001_008_001_001-002 - Kontrola odkazu `Rozpočet obce Krakovany na roky 2024-2026 – textová časť`
+          - TC_001_001_008_001_001-003 - Kontrola odkazu `Stanovisko hlavného kontrolóra k návrhu rozpočtu obce Krakovany na roky 2024-2026`
     - TS_001_001_013 - PRIHLÁSIŤ SA / REGISTRÁCIA
       - TC_001_001_013-001 - Kontrola interakcie `Prihlasovacie meno alebo e-mailová adresa`
       - TC_001_001_013-002 - Kontrola interakcie `Heslo`
@@ -73,9 +93,10 @@ Testy webovej stránky obce [Krakovany](https://www.krakovany.sk)
     - TC_001_010_003 - Kontorla stahovania `Žiadosť o vydanie stavebného povolenia (fyzická osoba)`
     - TC_001_010_004 - Kontorla stahovania `Žiadosť_o vydanie stavebného povolenia (právnická osoba)`
   - TS_001_015 - NÁJDETE NÁS AJ NA FACEBOOKU
-    - TC_001_015-001 - Kontrola odkazu `Futbal: Majcichov-Krakovany` 
-    - TC_001_015-002 - Kontrola odkazu `Pozvánka na Stavanie mája`
-    - TC_001_015-003 - Kontrola odkazu `Futbal: Krakovany-Bohdanovce`
+    - TC_001_015-001 - Kontrola tlačítka `Sledovať stránku`
+    - TC_001_015-002 - Kontrola odkazu `Futbal: Majcichov-Krakovany` 
+    - TC_001_015-003 - Kontrola odkazu `Pozvánka na Stavanie mája`
+    - TC_001_015-004 - Kontrola odkazu `Futbal: Krakovany-Bohdanovce`
   - TS_001_020 - Socialne siete
     - TC_001_020-001 - Facebook
     - TC_001_020-002 - Instagram
