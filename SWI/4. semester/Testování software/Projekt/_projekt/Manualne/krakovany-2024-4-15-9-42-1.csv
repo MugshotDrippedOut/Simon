@@ -1,6 +1,0 @@
-,OS: Windows 11 | Browser: Chrome 123 | Resolution: 1536x816 | Time: 15 Apr 2024 / 9:42:1  SELČ
-#,Step,Data,Exp Result,XPath,cssSelector
-1,Open website,https://www.krakovany.sk/#,,,
-2,Click on "© Copyright 2024 Obec Krakovany | Vytvorenie a prevádzku stránok zabezpečuje LOCAL MEDIA",,,//i[@class='fa fa-instagram'],.fa.fa-instagram
-3,Click on "Allow all cookies",,,//button[normalize-space()='Allow all cookies'],._a9--._ap36._a9_0._a9_2
-4,Click on "Follow",,,//div[@class='x9f619 xjbqb8w x78zum5 x168nmei x13lgxp2 x5pf9jr xo71vjh x150jy0e x1e558r4 x1n2onr6 x1plvlek xryxfnj x1c4vz4f x2lah0s x1q0g3np xqjyukv x6s0dn4 x1oa3qoh xl56j7k'],.x9f619.xjbqb8w.x78zum5.x168nmei.x13lgxp2.x5pf9jr.xo71vjh.x150jy0e.x1e558r4.x1n2onr6.x1plvlek.xryxfnj.x1c4vz4f.x2lah0s.x1q0g3np.xqjyukv.x6s0dn4.x1oa3qoh.xl56j7k

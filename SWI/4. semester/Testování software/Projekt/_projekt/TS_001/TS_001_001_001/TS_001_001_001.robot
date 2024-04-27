@@ -34,7 +34,7 @@ TC_001_001_001-005 - Kontrola interakcie tláčítka Erb obce
     Button interaction main menu   ${BUTTON_Obec}  ${BUTTON_Obec_ErbObce}  ${URL_Obec_ErbObce}
 
 
-TC_001_001_001-006 - Kontrola interakBUTTON_Obec_ZakladneUdajeAkontakty
+TC_001_001_001-006 - Kontrola interakcie tláčítka Územný plán obce
     Button interaction main menu  ${BUTTON_Obec}  ${BUTTON_Obec_UzemnyPlanObce}  ${URL_Obec_UzemnyPlanObce}    
 
 
