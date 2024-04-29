@@ -46,9 +46,9 @@ deltaPj_res = [deltaPj(I0[i]) for i in range(len(U10))]
 deltaPfe_res = [deltaPfe(deltaP0_res[i], deltaPj_res[i]) for i in range(len(U10))]
 
 def Mereni_naprazdno():
-    print(f"{'U10':<10}{'I0':<10}{'deltaP':<10}{'Z0':<10}{'deltaPwa':<10}{'deltaP0':<10}{'cos0':<10}{'I0p':<10}{'I0q':<10}{'deltaPj':<10}{'deltaPfe':<10}")
+    print(f"{'U10':<10}{'I0 [mA]':<10}{'deltaP':<10}{'Z0':<10}{'deltaPwa':<10}{'deltaP0':<10}{'cos0':<10}{'I0p [mA]':<10}{'I0q [mA]':<10}{'deltaPj':<10}{'deltaPfe':<10}")
     for i in range(len(U10)):
-        print(f"{U10[i]:<10.4g}{I0[i]:<10.4g}{deltaP[i]:<10.4g}{Z0_res[i]:<10.4g}{deltaPwa_res[i]:<10.4g}{deltaP0_res[i]:<10.4g}{cos0_res[i]:<10.4g}{I0p_res[i]:<10.4g}{I0q_res[i]:<10.4g}{deltaPj_res[i]:<10.4g}{deltaPfe_res[i]:<10.4g}")
+        print(f"{U10[i]:<10.4g}{I0[i]*1000:<10.4g}{deltaP[i]:<10.4g}{Z0_res[i]:<10.4g}{deltaPwa_res[i]:<10.4g}{deltaP0_res[i]:<10.4g}{cos0_res[i]:<10.4g}{I0p_res[i]*1000:<10.4g}{I0q_res[i]*1000:<10.4g}{deltaPj_res[i]:<10.4g}{deltaPfe_res[i]:<10.4g}")
 
 
 # Mereni nakratko
@@ -87,7 +87,7 @@ cos08_res = [0.8*rS_res[i] for i in range(len(I1k))]
 cos1_res = [rS_res[i] for i in range(len(I1k))]
 
 def Vut():
-    print(f"{'rS':<10}{'I2':<10}{'I1k':<10}{'Pjk':<10}{'cos05':<10}{'cos08':<10}{'cos1':<10}")
+    print(f"{'rS':<10}{'I2 []':<10}{'I1k':<10}{'Pjk':<10}{'cos05':<10}{'cos08':<10}{'cos1':<10}")
     for i in range(len(I1k)):
         print(f"{rS_res[i]:<10.4g}{I2_res[i]:<10.4g}{I1k[i]:<10.4g}{Pjk[i]:<10.4g}{cos05_res[i]:<10.4g}{cos08_res[i]:<10.4g}{cos1_res[i]:<10.4g}")
 

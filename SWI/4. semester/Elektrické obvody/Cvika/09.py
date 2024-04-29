@@ -115,6 +115,14 @@ def Q(S, P):
     except:
         return -1
 
+def PosunFaze(P,S):
+    try:
+        PF =  math.acos(P/S)
+        return PF * 180 / math.pi # rad -> stupne
+    except:
+        return -1
+
+
 Z_bezJadra = [Z(Ug[i], I_bezJadra[i]) for i in range(len(Ug))]
 Z_sJadrom = [Z(Ug[i], I_sJadrom[i]) for i in range(len(Ug))]
 Z_pkk = [Z(Ug[i], I_Pkk[i]) for i in range(len(Ug))]
@@ -138,3 +146,23 @@ print("\nParalelni kombinace kondenzatoru")
 print("|  Ug[V]  |  Z[Ohm]  |  I[mA]  |  P[W]  |  Q[VAr]  |  S[VA]  |")
 for i in range(len(Ug)):
     print(f"|  {Ug[i]:<6} | {Z_pkk[i]:<8.3f} | {I_Pkk[i]:<7.1f} | {Pzi_pkk_res[i]:<5.2f} | {Q(S_pkk[i], Pzi_pkk_res[i]):<9.3f}| {S_pkk[i]:<6.2f} |")   
+
+PF_bezJadra = [PosunFaze(Pzi_bezJadra_res[i], S_bezJadra[i]) for i in range(len(Ug))]
+PF_sJadrom = [PosunFaze(Pzi_sJadrom_res[i], S_sJadrom[i]) for i in range(len(Ug))]
+PF_pkk = [PosunFaze(Pzi_pkk_res[i], S_pkk[i]) for i in range(len(Ug))]
+
+print("\nPosun faze")
+print("\nBez jadra")
+print("|  Ug[V]  |  PF[rad]  |")
+for i in range(len(Ug)):
+    print(f"|  {Ug[i]:<6} | {PF_bezJadra[i]:<9.3f} |")
+    
+print("\nS Jadrem")
+print("|  Ug[V]  |  PF[rad]  |")
+for i in range(len(Ug)):
+    print(f"|  {Ug[i]:<6} | {PF_sJadrom[i]:<9.3f} |")
+    
+print("\nParalelni kombinace kondenzatoru")
+print("|  Ug[V]  |  PF[rad]  |")
+for i in range(len(Ug)):
+    print(f"|  {Ug[i]:<6} | {PF_pkk[i]:<9.3f} |")
