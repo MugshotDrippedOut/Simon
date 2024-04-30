@@ -22,7 +22,7 @@ def deltaP0(deltaP, deltaPwa):
     return deltaP - deltaPwa
 
 def cos0(P, I, U):
-    return P/(I*U)
+    return P/(U*I)
 
 def I0p(I, cos0):
     return I * cos0
@@ -52,17 +52,25 @@ def Mereni_naprazdno():
 
 
 # Mereni nakratko
-Uk = [79.8,74.7,69.6,64.7,59.5,55.4,50.2,44.7]
+Uk = [79.8,74.7,69.6,64.7,59.5,55.6,50.2,44.7]
 Ik = [0.55,0.5,0.46,0.42,0.39,0.36,0.33,0.29]
-deltaPk = [44,38,32.5,28,23.5,20,16.5,13]
+deltaPk = [43.5,37,32,27,23,20,16.5,12.5]
 
 Zk_res = [Z0(Uk[i], Ik[i]) for i in range(len(Uk))]
 cos0k_res = [cos0(deltaPk[i], Ik[i], Uk[i]) for i in range(len(Uk))]
 
+def radToDeg(rad):
+    try:
+        return (rad * 180 )/ math.pi
+    except:
+        return "Chyba"
+
+cos0k_resDeg = [radToDeg(cos0k_res[i]) for i in range(len(Uk))]
+
 def Mereni_nakratko():
-    print(f"{'Uk':<10}{'Ik':<10}{'deltaPk':<10}{'Zk':<10}{'cos0k':<10}")
+    print(f"{'Uk':<10}{'Ik':<10}{'deltaPk':<10}{'Zk':<10}{'cos0k':<10}{'cos0k [°]':<10}")
     for i in range(len(Uk)):
-        print(f"{Uk[i]:<10.4g}{Ik[i]:<10.4g}{deltaPk[i]:<10.4g}{Zk_res[i]:<10.4g}{cos0k_res[i]:<10.4g}")
+        print(f"{Uk[i]:<10.4g}{Ik[i]:<10.4g}{deltaPk[i]:<10.4g}{Zk_res[i]:<10.5g}{cos0k_res[i]:<10.4g}{cos0k_resDeg[i]:<10.4g}")
 
 
 def new_line(N = 1):
@@ -87,7 +95,7 @@ cos08_res = [0.8*rS_res[i] for i in range(len(I1k))]
 cos1_res = [rS_res[i] for i in range(len(I1k))]
 
 def Vut():
-    print(f"{'rS':<10}{'I2 []':<10}{'I1k':<10}{'Pjk':<10}{'cos05':<10}{'cos08':<10}{'cos1':<10}")
+    print(f"{'rS':<10}{'I2':<10}{'I1k':<10}{'Pjk':<10}{'cos05':<10}{'cos08':<10}{'cos1':<10}")
     for i in range(len(I1k)):
         print(f"{rS_res[i]:<10.4g}{I2_res[i]:<10.4g}{I1k[i]:<10.4g}{Pjk[i]:<10.4g}{cos05_res[i]:<10.4g}{cos08_res[i]:<10.4g}{cos1_res[i]:<10.4g}")
 

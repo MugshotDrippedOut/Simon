@@ -168,4 +168,41 @@ bool List_Is_Active(List_t list)
   return true;
 }
 
+
+void IntersectLists(List_t * seznam1, List_t * seznam2){
+    List_Node_t *current = seznam1->first;
+    List_Node_t *prev = NULL;
+
+    while(current != NULL){
+        List_Node_t *search = seznam2->first;
+
+        while(search != NULL && Data_Cmp(&current->data, &search->data) != 0){
+            search = search->next;
+        }
+
+        if(search == NULL){
+            if(prev == NULL){
+                List_Node_t *toDelete = seznam1->first;
+                seznam1->first = seznam1->first->next;
+                if(seznam1->active == toDelete) {
+                    seznam1->active = seznam1->first;
+                }
+                current = seznam1->first;
+                myFree(toDelete);
+            } else {
+                List_Node_t *toDelete = current;
+                prev->next = current->next;
+                if(seznam1->active == current) {
+                    seznam1->active = current->next;
+                }
+                current = current->next;
+                myFree(toDelete);
+            }
+        } else {
+            prev = current;
+            current = current->next;
+        }
+    }
+}
+
 /* Private function definitions ------------------------------------------------------------------*/

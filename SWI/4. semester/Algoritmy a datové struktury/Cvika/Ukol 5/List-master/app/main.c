@@ -38,6 +38,21 @@ int main()
   List_t seznam;
   Data_t data;
   List_Init(&seznam); /*kdyby uzivatel zapomel na zacatku iniciovat seznam... */
+
+
+  List_t seznam2;
+  List_Init(&seznam2);
+
+  for(int i = 0; i < 5; i++){
+    Data_t data1;
+    sprintf(data1.name, "%d", i);
+    data1.age =  i;
+    data1.weight =  i;
+    data1.height =  i;
+    List_Insert_First(&seznam2, data1);
+  }
+
+
   menu();
   bool running = true;
   char c;
@@ -142,6 +157,15 @@ int main()
         menu();
         break;
 
+      case 'I':
+      case 'i':
+        printf("IntersectLists - Intersect two lists\n");
+        printf("seznam1:\n");
+        Vypis_Seznam(seznam);
+        printf("seznam2:\n");
+        Vypis_Seznam(seznam2);
+        IntersectLists(&seznam, &seznam2);
+        break;
       default:
         printf("Unknown option\n");
         menu();
@@ -149,7 +173,7 @@ int main()
     }
 
     Vypis_Seznam(seznam);
-    printf("Type char 0-A, EOF(tj. CTRL+Z nebo CTRL+D)=Konec, M=Menu:\n");
+    printf("Type char 0-A, I=IntersectLists, EOF(tj. CTRL+Z nebo CTRL+D)=Konec, M=Menu:\n");
     printf("************************************************************\n");
   }
 
@@ -166,7 +190,7 @@ int main()
 /* Private function definitions ------------------------------------------------------------------*/
 static void menu(void)
 {
-  printf("Type char 0-A for one of the following options:\n"
+  printf("Type char 0-A or I for one of the following options:\n"
          "0: Init,\n"
          "1: Active_Update,\n"
          "2: Insert_First,\n"
@@ -178,6 +202,7 @@ static void menu(void)
          "8: Copy,\n"
          "9: Active_Next,\n"
          "A: Is_Active,\n"
+          "I: IntersectLists,\n"
          "M: Print menu\n"
          "CTRL+Z (Win) or CTRL+D (Unix): END\n");
 }

@@ -127,6 +127,7 @@ void List_Active_Next(List_t *const list);
  */
 bool List_Is_Active(List_t list);
 
+void IntersectLists(List_t * seznam1, List_t * seznam2);
 #endif /* LIST_H */
 
 /*! \} */
