@@ -1,13 +1,13 @@
 *** Settings ***
 Library  SeleniumLibrary  run_on_failure=Nothing
 
-Resource  ../../resources/keywords.robot
+Resource  ../resources/keywords.robot
 
-Resource  ../../Resources/variables/Browsers.robot
-Resource  ../../Resources/variables/URLs.robot
-Resource  ../../Resources/variables/P.robot
-Resource  ../../Resources/variables/Images.robot
-Resource  ../../Resources/variables/Values.robot
+Resource  ../Resources/variables/Browsers.robot
+Resource  ../Resources/variables/URLs.robot
+Resource  ../Resources/variables/P.robot
+Resource  ../Resources/variables/Images.robot
+Resource  ../Resources/variables/Values.robot
 
 
 

@@ -1,0 +1,944 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.0 on win32)" generated="2024-05-02T15:40:26.652132" rpa="false" schemaversion="5">
+<suite id="s1" name="TS 001 006" source="C:\Users\bucka\Documents\GitHub\Simon\SWI\4. semester\Testování software\Projekt\_projekt\TS_001\TS_001_006.robot">
+<test id="s1-t1" name="Pre-conditions" line="16">
+<kw name="Open EN Incognito Chrome Webdriver" owner="keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-02T15:40:27.012128" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000018537314490&gt;</msg>
+<var>${chrome_options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-02T15:40:27.012128" elapsed="0.000000"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-05-02T15:40:27.012128" level="INFO">${prefs} = {'intl.accept_languages': 'en'}</msg>
+<var>${prefs}</var>
+<arg>intl.accept_languages</arg>
+<arg>en</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-05-02T15:40:27.012128" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_experimental_option</arg>
+<arg>prefs</arg>
+<arg>${prefs}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-05-02T15:40:27.012128" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--incognito</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-05-02T15:40:27.012128" elapsed="0.000000"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:40:27.012128" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<arg>options=${chrome_options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-02T15:40:27.012128" elapsed="2.863227"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:40:29.876351" level="INFO">Opening url 'https://www.krakovany.sk'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-02T15:40:29.876351" elapsed="6.234193"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-02T15:40:36.111611" elapsed="0.119176"/>
+</kw>
+<arg>${URL_MainPage}</arg>
+<doc>Open Chrome browser in incognito mode with English language</doc>
+<status status="PASS" start="2024-05-02T15:40:27.012128" elapsed="9.218659"/>
+</kw>
+<status status="PASS" start="2024-05-02T15:40:27.012128" elapsed="9.220114"/>
+</test>
+<test id="s1-t2" name="TC_001_006-001 - Kontrola zobrazenia mapy" line="20">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${IMAGE_Map}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T15:40:36.233702" elapsed="0.064950"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${IMAGE_Map}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-05-02T15:40:36.299499" elapsed="0.300180"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-05-02T15:40:36.599679" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:40:36.599679" level="INFO">Clicking element '//img[@title='Click to open a larger map']'.</msg>
+<arg>${IMAGE_Map}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T15:40:36.599679" elapsed="1.255650"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${IFRAME_Map}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T15:40:37.858020" elapsed="1.115848"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${IFRAME_Map}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-05-02T15:40:38.973868" elapsed="1.334380"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:40:40.308756" level="INFO">Selecting frame '//*[@id="cboxLoadedContent"]/div/iframe'.</msg>
+<arg>${IFRAME_Map}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2024-05-02T15:40:40.308756" elapsed="1.099279"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-05-02T15:40:41.408035" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-02T15:40:36.233702" elapsed="5.178534"/>
+</test>
+<test id="s1-t3" name="TC_001_006-002 - Kontrola tlačítka `Zoom in`" line="31">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON_ZoomIn}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T15:40:41.417712" elapsed="0.123466"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-05-02T15:40:41.542164" elapsed="0.000998"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:40:41.544167" level="INFO">Clicking element '//button[@title='Zoom in']'.</msg>
+<arg>${BUTTON_ZoomIn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T15:40:41.544167" elapsed="1.361837"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:40:43.955932" level="INFO">${matrix} = position: absolute; z-index: 985; transform: matrix(1, 0, 0, 1, -4, -158);</msg>
+<var>${matrix}</var>
+<arg>${DIV_Map_matrix}</arg>
+<arg>style</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-05-02T15:40:42.906004" elapsed="1.050552"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${matrix}</arg>
+<arg>${VALUE_Map_matrix_zoom_in}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-05-02T15:40:43.957863" elapsed="0.000631"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-05-02T15:40:43.959874" elapsed="0.000680"/>
+</kw>
+<status status="PASS" start="2024-05-02T15:40:41.415699" elapsed="2.546296"/>
+</test>
+<test id="s1-t4" name="TC_001_006-003 - Kontrola tlačítka `Zoom out`" line="40">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON_ZoomOut}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T15:40:43.967258" elapsed="0.050032"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-05-02T15:40:44.018292" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:40:44.019290" level="INFO">Clicking element '//*[@id="mapDiv"]/div/div[3]/div[12]/div/div/div/button[2]'.</msg>
+<arg>${BUTTON_ZoomOut}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T15:40:44.019290" elapsed="1.295857"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:40:45.316172" level="INFO">Clicking element '//*[@id="mapDiv"]/div/div[3]/div[12]/div/div/div/button[2]'.</msg>
+<arg>${BUTTON_ZoomOut}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T15:40:45.316172" elapsed="1.132320"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:40:47.474857" level="INFO">${matrix} = position: absolute; z-index: 987; transform: matrix(1, 0, 0, 1, -1, -167);</msg>
+<var>${matrix}</var>
+<arg>${DIV_Map_matrix}</arg>
+<arg>style</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-05-02T15:40:46.449304" elapsed="1.025553"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${matrix}</arg>
+<arg>${VALUE_Map_matrix_zoom_out}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-05-02T15:40:47.474857" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:40:47.479947" level="INFO">Clicking element '//button[@title='Zoom in']'.</msg>
+<arg>${BUTTON_ZoomIn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T15:40:47.474857" elapsed="1.308627"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-05-02T15:40:48.783484" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-02T15:40:43.964728" elapsed="4.822284"/>
+</test>
+<test id="s1-t5" name="TC_001_006-004 - Kontrola funkcie `Move left`" line="51">
+<kw name="Move functionality" owner="keywords">
+<kw name="Convert To Integer" owner="BuiltIn">
+<msg time="2024-05-02T15:40:48.787012" level="INFO">${count} = 0</msg>
+<var>${count}</var>
+<arg>0</arg>
+<doc>Converts the given item to an integer number.</doc>
+<status status="PASS" start="2024-05-02T15:40:48.787012" elapsed="0.000000"/>
+</kw>
+<while condition="${count} &lt;= 5">
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:40:48.787012" level="INFO">Sending key(s) ('ARROW_LEFT',) to //*[@id="mapDiv"]/div/div[3]/div[1]/div[2] element.</msg>
+<msg time="2024-05-02T15:40:49.270604" level="INFO">Pressing special key ARROW_LEFT to element.</msg>
+<msg time="2024-05-02T15:40:49.270604" level="INFO">Releasing special key ARROW_LEFT.</msg>
+<arg>${DIV}</arg>
+<arg>${KEY}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-05-02T15:40:48.787012" elapsed="0.496158"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-02T15:40:49.284180" level="INFO">${count} = 1</msg>
+<var>${count}</var>
+<arg>${count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-02T15:40:49.283170" elapsed="0.001010"/>
+</kw>
+<status status="PASS" start="2024-05-02T15:40:48.787012" elapsed="0.497168"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:40:49.284180" level="INFO">Sending key(s) ('ARROW_LEFT',) to //*[@id="mapDiv"]/div/div[3]/div[1]/div[2] element.</msg>
+<msg time="2024-05-02T15:40:49.616170" level="INFO">Pressing special key ARROW_LEFT to element.</msg>
+<msg time="2024-05-02T15:40:49.616170" level="INFO">Releasing special key ARROW_LEFT.</msg>
+<arg>${DIV}</arg>
+<arg>${KEY}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-05-02T15:40:49.284180" elapsed="0.364797"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-02T15:40:49.650003" level="INFO">${count} = 2</msg>
+<var>${count}</var>
+<arg>${count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-02T15:40:49.648977" elapsed="0.001026"/>
+</kw>
+<status status="PASS" start="2024-05-02T15:40:49.284180" elapsed="0.365823"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:40:49.651005" level="INFO">Sending key(s) ('ARROW_LEFT',) to //*[@id="mapDiv"]/div/div[3]/div[1]/div[2] element.</msg>
+<msg time="2024-05-02T15:40:50.051444" level="INFO">Pressing special key ARROW_LEFT to element.</msg>
+<msg time="2024-05-02T15:40:50.051444" level="INFO">Releasing special key ARROW_LEFT.</msg>
+<arg>${DIV}</arg>
+<arg>${KEY}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-05-02T15:40:49.651005" elapsed="0.441047"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-02T15:40:50.097658" level="INFO">${count} = 3</msg>
+<var>${count}</var>
+<arg>${count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-02T15:40:50.096140" elapsed="0.001518"/>
+</kw>
+<status status="PASS" start="2024-05-02T15:40:49.650003" elapsed="0.447655"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:40:50.101503" level="INFO">Sending key(s) ('ARROW_LEFT',) to //*[@id="mapDiv"]/div/div[3]/div[1]/div[2] element.</msg>
+<msg time="2024-05-02T15:40:50.568290" level="INFO">Pressing special key ARROW_LEFT to element.</msg>
+<msg time="2024-05-02T15:40:50.569295" level="INFO">Releasing special key ARROW_LEFT.</msg>
+<arg>${DIV}</arg>
+<arg>${KEY}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-05-02T15:40:50.099685" elapsed="0.506575"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-02T15:40:50.612103" level="INFO">${count} = 4</msg>
+<var>${count}</var>
+<arg>${count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-02T15:40:50.609286" elapsed="0.003173"/>
+</kw>
+<status status="PASS" start="2024-05-02T15:40:50.098691" elapsed="0.513768"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:40:50.616732" level="INFO">Sending key(s) ('ARROW_LEFT',) to //*[@id="mapDiv"]/div/div[3]/div[1]/div[2] element.</msg>
+<msg time="2024-05-02T15:40:51.058578" level="INFO">Pressing special key ARROW_LEFT to element.</msg>
+<msg time="2024-05-02T15:40:51.059577" level="INFO">Releasing special key ARROW_LEFT.</msg>
+<arg>${DIV}</arg>
+<arg>${KEY}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-05-02T15:40:50.614506" elapsed="0.482205"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-02T15:40:51.096711" level="INFO">${count} = 5</msg>
+<var>${count}</var>
+<arg>${count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-02T15:40:51.096711" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-02T15:40:50.612459" elapsed="0.484252"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:40:51.106141" level="INFO">Sending key(s) ('ARROW_LEFT',) to //*[@id="mapDiv"]/div/div[3]/div[1]/div[2] element.</msg>
+<msg time="2024-05-02T15:40:51.519189" level="INFO">Pressing special key ARROW_LEFT to element.</msg>
+<msg time="2024-05-02T15:40:51.519375" level="INFO">Releasing special key ARROW_LEFT.</msg>
+<arg>${DIV}</arg>
+<arg>${KEY}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-05-02T15:40:51.104080" elapsed="0.450823"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-02T15:40:51.554903" level="INFO">${count} = 6</msg>
+<var>${count}</var>
+<arg>${count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-02T15:40:51.554903" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-02T15:40:51.102422" elapsed="0.452481"/>
+</iter>
+<status status="PASS" start="2024-05-02T15:40:48.787012" elapsed="2.773936"/>
+</while>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:40:51.661542" level="INFO">${matrix} = position: absolute; z-index: 986; transform: matrix(1, 0, 0, 1, -252, -79);</msg>
+<var>${matrix}</var>
+<arg>${MATRIX}</arg>
+<arg>style</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-05-02T15:40:51.561795" elapsed="0.099747"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T15:40:51.661542" level="INFO">position: absolute; z-index: 986; transform: matrix(1, 0, 0, 1, -252, -79);</msg>
+<arg>${matrix}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T15:40:51.661542" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${matrix}</arg>
+<arg>${VALUE}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-05-02T15:40:51.661542" elapsed="0.000000"/>
+</kw>
+<arg>${DIV_Map_frame}</arg>
+<arg>${KEY_Left}</arg>
+<arg>${DIV_Map_matrix}</arg>
+<arg>${VALUE_Map_matrix_move_left}</arg>
+<status status="PASS" start="2024-05-02T15:40:48.787012" elapsed="2.874530"/>
+</kw>
+<status status="PASS" start="2024-05-02T15:40:48.787012" elapsed="2.874530"/>
+</test>
+<test id="s1-t6" name="TC_001_006-005 - Kontrola funkcie `Move right`" line="55">
+<kw name="Move functionality" owner="keywords">
+<kw name="Convert To Integer" owner="BuiltIn">
+<msg time="2024-05-02T15:40:51.670877" level="INFO">${count} = 0</msg>
+<var>${count}</var>
+<arg>0</arg>
+<doc>Converts the given item to an integer number.</doc>
+<status status="PASS" start="2024-05-02T15:40:51.670877" elapsed="0.000000"/>
+</kw>
+<while condition="${count} &lt;= 5">
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:40:51.679098" level="INFO">Sending key(s) ('ARROW_RIGHT',) to //*[@id="mapDiv"]/div/div[3]/div[1]/div[2] element.</msg>
+<msg time="2024-05-02T15:40:52.121096" level="INFO">Pressing special key ARROW_RIGHT to element.</msg>
+<msg time="2024-05-02T15:40:52.121096" level="INFO">Releasing special key ARROW_RIGHT.</msg>
+<arg>${DIV}</arg>
+<arg>${KEY}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-05-02T15:40:51.679098" elapsed="0.485657"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-02T15:40:52.164755" level="INFO">${count} = 1</msg>
+<var>${count}</var>
+<arg>${count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-02T15:40:52.164755" elapsed="0.003329"/>
+</kw>
+<status status="PASS" start="2024-05-02T15:40:51.670877" elapsed="0.497207"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:40:52.172119" level="INFO">Sending key(s) ('ARROW_RIGHT',) to //*[@id="mapDiv"]/div/div[3]/div[1]/div[2] element.</msg>
+<msg time="2024-05-02T15:40:52.583108" level="INFO">Pressing special key ARROW_RIGHT to element.</msg>
+<msg time="2024-05-02T15:40:52.583108" level="INFO">Releasing special key ARROW_RIGHT.</msg>
+<arg>${DIV}</arg>
+<arg>${KEY}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-05-02T15:40:52.170120" elapsed="0.448736"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-02T15:40:52.621864" level="INFO">${count} = 2</msg>
+<var>${count}</var>
+<arg>${count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-02T15:40:52.619925" elapsed="0.001939"/>
+</kw>
+<status status="PASS" start="2024-05-02T15:40:52.168084" elapsed="0.454776"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:40:52.625800" level="INFO">Sending key(s) ('ARROW_RIGHT',) to //*[@id="mapDiv"]/div/div[3]/div[1]/div[2] element.</msg>
+<msg time="2024-05-02T15:40:53.097784" level="INFO">Pressing special key ARROW_RIGHT to element.</msg>
+<msg time="2024-05-02T15:40:53.097784" level="INFO">Releasing special key ARROW_RIGHT.</msg>
+<arg>${DIV}</arg>
+<arg>${KEY}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-05-02T15:40:52.624857" elapsed="0.521827"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-02T15:40:53.147902" level="INFO">${count} = 3</msg>
+<var>${count}</var>
+<arg>${count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-02T15:40:53.147902" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-02T15:40:52.622860" elapsed="0.525042"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:40:53.151121" level="INFO">Sending key(s) ('ARROW_RIGHT',) to //*[@id="mapDiv"]/div/div[3]/div[1]/div[2] element.</msg>
+<msg time="2024-05-02T15:40:53.602352" level="INFO">Pressing special key ARROW_RIGHT to element.</msg>
+<msg time="2024-05-02T15:40:53.602352" level="INFO">Releasing special key ARROW_RIGHT.</msg>
+<arg>${DIV}</arg>
+<arg>${KEY}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-05-02T15:40:53.147902" elapsed="0.469227"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-02T15:40:53.618129" level="INFO">${count} = 4</msg>
+<var>${count}</var>
+<arg>${count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-02T15:40:53.618129" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-02T15:40:53.147902" elapsed="0.470227"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:40:53.619126" level="INFO">Sending key(s) ('ARROW_RIGHT',) to //*[@id="mapDiv"]/div/div[3]/div[1]/div[2] element.</msg>
+<msg time="2024-05-02T15:40:53.958142" level="INFO">Pressing special key ARROW_RIGHT to element.</msg>
+<msg time="2024-05-02T15:40:53.959156" level="INFO">Releasing special key ARROW_RIGHT.</msg>
+<arg>${DIV}</arg>
+<arg>${KEY}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-05-02T15:40:53.619126" elapsed="0.373101"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-02T15:40:53.993234" level="INFO">${count} = 5</msg>
+<var>${count}</var>
+<arg>${count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-02T15:40:53.992227" elapsed="0.001007"/>
+</kw>
+<status status="PASS" start="2024-05-02T15:40:53.618129" elapsed="0.376128"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:40:53.996274" level="INFO">Sending key(s) ('ARROW_RIGHT',) to //*[@id="mapDiv"]/div/div[3]/div[1]/div[2] element.</msg>
+<msg time="2024-05-02T15:40:54.472998" level="INFO">Pressing special key ARROW_RIGHT to element.</msg>
+<msg time="2024-05-02T15:40:54.472998" level="INFO">Releasing special key ARROW_RIGHT.</msg>
+<arg>${DIV}</arg>
+<arg>${KEY}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-05-02T15:40:53.995251" elapsed="0.514059"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-02T15:40:54.509310" level="INFO">${count} = 6</msg>
+<var>${count}</var>
+<arg>${count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-02T15:40:54.509310" elapsed="0.005057"/>
+</kw>
+<status status="PASS" start="2024-05-02T15:40:53.994257" elapsed="0.520110"/>
+</iter>
+<status status="PASS" start="2024-05-02T15:40:51.670877" elapsed="2.845549"/>
+</while>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:40:54.593257" level="INFO">${matrix} = position: absolute; z-index: 986; transform: matrix(1, 0, 0, 1, -2, -79);</msg>
+<var>${matrix}</var>
+<arg>${MATRIX}</arg>
+<arg>style</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-05-02T15:40:54.517626" elapsed="0.075631"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T15:40:54.593257" level="INFO">position: absolute; z-index: 986; transform: matrix(1, 0, 0, 1, -2, -79);</msg>
+<arg>${matrix}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T15:40:54.593257" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${matrix}</arg>
+<arg>${VALUE}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-05-02T15:40:54.600202" elapsed="0.000708"/>
+</kw>
+<arg>${DIV_Map_frame}</arg>
+<arg>${KEY_Right}</arg>
+<arg>${DIV_Map_matrix}</arg>
+<arg>${VALUE_Map_matrix_move_right}</arg>
+<status status="PASS" start="2024-05-02T15:40:51.670877" elapsed="2.930033"/>
+</kw>
+<status status="PASS" start="2024-05-02T15:40:51.670877" elapsed="2.930033"/>
+</test>
+<test id="s1-t7" name="TC_001_006-006 - Kontrola funkcie `Move up`" line="59">
+<kw name="Move functionality" owner="keywords">
+<kw name="Convert To Integer" owner="BuiltIn">
+<msg time="2024-05-02T15:40:54.608778" level="INFO">${count} = 0</msg>
+<var>${count}</var>
+<arg>0</arg>
+<doc>Converts the given item to an integer number.</doc>
+<status status="PASS" start="2024-05-02T15:40:54.608778" elapsed="0.000000"/>
+</kw>
+<while condition="${count} &lt;= 5">
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:40:54.617523" level="INFO">Sending key(s) ('ARROW_UP',) to //*[@id="mapDiv"]/div/div[3]/div[1]/div[2] element.</msg>
+<msg time="2024-05-02T15:40:54.997017" level="INFO">Pressing special key ARROW_UP to element.</msg>
+<msg time="2024-05-02T15:40:54.998011" level="INFO">Releasing special key ARROW_UP.</msg>
+<arg>${DIV}</arg>
+<arg>${KEY}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-05-02T15:40:54.614307" elapsed="0.415538"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-02T15:40:55.032133" level="INFO">${count} = 1</msg>
+<var>${count}</var>
+<arg>${count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-02T15:40:55.031074" elapsed="0.001059"/>
+</kw>
+<status status="PASS" start="2024-05-02T15:40:54.608778" elapsed="0.423926"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:40:55.036141" level="INFO">Sending key(s) ('ARROW_UP',) to //*[@id="mapDiv"]/div/div[3]/div[1]/div[2] element.</msg>
+<msg time="2024-05-02T15:40:55.513262" level="INFO">Pressing special key ARROW_UP to element.</msg>
+<msg time="2024-05-02T15:40:55.513262" level="INFO">Releasing special key ARROW_UP.</msg>
+<arg>${DIV}</arg>
+<arg>${KEY}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-05-02T15:40:55.034071" elapsed="0.509480"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-02T15:40:55.544790" level="INFO">${count} = 2</msg>
+<var>${count}</var>
+<arg>${count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-02T15:40:55.544584" elapsed="0.000206"/>
+</kw>
+<status status="PASS" start="2024-05-02T15:40:55.033054" elapsed="0.511736"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:40:55.544790" level="INFO">Sending key(s) ('ARROW_UP',) to //*[@id="mapDiv"]/div/div[3]/div[1]/div[2] element.</msg>
+<msg time="2024-05-02T15:40:56.045395" level="INFO">Pressing special key ARROW_UP to element.</msg>
+<msg time="2024-05-02T15:40:56.045395" level="INFO">Releasing special key ARROW_UP.</msg>
+<arg>${DIV}</arg>
+<arg>${KEY}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-05-02T15:40:55.544790" elapsed="0.531955"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-02T15:40:56.081724" level="INFO">${count} = 3</msg>
+<var>${count}</var>
+<arg>${count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-02T15:40:56.076745" elapsed="0.005074"/>
+</kw>
+<status status="PASS" start="2024-05-02T15:40:55.544790" elapsed="0.537029"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:40:56.084828" level="INFO">Sending key(s) ('ARROW_UP',) to //*[@id="mapDiv"]/div/div[3]/div[1]/div[2] element.</msg>
+<msg time="2024-05-02T15:40:56.542188" level="INFO">Pressing special key ARROW_UP to element.</msg>
+<msg time="2024-05-02T15:40:56.542188" level="INFO">Releasing special key ARROW_UP.</msg>
+<arg>${DIV}</arg>
+<arg>${KEY}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-05-02T15:40:56.082836" elapsed="0.490215"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-02T15:40:56.575080" level="INFO">${count} = 4</msg>
+<var>${count}</var>
+<arg>${count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-02T15:40:56.574093" elapsed="0.000987"/>
+</kw>
+<status status="PASS" start="2024-05-02T15:40:56.081819" elapsed="0.493261"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:40:56.579459" level="INFO">Sending key(s) ('ARROW_UP',) to //*[@id="mapDiv"]/div/div[3]/div[1]/div[2] element.</msg>
+<msg time="2024-05-02T15:40:57.026613" level="INFO">Pressing special key ARROW_UP to element.</msg>
+<msg time="2024-05-02T15:40:57.027600" level="INFO">Releasing special key ARROW_UP.</msg>
+<arg>${DIV}</arg>
+<arg>${KEY}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-05-02T15:40:56.577514" elapsed="0.487670"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-02T15:40:57.065184" level="INFO">${count} = 5</msg>
+<var>${count}</var>
+<arg>${count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-02T15:40:57.065184" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-02T15:40:56.576083" elapsed="0.489101"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:40:57.074060" level="INFO">Sending key(s) ('ARROW_UP',) to //*[@id="mapDiv"]/div/div[3]/div[1]/div[2] element.</msg>
+<msg time="2024-05-02T15:40:57.500753" level="INFO">Pressing special key ARROW_UP to element.</msg>
+<msg time="2024-05-02T15:40:57.500753" level="INFO">Releasing special key ARROW_UP.</msg>
+<arg>${DIV}</arg>
+<arg>${KEY}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-05-02T15:40:57.072503" elapsed="0.461588"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-02T15:40:57.538435" level="INFO">${count} = 6</msg>
+<var>${count}</var>
+<arg>${count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-02T15:40:57.534091" elapsed="0.004344"/>
+</kw>
+<status status="PASS" start="2024-05-02T15:40:57.065184" elapsed="0.473724"/>
+</iter>
+<status status="PASS" start="2024-05-02T15:40:54.608778" elapsed="2.931225"/>
+</while>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:40:57.640467" level="INFO">${matrix} = position: absolute; z-index: 986; transform: matrix(1, 0, 0, 1, -2, -73);</msg>
+<var>${matrix}</var>
+<arg>${MATRIX}</arg>
+<arg>style</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-05-02T15:40:57.541033" elapsed="0.099434"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T15:40:57.640467" level="INFO">position: absolute; z-index: 986; transform: matrix(1, 0, 0, 1, -2, -73);</msg>
+<arg>${matrix}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T15:40:57.640467" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${matrix}</arg>
+<arg>${VALUE}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-05-02T15:40:57.640467" elapsed="0.000000"/>
+</kw>
+<arg>${DIV_Map_frame}</arg>
+<arg>${KEY_Up}</arg>
+<arg>${DIV_Map_matrix}</arg>
+<arg>${VALUE_Map_matrix_move_up}</arg>
+<status status="PASS" start="2024-05-02T15:40:54.608778" elapsed="3.037604"/>
+</kw>
+<status status="PASS" start="2024-05-02T15:40:54.607952" elapsed="3.039771"/>
+</test>
+<test id="s1-t8" name="TC_001_006-007 - Kontrola funkcie `Move down`" line="63">
+<kw name="Move functionality" owner="keywords">
+<kw name="Convert To Integer" owner="BuiltIn">
+<msg time="2024-05-02T15:40:57.658784" level="INFO">${count} = 0</msg>
+<var>${count}</var>
+<arg>0</arg>
+<doc>Converts the given item to an integer number.</doc>
+<status status="PASS" start="2024-05-02T15:40:57.657347" elapsed="0.001437"/>
+</kw>
+<while condition="${count} &lt;= 5">
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:40:57.658784" level="INFO">Sending key(s) ('ARROW_DOWN',) to //*[@id="mapDiv"]/div/div[3]/div[1]/div[2] element.</msg>
+<msg time="2024-05-02T15:40:58.102862" level="INFO">Pressing special key ARROW_DOWN to element.</msg>
+<msg time="2024-05-02T15:40:58.103886" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<arg>${DIV}</arg>
+<arg>${KEY}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-05-02T15:40:57.658784" elapsed="0.484628"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-02T15:40:58.146638" level="INFO">${count} = 1</msg>
+<var>${count}</var>
+<arg>${count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-02T15:40:58.144644" elapsed="0.001994"/>
+</kw>
+<status status="PASS" start="2024-05-02T15:40:57.658784" elapsed="0.487854"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:40:58.149653" level="INFO">Sending key(s) ('ARROW_DOWN',) to //*[@id="mapDiv"]/div/div[3]/div[1]/div[2] element.</msg>
+<msg time="2024-05-02T15:40:58.587945" level="INFO">Pressing special key ARROW_DOWN to element.</msg>
+<msg time="2024-05-02T15:40:58.587945" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<arg>${DIV}</arg>
+<arg>${KEY}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-05-02T15:40:58.147655" elapsed="0.456500"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-02T15:40:58.605193" level="INFO">${count} = 2</msg>
+<var>${count}</var>
+<arg>${count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-02T15:40:58.604155" elapsed="0.001038"/>
+</kw>
+<status status="PASS" start="2024-05-02T15:40:58.146638" elapsed="0.458555"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:40:58.606156" level="INFO">Sending key(s) ('ARROW_DOWN',) to //*[@id="mapDiv"]/div/div[3]/div[1]/div[2] element.</msg>
+<msg time="2024-05-02T15:40:58.958069" level="INFO">Pressing special key ARROW_DOWN to element.</msg>
+<msg time="2024-05-02T15:40:58.958069" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<arg>${DIV}</arg>
+<arg>${KEY}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-05-02T15:40:58.605193" elapsed="0.387360"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-02T15:40:58.995568" level="INFO">${count} = 3</msg>
+<var>${count}</var>
+<arg>${count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-02T15:40:58.993629" elapsed="0.001939"/>
+</kw>
+<status status="PASS" start="2024-05-02T15:40:58.605193" elapsed="0.391417"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:40:58.997902" level="INFO">Sending key(s) ('ARROW_DOWN',) to //*[@id="mapDiv"]/div/div[3]/div[1]/div[2] element.</msg>
+<msg time="2024-05-02T15:40:59.467764" level="INFO">Pressing special key ARROW_DOWN to element.</msg>
+<msg time="2024-05-02T15:40:59.467764" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<arg>${DIV}</arg>
+<arg>${KEY}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-05-02T15:40:58.997902" elapsed="0.509388"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-02T15:40:59.507290" level="INFO">${count} = 4</msg>
+<var>${count}</var>
+<arg>${count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-02T15:40:59.507290" elapsed="0.003826"/>
+</kw>
+<status status="PASS" start="2024-05-02T15:40:58.996610" elapsed="0.515166"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:40:59.515571" level="INFO">Sending key(s) ('ARROW_DOWN',) to //*[@id="mapDiv"]/div/div[3]/div[1]/div[2] element.</msg>
+<msg time="2024-05-02T15:40:59.974114" level="INFO">Pressing special key ARROW_DOWN to element.</msg>
+<msg time="2024-05-02T15:40:59.974114" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<arg>${DIV}</arg>
+<arg>${KEY}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-05-02T15:40:59.513058" elapsed="0.498852"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-02T15:41:00.021992" level="INFO">${count} = 5</msg>
+<var>${count}</var>
+<arg>${count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-02T15:41:00.019324" elapsed="0.003190"/>
+</kw>
+<status status="PASS" start="2024-05-02T15:40:59.512052" elapsed="0.510462"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:41:00.030129" level="INFO">Sending key(s) ('ARROW_DOWN',) to //*[@id="mapDiv"]/div/div[3]/div[1]/div[2] element.</msg>
+<msg time="2024-05-02T15:41:00.541152" level="INFO">Pressing special key ARROW_DOWN to element.</msg>
+<msg time="2024-05-02T15:41:00.541152" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<arg>${DIV}</arg>
+<arg>${KEY}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-05-02T15:41:00.022514" elapsed="0.549222"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-02T15:41:00.571736" level="INFO">${count} = 6</msg>
+<var>${count}</var>
+<arg>${count} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-02T15:41:00.571736" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-02T15:41:00.022514" elapsed="0.549222"/>
+</iter>
+<status status="PASS" start="2024-05-02T15:40:57.658784" elapsed="2.912952"/>
+</while>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:41:00.644169" level="INFO">${matrix} = position: absolute; z-index: 986; transform: matrix(1, 0, 0, 1, -2, -79);</msg>
+<var>${matrix}</var>
+<arg>${MATRIX}</arg>
+<arg>style</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-05-02T15:41:00.576857" elapsed="0.067671"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-02T15:41:00.645700" level="INFO">position: absolute; z-index: 986; transform: matrix(1, 0, 0, 1, -2, -79);</msg>
+<arg>${matrix}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-02T15:41:00.644821" elapsed="0.000879"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${matrix}</arg>
+<arg>${VALUE}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-05-02T15:41:00.645700" elapsed="0.000000"/>
+</kw>
+<arg>${DIV_Map_frame}</arg>
+<arg>${KEY_Down}</arg>
+<arg>${DIV_Map_matrix}</arg>
+<arg>${VALUE_Map_matrix_move_down}</arg>
+<status status="PASS" start="2024-05-02T15:40:57.647723" elapsed="2.997977"/>
+</kw>
+<status status="PASS" start="2024-05-02T15:40:57.647723" elapsed="2.997977"/>
+</test>
+<test id="s1-t9" name="TC_001_006-008 - Kontrola tlačítka `Show satellite imagery`" line="67">
+<kw name="Button interaction" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<arg>15 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T15:41:00.653180" elapsed="0.110922"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.2</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-05-02T15:41:00.764102" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:41:00.768558" level="INFO">Clicking element '//*[@id="mapDiv"]/div/div[3]/div[13]/div/div/button/div[1]'.</msg>
+<arg>${BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T15:41:00.768140" elapsed="0.516345"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-05-02T15:41:01.284974" elapsed="0.000000"/>
+</kw>
+<arg>${BUTTON_Satellite}</arg>
+<status status="PASS" start="2024-05-02T15:41:00.653180" elapsed="0.631794"/>
+</kw>
+<status status="PASS" start="2024-05-02T15:41:00.653180" elapsed="0.631794"/>
+</test>
+<test id="s1-t10" name="TC_001_006-009 - Kontrola tlačítka `Show street map`" line="71">
+<kw name="Button interaction" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<arg>15 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T15:41:01.284974" elapsed="0.024693"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.2</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-05-02T15:41:01.309667" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:41:01.309667" level="INFO">Clicking element '//*[@id="mapDiv"]/div/div[3]/div[13]/div/div/button/div[1]'.</msg>
+<arg>${BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T15:41:01.309667" elapsed="0.699239"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-05-02T15:41:02.010114" elapsed="0.000000"/>
+</kw>
+<arg>${BUTTON_Street}</arg>
+<status status="PASS" start="2024-05-02T15:41:01.284974" elapsed="0.725140"/>
+</kw>
+<status status="PASS" start="2024-05-02T15:41:01.284974" elapsed="0.725140"/>
+</test>
+<test id="s1-t11" name="TC_001_006-010 - Kontrola tlačítka `View larger map`" line="75">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON_LargerMap}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T15:41:02.018701" elapsed="0.091318"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:41:02.113156" level="INFO">Clicking element '//*[@id="mapDiv"]/div/div[3]/div[3]/div/div/div/div/a'.</msg>
+<arg>${BUTTON_LargerMap}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T15:41:02.112024" elapsed="0.171514"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-05-02T15:41:02.289130" elapsed="0.031840"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON_AcceptGoogle}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-02T15:41:02.320970" elapsed="0.727107"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BUTTON_AcceptGoogle}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-05-02T15:41:03.048805" elapsed="0.385206"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:41:03.434011" level="INFO">Clicking element '//*[@id="yDmH0d"]/c-wiz/div/div/div/div[2]/div[1]/div[3]/div[1]/div[1]/form[2]/div/div/button'.</msg>
+<arg>${BUTTON_AcceptGoogle}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-02T15:41:03.434011" elapsed="2.096277"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-02T15:41:05.655758" level="INFO">Current location is 'https://www.google.com/maps?t=m&amp;hl=en&amp;gl=US&amp;q=Krakovany+922+02+Slovakia'.</msg>
+<arg>${URL_GoogleMap}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-02T15:41:05.530288" elapsed="0.125470"/>
+</kw>
+<status status="PASS" start="2024-05-02T15:41:02.017959" elapsed="3.637799"/>
+</test>
+<test id="s1-t12" name="Post-conditions" line="85">
+<kw name="Close" owner="keywords">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-02T15:41:05.864991" level="INFO">Slept 200 milliseconds.</msg>
+<arg>200ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-02T15:41:05.664618" elapsed="0.200373"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-02T15:41:05.864991" elapsed="2.312434"/>
+</kw>
+<status status="PASS" start="2024-05-02T15:41:05.663864" elapsed="2.513561"/>
+</kw>
+<status status="PASS" start="2024-05-02T15:41:05.655758" elapsed="2.521667"/>
+</test>
+<status status="PASS" start="2024-05-02T15:40:26.652132" elapsed="41.525293"/>
+</suite>
+<statistics>
+<total>
+<stat pass="12" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="12" fail="0" skip="0" id="s1" name="TS 001 006">TS 001 006</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
