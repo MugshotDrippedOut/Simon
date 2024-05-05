@@ -22,4 +22,5 @@ ${URL_GoogleMap}  https://www.google.com/maps?t=m&hl=en&gl=US&q=Krakovany+922+02
 
 ${URL_TvKrakovany}  https://www.krakovany.sk/?page_id=19224
 
+${URL_Video_EmbededYT}  https://www.youtube.com/embed/Pv9qX_wfMS0
 ${URL_Video_YT}  https://www.youtube.com/watch?v=Pv9qX_wfMS0

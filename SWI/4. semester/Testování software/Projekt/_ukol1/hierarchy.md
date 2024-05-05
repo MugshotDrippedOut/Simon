@@ -58,7 +58,6 @@ Testy webovej stránky obce [Krakovany](https://www.krakovany.sk)
       - TC_001_001_014-006 - Kontrola funkcie `Play-back speed` a nastavenie rýchlosti prehrávania na 0.5
       - TC_001_001_014-007 - Kontrola funkcie `Full-screen` a minimalizoavanie
       - TC_001_001_014-008 - Kontrola tlačítka `Quality` a zmena kvality na 144p
-      - TC_001_001_014-009 - Kontrola funkcie `Watch on YouTube`
   - TS_001_002 - Kontrola Vyhľadávania <!-- Automatizovane -->
     - TC_001_002-001 - Kontrola interakcie vstupu `Vyhľadávanie`
   - TS_001_003 - Testovanie zmeny zobrazenia <!-- Automatizovane -->

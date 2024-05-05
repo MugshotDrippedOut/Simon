@@ -29,7 +29,7 @@ TC_001_005-002 - Kontrola, či sú všetky očakávané `img` elementy prítomn�
     ${alts}=  Create List  ${IMAGE_ObecKrakovany_alt}  ${IMAGE_Print_alt}  ${IMAGE_Starosta_alt}  ${IMAGE_Map_alt}  ${IMAGE_Plus_alt}  ${IMAGE_Minus_alt}  ${IMAGE_100_alt}  ${IMAGE_Dcom_alt}  ${IMAGE_Mobec_alt}  ${IMAGE_Lsvr_alt}  ${IMAGE_Zmaos_alt}  ${IMAGE_Zmo_alt}  ${IMAGE_Mnh_alt}
     ${count}=  Convert To Integer  0
     FOR  ${image}  IN  @{images}
-        ${src}=  Get Element Attribute  ${image}  ${VALUE_ImgSrc}
+        ${src}=  Get Element Attribute  ${image}  ${VALUE_Src}
         ${alt}=  Get Element Attribute  ${image}  ${VALUE_ImgAlt}
         Should Be Equal As Strings  ${src}  ${srcs}[${count}]
         Should Be Equal As Strings  ${alt}  ${alts}[${count}]

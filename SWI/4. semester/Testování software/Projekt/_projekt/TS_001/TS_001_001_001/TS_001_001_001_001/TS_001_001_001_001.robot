@@ -14,7 +14,7 @@ Resource  ../../../Resources/variables/Fonts.robot
 *** Test Cases ***
 Pre-conditions
     Open  ${BROWSER_CHROME}  ${URL_Obec_ZakladneUdajeAKontakty}
-    Wait Until Element Contains  ${FONT_Obec_Header}  ${VALUE_ZakladneUdajeaKontakty}
+    Wait Until Element Contains  ${FONT_Obec_Heading}  ${VALUE_ZakladneUdajeaKontakty}
 
 
 TC_001_001_001_001-001 - Kontrola interakcie pola "Komentár"
@@ -36,7 +36,7 @@ TC_001_001_001_001-004 - Kontrola interakcie pola "Adresa webu"
 TC_001_001_001_001-005 - Kontrola interakcie tlačidla "Pridať komentár"
     Wait Until Element Is Visible  ${BUTTON_PridatKomentar}  2 seconds
     #Click Element  ${bPridatKomentar}
-    Wait Until Keyword Succeeds  2 seconds  1 seconds  Wait Until Element Contains  ${FONT_Obec_Header}  ${VALUE_ZakladneUdajeaKontakty}
+    Wait Until Keyword Succeeds  2 seconds  1 seconds  Wait Until Element Contains  ${FONT_Obec_Heading}  ${VALUE_ZakladneUdajeaKontakty}
 
 
 Post-conditions

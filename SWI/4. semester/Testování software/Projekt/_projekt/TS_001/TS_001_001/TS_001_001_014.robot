@@ -25,6 +25,7 @@ Pre-conditions
 TC_001_001_014-001 - Kontrola interakcie videa
     Wait Until Element Is Visible  ${IFRAME_Video}  10s
     Scroll Element Into View  ${IFRAME_Video}
+    Element Attribute Value Should Be  ${IFRAME_Video}  ${VALUE_Src}  ${URL_Video_EmbededYT}
     Select Frame  ${IFRAME_Video}
     Button interaction  ${BUTTON_Video_PlayBig}
 

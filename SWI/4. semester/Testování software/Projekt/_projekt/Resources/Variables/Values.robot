@@ -17,7 +17,7 @@ ${VALUE_SearchResults}  far
 
 ${VALUE_CookiesFontsize}  fontSize
 
-${VALUE_ImgSrc}  src
+${VALUE_Src}  src
 ${VALUE_ImgAlt}  alt
 ${VALUE_NumberOfDivsMin}  257
 ${VALUE_NumberOfDivsMax}  259

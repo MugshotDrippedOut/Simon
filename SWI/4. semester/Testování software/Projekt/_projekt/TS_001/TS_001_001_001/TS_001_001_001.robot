@@ -19,55 +19,55 @@ Pre-conditions
 
 
 TC_001_001_001-001 - Kontrola interakcie tláčítka Základné údaje a kontakty
-    Button interaction main menu   ${BUTTON_Obec}  ${BUTTON_Obec_ZakladneUdajeAkontakty}  ${URL_Obec_ZakladneUdajeAKontakty}  ${FONT_Obec_Header}  ${VALUE_ZakladneUdajeaKontakty}  ${LIST_ThirdElement}  ${VALUE_ZakladneUdajeaKontakty} 
+    Button interaction main menu   ${BUTTON_Obec}  ${BUTTON_Obec_ZakladneUdajeAkontakty}  ${URL_Obec_ZakladneUdajeAKontakty}  ${FONT_Obec_Heading}  ${VALUE_ZakladneUdajeaKontakty}  ${LIST_ThirdElement}  ${VALUE_ZakladneUdajeaKontakty} 
 
 
 TC_001_001_001-002 - Kontrola interakcie tláčítka Geografická poloha
-    Button interaction main menu   ${BUTTON_Obec}  ${BUTTON_Obec_GeografickaPoloha}  ${URL_Obec_GeografickaPoloha}  ${FONT_Obec_Header}  ${VALUE_GeografickaPoloha}  ${LIST_ThirdElement}  ${VALUE_GeografickaPoloha}
+    Button interaction main menu   ${BUTTON_Obec}  ${BUTTON_Obec_GeografickaPoloha}  ${URL_Obec_GeografickaPoloha}  ${FONT_Obec_Heading}  ${VALUE_GeografickaPoloha}  ${LIST_ThirdElement}  ${VALUE_GeografickaPoloha}
 
 
 TC_001_001_001-003 - Kontrola interakcie tláčítka História obce Krakovany
-    Button interaction main menu   ${BUTTON_Obec}  ${BUTTON_Obec_HistoriaObce}  ${URL_Obec_HistoriaObce}  ${FONT_Obec_Header}  ${VALUE_HistoriaObce}  ${LIST_ThirdElement}  ${VALUE_HistoriaObce}
+    Button interaction main menu   ${BUTTON_Obec}  ${BUTTON_Obec_HistoriaObce}  ${URL_Obec_HistoriaObce}  ${FONT_Obec_Heading}  ${VALUE_HistoriaObce}  ${LIST_ThirdElement}  ${VALUE_HistoriaObce}
 
 
 TC_001_001_001-004 - Kontrola interakcie tláčítka Monografia obce
-    Button interaction main menu   ${BUTTON_Obec}  ${BUTTON_Obec_MonografiaObce}  ${URL_Obec_MonografiaObce}  ${FONT_Obec_Header}  ${VALUE_MonografiaObce}  ${LIST_ThirdElement}  ${VALUE_MonografiaObce}
+    Button interaction main menu   ${BUTTON_Obec}  ${BUTTON_Obec_MonografiaObce}  ${URL_Obec_MonografiaObce}  ${FONT_Obec_Heading}  ${VALUE_MonografiaObce}  ${LIST_ThirdElement}  ${VALUE_MonografiaObce}
 
 
 TC_001_001_001-005 - Kontrola interakcie tláčítka Erb obce
-    Button interaction main menu   ${BUTTON_Obec}  ${BUTTON_Obec_ErbObce}  ${URL_Obec_ErbObce}  ${FONT_Obec_Header}  ${VALUE_ErbObce}  ${LIST_ThirdElement}  ${VALUE_ErbObce}
+    Button interaction main menu   ${BUTTON_Obec}  ${BUTTON_Obec_ErbObce}  ${URL_Obec_ErbObce}  ${FONT_Obec_Heading}  ${VALUE_ErbObce}  ${LIST_ThirdElement}  ${VALUE_ErbObce}
 
 
 TC_001_001_001-006 - Kontrola interakcie tláčítka Územný plán obce
-    Button interaction main menu  ${BUTTON_Obec}  ${BUTTON_Obec_UzemnyPlanObce}  ${URL_Obec_UzemnyPlanObce}  ${FONT_Obec_Header}  ${VALUE_UzemnyPlanObce}  ${LIST_ThirdElement}  ${VALUE_UzemnyPlanObce}
+    Button interaction main menu  ${BUTTON_Obec}  ${BUTTON_Obec_UzemnyPlanObce}  ${URL_Obec_UzemnyPlanObce}  ${FONT_Obec_Heading}  ${VALUE_UzemnyPlanObce}  ${LIST_ThirdElement}  ${VALUE_UzemnyPlanObce}
 
 
 TC_001_001_001-007 - Kontrola interakcie tláčítka Program rozvoja obce
-    Button interaction main menu   ${BUTTON_Obec}  ${BUTTON_Obec_ProgramRozvojaObce}  ${URL_Obec_ProgramRozvojaObce}  ${FONT_Obec_Header}  ${VALUE_ProgramRozvojaObce}  ${LIST_ThirdElement}  ${VALUE_ProgramRozvojaObce}
+    Button interaction main menu   ${BUTTON_Obec}  ${BUTTON_Obec_ProgramRozvojaObce}  ${URL_Obec_ProgramRozvojaObce}  ${FONT_Obec_Heading}  ${VALUE_ProgramRozvojaObce}  ${LIST_ThirdElement}  ${VALUE_ProgramRozvojaObce}
 
 
 TC_001_001_001-008 - Kontrola interakcie tláčítka Prevádzkový poriadok Zberného dvora
-    Button interaction main menu   ${BUTTON_Obec}  ${BUTTON_Obec_PrevadzkovyPoriadokZbernehoDvora}  ${URL_Obec_PrevadzkovyPoriadokZbernehoDvora}  ${FONT_Obec_Header}  ${VALUE_PrevadzkovyPoriadokZbernehoDvora}  ${LIST_ThirdElement}  ${VALUE_PrevadzkovyPoriadokZbernehoDvora}
+    Button interaction main menu   ${BUTTON_Obec}  ${BUTTON_Obec_PrevadzkovyPoriadokZbernehoDvora}  ${URL_Obec_PrevadzkovyPoriadokZbernehoDvora}  ${FONT_Obec_Heading}  ${VALUE_PrevadzkovyPoriadokZbernehoDvora}  ${LIST_ThirdElement}  ${VALUE_PrevadzkovyPoriadokZbernehoDvora}
 
 
 TC_001_001_001-009 - Kontrola interakcie tláčítka Starosta obce
-    Button interaction main menu   ${BUTTON_Obec}  ${BUTTON_Obec_StarostaObce}  ${URL_Obec_StarostaObce}  ${FONT_Obec_Header}  ${VALUE_StarostaObce}  ${LIST_ThirdElement}  ${VALUE_StarostaObce}
+    Button interaction main menu   ${BUTTON_Obec}  ${BUTTON_Obec_StarostaObce}  ${URL_Obec_StarostaObce}  ${FONT_Obec_Heading}  ${VALUE_StarostaObce}  ${LIST_ThirdElement}  ${VALUE_StarostaObce}
 
 
 TC_001_001_001-010 - Kontrola interakcie tláčítka Obecné zastupiteľstvo
-    Button interaction main menu   ${BUTTON_Obec}  ${BUTTON_Obec_ObecneZastupitelstvo}  ${URL_Obec_ObecneZastupitelstvo}  ${FONT_Obec_Header}  ${VALUE_ObecneZastupitelstvo}  ${LIST_ThirdElement}  ${VALUE_ObecneZastupitelstvo}
+    Button interaction main menu   ${BUTTON_Obec}  ${BUTTON_Obec_ObecneZastupitelstvo}  ${URL_Obec_ObecneZastupitelstvo}  ${FONT_Obec_Heading}  ${VALUE_ObecneZastupitelstvo}  ${LIST_ThirdElement}  ${VALUE_ObecneZastupitelstvo}
 
 
 TC_001_001_001-011 - Kontrola interakcie tláčítka Obecná knižnica
-    Button interaction main menu   ${BUTTON_Obec}  ${BUTTON_Obec_ObecnaKniznica}  ${URL_Obec_ObecnaKniznica}  ${FONT_Obec_Header}  ${VALUE_ObecnaKniznica}  ${LIST_FourthElement}  ${VALUE_ObecnaKniznica}
+    Button interaction main menu   ${BUTTON_Obec}  ${BUTTON_Obec_ObecnaKniznica}  ${URL_Obec_ObecnaKniznica}  ${FONT_Obec_Heading}  ${VALUE_ObecnaKniznica}  ${LIST_FourthElement}  ${VALUE_ObecnaKniznica}
 
 
 TC_001_001_001-012 - Kontrola interakcie tláčítka Fotogaléria
-    Button interaction main menu   ${BUTTON_Obec}  ${BUTTON_Obec_Fotogaleria}  ${URL_Obec_Fotogaleria}  ${FONT_Obec_Header}  ${VALUE_Fotogaleria}  ${LIST_FourthElement}  ${VALUE_Fotogaleria}
+    Button interaction main menu   ${BUTTON_Obec}  ${BUTTON_Obec_Fotogaleria}  ${URL_Obec_Fotogaleria}  ${FONT_Obec_Heading}  ${VALUE_Fotogaleria}  ${LIST_FourthElement}  ${VALUE_Fotogaleria}
 
 
 TC_001_001_001-013 - Kontrola interakcie tláčítka Podnikateľské subjekty
-    Button interaction main menu   ${BUTTON_Obec}  ${BUTTON_Obec_PodnikatelskeSubjekty}  ${URL_Obec_PodnikatelskeSubjekty}  ${FONT_Obec_Header}  ${VALUE_PodnikateleSubjekty}  ${LIST_ThirdElement}  ${VALUE_PodnikateleSubjekty}
+    Button interaction main menu   ${BUTTON_Obec}  ${BUTTON_Obec_PodnikatelskeSubjekty}  ${URL_Obec_PodnikatelskeSubjekty}  ${FONT_Obec_Heading}  ${VALUE_PodnikateleSubjekty}  ${LIST_ThirdElement}  ${VALUE_PodnikateleSubjekty}
 
 
 TC_001_001_001-014 - Kontrola interakcie tláčítka Červ. kríž
@@ -78,7 +78,7 @@ TC_001_001_001-014 - Kontrola interakcie tláčítka Červ. kríž
     Click Element  ${BUTTON_Obec_CervenyKriz}
     Sleep  20 milliseconds
     Location Should Be  ${URL_Obec_CervenyKriz}
-    Page Should Contain Element  ${FONT_Obec_Header}
+    Page Should Contain Element  ${FONT_Obec_Heading}
     Page Should Contain  ${VALUE_CervenyKriz}
     Page Should Contain Element  ${LIST_ThirdElement}
     Page Should Contain  ${VALUE_CervenyKriz}
