@@ -42,3 +42,20 @@ ${VALUE_AttributeTitle}  title
 ${VALUE_ExitFullscreen}  Exit full screen (f)
 ${VALUE_FullScreen}  Full screen (f)
 ${VALUE_144p}  144p
+
+
+${VALUE_ZakladneUdajeaKontakty}  Základné údaje a kontakty
+${VALUE_GeografickaPoloha}  Geografická poloha
+${VALUE_HistoriaObce}  História obce Krakovany
+${VALUE_MonografiaObce}  Monografia o obci Krakovany Pečať našich predkov
+${VALUE_ErbObce}  Erb obce
+${VALUE_UzemnyPlanObce}  Územný plán obce
+${VALUE_ProgramRozvojaObce}  Program hospodárskeho a sociálneho rozvoja obce Krakovany 2015-2025
+${VALUE_PrevadzkovyPoriadokZbernehoDvora}  Prevádzkový poriadok Zberného dvora
+${VALUE_StarostaObce}  Starosta obce
+${VALUE_ObecneZastupitelstvo}  Obecné zastupiteľstvo
+${VALUE_ObecnaKniznica}  Obecná knižnica
+${VALUE_Fotogaleria}  Fotogaléria
+${VALUE_PodnikateleSubjekty}  Podnikateľské subjekty
+${VALUE_CervenyKriz}  Červený kríž
+${VALUE_MikroregionNadHoleskou}  PROJEKTY CYKLOTRÁS V MIKROREGIÓNE NAD HOLEŠKOU

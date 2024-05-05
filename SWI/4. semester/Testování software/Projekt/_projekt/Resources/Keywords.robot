@@ -35,7 +35,7 @@ Close
 
 
 Button interaction main menu 
-    [Arguments]  ${BUTTON_MAIN}  ${BUTTON_SUB}  ${URL_TO_CHECK}
+    [Arguments]  ${BUTTON_MAIN}  ${BUTTON_SUB}  ${URL_TO_CHECK}  ${HEADER_LOCATOR}  ${HEADER_TEXT}  ${LIST_LOCATOR}  ${LIST_TEXT}
 
     Wait Until Element Is Visible  ${BUTTON_MAIN}  10 seconds
     Mouse Over  ${BUTTON_MAIN}
@@ -43,7 +43,10 @@ Button interaction main menu
     Scroll Element Into View  ${BUTTON_SUB}
     Click Element  ${BUTTON_SUB}
     Location Should Be  ${URL_TO_CHECK}
-
+    Page Should Contain Element  ${HEADER_LOCATOR}
+    Element Should Contain  ${HEADER_LOCATOR}  ${HEADER_TEXT}
+    Page Should Contain Element  ${LIST_LOCATOR}
+    Element Should Contain  ${LIST_LOCATOR}  ${LIST_TEXT}
 
 Button interaction 
     [Arguments]  ${BUTTON}
