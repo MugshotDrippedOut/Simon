@@ -1,0 +1,124 @@
+Testy webovej stránky obce [Krakovany](https://www.krakovany.sk)
+
+<!--
+# _ znamená test sada, eg. 001_001 je prvá sada prvej sady
+# - znamená test case, eg. 001_001-001 je prvý test case prvej sady prvej sady
+-->
+
+- TS_001 - Stránka obce Krakovany
+  - TS_001_001 - Navigační/hlavné menu
+    - TS_001_001_001 - Obec <!-- Automatizovane -->
+      - TC_001_001_001-001 - Kontrola interakcie tláčítka `Základné údaje a kontakty`
+      - TC_001_001_001-002 - Kontrola interakcie tláčítka `Geografická poloha`
+      - TC_001_001_001-003 - Kontrola interakcie tláčítka `História obce Krakovany`
+      - TC_001_001_001-004 - Kontrola interakcie tláčítka `Monografia obce`
+      - TC_001_001_001-005 - Kontrola interakcie tláčítka `Erb obce`
+      - TC_001_001_001-006 - Kontrola interakcie tláčítka `Územný plán obce`
+      - TC_001_001_001-007 - Kontrola interakcie tláčítka `Program rozvoja obce`
+      - TC_001_001_001-008 - Kontrola interakcie tláčítka `Prevádzkový poriadok Zberného dvora`
+      - TC_001_001_001-009 - Kontrola interakcie tláčítka `Starosta obce`
+      - TC_001_001_001-010 - Kontrola interakcie tláčítka `Obecné zastupiteľstvo`
+      - TC_001_001_001-011 - Kontrola interakcie tláčítka `Obecná knižnica`
+      - TC_001_001_001-012 - Kontrola interakcie tláčítka `Fotogaléria`
+      - TC_001_001_001-013 - Kontrola interakcie tláčítka `Podnikateľské subjekty`
+      - TC_001_001_001-014 - Kontrola interakcie tláčítka `Červ. kríž`
+      - TC_001_001_001-015 - Kontrola interakcie tláčítka `Mikroregión`
+      - TS_001_001_001_001 - Základné údaje a kontakty <!-- Automatizovane -->
+        - TC_001_001_001_001-001 - Kontrola interakcie pola `Komentár`
+        - TC_001_001_001_001-002 - Kontrola interakcie pola `Meno`
+        - TC_001_001_001_001-003 - Kontrola interakcie pola `E-mail`
+        - TC_001_001_001_001-004 - Kontrola interakcie pola `Adresa webu`
+        - TC_001_001_001_001-005 - Kontrola interakcie tlačidla `Pridať komentár`
+    - TS_001_001_008 - POVINNÉ ZVEREJŇOVANIE <!-- Manualne -->
+      - TC_001_001_008-001 - Kontrola interakcie tlačítka `Rozpočet obce`
+      - TC_001_001_008-002 - Kontrola interakcie tlačítka `Rozpočtové opatrenia`
+      - TC_001_001_008-003 - Kontrola interakcie tlačítka `Záverečný účet`
+      - TC_001_001_008-004 - Kontrola interakcie tlačítka `Zmluvy`
+      - TC_001_001_008-005 - Kontrola interakcie tlačítka `Faktúry`
+      - TC_001_001_008-006 - Kontrola interakcie tlačítka `Objednávky`
+      - TC_001_001_008-007 - Kontrola interakcie tlačítka `Majetok obce`
+      - TC_001_001_008-008 - Kontrola interakcie tlačítka `Dotácie pre obec Krakovany`
+      - TC_001_001_008-009 - Kontrola interakcie tlačítka `Ročný výkaz o komunálnom odpade`
+      - TC_001_001_008-010 - Kontrola interakcie tlačítka `Majetkové priznania`
+      - TC_001_001_008-011 - Kontrola interakcie tlačítka `Ostatné`
+      - TS_001_001_008_001 - Rozpočet obce <!-- Manualne -->
+        - TC_001_001_008_001-001 - Kontrola odkazu `Rozpočet obce na roky 2024-2026`
+        - TC_001_001_008_001-002 - Kontrola odkazu `Záverečný účet obce za rok 2022`
+        - TC_001_001_008_001-003 - Kontrola odkazu `Rozpočet obce na roky 2023-2025`
+        - TS_001_001_008_001_001 - Rozpočet obce na roky 2024-2026 <!-- Manualne -->
+          - TC_001_001_008_001_001-001 - Kontrola odkazu `Rozpočet obce Krakovany na roky 2024-2026`
+          - TC_001_001_008_001_001-002 - Kontrola odkazu `Rozpočet obce Krakovany na roky 2024-2026 – textová časť`
+          - TC_001_001_008_001_001-003 - Kontrola odkazu `Stanovisko hlavného kontrolóra k návrhu rozpočtu obce Krakovany na roky 2024-2026`
+    - TS_001_001_014 - TV KRAKOVANY <!-- Automatizovane -->
+      - TC_001_001_014-001 - Kontrola interakcie videa
+      - TC_001_001_014-002 - Kontrola tlačítka `Play`
+      - TC_001_001_014-003 - Kontrola funkcie posunutia vpred o 5 sekúnd
+      - TC_001_001_014-004 - Kontrola funkcie posunutia vzad o 5 sekúnd
+      - TC_001_001_014-005 - Kontrola tlačítka `Mute`
+      - TC_001_001_014-006 - Kontrola funkcie `Play-back speed` a nastavenie rýchlosti prehrávania na 0.5
+      - TC_001_001_014-007 - Kontrola funkcie `Full-screen` a minimalizoavanie
+      - TC_001_001_014-008 - Kontrola tlačítka `Quality` a zmena kvality na 144p
+  - TS_001_002 - Kontrola Vyhľadávania <!-- Automatizovane -->
+    - TC_001_002-001 - Kontrola interakcie vstupu `Vyhľadávanie`
+  - TS_001_003 - Testovanie zmeny zobrazenia <!-- Automatizovane -->
+    - TC_001_003-001 - Kontorla interakcie s tlačítkom `+`
+    - TC_001_003-002 - Kontorla interakcie s tlačítkom `-`
+    - TC_001_003-003 - Kontorla interakcie s tlačítkom `100%`
+  - TS_001_004 - Cookies <!-- Automatizovane -->
+    - TC_001_004-001 - Kontrola obsahu cookies
+  - TS_001_005 - Kontrola Generovania Elementov <!-- Automatizovane -->
+    - TC_001_005-001 - Kontrola, či sú všetky očakávané `div` elementy prítomné
+    - TC_001_005-002 - Kontrola, či sú všetky očakávané `img` elementy prítomné a či majú správne nastavené `src` a `alt` atribúty
+    - TC_001_005-003 - Kontrola, či sú všetky očakávané `a` elementy prítomné
+    - TC_001_005-004 - Kontrola, či sú všetky očakávané `input` elementy prítomné a či majú správne nastavené `type` a `name` atribúty
+  - TS_001_006 - Mapa <!-- Automatizovane -->
+    - TC_001_006-001 - Kontrola zobrazenia mapy
+    - TC_001_006-002 - Kontrola tlačítka `Zoom in`
+    - TC_001_006-003 - Kontrola tlačítka `Zoom out`
+    - TC_001_006-004 - Kontrola funkcie `Move left`
+    - TC_001_006-005 - Kontrola funkcie `Move right`
+    - TC_001_006-006 - Kontrola funkcie `Move up`
+    - TC_001_006-007 - Kontrola funkcie `Move down`
+    - TC_001_006-008 - Kontrola tlačítka `Show satellite imagery`
+    - TC_001_006-009 - Kontrola tlačítka `Show street map`
+    - TC_001_006-010 - Kontrola tlačítka `View larger map`
+  - TS_001_010 - TLAČIVÁ A FORMULÁRE <!-- Manualne -->
+    - TC_001_010-001 - Kontrola odkazu `tlačivá pre potreby občanov a organizácií`
+    - TC_001_010_002 - Kontorla stahovania `Ohlásenie_stavebných_úprav`
+    - TC_001_010_003 - Kontorla stahovania `Žiadosť o vydanie stavebného povolenia (fyzická osoba)`
+    - TC_001_010_004 - Kontorla stahovania `Žiadosť_o vydanie stavebného povolenia (právnická osoba)`
+  - TS_001_015 - NÁJDETE NÁS AJ NA FACEBOOKU <!-- Manualne -->
+    - TC_001_015-001 - Kontrola tlačítka `Sledovať stránku`
+    - TC_001_015-002 - Kontrola odkazu `Futbal: Majcichov-Krakovany` 
+    - TC_001_015-003 - Kontrola odkazu `Pozvánka na Stavanie mája`
+    - TC_001_015-004 - Kontrola odkazu `Futbal: Krakovany-Bohdanovce`
+  - TS_001_020 - Socialne siete <!-- Manualne -->
+    - TC_001_020-001 - Facebook
+    - TC_001_020-002 - Instagram
+    - TC_001_020-003 - X
+    - TC_001_020-004 - YouTube
+<!--
+   - TS_001_100 - UI/UX
+    - TC_001_100-001 - Konzistentnosť elementov
+    - TC_001_100-002 - Čitelnosť a vizibilita textu
+    - TC_001_100-003 - Schopnosť reagovať na iné veľkosti obrazovky
+    - TC_001_100-004 - Zrozumitelnosť chybových hlásení
+    - TC_001_100-005 - Rozloženie stránky a použitie medzier
+    - TC_001_100-006 - Využitie obrázkov
+    - TC_001_100-007 - Farby a kontrast
+
+            Možné ďalšie UI/UX:
+            - Funkčnosť navigačného menu
+            - Funkčnosť linkov a ich správnosť
+            - Funkčnosť foriem
+            - Načítacia doba a výkon
+            - Funkcie na prispôsobenie (možnosť zväčšiť/zmenšiť text)
+            - Kompatibilita s rôznymi prehliadačmi
+            - Funkčnosť možnosti vyhľadávania
+            - Aktualita obsahu
+            - Plynulost elementov pri hover
+            - Funkčnosť interaktívnych elementov (buttons, dopdowns)
+            - Funkčnosť možnosti prihlásenia
+            - Presnosť predpovedi počasia
+            - Funkčnosť tláčítok socialnych médií
+-->
