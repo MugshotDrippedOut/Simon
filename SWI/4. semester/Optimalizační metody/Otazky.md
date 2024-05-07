@@ -16,7 +16,7 @@
 
 5. **Jaký je rozdíl mezi otevřenou a uzavřenou množinou?**
 
-   - Otevřená množina je množina, která obsahuje všechny své vnitřní body, zatímco uzavřená množina obsahuje všechny své hranice.
+   - Otevřená množina je množina, která neobsahuje žádný ze svých limitních bodů, zatímco uzavřená množina obsahuje všechny své hranice.
 
 6. **Definujte stacionární bod funkce jedné reálné proměnné.**
 
@@ -68,11 +68,14 @@
 
 18. **Formulujte základní úlohu lineárního programování.**
 
-    - Základní úloha lineárního programování spočívá v minimalizaci nebo maximalizaci lineární účelové funkce za přítomnosti lineárních omezení.
+    - Ax ≤ b, x ≥ 0
 
 19. **Proveďte klasifikaci úloh lineárního programování.**
 
-    - Úlohy lineárního programování se dělí na úlohy lineárního programování v normální formě, kanonické formě a standardní formě.
+    - $max(c^T x)$ při $Ax ≤ b$, $x ≥ 0$
+    - $min(c^T x)$ při $Ax ≤ b$, $x ≥ 0$
+    - $max(c^T x)$ při $Ax ≥ b$, $x ≥ 0$
+    - $min(c^T x)$ při $Ax ≥ b$, $x ≥ 0$
 
 20. **Popište primární a duální úlohu lineárního programování.**
 
@@ -80,15 +83,19 @@
 
 21. **Jak může vypadat množina přípustných řešení úlohy lineárního programování?**
 
-    - Množina přípustných řešení úlohy lineárního programování může být omezená nebo neomezená, uzavřená nebo neuzavřená, konvexní nebo nekonvexní.
+    - Množina přípustných řešení úlohy LP je uzavřená a konvexní a má konečný počet krajních bodů.
+    - jedna se o polyedr
 
 22. **V jakých bodech množiny přípustných řešení může být optimální řešení úlohy LP?**
 
     - Optimální řešení úlohy lineárního programování může být vnitřní bod množiny přípustných řešení, bod na hranici množiny nebo bod na nekonečnu.
+    - Máli úloha LP optimální řešení, potom alespoň jedno optimální řešení je krajním bodem množiny přípustných řešení.
+    - Pokud je množina přípustných řešení omezená, je množina všech optimálních řešení konvexním obalem množiny všech těch optimálních řešení, která jsou krajními body množiny přípustných řešení.
 
 23. **Popište simplexovou tabulku pro úlohu lineárního programování.**
 
     - Simplexová tabulka je tabulka, která obsahuje hodnoty proměnných, hodnoty účelové funkce a hodnoty omezení v každém řádku a sloupci.
+    - nerovnice doplnim pridatnymi promennymi na rovnice a dodam radek ucelove fce jako posledni radek simplexove tabulky (s opacnymi znamenky)
 
 24. **Jak odečtete řešení duální úlohy lineárního programování v simplexové tabulce?**
 
@@ -97,22 +104,28 @@
 25. **Jaké podmínky musí splňovat matematický model (resp. jak vypadá), abychom jej nazývali modelem LP?**
 
     - Matematický model lineárního programování musí obsahovat lineární účelovou funkci, lineární omezení a proměnné omezené na nezáporné hodnoty.
+    - linearni fce, linear. omezeni a podminky nezapornosti
 
 26. **Uvažujme takovou úlohu LP, kde některé/á omezení není/nejsou vyčerpána. Nicméně, se trvá na plném dočerpání omezení. Co toto rozhodnutí může znamenat pro hodnotu účelové funkce a j řešení?**
 
     - Pokud se trvá na plném dočerpání omezení, to znamená, že všechna omezení musí být přesně splněna. To může mít za následek, že hodnota účelové funkce bude nižší než v případě, kdyby nebyla vyžadována plná realizace omezení.
+    - Nebude maximalni. Napr. prodelame
 
 27. **Jak se formuluje úloha celočíselného lineárního programování a naznačte, jak se to projeví v řešení.**
 
     - Úloha celočíselného lineárního programování je úloha, ve které jsou proměnné omezeny na celočíselné hodnoty. To může způsobit, že řešení úlohy bude omezeno na diskrétní hodnoty a může být obtížné nalézt optimální řešení.
 
+    - lineární programování + podmínka řešení v celých číslech
+    - Optimální řešení se nemusí nacházet na hranici polyedru omezení
+    - Hodnota účelové funkce při celočíselném řešení je obvykle „horší“ než v neceločíselném
+
 28. **Je celočíselné zaokrouhlení cestou k řešení úlohy celočíselného programování?**
 
-    - Celočíselné zaokrouhlení není vždy cestou k řešení úlohy celočíselného programování. Existují metody, které se snaží nalézt optimální řešení bez nutnosti zaokrouhlování.
+    - Ne
 
 29. **Formulujte úlohu síťové (grafické) formy dynamického programování a popište postup řešení.**
 
-    - Úloha síťové formy dynamického programování spočívá v hledání nejlepší cesty v orientovaném grafu s ohodnocenými hranami. Postup řešení zahrnuje vytvoření grafu, nalezení nejkratších cest a určení optimální cesty.
+    - formou grafu a jednou od cile k pocatku a jednou, jedna cesta mne vylouci nemozne (slepe ulicky), druha cesta udela souvislou krivku spojeni
 
 30. **Popište způsob řešení úlohy dynamického programování v tabulce dynamického programování.**
 
@@ -120,7 +133,8 @@
 
 31. **Které osobnosti znáte jako tvůrce moderní teorie her.**
 
-    - Mezi tvůrce moderní teorie her patří John von Neumann, Oskar Morgenstern, John Nash a Robert Aumann.
+    - Pocatky: Daniel Bernoulli, Gabriel Cramer, Daniel Bernoulli, Émile Borel
+    - Modernejsi: John von Neumann, Oskarem Morgensternem, John Forbes Nash, Reinhardem Seltenem a Johnem C. Harsanyim, T. C. Schellingovi a R.J.Aumannovi
 
 32. **Jaké znáte základní principy v teorii rozhodování? Vyjmenujte aspoň dva.**
 
@@ -141,6 +155,8 @@
 36. **Jaký je rozdíl mezi čistou a smíšenou strategií?**
 
     - Čistá strategie je strategie, ve které hráč volí jedno konkrétní rozhodnutí. Smíšená strategie je strategie, ve které hráč volí rozhodnutí s určitou pravděpodobností.
+    - Cista (ryzi) – horni a dolni cesta jsou totozne
+    - Matice nema sedlovy prvek – reseni bude pouze ve smisenych strategiich
 
 37. **Jaký je vztah čisté strategie a sedlového prvku matice.**
 
@@ -157,3 +173,41 @@
 40. **Popište způsob převodu smíšené strategie na úlohu lineárního programování.**
 
     - Převod smíšené strategie na úlohu lineárního programování spočívá v převedení pravděpodobností výběru jednotlivých rozhodnutí na proměnné omezené na nezáporné hodnoty a formulování omezení a účelové funkce pomocí těchto proměnných.
+
+41. **definujte stacionární bod spojité reálné funkce jedné proměnné**
+
+    - bod, ve kterém je derivace funkce v tomto bodě rovna nule.
+
+42. **jak se odečte řešení duální úlohy lineárního programování ze simplexové tabulky primární úlohy?**
+
+    - Ze simplexové tabulky primární úlohy pomocí hodnot duálních proměnných v posledním sloupci.
+
+43. **jak se nazývá hlavní princip používaný v dynamickém programování?**
+
+    - Bellmanův princip
+
+44. **formulujte podmínky pro volný lokální extrém spojité funkce více proměnných**
+
+    - gradient funkce musí být roven nule a determinant Hessovy matice musí být různý od nuly
+
+45. **Formulujte neklasický vázaný extrém**
+
+    - hledání extrémů funkce za přítomnosti omezení ve formě rovnic a/nebo nerovnic, která nejsou lineární
+
+46. **Formulujte podmínky pro volný lokální extrém spojité funkce více proměnných**
+
+    - gradient funkce musí být roven nule a determinant Hessovy matice musí být různý od nuly
+
+47. **Definujte základní úlohu lineárního programování**
+
+    - Ax ≤ b, x ≥ 0
+    - definice: základní úloha lineárního programování je úloha, kterou chceme řešit, zatímco duální úloha je úloha, která je odvozena z primární úlohy a slouží k nalezení dolního a horního odhadu optimální hodnoty.
+
+48. **Definujte separovatelnou funkci reálné funkce n reálných proměnných**
+
+    - $f(x_1, x_2, ..., x_n) = \sum_{i=1}^{n} f_i(x_i)$
+
+49. **Jak se pozná pozitivně a negativně definitní čtvercová číselná matice?**
+
+    - pozitivně definitní: determinanty všech hlavních podmatic jsou kladné
+    - negativně definitní: determinanty všech hlavních podmatic jsou záporné
