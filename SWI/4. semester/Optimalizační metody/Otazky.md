@@ -138,11 +138,18 @@
 
 32. **Jaké znáte základní principy v teorii rozhodování? Vyjmenujte aspoň dva.**
 
-    - Základními principy v teorii rozhodování jsou princip maximalizace očekávaného užitku a princip minimalizace rizika.
+    - Princip minimaxní (pesimistické) kritérium
+    - Princip maximaxní (optimistické) kritérium
+    - Hurwitzovo kritérium,
+    - Minimalizace funkce lítosti,
+    - Laplaceův princip,
+    - Bernouliho princip,
+    - Cramérův princip postoje k riziku,
+    - Rozhodování o preferencích, atd.
 
 33. **Co je funkce užitku v teorii rozhodování?**
 
-    - Funkce užitku v teorii rozhodování je matematická funkce, která přiřazuje různým výsledkům rozhodnutí hodnotu reprezentující subjektivní užitek.
+    - poskytují jednoduché a jasné pravidlo pro rozřešení obtížných rozhodovacích situací
 
 34. **Co je maticová hra dvou hráčů?**
 
@@ -150,7 +157,7 @@
 
 35. **Co je dolní cena hry a horní cena hry?**
 
-    - Dolní cena hry je největší hodnota, kterou hráč 1 může garantovat, ať se hráč 2 rozhodne jakkoli. Horní cena hry je nejmenší hodnota, kterou hráč 2 může garantovat, ať se hráč 1 rozhodne jakkoli.
+    - Maximum z minim se nazývá dolní cena hry, minimum z maxim se nazývá horní cena hry
 
 36. **Jaký je rozdíl mezi čistou a smíšenou strategií?**
 
@@ -160,7 +167,9 @@
 
 37. **Jaký je vztah čisté strategie a sedlového prvku matice.**
 
-    - Sedlový prvek matice je prvek, který je největší ve svém sloupci a nejmenší ve svém řádku. Čistá strategie je strategie, která odpovídá sedlovému prvku matice.
+    - sedlovy prvek matice obsahuje hodnotu optimalniho reseni a take strategii, kterou maji hraci vyuzit
+    - Sedlový bod a čistá strategie existuje právě tehdy, jestliže horní a dolní cena hry jsou totožné
+    - Vyjadřuje optimální řešení maticové hry
 
 38. **Popište, jak se nalezne sedlový prvek matice.**
 
