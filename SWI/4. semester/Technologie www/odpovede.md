@@ -1,0 +1,53 @@
+- Login rozhranie:
+  - action, post, username, password
+- Bootstrap width:
+  - col-6, col-3
+- svg:
+  - žlté s tenkým okrajom
+- JS DOM:
+  - querySelector
+  - getElementById
+  - getElementsByClassName
+- Pripojenie js
+  - ```<script src="script.js"></script>```
+- color:
+  - červená
+- odkaz
+  - ```<a href="static.html">Click here</a>```
+- HTML DOM:
+  - Rozhraní pro práci s událostmi webového dokumentu
+  - Ruzných metod objektu dokumnt pro přístup k HTML značkám
+  - Přístup k HTML značkám, reprezentovaným pomocí JavaScript objektů
+  - Přístup k vlastnostem JavaScriptu objektu, které umožňují získání či změnu HTML atributů či obsahu značek
+- Autorem projektu WWW je:
+  - Tim Berners-Lee
+- http 500:
+  - Nepravda
+  - Internal Server Error
+- Neziskové organizace:
+  - ICAN (tu je chyba, ICANN)
+  - W3
+  - (IP, AB - nejsou neziskové, chyba v otazke)
+- DELEte protokolu HTTP:
+  - Umožňuje odstranit objekt (specifický zdroj) na straně serveru
+- Doplnte najeti myší na div:
+  - div, transition, 2s, hover
+- http komunikace ve znění:
+  - Že klient zažádal server o zaslání zdrojového kódu souboru, ležícího v rootu webového serveru www.utb.cz
+- obrázek, blokový element:
+  - v zákldních stylech prohlížeče
+- kód zobrazí (list):
+  1. Coffee
+  2. Tea
+  3. Milk
+- Bootstrap FW .btn:
+  - btn btn-success
+- Http 200:
+  - pravda
+  - Vše v pořádku
+- http poskytuje:
+  - POST
+  - PUT
+  - GET
+- připojení CSS:
+  - ```<link rel="stylesheet" href="style.css">```

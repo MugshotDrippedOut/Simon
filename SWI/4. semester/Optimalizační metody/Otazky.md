@@ -219,4 +219,7 @@
 49. **Jak se pozná pozitivně a negativně definitní čtvercová číselná matice?**
 
     - pozitivně definitní: determinanty všech hlavních podmatic jsou kladné
-    - negativně definitní: determinanty všech hlavních podmatic jsou záporné
+    - negativně definitní: determinanty hlavních podmatic se střídají ve znaménku a první je záporný
+    - pozitivně semidefinitní: determinanty hlavních podmatic jsou nezáporné a první je nulový
+    - negativně semidefinitní: determinanty hlavních podmatic se střídají ve znaménku a první je nulový
+    - indefinitní: determinanty hlavních podmatic se střídají ve znaménku a první je kladný (sedlový bod) 
