@@ -80,6 +80,7 @@
 20. **Popište primární a duální úlohu lineárního programování.**
 
     - Primární úloha lineárního programování je úloha, kterou chceme řešit, zatímco duální úloha je úloha, která je odvozena z primární úlohy a slouží k nalezení dolního a horního odhadu optimální hodnoty.
+    - Ke každému primárnímu modelu úlohy LP lze přiradit tzv.duální model LP. Zatím co puvodní úloha LP se zabýva otázkou určení úrovne procesu, je úkolem duálního problému stanovit "ceny" činitelů
 
 21. **Jak může vypadat množina přípustných řešení úlohy lineárního programování?**
 
@@ -222,4 +223,7 @@
     - negativně definitní: determinanty hlavních podmatic se střídají ve znaménku a první je záporný
     - pozitivně semidefinitní: determinanty hlavních podmatic jsou nezáporné a první je nulový
     - negativně semidefinitní: determinanty hlavních podmatic se střídají ve znaménku a první je nulový
-    - indefinitní: determinanty hlavních podmatic se střídají ve znaménku a první je kladný (sedlový bod) 
+    - indefinitní: determinanty hlavních podmatic se střídají ve znaménku a první je kladný (sedlový bod)
+
+50. **Ve kterých bodech polyedru omezení se vyskytuje optimální řešení úlohy lineárního programování?**
+    - Vyskytuje se ve vrcholech , v některých případech i na hranách polyedru omezení
