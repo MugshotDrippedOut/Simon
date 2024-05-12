@@ -937,6 +937,8 @@ Frekvenční multiplex (FDM) rozděluje celkovou frekvenční šířku kanálu n
 - Přenášený signál by měl mít:
 
   - mít i stejnosměrnou složku = špatně
+  - mít nulovou stejnosměrnou složku -ChatGPT
+
 
 - Přenosová rychlost se udává v:
 
@@ -1746,9 +1748,9 @@ Které zařízení používá ke směrování dat adresy sít'ových protokolů?
 
   - 96
 
-- Kroucená dvojlinka se vyrábí v několika kategoriích. Pro rozvody LAN s přenosovou rychlostí1 Gbpsje možné použít kabeláž kategorie:
+- Kroucená dvojlinka se vyrábí v několika kategoriích. Pro rozvody LAN s přenosovou rychlostí1 Gbps je možné použít kabeláž kategorie:
 
-  -
+  - 5E 
 
 - Pasivní retranslaci u WLAN můžeme uskutečnit:
 
