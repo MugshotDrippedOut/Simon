@@ -939,7 +939,6 @@ Frekvenční multiplex (FDM) rozděluje celkovou frekvenční šířku kanálu n
   - mít i stejnosměrnou složku = špatně
   - mít nulovou stejnosměrnou složku -ChatGPT
 
-
 - Přenosová rychlost se udává v:
 
   - bps nebo b/s
@@ -1069,15 +1068,19 @@ Frekvenční multiplex (FDM) rozděluje celkovou frekvenční šířku kanálu n
   - Soubor pravidel umožňující výměnu dat přes počítačovou síť
 
 - Skoková změna indexu lomu se používá:
+
   - u jednovidovych i mnohovidovych vláken
 
-- Snížení napětí signálu v dB na 25% 
+- Snížení napětí signálu v dB na 25%
+
   - -12
 
-- Snížení napětí signálu v dB na 50% 
+- Snížení napětí signálu v dB na 50%
+
   - -6
 
-- Snížení výkonu signálu v dB na 25% 
+- Snížení výkonu signálu v dB na 25%
+
   - -6
 
 - Správný tvar IPX/SPX adresy je:
@@ -1750,7 +1753,7 @@ Které zařízení používá ke směrování dat adresy sít'ových protokolů?
 
 - Kroucená dvojlinka se vyrábí v několika kategoriích. Pro rozvody LAN s přenosovou rychlostí1 Gbps je možné použít kabeláž kategorie:
 
-  - 5E 
+  - 5E
 
 - Pasivní retranslaci u WLAN můžeme uskutečnit:
 
@@ -2194,8 +2197,7 @@ Které zařízení používá ke směrování dat adresy sít'ových protokolů?
 
 - Která adresa má správný tvar a hodnotu IPX/SPX adresy:
 
-  - 000000F5:
-    -00A78DE0004B.
+  - 000000F5:00A78DE0004B.
 
 - Na které vrstvě modelu OSI pracují protokoly ARP a RARP (zařaďte dle použití IP adres v protokolech ARP a RARP)?
 
@@ -2216,3 +2218,4 @@ Obrázky:
 
 ![alt text](download.png)
 ![alt text](download-1.png)
+
