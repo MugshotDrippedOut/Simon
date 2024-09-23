@@ -39,7 +39,13 @@ venv.bak/
 
 # LibreOffice locks
 .~lock.*#
+
+
 SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 2/vector_test_zadani-main/cmake-build-debug/_deps/ioutils-src/
 SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 2/vector_test_zadani-main/cmake-build-debug/_deps/mymalloc-src/
 SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 3/DTMF_generator-master/cmake-build-debug/_deps/ioutils-src/
 SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 3/DTMF_generator-master/cmake-build-debug/_deps/mymalloc-src/
+
+# C++ builds
+SWI/**/build/*
+!build/build.xml
