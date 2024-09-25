@@ -1,0 +1,10 @@
+{
+  "appId": "cz.utb.fai.demoapp",
+  "appName": "DemoApp",
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  }
+}
