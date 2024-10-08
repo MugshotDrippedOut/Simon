@@ -49,3 +49,21 @@ SWI/4. semester/Algoritmy a datové struktury/Cvika/Ukol 3/DTMF_generator-master
 # C++ builds
 SWI/**/build/*
 !build/build.xml
+
+# my files
+SWI/5. semester/Programovani mobilnich aplikaci/cviko/
+
+# every  apk and exe file (or other big files)
+*.apk
+*.exe
+*.dll
+*.so
+*.dylib
+*.zip
+*.tar.gz
+*.rar
+*.tar
+*.gz
+*.7z
+*.dmg
+*.iso
