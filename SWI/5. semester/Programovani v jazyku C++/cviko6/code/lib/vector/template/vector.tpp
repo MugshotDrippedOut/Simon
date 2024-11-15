@@ -13,3 +13,4 @@ std::ostream& operator<<(std::ostream& os, const Vector<T>& vec) {
     os << "Vector(" << vec.getX() << ")";
     return os;
 }
+
