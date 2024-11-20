@@ -63,10 +63,52 @@ public:
     }
 };
 
+
+template <class T>
+concept Addable = requires(T a, T b){
+    {a +b} -> std::same_as<T>;
+};
+
+
+template <Addable T>
+T add(T a, T b)
+{
+    return a + b;
+};
+
+
+template <class T, class S>
+concept MyScalabe = requires(T a, S b){
+    {a*b} -> std::same_as<T>;
+}
+
+template <class T, class S>
+    requires MyScalable<T,S>
+T myScale (T a, S b){
+    return a*b;
+};
 using namespace std;
+
+class Rectangle{
+private:
+    int _a,_b;
+public:
+    Rectangle(int a, int b) : _a(a), _b(b) {};
+
+    friend std::ostream &operator<<(std::ostream &os, const Rectangle &rec) {
+        os << "Rectangle(" << rec._a <<","<< rec._b<< ")" <<std::endl;
+    }
+
+    Rectangle operator*(int scalar) const{
+        return Rectangle(_a * scalar);
+    } 
+};
+
 
 int main()
 {
+    cout << add(1, 2) << endl;
+
     auto result = scale(Square(4), 2);
 
     cout << scale(Circle(1), 1) << endl;
