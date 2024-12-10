@@ -30,19 +30,7 @@ testy jsou za bod navíc
 #include <iostream>
 #include "point.h"
 
-template <class T>
-class Days {
-private:
-    T _day;
-public:
-    Days(T day) : _day(day) {}
-    T getDay() const { return _day; }
 
-    friend std::ostream& operator<<(std::ostream& os, const Days& days) {
-    os << "Days(" << days.getDay() << " days)";
-    return os;
-    }
-};
 
 class Hours {
 private:
@@ -84,7 +72,6 @@ public:
     }
 };
 
-template <class T>
 class Time {
 private:
     int _year;
@@ -161,21 +148,6 @@ public:
         return Time(newYear, newDay, newMonth, newHour, _minute);
     }
 
-    Time operator+(const Days& days) const {
-        int newDay = _day + days.getDay();
-        int newMonth = _month;
-        int newYear = _year;
-        if (newDay > 30) {
-            newDay -= 30;
-            newMonth++;
-        }
-        if (newMonth > 12) {
-            newMonth -= 12;
-            newYear++;
-        }
-
-        return Time(newYear, newDay, newMonth, _hour, _minute);
-    }
     
     friend std::ostream& operator<<(std::ostream& os, const Time& time) {
         os << "Time(" << time.getYear() << " " << time.getDay() << "." << time.getMonth() << " " << time.getHour() << ":" << time.getMinute() << ")";
@@ -219,6 +191,5 @@ int main() {
     std::cout << newTimePoint2 << std::endl;
 
 
-    const Point<int> daysPoint(Days(5));
     return 0;
 }
