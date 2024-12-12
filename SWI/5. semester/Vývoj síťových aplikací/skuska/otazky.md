@@ -225,7 +225,7 @@
 <!-- 12 DUPLICIDNA -->
 <!-- 13 -->
 
-- Seřaďte správně kroky pro implementaci telnet klienta s funkcionalitou přijímání a odesílání zpráv přes socket.
+- ### Seřaďte správně kroky pro implementaci telnet klienta s funkcionalitou přijímání a odesílání zpráv přes socket.
 
   - <!-- Nedáva zmysel aby záležalo na poradí tvorby streamov -->
 
@@ -407,7 +407,7 @@
 
 - ### Jaký kód použít pro zpracování/přijetí klientského připojení u serveru v Javě, pokud již máte otevřený ServerSocket?
     
-      - Socket socket = serverSocket.accept();
+    - Socket socket = serverSocket.accept();
 
 - ### Pokud v Spring JPA použiváte anotaci @GeneratedValue, jaký atribut určujete pro výběr konkrétní strategie generování ID?
     
@@ -420,7 +420,6 @@
 - ### Jaká metoda se využívá pro načtení HTML obsah z URL pomocí knihovny Jsoup?
 
     - Jsoup.connect(url).get()
-
 
 
 - ### Na jakém portu standardně bēži SMTP server?
