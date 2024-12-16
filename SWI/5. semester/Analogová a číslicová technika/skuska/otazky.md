@@ -49,7 +49,21 @@
       - chyba nuly – je dána posunem převodní charakteristiky ve směru osy N
       - chyba linearity převodu
       - Kvantizační šum - rozdíl kvantovaného a vstupního spojitého signálu
+    - Typy:
+      - unipolární – vstupní rozsah 0 až Umax
+      - bipolární – vstupní rozsah –Umax až Umax
+      - komparační (neintegrační) – převádí na číslo okamžitou hodnotu vstupního napětí v určitém časovém okamžiku převodu
+      - integrační – převádí na číslo průměrnou hodnotu napětí za určitý časový interval
 40. **Č/A převodníky, princip činnosti, typy převodníků a jejich chyby.**
+    - jde o digitálněanalogový převodník
+    - princip činnosti:
+      - převádí binární datová slova D na analogovou hodnotu napětí U
+      - využívají se např. k nastavení analogových regulátorů pomocí PC
+        ![alt text](imgs/prevodnikDA.png)
+    - typy:
+      - DA převodník s odstupňovanými rezistory
+        - obsahuje odporový převodník jednotlivých cifer binárního čísla na proudy odpovídající vahám těchto cifer
+      -
 
 # SKÚŠKA
 
@@ -66,11 +80,26 @@
 1. diody obrz
 2. tranzistor obrz
 3. tabulka, k. mapa a zapojení polosčítačky a poté nakreslit 4-bit sčítačku
+
 4. zase k. mapa jako u toho testu předem
-5. dvousetný usměrnovač
+
+5. Dvojcestný usměrňovač
+
+   - ![alt text](imgs/dvoucestny.png)
+
 6. co je to diak, schematická značka a k čemu se používá
+
+   - dioda pre striedavý prúd
+   - značka sú dve diody velda seba preškrtnuté
+   - ![alt text](imgs/diak.png)
+   - používa sa na prepínanie obvodov, sepne překročením blokovacího napětí
+
 7. popis rozdíl mezi logickým a analogovým komparatorem
+   - logický - vyhodnocuje pouze rovnost či nerovnost srovnávaných čísel (1 nebo 0)
+   - analogový - vyhodnocuje relace =, >, <
 8. k čemu slouží multiplexer
+
+   - elektronické přepínače logických signálů.Přepínání je ovládáno výběrovým (adresovým) signálem
 
    ![alt](imgs/skuska1-1.jpg)
    ![alt](imgs/skuska1-2.jpg)
@@ -92,8 +121,23 @@
 ### 3. Varianta
 
 5. parametry polovodicovych diod
+   - Medzi polovodičom P a polovodičom N je hraničná plocha (PN prechod)
 6. neco s tyristorem a jake mame druhy
+
+   - Princíp:
+
+     - Tyristor je polovodičová součástka, která má tři vrstvy polovodiče (NPN nebo PNP) a je schopna udržet vodivý stav i po odebrání spínacího signálu. Tyristor se spíná pomocí krátkého pulzního signálu na jeho řídící elektrodě (gate). Tyristor se spíná do vodivého stavu až po překročení určitého prahového napětí na anodě a zároveň přivedení spínacího signálu na gate. Tyristor se vypíná až po snížení proudu na nulu. Tyristor je nespínatelný zpět do blokovacího stavu, dokud proud nepoklesne na nulu.
+
+   - Druhy tyristorů:
+     - Tyristor
+     - Triak
+     - Diak
+
 7. jake zname cislicove soustavy
+    - binární
+    - osmičková
+    - desítková
+    - hexadecimální
 8. co je to multiplexer a k cemu se pouziva
 
    ![alt](imgs/skuska3-1.jpg)
