@@ -26,16 +26,65 @@
 24. **Statické (převodní, vstupní, výstupní, zatěžovací) a dynamické parametry TTL hradel. Měření parametrů hradel.**
 25. **Logický zisk. Typy výstupů hradel TTL (s aktivním a pasivním výstupem, s otevřeným kolektorem, s třístavovým výstupem). Modifikace obvodů TTL.**
 26. **Obvody CMOS. Princip činnosti investoru CMOS, princip činnosti hradla NAND v technologii CMOS. Charakteristiky CMOS obvodů. Propojení TTL a CMOS obvodů.**
+    - Přednosti CMOS technologií:
+      - malá statická spotřeba
+      - větší hustota obvodů
+      - jednodušší výroba
+    - ![alt text](image-1.png)
 27. **Princip dekodérů, konstrukce dekodérů. Dekodér BIN na 1 ze 4, dekodér BCD na 1 z 10. Integrované verze dekodérů.**
+    - Dekodér - převádí informaci z jiného druhu kódu na kód k z n
+    - ![alt text](image.png)
 28. **Kodéry a rekodéry. Kodér 1 z 10 na BCD, dekodér z 8421 na 2421. Rekodér pro sedmisegmentový displej, jeho režimy.**
 29. **Multiplexery a demultiplexery, multiplexerová logika.**
+    - Multiplexer - elektronické přepínače logických signálů. Přepínání je ovládáno výběrovým (adresovým) signálem
+    - Demultiplexer - přepíná v závislosti na výběrovém kódu jediný logický vstupní signál na jeden u n výstupů
 30. **Elektronické komparátory, využití funkce XOR a XNOR pro konstrukci komparátorů.**
 31. **Číslicové obvody pro aritmetické operace. Binární polosčítačka a úplná sčítačka, BCD sčítačka. Aritmeticko – logická jednotka.**
+
+    - BCD - Binary Coded Decimal
+    - Aritmeticko-logická jednotka (ALU) je část procesoru, která provádí aritmetické a logické operace.
+
 32. **Klopné obvody RS a D, jednotlivé typy.**
+    - RS klopný obvod
+      - vstup R (reset) – nulovací
+      - vstup S (set) - nastavovací
+      - výstupy Q a !Q
+      - vstupní hodnoty:
+        - R = 0, S = 0 – stav paměti
+        - R = 0, S = 1 – stav reset
+        - R = 1, S = 0 – stav set
+        - R = 1, S = 1 – nedovolený stav X
+    - D klopný obvod
+      - jde o synchronní klopný obvod
+      - má jeden vstup D
+      - výstupy Q a !Q
+      - vstupní hodnoty:
+        - D = 0 – stav reset
+        - D = 1 – stav set
 33. **Klopné obvody JK, využití klopných obvodů pro návrh sekvenčního obvodu.**
+
+    - JK klopny obvod je nejvíce univerzální klopný obvod.
+
+    |     | J   | K   | Qn    |
+    | --- | --- | --- | ----- |
+    | 1   | L   | L   | Qn-1  |
+    | 2   | H   | L   | L     |
+    | 3   | L   | H   | H     |
+    | 4   | H   | H   | !Qn-1 |
+
+    - řádek 2, 3 – výstup odpovídá vstupu na J
+    - řádek 1 - pamatuje předchozí stav
+    - řádek 4 – inverzní k předchozímu stavu
+
 34. **Posuvné registry, statické a dynamické registry.**
+    - Posuvné registry - slouží k posouvání vstupní sériové nebo paralelní informace
+    - Statické - vstupní informace se zapisuje do vstupních klopných obvodů a výstupní informace se zapisuje do výstupních klopných obvodů
+    - Dynamické - vstupní informace se zapisuje do vstupních klopných obvodů a výstupní informace se zapisuje do výstupních klopných obvodů a zároveň se posouvá do dalšího klopného obvodu
 35. **Asynchronní čítače, princip činnosti, integrované verze.**
+    - odinový puls je vázán na výstup předchozího vstupu
 36. **Synchronní čítače, princip činnosti, integrované verze.**
+    - hodinové vstupy jsou navázány paralelně na
+      vstupní impulsy
 37. **Dělič frekvence, konstrukce pomocí čítačů.**
 38. **Vzorkovače, princip činnosti, chyby vzorkovačů.**
 39. **A/Č převodníky, princip činnosti, typy převodníků a jejich chyby.**
@@ -63,7 +112,8 @@
     - typy:
       - DA převodník s odstupňovanými rezistory
         - obsahuje odporový převodník jednotlivých cifer binárního čísla na proudy odpovídající vahám těchto cifer
-      -
+      - DA převodník s rezistorovou sítí
+        - obsahuje rezistorovou síť, která je připojena k operačnímu zesilovači
 
 # SKÚŠKA
 
@@ -115,6 +165,8 @@
 1. popis rozdíl mezi logickým a analogovým komparatorem
 1. k čemu slouží multiplexer
 
+   - Elektronické přepínače logických signálů. Přepínání je ovládáno výběrovým (adresovým) signálem
+
    ![alt](imgs/skuska2-1.jpg)
    ![alt](imgs/skuska2-2.jpg)
 
@@ -134,10 +186,10 @@
      - Diak
 
 7. jake zname cislicove soustavy
-    - binární
-    - osmičková
-    - desítková
-    - hexadecimální
+   - binární
+   - osmičková
+   - desítková
+   - hexadecimální
 8. co je to multiplexer a k cemu se pouziva
 
    ![alt](imgs/skuska3-1.jpg)
