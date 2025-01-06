@@ -2,13 +2,15 @@
 
 1. (3 B) Nakreslete blokové schéma jednočipového mikropočitače a stručně popište jednotlivé části a jejich účel.
 
-   - ![alt](/Imgs/jednocipovy.excalidraw.png)
+   - ![alt](/Imgs/jednocipovy1.png)
    - CPU - mikroprocesor
    - Paměť - RAM + ROM
    - I/O - vstupy a výstupy
-   - CLK - hodinový signál
-   - Čítač - čítač pro časovač
    - ADC - A/D převodník
+   - Časovač - generování časových signálů
+   - Hodinový generátor - generování hodinového signálu
+   - Komunikační rozhraní - SCI, SPI... - komunikace s periferiemi
+   - Vnitřní sběrnice - propojení jednotlivých bloků
 
 2. (3 B) Co znamená zkratka CISC? Čím jsou charakteristické procesory využívajíci instrukční sadu typu CISC?
 
