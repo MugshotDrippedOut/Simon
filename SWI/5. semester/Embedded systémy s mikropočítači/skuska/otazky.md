@@ -15,11 +15,11 @@
 2. (3 B) Co znamená zkratka CISC? Čím jsou charakteristické procesory využívajíci instrukční sadu typu CISC?
 
    - CISC - Complex Instruction Set Computer
-   - Procesory mohou obsahovat velké množství instrukcí, které mohou být velmi složité a mohou pracovat s pamětí přímo.
+   - Instrukční sada obsahuje složité instrukce, které mohou pracovat s pamětí přímo, mohou být proměnné délky, mohou obsahovat složité adresovací režimy
 
 3. (3 B) Vysvětlete, jak funguje cyklické plánování u operačního systému. Uvěďte také příklad chování systému např. se třemi procesy (úlohami).
 
-   - Proces se přideluje v časových kvantech po skončení kvanta na konec té fronty tech procesů
+   - Proces se přideluje v časových kvantech, po skončení kvanta se proces přesune na konec fronty
    - 1. Proces A začíná a běží po dobu určitého času (napr 20ms)
    - 2. Proces A je přesunut na konec fronty a proces B začíná běžet (20ms)
    - 3. Proces B je přesunut na konec fronty a proces C začíná běžet (20ms)
@@ -365,74 +365,74 @@
 
 3.  (3 B) Vysvětlete, jak funguje cyklické plánování u operačního systému. Uvěďte také příklad chování systému např. se třemi procesy (úlohami).
 
-    - Proces se přideluje v časových kvantech po skončení kvanta na konec té fronty tech procesů
-    - 1. Proces A začíná a běží po dobu určitého času (napr 20ms)
-    - 2. Proces A je přesunut na konec fronty a proces B začíná běžet (20ms)
-    - 3. Proces B je přesunut na konec fronty a proces C začíná běžet (20ms)
-    - 4. Proces C je přesunut na konec fronty a proces A začíná běžet (20ms)
+- Proces se přideluje v časových kvantech, po skončení kvanta se proces přesune na konec fronty
+  - 1. Proces A začíná a běží po dobu určitého času (napr 20ms)
+  - 2. Proces A je přesunut na konec fronty a proces B začíná běžet (20ms)
+  - 3. Proces B je přesunut na konec fronty a proces C začíná běžet (20ms)
+  - 4. Proces C je přesunut na konec fronty a proces A začíná běžet (20ms)
 
-4.  (2 B) Napište masku pro vynulování (clear) bitu 6 v registru REG pro použití v následujícim kódu:
+1.  (2 B) Napište masku pro vynulování (clear) bitu 6 v registru REG pro použití v následujícim kódu:
 
     - REG & =~ MASKA;
     - MASKA = 1 << 6;
 
-5.  (2 B) Napište v jazyku C podmínku, která bude splněna, když bit 0 v registru REG bude nulový
+2.  (2 B) Napište v jazyku C podmínku, která bude splněna, když bit 0 v registru REG bude nulový
 
     - if (!(REG & (1 << 0))) {}
 
-6.  (1 B) Mikropočitač obsahuje procesor, paměti a dalši obvody, např. časovače.
+3.  (1 B) Mikropočitač obsahuje procesor, paměti a dalši obvody, např. časovače.
 
     - Pravda
 
-7.  (1 B) Mezi základní typy pamětí používaných v současných mikropočítačích patři paměť RAM a FLASH.
+4.  (1 B) Mezi základní typy pamětí používaných v současných mikropočítačích patři paměť RAM a FLASH.
 
     - Pravda
 
-8.  (1 B) Instrukční soubor obsahuje u současných mikropočítačů obvykle několik desítek až několik stovek instrukcl.
+5.  (1 B) Instrukční soubor obsahuje u současných mikropočítačů obvykle několik desítek až několik stovek instrukcl.
 
     - Pravda
 
-9.  (1 B) Zásobník u mikropočítače HCS08 funguje na principu FIFO (první dovnitř - první ven).
+6.  (1 B) Zásobník u mikropočítače HCS08 funguje na principu FIFO (první dovnitř - první ven).
 
     - Nepravda <!-- Zásobník u mikropočítače HCS08 funguje na principu LIFO (poslední dovnitř - první ven). -->
 
-10. (1 B) Při paralelní komunikaci se přenáší více bitů současně. Při sériové komunikaci se přenášejí jednotlivé bity za sebou.
+7.  (1 B) Při paralelní komunikaci se přenáší více bitů současně. Při sériové komunikaci se přenášejí jednotlivé bity za sebou.
 
     - Pravda
 
-11. (1 B) Při příchodu přerušení procesor okamžitě začne vykonávat obsluhu přerušení, aniž by dokončil právě prováděnou instrukci. Rozpracovaná instrukce je uložena na zásobník.
+8.  (1 B) Při příchodu přerušení procesor okamžitě začne vykonávat obsluhu přerušení, aniž by dokončil právě prováděnou instrukci. Rozpracovaná instrukce je uložena na zásobník.
 
     - Nepravda <!-- Procesor dokončí právě prováděnou instrukci a teprve poté začne vykonávat obsluhu přerušení. -->
 
-12. (1 B) Procesor mikropočítače ukládá při příchodu přerušení na zásobník všechny lokální proměnné, se kterými přerušený program pracoval.
+9.  (1 B) Procesor mikropočítače ukládá při příchodu přerušení na zásobník všechny lokální proměnné, se kterými přerušený program pracoval.
 
     - Nepravda <!-- Procesor ukládá na zásobník pouze některé registry a některé informace o stavu procesoru. -->
 
-13. (1 B) Pro konfiguraci A/D převodníku u mikropočítače KL25Z se používají speciální funkce obsažené v paměti ROM mikropočítače přímo z výroby a vyvolávané z uživatelského programu pomocí instrukce CALL.
+10. (1 B) Pro konfiguraci A/D převodníku u mikropočítače KL25Z se používají speciální funkce obsažené v paměti ROM mikropočítače přímo z výroby a vyvolávané z uživatelského programu pomocí instrukce CALL.
 
     - Nepravda <!-- Konfigurace A/D převodníku se obvykle provádí zápisem do speciálních registrů, které ovlivňují chování A/D převodníku. -->
 
-14. (1 B) Rozlišení A/D převodníku u mikropočítačů bývá obvykle v rozsahu 8 až 16 bitů.
+11. (1 B) Rozlišení A/D převodníku u mikropočítačů bývá obvykle v rozsahu 8 až 16 bitů.
 
     - Pravda
 
-15. (1 B) Základní odlišností mezi operačním systémem reálného času (RTOS) a běžným operačním systémem je doba odezvy. Ta je u RTOS několikanásobně kratší (řádově milisekundy).
+12. (1 B) Základní odlišností mezi operačním systémem reálného času (RTOS) a běžným operačním systémem je doba odezvy. Ta je u RTOS několikanásobně kratší (řádově milisekundy).
 
     - Pravda
 
-16. (1 B) Proces, který je připraven k vykonávání, ale není právě vykonáván procesorem, např. proto, že se právě provádí proces s vyšší prioritou, se označuje jako připravený (ready).
+13. (1 B) Proces, který je připraven k vykonávání, ale není právě vykonáván procesorem, např. proto, že se právě provádí proces s vyšší prioritou, se označuje jako připravený (ready).
 
     - Pravda
 
-17. (1 B) FreeRTOS je operační systém reálného času (RTOS).
+14. (1 B) FreeRTOS je operační systém reálného času (RTOS).
 
     - Pravda
 
-18. (1 B) Instrukční sada používaná u procesorů ARM Cortex-M se nazývá SIS (Super Instruction Set).
+15. (1 B) Instrukční sada používaná u procesorů ARM Cortex-M se nazývá SIS (Super Instruction Set).
 
     - Nepravda <!-- Instrukční sada používaná u procesorů ARM Cortex-M se nazývá Thumb. -->
 
-19. (1 B) Mechanizmus pipeline znamená, že instrukce jsou do procesoru přenášeny z paměti přes tzv. rouru (pipe) a nikoliv přes sběrnice.
+16. (1 B) Mechanizmus pipeline znamená, že instrukce jsou do procesoru přenášeny z paměti přes tzv. rouru (pipe) a nikoliv přes sběrnice.
 
     - Nepravda <!-- Mechanizmus pipeline znamená, že instrukce jsou zpracovávány paralelně, tj. několik instrukcí je zpracováváno současně. -->
 
