@@ -365,76 +365,230 @@
 
 3.  (3 B) Vysvětlete, jak funguje cyklické plánování u operačního systému. Uvěďte také příklad chování systému např. se třemi procesy (úlohami).
 
-- Proces se přideluje v časových kvantech, po skončení kvanta se proces přesune na konec fronty
-  - 1. Proces A začíná a běží po dobu určitého času (napr 20ms)
-  - 2. Proces A je přesunut na konec fronty a proces B začíná běžet (20ms)
-  - 3. Proces B je přesunut na konec fronty a proces C začíná běžet (20ms)
-  - 4. Proces C je přesunut na konec fronty a proces A začíná běžet (20ms)
+    - Proces se přideluje v časových kvantech, po skončení kvanta se proces přesune na konec fronty
+      - 1. Proces A začíná a běží po dobu určitého času (napr 20ms)
+      - 2. Proces A je přesunut na konec fronty a proces B začíná běžet (20ms)
+      - 3. Proces B je přesunut na konec fronty a proces C začíná běžet (20ms)
+      - 4. Proces C je přesunut na konec fronty a proces A začíná běžet (20ms)
 
-1.  (2 B) Napište masku pro vynulování (clear) bitu 6 v registru REG pro použití v následujícim kódu:
+4.  (2 B) Napište masku pro vynulování (clear) bitu 6 v registru REG pro použití v následujícim kódu:
 
     - REG & =~ MASKA;
     - MASKA = 1 << 6;
 
-2.  (2 B) Napište v jazyku C podmínku, která bude splněna, když bit 0 v registru REG bude nulový
+5.  (2 B) Napište v jazyku C podmínku, která bude splněna, když bit 0 v registru REG bude nulový
 
     - if (!(REG & (1 << 0))) {}
 
-3.  (1 B) Mikropočitač obsahuje procesor, paměti a dalši obvody, např. časovače.
+6.  (1 B) Mikropočitač obsahuje procesor, paměti a dalši obvody, např. časovače.
 
     - Pravda
 
-4.  (1 B) Mezi základní typy pamětí používaných v současných mikropočítačích patři paměť RAM a FLASH.
+7.  (1 B) Mezi základní typy pamětí používaných v současných mikropočítačích patři paměť RAM a FLASH.
 
     - Pravda
 
-5.  (1 B) Instrukční soubor obsahuje u současných mikropočítačů obvykle několik desítek až několik stovek instrukcl.
+8.  (1 B) Instrukční soubor obsahuje u současných mikropočítačů obvykle několik desítek až několik stovek instrukcl.
 
     - Pravda
 
-6.  (1 B) Zásobník u mikropočítače HCS08 funguje na principu FIFO (první dovnitř - první ven).
+9.  (1 B) Zásobník u mikropočítače HCS08 funguje na principu FIFO (první dovnitř - první ven).
 
     - Nepravda <!-- Zásobník u mikropočítače HCS08 funguje na principu LIFO (poslední dovnitř - první ven). -->
 
-7.  (1 B) Při paralelní komunikaci se přenáší více bitů současně. Při sériové komunikaci se přenášejí jednotlivé bity za sebou.
+10. (1 B) Při paralelní komunikaci se přenáší více bitů současně. Při sériové komunikaci se přenášejí jednotlivé bity za sebou.
 
     - Pravda
 
-8.  (1 B) Při příchodu přerušení procesor okamžitě začne vykonávat obsluhu přerušení, aniž by dokončil právě prováděnou instrukci. Rozpracovaná instrukce je uložena na zásobník.
+11. (1 B) Při příchodu přerušení procesor okamžitě začne vykonávat obsluhu přerušení, aniž by dokončil právě prováděnou instrukci. Rozpracovaná instrukce je uložena na zásobník.
 
     - Nepravda <!-- Procesor dokončí právě prováděnou instrukci a teprve poté začne vykonávat obsluhu přerušení. -->
 
-9.  (1 B) Procesor mikropočítače ukládá při příchodu přerušení na zásobník všechny lokální proměnné, se kterými přerušený program pracoval.
+12. (1 B) Procesor mikropočítače ukládá při příchodu přerušení na zásobník všechny lokální proměnné, se kterými přerušený program pracoval.
 
     - Nepravda <!-- Procesor ukládá na zásobník pouze některé registry a některé informace o stavu procesoru. -->
 
-10. (1 B) Pro konfiguraci A/D převodníku u mikropočítače KL25Z se používají speciální funkce obsažené v paměti ROM mikropočítače přímo z výroby a vyvolávané z uživatelského programu pomocí instrukce CALL.
+13. (1 B) Pro konfiguraci A/D převodníku u mikropočítače KL25Z se používají speciální funkce obsažené v paměti ROM mikropočítače přímo z výroby a vyvolávané z uživatelského programu pomocí instrukce CALL.
 
     - Nepravda <!-- Konfigurace A/D převodníku se obvykle provádí zápisem do speciálních registrů, které ovlivňují chování A/D převodníku. -->
 
-11. (1 B) Rozlišení A/D převodníku u mikropočítačů bývá obvykle v rozsahu 8 až 16 bitů.
+14. (1 B) Rozlišení A/D převodníku u mikropočítačů bývá obvykle v rozsahu 8 až 16 bitů.
 
     - Pravda
 
-12. (1 B) Základní odlišností mezi operačním systémem reálného času (RTOS) a běžným operačním systémem je doba odezvy. Ta je u RTOS několikanásobně kratší (řádově milisekundy).
+15. (1 B) Základní odlišností mezi operačním systémem reálného času (RTOS) a běžným operačním systémem je doba odezvy. Ta je u RTOS několikanásobně kratší (řádově milisekundy).
 
     - Pravda
 
-13. (1 B) Proces, který je připraven k vykonávání, ale není právě vykonáván procesorem, např. proto, že se právě provádí proces s vyšší prioritou, se označuje jako připravený (ready).
+16. (1 B) Proces, který je připraven k vykonávání, ale není právě vykonáván procesorem, např. proto, že se právě provádí proces s vyšší prioritou, se označuje jako připravený (ready).
 
     - Pravda
 
-14. (1 B) FreeRTOS je operační systém reálného času (RTOS).
+17. (1 B) FreeRTOS je operační systém reálného času (RTOS).
 
     - Pravda
 
-15. (1 B) Instrukční sada používaná u procesorů ARM Cortex-M se nazývá SIS (Super Instruction Set).
+18. (1 B) Instrukční sada používaná u procesorů ARM Cortex-M se nazývá SIS (Super Instruction Set).
 
     - Nepravda <!-- Instrukční sada používaná u procesorů ARM Cortex-M se nazývá Thumb. -->
 
-16. (1 B) Mechanizmus pipeline znamená, že instrukce jsou do procesoru přenášeny z paměti přes tzv. rouru (pipe) a nikoliv přes sběrnice.
+19. (1 B) Mechanizmus pipeline znamená, že instrukce jsou do procesoru přenášeny z paměti přes tzv. rouru (pipe) a nikoliv přes sběrnice.
 
     - Nepravda <!-- Mechanizmus pipeline znamená, že instrukce jsou zpracovávány paralelně, tj. několik instrukcí je zpracováváno současně. -->
+
+## Test 6
+
+1.  (3 B) Který typ paměti se využívá u mikropočítačů pro umístění dat, se kterými program právě pracuje
+    (globální a lokální proměnné) Uveďte také základní vlastnosti tohoto typu paměti.
+
+    - RAM (Random Access Memory) - rychlá, dočasná paměť pro ukládání dat a instrukcí, které procesor potřebuje k okamžitému zpracování. Data se ztrácí při vypnutí napájení.
+
+2.  (3 B) Popište funkci a využití zásobniku (stack) u mikropočitače. Uveďte příklady položek, které se na
+    zásobník ukládájí a popište princip jeho fungování.
+
+    - Na zásobnik ukladame napr. medzivysledky, funguje na principe LIFO (Last In First Out), je v RAM, využíva sa pri prerušeniach kedy sa do neho ukladá hodnota z program countru (PC) registru
+
+3.  (3 B) Vysvětlete pojem preemptivní multitasking.
+
+    - Preemptivní multitasking je způsob plánování procesů, kdy je procesor schopen přerušit běžící proces a přepnout na jiný proces s vyšší prioritou
+    - Znamená že pracuje s viacerými úlohami súčastne. Viee efektívne pristupovať k úlohám v reálnom čase.
+
+4.  (2 B) Napište masku pro vynulování (clear) bitu 4 v registru REG pro použití v následujícím kódu:
+
+    - REG &= ~MASKA;
+    - MASKA = 1 << 4;
+
+5.  (2 B) Napište v jazyku C podmínku, která bude splněna, když bit 5 v registru REG bude nulový
+
+    - if (!(REG & (1 << 5))) {}
+
+6.  (1 B) Mikropočítač a mikroprocesor jsou synonyma (slova se stejným významem).
+
+    - Nepravda <!-- Mikroprocesor je pouze procesor, zatímco mikropočítač zahrnuje procesor a další komponenty jako paměť a vstupy/výstupy. -->
+
+7.  (1 B) Paměti typu FLASH uchovávají informaci i po odpojení napájení.
+
+    - Pravda
+
+8.  (1 B) Implicitní adresování znamená, že operand je přímo součástí instrukce, tedy že přímo z instrukce vyplývá, co je jejím operandem. Příkladem jsou instrukce pro inkrementaci registru (INCA) nebo vymazání registru (CLRA).
+
+    - Pravda
+
+9.  (1 B) Odkaz na následující volnou pozici na zásobníku je uložen v registru procesoru označovaném jako SP (stack pointer).
+
+    - Pravda
+
+10. (1 B) Synchronní komunikace znamená, že data jsou přenášena po jednotlivých bitech, zatímco při asynchronní jsou data přenášena po více bitech najednou, typicky po osmi, tj. po bajtech.
+
+    - Nepravda
+
+11. (1 B) Přerušení slouží k tomu, aby se přerušil cyklus, který se vykonával příliš dlouho. Procesor tak brání zamrznutí uživatelského programu.
+
+    - Nepravda <!-- Přerušení slouží k tomu, aby procesor mohl reagovat na události, které vyžadují okamžitou pozornost, např. obsluha periferií, časovačů, atd. -->
+
+12. (1 B) Procesor mikropočítače ukládá při příchodu přerušení na zásobník všechny lokální proměnné, se kterými přerušený program pracoval.
+
+    - Nepravda <!-- Procesor ukládá na zásobník pouze některé registry a některé informace o stavu procesoru. -->
+
+13. (1 B) A/D převodník není běžnou součástí současných mikropočítačů. Pokud je v aplikaci požadován, musí být vždy přidán jako externí obvod.
+
+    - Nepravda <!-- A/D převodník je běžnou součástí současných mikropočítačů a slouží k převodu analogového signálu na digitální. -->
+
+14. (1 B) Výstupem A/D převodníku s rozlišením 8 bitů je číselná hodnota v rozsahu 0 až 255.
+
+    - Pravda
+
+15. (1 B) Popisovač procesu (deskriptor tasku) slouží programátorovi k popsání vlastností procesu. Obvykle se zapisuje přímo do zdrojového kódu jako komentář.
+
+    - Nepravda <!-- Deskriptor tasku je struktura v OS, která uchovává informace o procesu, např. stav, prioritu, atd. -->
+
+16. (1 B) Jako čekající se označuje proces, který chce být vykonáván na procesoru, ale musí čekat, protože procesor právě vokonává jiný proces, např. s vyšší prioritou.
+
+    - Nepravda <!-- Jako čekající se označuje proces, který neusiluje o své vykonávání na procesoru, protože čeká na nějakou událost nebo prostředek, např. na uvolnění schránky. -->
+
+17. (1 B) Plánovač systému FreeRTOS umožňuje pouze kooperativní plánování.
+
+    - Nepravda <!-- Plánovač systému FreeRTOS umožňuje jak kooperativní, tak preemptivní plánování. -->
+
+18. (1 B) Firma ARM je v současnosti největším výrobcem mikroprocesorů.
+
+    - Nepravda <!-- Firma ARM je vývojářem architektury mikroprocesorů, nikoliv výrobcem. -->
+
+19. (1 B) Mechanizmus pipeline znamená, že v procesoru se nachází několik instrukcí v různém stupni rozpracování, např. načítá se další instrukce zatímco předchozí se dekóduje a ještě dřívější se vykonává.
+
+    - Pravda
+
+## Test 7
+
+1.  (3 B) Nakreslete blokové schéma jednočipového mikropočítače a stručně popište jednotlivé části a jejich
+    účel
+
+    - ![alt](/Imgs/jednocipovy1.png)
+    - CPU - mikroprocesor
+    - Paměť - RAM + ROM
+    - I/O - vstupy a výstupy
+    - ADC - A/D převodník
+    - Časovač - generování časových signálů
+    - Hodinový generátor - generování hodinového signálu
+    - Komunikační rozhraní - SCI, SPI... - komunikace s periferiemi
+    - Vnitřní sběrnice - propojení jednotlivých bloků
+
+2.  (3 B) Popište funkci a využití zásobniku (stack) u mikropočitače. Uveďte přiklady položek, které se na
+    zásobnik ukládájí a popište princip jeho fungování.
+
+    - Na zásobnik ukladame napr. medzivysledky, funguje na principe LIFO (Last In First Out), je v RAM, využíva sa pri prerušeniach kedy sa do neho ukladá hodnota z program countru (PC) registru
+
+3.  (3 B) Vysvětlete, jak funguje cyklické plánování u operačniho systému. Uvěďte také příklad chování
+    systému např. se třemi procesy (úlohami).
+
+    - Proces se přideluje v časových kvantech, po skončení kvanta se proces přesune na konec fronty
+      - 1. Proces A začíná a běží po dobu určitého času (napr 20ms)
+      - 2. Proces A je přesunut na konec fronty a proces B začíná běžet (20ms)
+      - 3. Proces B je přesunut na konec fronty a proces C začíná běžet (20ms)
+      - 4. Proces C je přesunut na konec fronty a proces A začíná běžet (20ms)
+
+4.  (2 B) Napište masku pro vynulování (clear) bitu 7 v registru REG pro použití v následujícím kódu:
+
+    - REG &= ~MASKA;
+
+    - MASKA = 1<<7;
+
+5.  (2 B) Napište v jazyku C podmínku, která bude splněna, když bit 0 v registru REG bude nastaven na 1
+
+    - if (REG & (1<<0)) {}
+
+6.  (1 B) Vektor přerušení je vyhrazená oblast paměti FLASH, která slouží k uložení registrů procesoru při
+    příchodu přerušení.
+
+    - Nepravda <!-- Vektor přerušení je vyhrazená oblast paměti, kde jsou uloženy adresy obslužných rutin přerušení. -->
+
+7.  (1 B) Doba převodu u A/D převodníku u mikropočítače KL25Z se pohybuje v řádu desetin sekundy.
+
+    - Nepravda <!-- Doba převodu u A/D převodníku se pohybuje v řádu mikrosekund. -->
+
+8.  (1 B) Rozlišení A/D převodníku u 32-bitového mikropočítače KL25Z je 24 bitů.
+
+    - Nepravda <!-- Rozlišení A/D převodníku je obvykle menší než šířka datové sběrnice, např. 8, 10, 12, 16 bitů. -->
+
+9.  (1 B) Preemptivní multitasking je charakteristický tím, že operační systém může kdykoliv přerušit běh kteréhokoliv procesu a přepnout na jiný proces.
+
+    - Pravda
+
+10. (1 B) Priorita procesu je většinou uložena jako bitová maska, kde jednotlivé bity mají význam určitých oprávnění procesu, např. k přepsání paměti jiného procesu nebo k volání privilegovaných služeb operačního systému.
+
+    - Nepravda <!-- Priorita procesu je obvykle uložena jako číslo, které určuje, jak často má procesor vykonávat daný proces. -->
+
+11. (1 B) Ve FreeRTOS nejsou implementovány semafory.
+
+    - Nepravda <!-- Ve FreeRTOS jsou implementovány semafory, mutexy, fronty, atd. -->
+
+12. (1 B) Programovací model procesorů ARM využívá tzv. load store architekturu, což znamená, že výsledky aritmetických operací jsou vždy ukládány na zásobník.
+
+    - Nepravda <!-- Load store architektura znamená, že data jsou vždy načtena do registrů a uložena zpět do paměti pouze výsledky. -->
+
+13. (1 B) Procesory Cortex-MO (použité u mikropočítače Kinetis KL25Z) mají 13 registrů pro všeobecné použití (general purpose) označených jako RO až R12.
+
+    - Nepravda <!-- Procesory Cortex-M0 mají 16 registrů pro všeobecné použití označených jako R0 až R15. -->
 
 ## TABULKA
 
