@@ -6,7 +6,7 @@
    - CPU - mikroprocesor
    - Paměť - RAM + ROM
    - I/O - vstupy a výstupy
-   - ADC - A/D převodník
+   - ADC - A/D převodník - převod analogového signálu na digitální
    - Časovač - generování časových signálů
    - Hodinový generátor - generování hodinového signálu
    - Komunikační rozhraní - SCI, SPI... - komunikace s periferiemi
@@ -84,7 +84,7 @@
 
 18. Zkratka ARM znamená Advanced Register Model.
 
-    - Nepravda <!-- ARM znamená Acorn RISC Machine. -->
+    - Nepravda <!-- ARM znamená Advanced  RISC Machine. -->
 
 19. Mechanizmus pipeline znamená, že instrukce jsou do procesoru přenášeny z paměti přes tzv. rouru (pipe) a nikoliv přes sběrnice.
 
@@ -95,7 +95,7 @@
 1. (3 B) Uveďte 3 typy polovodičových paměti běžně použivaných u současných mikropočitačů. U každého typu paměti uveďte jeho základní vlastnosti (např. možnosti přepisu a mazání, uchování dat bez napájení).
 
    - RAM - Random Access Memory - rychlá, náhodný přístup, nestálá paměť
-   - ROM - Read Only Memory - neměnná paměť, obsahuje firmware
+   - ROM - Read Only Memory - neměnná paměť, obsahuje firmware, uchovává data i bez napájení
    - FLASH - programovatelná paměť, uchovává data i bez napájení
 
 2. (3 B) Jaký je rozdil mezi instrukční sadou typu RISC a CISC? Popište vlastností obou sad.
@@ -106,7 +106,7 @@
 3. (3 B) Uveďte tři základni stavy, ve kterých se může nacházet proces (task) u operačního systému reálného času. Každý stav stručně charakterizujte.
 
    - Active - Proces je běžící, má přidělený procesor a běží s vysokou prioritou
-   - Waiting - Proces čeká na nějakou událost, např. dokončení I/O operace
+   - Ready - Proces je připraven k běhu, ale není právě běžící kvůli jinému procesu s vyšší prioritou
    - Blocked - Proces je blokován, např. kvůli synchronizaci s jinými procesy
 
 4. (2 B) Napište masku pro vynulování (clear) bitu 2 v registru REG pro použití v následujícím kódu:
@@ -260,7 +260,7 @@
 
 19. (1 B) Procesory Cortex-MO (použité u mikropočítače Kinetis KL25Z) mají 13 registrů pro všeobecné použití (general purpose) označených jako RO až R12.
 
-    - Nepravda <!-- Procesory Cortex-M0 mají 16 registrů pro všeobecné použití označených jako R0 až R15. -->
+    - Pravda
 
 ## Test 4
 
@@ -279,7 +279,7 @@
 3. (3 B) Uveďte tři základní stavy, ve kterých se může nacházet proces (task) u operačního systému reálného času. Každý stav stručně charakterizujte.
 
    - Active - Proces je běžící, má přidělený procesor a běží s vysokou prioritou
-   - Waiting - Proces čeká na nějakou událost, např. dokončení I/O operace
+   - Ready - Proces je připraven k běhu, ale není právě běžící kvůli jinému procesu s vyšší prioritou
    - Blocked - Proces je blokován, např. kvůli synchronizaci s jinými procesy
 
 4. (2 B) Napište masku pro vynulování (clear) bitu 3 v registru REG pro použití v následujícím kódu:
@@ -342,7 +342,7 @@
 
 18. (1 B) Zkratka ARM znamená Advanced Register Model.
 
-    - Nepravda <!-- ARM znamená Acorn RISC Machine. -->
+    - Nepravda <!-- ARM znamená Advanced RISC Machine. -->
 
 19. (1 B) Procesory Cortex-MO (použité u mikropočítače Kinetis KL25Z) mají registr ukazatel zásobníku (SP) o velikosti 8 bitů.
 
@@ -588,7 +588,7 @@
 
 13. (1 B) Procesory Cortex-MO (použité u mikropočítače Kinetis KL25Z) mají 13 registrů pro všeobecné použití (general purpose) označených jako RO až R12.
 
-    - Nepravda <!-- Procesory Cortex-M0 mají 16 registrů pro všeobecné použití označených jako R0 až R15. -->
+    - Pravda 
 
 ## TABULKA
 
