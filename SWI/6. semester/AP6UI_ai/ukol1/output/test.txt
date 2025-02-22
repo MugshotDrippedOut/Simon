@@ -1,0 +1,5 @@
+game was LOST Score:  510   Biggest tile:256
+game was LOST Score:  232   Biggest tile:64
+game was LOST Score:  226   Biggest tile:   64   
+game was LOST Score:  376   Biggest tile:  128   
+game was LOST Score:  332   Biggest tile:  128   
