@@ -1,0 +1,91 @@
+         CircleSolver         
+Average score in 1000 runs was: 2390
+Number of losses to wins is 1000:0
+
+The best was run 771:
+score         6948
+moves          481
+maxTile        512
+gameStatus    LOST
+Name: 771, dtype: object
+
+The worst was run 94:
+score          472
+moves           69
+maxTile         64
+gameStatus    LOST
+Name: 94, dtype: object
+---------------------------------------------------
+         RandomSolver         
+Average score in 1000 runs was: 1064
+Number of losses to wins is 1000:0
+
+The best was run 473:
+score         3036
+moves          293
+maxTile        256
+gameStatus    LOST
+Name: 473, dtype: object
+
+The worst was run 374:
+score          144
+moves           40
+maxTile         16
+gameStatus    LOST
+Name: 374, dtype: object
+---------------------------------------------------
+       LeftRightSolver        
+Average score in 1000 runs was: 634
+Number of losses to wins is 1000:0
+
+The best was run 202:
+score         2480
+moves          242
+maxTile        256
+gameStatus    LOST
+Name: 202, dtype: object
+
+The worst was run 731:
+score           48
+moves           25
+maxTile          8
+gameStatus    LOST
+Name: 731, dtype: object
+---------------------------------------------------
+       RightDownSolver        
+Average score in 1000 runs was: 834
+Number of losses to wins is 991:0
+
+The best was run 690:
+score         3524
+moves          360
+maxTile        256
+gameStatus    LOST
+Name: 690, dtype: object
+
+The worst was run 319:
+score           88
+moves           38
+maxTile          8
+gameStatus    LOST
+Name: 319, dtype: object
+---------------------------------------------------
+        MiniMaxSolver         
+Average score in 1000 runs was: 157
+Number of losses to wins is 1000:0
+
+The best was run 62:
+score          724
+moves           42
+maxTile        256
+gameStatus    LOST
+Name: 62, dtype: object
+
+The worst was run 504:
+score            4
+moves           11
+maxTile         32
+gameStatus    LOST
+Name: 504, dtype: object
+---------------------------------------------------
+Solver with the best average score is CircleSolver with 2390 score
