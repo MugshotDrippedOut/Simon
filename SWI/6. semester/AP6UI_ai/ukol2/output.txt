@@ -1,0 +1,129 @@
+Title: Captain America: Brave New World
+URL: https://www.rottentomatoes.com/m/captain_america_brave_new_world/reviews
+Number of reviews: 20
+Positive:  5   Neutral:  11  Negative:  4  
+Mean compound sentiment was Neutral: 0.23478500000000002
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Title: Paddington in Peru
+URL: https://www.rottentomatoes.com/m/paddington_in_peru/reviews
+Number of reviews: 20
+Positive:  13  Neutral:  4   Negative:  3  
+Mean compound sentiment was Neutral: 0.48282499999999995
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Title: Sonic the Hedgehog 3
+URL: https://www.rottentomatoes.com/m/sonic_the_hedgehog_3/reviews
+Number of reviews: 20
+Positive:  14  Neutral:  2   Negative:  4  
+Mean compound sentiment was Neutral: 0.425855
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Title: Forrest Gump
+URL: https://www.rottentomatoes.com/m/forrest_gump/reviews
+Number of reviews: 20
+Positive:  12  Neutral:  8   Negative:  0  
+-------------------------------------------------------------------------------
+Autor: Nadir Samara
+Review: Flaws and all, the movie unfolds like a book of short stories and that choice ushered in a confidence the script is able to pull off.
+Sentiment is Positive with score 0.7003
+-------------------------------------------------------------------------------
+Autor: Josh Parham
+Review: When analyzing the ultimate endurance that �Forrest Gump� has left in the decades since it first came out, it�s obvious that approaching it with a more inquisitive perspective leaves it with a much shallower impact than it did upon its initial release.
+Sentiment is Neutral with score 0.2484
+-------------------------------------------------------------------------------
+Autor: Peter Bradshaw
+Review: Forrest Gump is Hollywood film-making at its most corn-fed, sucrose-enriched and calorific; you�ll need a sweet tooth for it.
+Sentiment is Neutral with score 0.4588
+-------------------------------------------------------------------------------
+Autor: Cameron Meier
+Review: Forrest was an ordinary man in extraordinary circumstances.
+Sentiment is Neutral with score 0.0
+-------------------------------------------------------------------------------
+Autor: David Denby
+Review: Zemeckis has made a fast movie about a slow hero; he transforms Forrest's daffy misconceptions into lyrical flights. Forrest Gump has a softer, more delicate touch and a richer current of feeling than any of the other holy-innocent movies.
+Sentiment is Positive with score 0.8399
+-------------------------------------------------------------------------------
+Autor: Michael MacCambridge
+Review: What makes Forrest Gump a stunning triumph, a departure from the mediocre norm? A big reason is the way the film provides a fresh perspective on the familiar experience, through the eyes of its unforgettable protagonist.
+Sentiment is Positive with score 0.7906
+-------------------------------------------------------------------------------
+Autor: Steve Persall
+Review: Forrest Gump isn't a movie for cynics. Instead, it's one of those rare films that seduces viewers into overlooking its faults with the sheer goodness of its heart.
+Sentiment is Neutral with score 0.0315
+-------------------------------------------------------------------------------
+Autor: Michael Medved
+Review: Hanks' performance [is] a triumph of dignity, decency, and warm-hearted humor... Even more than his Oscar-winning achievement in Philadelphia, this is a role that will be remembered as long as people care about great acting.
+Sentiment is Very Positive with score 0.9201
+-------------------------------------------------------------------------------
+Autor: Eleanor OSullivan
+Review: Forrest Gump is a very fine hour for everybody involved. And it's concrete evidence that Tom Hanks is the best actor working in American film today.
+Sentiment is Positive with score 0.7425
+-------------------------------------------------------------------------------
+Autor: Kristal Brent Zook
+Review: Forrest Gump is for big kids what playing Nintendo is for little ones -- that is, the neato thing about Robert Zemeckis' film is the clever techno-wizardry produced by Ken Ralston and Industrial Light and Magic.
+Sentiment is Positive with score 0.5859
+-------------------------------------------------------------------------------
+Autor: Harper Barnes
+Review: Hanks never strikes a false note, never panders to his mentally slow character nor tries to make him more than he is, despite a script that occasionally calls on him to utter what presumably are intended to be simple profundities.
+Sentiment is Neutral with score 0.2755
+-------------------------------------------------------------------------------
+Autor: J Hoberman
+Review: There's an undeniable kick to the idea of recapitulating to the Boomerography as a tale told by an idiot, but the thrill inexorably fades.
+Sentiment is Neutral with score 0.2732
+-------------------------------------------------------------------------------
+Autor: Peter Keough
+Review: Intended as a paean to simplicity and a meditation on the quirks of destiny, "Gump" is instead simple-minded and calculated, a cloying, reactionary fable in praise of stupidity.
+Sentiment is Neutral with score 0.1779
+-------------------------------------------------------------------------------
+Autor: Robert W Butler
+Review: Forrest Gump is about as good as Hollywood movies get.
+Sentiment is Neutral with score 0.4404
+-------------------------------------------------------------------------------
+Autor: Michael H Price
+Review: Hanks' immersion in character and his convincing interaction with fellow players make Forrest Gump -- gimmicks and all -- a pleasure.
+Sentiment is Positive with score 0.7506
+-------------------------------------------------------------------------------
+Autor: Bob Fenster
+Review: The best art takes the biggest chances, thereby losing people who can't stretch with it. Forrest Gump is worth the effort.
+Sentiment is Positive with score 0.6486
+-------------------------------------------------------------------------------
+Autor: Marylynn Uricchio
+Review: Forrest Gump is going to touch a lot of people's lives. It also has a good shot at bringing Tom Hanks a second Oscar for best actor.
+Sentiment is Positive with score 0.7964
+-------------------------------------------------------------------------------
+Autor: Jackie Potts
+Review: Loosely adapted from Winston Groom's satirical novel, Forrest Gump provides an incredibly rich and daffy historical pastiche.
+Sentiment is Positive with score 0.7346
+-------------------------------------------------------------------------------
+Autor: Bill DuPre
+Review: Forrest Gump is a rare treat: a movie that delivers a message of hope and faith without delving into preachiness. Much of that success is due to Hanks' majestically deadpan performance.
+Sentiment is Very Positive with score 0.9022
+-------------------------------------------------------------------------------
+Autor: Frank Bruni
+Review: It turns tedious toward the end... But when it's good, it's very good, and the way it blends star Tom Hanks, who plays the title character, into actual historical film footage will tickle you to no end.
+Sentiment is Positive with score 0.8126
+-------------------------------------------------------------------------------
+Mean compound sentiment was Positive: 0.5565
+===============================================================================
+Top 10 most frequent used words were:
+a : 29
+the : 23
+is : 18
+Forrest : 15
+and : 14
+Gump : 14
+of : 13
+to : 11
+it : 11
+that : 10
+===============================================================================
+Top 10 longest words that were used:
+misconceptions : 14 characters
+recapitulating : 14 characters
+extraordinary : 13 characters
+circumstances : 13 characters
+unforgettable : 13 characters
+Boomerography : 13 characters
+Philadelphia : 12 characters
+occasionally : 12 characters
+profundities : 12 characters
+majestically : 12 characters
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
