@@ -4,27 +4,54 @@
    - Ekonomika je konkrétní praxe (čísla)
 2. Charakterizujte živnost
    - Živnost je pravidelná/sústavná činnost vykonávaná samostatně, vlastním jménem a na vlastní odpovědnost za účelem dosažení zisku
-3. Rozčleňte živnost a uveďte příklady **DOPLNIT**
-   1. Koncesované živnosti (taxikár) vs ohlasovaná
-   2.
+3. Rozčleňte živnost a uveďte příklady
+   - Koncesované živnosti
+     - Např. výroba a rozvod elektrické energie, výroba a rozvod plynu, výroba a rozvod tepla, výroba a rozvod vody, atd.
+   - Ohlašovací živnosti
+     - Volné živnosti (např. obchodní činnost, zprostředkovatelská činnost, reklamní činnost, atd.)
+     - Řemeslné živnosti (např. truhlářství, zednictví, kadeřnictví, atd.)
+     - Vázané živnosti (např. účetnictví, daňové poradenství, atd.)
 4. Uveďte všeobecné podmínky a zvláštní podmínky k provozování živnosti
    - Všeobecné podmínky:
      - Svojprávnost
      - Bezúhonnost
      - Bez záznamu v trestnom registru
      - 18+ (ale je možné i 16+ v špeciálních případech)
-   - Zvláštní podmínky: **DOPLNIT**
+   - Zvláštní podmínky:
      - Vzdělání (např. maturita, VŠ)
      - Odborná praxe (např. 2 roky v oboru)
      - Odborná zkouška (např. zkouška z účetnictví)
      - Odborné osvědčení (např. osvědčení o odborné způsobilosti)
 5. Vysvětlete daňové aspekty OSVČ
 
-   - co se odvadi z prijmu
-   - kolik 15,
-   - z ceho se odvadi
-   - minimálni vymerovy základ
-   - vydejovy pausal, vydejovu dan
+- OSVČ je osoba samostatně výdělečně činná
+- OSVČ je fyzická osoba, která vykonává samostatnou výdělečnou činnost (živnost)
+- Daňové povinnosti OSVČ:
+  - Daň z příjmů fyzických osob:
+  - 15% ze základu daně (příjmy - výdaje)
+  - 23% z příjmů nad limitem (pro 2025: cca 2 234 736 Kč)
+  - Sociální pojištění:
+  - 29,2% z vyměřovacího základu (50% ze základu daně)
+  - Minimální vyměřovací základ pro 2025: 195 540 Kč
+  - Minimální měsíční záloha pro 2025: 4 759 Kč
+  - Maximální vyměřovací základ pro 2025: 2 234 736 Kč
+  - Zdravotní pojištění:
+  - 13,5% z vyměřovacího základu (50% ze základu daně)
+  - Minimální vyměřovací základ pro 2025: 279 342 Kč
+  - Minimální měsíční záloha pro 2025: 3 143 Kč
+- Výdajové paušály:
+  - Zjednodušený způsob uplatnění výdajů procentem z příjmů
+  - 80% pro zemědělskou a řemeslnou činnost
+  - 60% pro ostatní živnosti
+  - 40% pro svobodná povolání, autorské příjmy
+  - 30% pro příjmy z pronájmu
+  - Lze uplatnit do ročního příjmu 2 000 000 Kč
+- Paušální daň:
+  - Alternativní režim pro podnikatele s příjmy do 2 mil. Kč
+  - Jedna měsíční platba zahrnující daň, sociální i zdravotní pojištění
+  - Tři pásma podle výše příjmů
+  - Snížení administrativy - bez nutnosti podávat daňové přiznání
+  - Přihlášení do 10. ledna příslušného roku
 
 6. K čemu slouží výdajové paušály?
    1. Vytvorene kvôli nízko příjmovým živnostníkům
@@ -74,13 +101,24 @@
 15. Co vyjadřuje a k čemu slouží finanční páka?
     - Efektívní využívaní cizího kapitálu na zvýšení výnosu vlastního kapitálu
     - Zvýšení výnosu vlastního kapitálu při použití cizího kapitálu
-16. Vysvětlete podstatu úrokového daňového štítu **DOPLNIT**
+16. Vysvětlete podstatu úrokového daňového štítu
+
+    - Úrokový daňový štít je finanční mechanismus, který umožňuje podnikům snížit daňovou povinnost prostřednictvím úroků placených z cizího kapitálu (úvěrů). Princip spočívá v tom, že:
+      - Úroky z úvěrů jsou daňově uznatelným nákladem
+      - Snižují základ daně a tím i výslednou daňovou povinnost
+      - Díky tomu je efektivní náklad na cizí kapitál nižší než nominální úroková sazba
+      - Matematicky vyjádřeno: Daňový štít = úrok × daňová sazba
+
 17. Co je indiferentní kapitálová struktura?
     - Indeferentní kapitálová struktura
     - odměnuji vlastní a cizí zdroje bez změny ziskovosti
-18. Charakterizujte rozvahu **DOPLNIT**
-    - Rozvaha je účetní výkaz zobrazující majetek krytý tohoto majetku (pasiva)(vlastní a cizí kapitál)
-    - Binanční princip: AKTIVA = PASIVA
+18. Charakterizujte rozvahu
+
+    - Rozvaha je základní účetní výkaz, který zachycuje majetek podniku (aktiva) a zdroje jeho krytí (pasiva) k určitému datu. Základní charakteristiky rozvahy:
+      - Vždy musí platit bilanční rovnice: Aktiva = Pasiva
+      - Poskytuje statický pohled na finanční situaci podniku k rozvahovému dni
+      - Je základem pro finanční analýzu podniku
+
 19. Vysvětlete význam odpisů v podnikové sféře.
     - Odpisy znázorňují opotřebení majetku a snižují základ daně
     - Odpis = zachycení opotřebení majetku
@@ -93,9 +131,28 @@
     - Vyjadřuje jestli sme schopní splácet krátkodobé závazky
     - Čistý pracovní kapitál = oběžný majetek - krátkodobé závazky(cizí zdroje)
 22. Vysvětlete, co jsou to výnosy, uveďte příklady a vysvětlete rozdíl oproti příjmům.
+
     - Peněžní části, které podnik získává za prodej zboží/služeb
     - Příjmy jsou když dostaneme zaplaceno za zboží/služby
-    - Výrobek je výnos, když je prodán, ale ještě není zaplacený **DOPLNIT**
+    - Výrobek je výnos, když je prodán, ale ještě není zaplacený
+
+    - **chat**
+
+      - Výnosy jsou peněžní částky, které podnik získává ze všech svých činností za určité období bez ohledu na to, zda v tomto období došlo k jejich úhradě (inkasu).
+
+      - Příklady výnosů:
+
+        - Tržby za prodej výrobků, zboží a služeb
+        - Finanční výnosy (úroky, dividendy)
+        - Mimořádné výnosy (náhrady škod)
+        - Aktivace vlastních výkonů (např. výroba stroje pro vlastní potřebu)
+
+      - Rozdíl mezi výnosy a příjmy:
+
+        - Výnosy vznikají v okamžiku realizace výkonu (prodej výrobku, poskytnutí služby), ale nezohledňují skutečný tok peněz
+        - Příjmy představují skutečný přírůstek peněz, tedy okamžik, kdy peníze fyzicky přicházejí do podniku
+        - Časový nesoulad: výnos často vzniká dříve než příjem (např. při prodeji na fakturu)
+
 23. Vysvětlete, co jsou to náklady, uveďte příklady a vysvětlete rozdíl oproti výdajům.
     - úbytek penězních prostředků
     - náklady = výdaje + odpisy
@@ -131,7 +188,7 @@
     - Nákladová funkce N = FN + VN
       - N - celkové náklady
       - FN - fixní náklady
-      - VN - variabilní náklady = b*q
+      - VN - variabilní náklady = b\*q
         - b - variabilní náklady na jednotku
         - q - objem výroby
     - Jaké budu mít celkové náklady při určitém objemu výroby
