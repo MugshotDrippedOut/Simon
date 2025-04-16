@@ -24,39 +24,41 @@
      - Odborné osvědčení (např. osvědčení o odborné způsobilosti)
 5. Vysvětlete daňové aspekty OSVČ
 
-- OSVČ je osoba samostatně výdělečně činná
-- OSVČ je fyzická osoba, která vykonává samostatnou výdělečnou činnost (živnost)
-- Daňové povinnosti OSVČ:
-  - Daň z příjmů fyzických osob:
-  - 15% ze základu daně (příjmy - výdaje)
-  - 23% z příjmů nad limitem (pro 2025: cca 2 234 736 Kč)
-  - Sociální pojištění:
-  - 29,2% z vyměřovacího základu (50% ze základu daně)
-  - Minimální vyměřovací základ pro 2025: 195 540 Kč
-  - Minimální měsíční záloha pro 2025: 4 759 Kč
-  - Maximální vyměřovací základ pro 2025: 2 234 736 Kč
-  - Zdravotní pojištění:
-  - 13,5% z vyměřovacího základu (50% ze základu daně)
-  - Minimální vyměřovací základ pro 2025: 279 342 Kč
-  - Minimální měsíční záloha pro 2025: 3 143 Kč
-- Výdajové paušály:
-  - Zjednodušený způsob uplatnění výdajů procentem z příjmů
-  - 80% pro zemědělskou a řemeslnou činnost
-  - 60% pro ostatní živnosti
-  - 40% pro svobodná povolání, autorské příjmy
-  - 30% pro příjmy z pronájmu
-  - Lze uplatnit do ročního příjmu 2 000 000 Kč
-- Paušální daň:
-  - Alternativní režim pro podnikatele s příjmy do 2 mil. Kč
-  - Jedna měsíční platba zahrnující daň, sociální i zdravotní pojištění
-  - Tři pásma podle výše příjmů
-  - Snížení administrativy - bez nutnosti podávat daňové přiznání
-  - Přihlášení do 10. ledna příslušného roku
+   - OSVČ je osoba samostatně výdělečně činná
+   - OSVČ je fyzická osoba, která vykonává samostatnou výdělečnou činnost (živnost)
+   - Daňové povinnosti OSVČ:
+     - Daň z příjmů fyzických osob:
+     - 15% ze základu daně (příjmy - výdaje)
+     - 23% z příjmů nad limitem (pro 2025: cca 2 234 736 Kč)
+     - Sociální pojištění:
+     - 29,2% z vyměřovacího základu (50% ze základu daně)
+     - Minimální vyměřovací základ pro 2025: 195 540 Kč
+     - Minimální měsíční záloha pro 2025: 4 759 Kč
+     - Maximální vyměřovací základ pro 2025: 2 234 736 Kč
+     - Zdravotní pojištění:
+     - 13,5% z vyměřovacího základu (50% ze základu daně)
+     - Minimální vyměřovací základ pro 2025: 279 342 Kč
+     - Minimální měsíční záloha pro 2025: 3 143 Kč
+   - Výdajové paušály:
+     - Zjednodušený způsob uplatnění výdajů procentem z příjmů
+     - 80% pro zemědělskou a řemeslnou činnost
+     - 60% pro ostatní živnosti
+     - 40% pro svobodná povolání, autorské příjmy
+     - 30% pro příjmy z pronájmu
+     - Lze uplatnit do ročního příjmu 2 000 000 Kč
+   - Paušální daň:
+     - Alternativní režim pro podnikatele s příjmy do 2 mil. Kč
+     - Jedna měsíční platba zahrnující daň, sociální i zdravotní pojištění
+     - Tři pásma podle výše příjmů
+     - Snížení administrativy - bez nutnosti podávat daňové přiznání
+     - Přihlášení do 10. ledna příslušného roku
 
 6. K čemu slouží výdajové paušály?
    1. Vytvorene kvôli nízko příjmovým živnostníkům
    2. Umoznuje dopocitam vydaje prostrednictvím procenta daní z příjmů, obsahuje i zdravotní a sociální pojištění
 7. Charakterizujte s.r.o.
+<!--
+
    - společnost s ručením omezeným
    - minimální pocet společníků 1
    - ručení společníkov za závazky společnosti: jen do zápisu splacení vkladu
@@ -65,7 +67,10 @@
    - statutární orgán: jednaté
    - další orgány: dozorčí rada, valná hromada
    - rozdelení zisku: dle vkladu
+-->
+
 8. Charakterizujte a.s.
+<!--
    | Akciová společnost | |
    | --- | --- |
    | min/max počet společníku | 1 |
@@ -75,14 +80,27 @@
    | statutární orgán | představenstvo/ správní rada |
    | další orgány | dozorčí rada/ správní rada, valná hromada |
    | rozdelení zisku | dle vkladu |
-
+-->
 9. Charakterizujte v.o.s.
 10. Charakterizujte k.s.
-11. Vysvětlete podstatu okolí podniku (co to je, co tam patří, co tam podniky nachází apod.)
+
+| Vlastnosť                     | a.s. - Akciová společnost                                         | s.r.o. - Společnost s ručením omezeným                     | v.o.s. - Všeobecná obchodní společnost  | k.s. - Komanditní společnost                                           |
+| ----------------------------- | ----------------------------------------------------------------- | ---------------------------------------------------------- | --------------------------------------- | ---------------------------------------------------------------------- |
+| **Základní kapitál**          | od 2014 – 2 mil. Kč (2 mil. Kč/ 20 mil. Kč s veř. nabídkou akcií) | od 2014 – .. 1 Kč (200 000 Kč)                             | nestanoveno                             | Od 2014 není stanoveno (min. 5 000 Kč/komanditista)                    |
+| **Min. vklad 1 osoby**        | hodnota 1 akcie                                                   | 1 Kč (20 000 Kč)                                           | nestanoveno                             | Od 2014 není stanoveno (5 000 Kč/komanditista)                         |
+| **Min/max počet zakladatelů** | 1 PO nebo 1 FO / neomezeno                                        | 1 PO nebo 1 FO max. neomezeno (1 FO nebo 1 PO/50 osob)     | max. neomezeno (1 FO nebo 1 PO/50 osob) | 2 x O / neomezeno                                                      |
+| **Základní dokumenty**        | stanovy                                                           | zakladatelská listina (1 os.), společenská smlouva (2 os.) | společenská smlouva                     | společenská smlouva                                                    |
+| **Nejvyšší orgán**            | valná hromada                                                     | valná hromada                                              | společníci                              | společníci                                                             |
+| **Statutární orgán**          | Představenstvo / Správní rada                                     | jednatel                                                   | společníci                              | komplementáři                                                          |
+| **Dozorčí orgán**             | dozorčí rada/ správní rada, valná hromada                         | dozorčí rada (dobrovolně)                                  | nestanoveno                             | komanditisté                                                           |
+| **Ručení společnosti**        | celým majetkem                                                    | celým majetkem                                             | celým majetkem                          | celým majetkem                                                         |
+| **Ručení společníků**         | ne (mohou přijít o hodnotu svých akcií)                           | do výše nesplacených vkladů                                | celým majetkem                          | komplementáři celým majetkem, komanditisté do výše nesplaceného vkladu |
+
+1.  Vysvětlete podstatu okolí podniku (co to je, co tam patří, co tam podniky nachází apod.)
     - Veci které ovlivnit nemůžeme, ale ovlivňují nás
     - nezamestnanost, inflace, úrokové sazby, konkurence, legislativa, politická situace, přírodní katastrofy, atd.
     - bud to vnímam jako příležitost nebo hrozbu
-12. Co vyjadřuje a k čemu slouží WACC?
+2.  Co vyjadřuje a k čemu slouží WACC?
     - Náklady na celkový kapitál
     - Obecne se snažíme mít co nejnižší WACC (co nejnižší náklady)
     - WACC = (CZ/K) _ I $_{ck}$ _ (-t) + (VK/K) \* I $_{vk}$
@@ -92,16 +110,16 @@
       - t- daňová sazba
       - I $_{ck}$ - náklady na cizí kapitál
       - I $_{vk}$ - náklady na vlastní kapitál
-13. Vysvětlete náklady dluhu
+3.  Vysvětlete náklady dluhu
     - Jaké mne vznikají náklady využitím cizího kapitálu
     - (v teste vypísať WACC vzorec a označiť I $_{ck}$)
-14. Charakterizujte náklady vlastního kapitálu
+4.  Charakterizujte náklady vlastního kapitálu
     - Jaké mne vznikají náklady využitím vlastního kapitálu
     - (v teste vypísať WACC vzorec a označiť I $_{vk}$)
-15. Co vyjadřuje a k čemu slouží finanční páka?
+5.  Co vyjadřuje a k čemu slouží finanční páka?
     - Efektívní využívaní cizího kapitálu na zvýšení výnosu vlastního kapitálu
     - Zvýšení výnosu vlastního kapitálu při použití cizího kapitálu
-16. Vysvětlete podstatu úrokového daňového štítu
+6.  Vysvětlete podstatu úrokového daňového štítu
 
     - Úrokový daňový štít je finanční mechanismus, který umožňuje podnikům snížit daňovou povinnost prostřednictvím úroků placených z cizího kapitálu (úvěrů). Princip spočívá v tom, že:
       - Úroky z úvěrů jsou daňově uznatelným nákladem
@@ -109,28 +127,28 @@
       - Díky tomu je efektivní náklad na cizí kapitál nižší než nominální úroková sazba
       - Matematicky vyjádřeno: Daňový štít = úrok × daňová sazba
 
-17. Co je indiferentní kapitálová struktura?
+7.  Co je indiferentní kapitálová struktura?
     - Indeferentní kapitálová struktura
     - odměnuji vlastní a cizí zdroje bez změny ziskovosti
-18. Charakterizujte rozvahu
+8.  Charakterizujte rozvahu
 
     - Rozvaha je základní účetní výkaz, který zachycuje majetek podniku (aktiva) a zdroje jeho krytí (pasiva) k určitému datu. Základní charakteristiky rozvahy:
       - Vždy musí platit bilanční rovnice: Aktiva = Pasiva
       - Poskytuje statický pohled na finanční situaci podniku k rozvahovému dni
       - Je základem pro finanční analýzu podniku
 
-19. Vysvětlete význam odpisů v podnikové sféře.
+9.  Vysvětlete význam odpisů v podnikové sféře.
     - Odpisy znázorňují opotřebení majetku a snižují základ daně
     - Odpis = zachycení opotřebení majetku
     - Oprávky = suma
-20. Objasněte zlaté bilanční pravidlo financování
+10. Objasněte zlaté bilanční pravidlo financování
     - Základní pravidlo financování podniku
     - Dlouhodobý majetek by měl být financován dlouhodobými zdroji
     - Krátkodobý majetek by měl být financován krátkodobými zdroji
-21. Co vyjadřuje čistý pracovní kapitál?
+11. Co vyjadřuje čistý pracovní kapitál?
     - Vyjadřuje jestli sme schopní splácet krátkodobé závazky
     - Čistý pracovní kapitál = oběžný majetek - krátkodobé závazky(cizí zdroje)
-22. Vysvětlete, co jsou to výnosy, uveďte příklady a vysvětlete rozdíl oproti příjmům.
+12. Vysvětlete, co jsou to výnosy, uveďte příklady a vysvětlete rozdíl oproti příjmům.
 
     - Peněžní části, které podnik získává za prodej zboží/služeb
     - Příjmy jsou když dostaneme zaplaceno za zboží/služby
@@ -153,20 +171,20 @@
         - Příjmy představují skutečný přírůstek peněz, tedy okamžik, kdy peníze fyzicky přicházejí do podniku
         - Časový nesoulad: výnos často vzniká dříve než příjem (např. při prodeji na fakturu)
 
-23. Vysvětlete, co jsou to náklady, uveďte příklady a vysvětlete rozdíl oproti výdajům.
+13. Vysvětlete, co jsou to náklady, uveďte příklady a vysvětlete rozdíl oproti výdajům.
     - úbytek penězních prostředků
     - náklady = výdaje + odpisy
-24. Vysvětlete zkratky EBITDA, EBIT, EBT, EAT a jak se používají.
+14. Vysvětlete zkratky EBITDA, EBIT, EBT, EAT a jak se používají.
     EBITDA - zisk před úroky, zdaněním, odpisy a amortizací
     EBIT - zisk před úroky a zdaněním
     EBT - zisk před zdaněním
     EAT - zisk po zdanění
-25. Vysvětlete rozdíl mezi výsledkem hospodaření a cash-flow.
+15. Vysvětlete rozdíl mezi výsledkem hospodaření a cash-flow.
     - Výsledek hospodaření - účetní výkaz, který ukazuje hospodaření podniku za určité období
     - Cash-flow - peněžní tok podniku za určité období
     - Výsledek hospodaření = výnosy - náklady
     - Cash-flow = příjmy - výdaje
-26. Jak klasifikujeme náklady? Uveďte příklady v jednotlivých členěních.
+16. Jak klasifikujeme náklady? Uveďte příklady v jednotlivých členěních.
     - Náklady jsou vynaložené peníze na výrobu zboží/služeb
     - Explicitní a implicitní náklady
       - Explicitní náklady - náklady, které jsou vyjádřeny v penězích (např. mzdy, nájemné)
@@ -177,14 +195,14 @@
     - Fixní a variabilní náklady
       - Fixní náklady - náklady, které se nemění s objemem výroby (např. nájemné, mzdy)
       - Variabilní náklady - náklady, které se mění s objemem výroby (např. materiál, energie)
-27. Vysvětlete, co jsou to fixní a variabilní náklady, jak s nimi pracujeme a jaký je jejich ekonomický význam pro řízení firmy.
+17. Vysvětlete, co jsou to fixní a variabilní náklady, jak s nimi pracujeme a jaký je jejich ekonomický význam pro řízení firmy.
     - Fixní náklady - náklady, které se nemění s objemem výroby (např. nájemné, mzdy)
       - Fixní náklady jsou důležité pro plánování a rozpočetování
       - Fixní náklady se musí zaplatit i když nevyrábíme
     - Variabilní náklady - náklady, které se mění s objemem výroby (např. materiál, energie)
       - Variabilní náklady jsou důležité pro kalkulaci ceny výrobku/služby
       - Variabilní náklady se mění s objemem výroby
-28. Co je to nákladová funkce, jak se sestavuje a k čemu slouží?
+18. Co je to nákladová funkce, jak se sestavuje a k čemu slouží?
     - Nákladová funkce N = FN + VN
       - N - celkové náklady
       - FN - fixní náklady
@@ -192,7 +210,7 @@
         - b - variabilní náklady na jednotku
         - q - objem výroby
     - Jaké budu mít celkové náklady při určitém objemu výroby
-29. Vysvětlete bod zvratu a uveďte vzorec.
+19. Vysvětlete bod zvratu a uveďte vzorec.
     - BZ(q) = FN / (P - b)
       - FN - fixní náklady
       - P - cena výrobku/služby
