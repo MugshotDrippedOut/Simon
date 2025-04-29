@@ -14,8 +14,7 @@
 4. Uveďte všeobecné podmínky a zvláštní podmínky k provozování živnosti
    - Všeobecné podmínky:
      - Svojprávnost
-     - Bezúhonnost
-     - Bez záznamu v trestnom registru
+     - Bezúhonnost - Bez záznamu v trestnom registru
      - 18+ (ale je možné i 16+ v špeciálních případech)
    - Zvláštní podmínky:
      - Vzdělání (např. maturita, VŠ)
@@ -69,7 +68,7 @@
    - rozdelení zisku: dle vkladu
 -->
 
-8. Charakterizujte a.s.
+1. Charakterizujte a.s.
 <!--
    | Akciová společnost | |
    | --- | --- |
@@ -81,8 +80,8 @@
    | další orgány | dozorčí rada/ správní rada, valná hromada |
    | rozdelení zisku | dle vkladu |
 -->
-9. Charakterizujte v.o.s.
-10. Charakterizujte k.s.
+1. Charakterizujte v.o.s.
+2.  Charakterizujte k.s.
 
 | Vlastnosť                     | a.s. - Akciová společnost                                         | s.r.o. - Společnost s ručením omezeným                     | v.o.s. - Všeobecná obchodní společnost  | k.s. - Komanditní společnost                                           |
 | ----------------------------- | ----------------------------------------------------------------- | ---------------------------------------------------------- | --------------------------------------- | ---------------------------------------------------------------------- |
